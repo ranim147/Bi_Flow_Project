@@ -1,0 +1,23 @@
+[
+  {
+    "model": "granite3.3:2b",
+    "seconds": 53.74138310001581,
+    "response": {
+      "model": "granite3.3:2b",
+      "created_at": "2026-10-24T13:45:01.5224466Z",
+      "message": {
+        "role": "assistant",
+        "content": "{\"ready\":true}"
+      },
+      "done": true,
+      "done_reason": "stop",
+      "total_duration": 51655009300,
+      "load_duration": 49633034300,
+      "prompt_eval_count": 55,
+      "prompt_eval_cached_count": 0,
+      "prompt_eval_duration": 1450765000,
+      "eval_count": 6,
+      "eval_duration": 366543000
+    }
+  }
+]

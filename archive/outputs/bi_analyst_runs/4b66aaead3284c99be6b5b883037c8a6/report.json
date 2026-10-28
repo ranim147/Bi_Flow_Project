@@ -1,0 +1,136 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "4b66aaead3284c99be6b5b883037c8a6",
+  "generated_at": "2026-10-28T19:59:44.075372+00:00",
+  "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "4b66aaead3284c99be6b5b883037c8a6-baseline",
+      "category": "data_quality",
+      "finding": "descriptive",
+      "insight": "Les preuves distinguent les demandes non clôturées des clôtures sans durée valide. Les délais non valides ne sont pas remplacés par zéro.",
+      "recommendation": "Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.",
+      "evidence_fact_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "limitation_codes": [
+        "missing_data",
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "quality.sample_rows",
+      "metric": "sample_rows",
+      "scope": "NYC 311 prepared extract",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.valid_resolution_days",
+      "metric": "valid_resolution_days",
+      "scope": "closed requests with valid resolution duration",
+      "value": 9285.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.open_requests",
+      "metric": "not_closed_requests",
+      "scope": "prepared extract with a valid creation date",
+      "value": 709.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T19:59:44.071760+00:00",
+      "elapsed_ms": 0.17739995382726192,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "total": 1412.5005999812856
+  }
+}

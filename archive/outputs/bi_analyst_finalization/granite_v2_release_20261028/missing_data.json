@@ -1,0 +1,331 @@
+{
+  "scenario": {
+    "id": "missing_data",
+    "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?",
+    "expected_metrics": [
+      "missing_or_invalid_resolution_days"
+    ]
+  },
+  "baseline": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "deef1baa89014f71bcf840c2b960fbdf",
+    "generated_at": "2026-10-28T10:26:38.525031+00:00",
+    "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "deef1baa89014f71bcf840c2b960fbdf-baseline",
+        "category": "data_quality",
+        "finding": "descriptive",
+        "insight": "Les preuves distinguent les demandes non clôturées des clôtures sans durée valide. Les délais non valides ne sont pas remplacés par zéro.",
+        "recommendation": "Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.",
+        "evidence_fact_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "limitation_codes": [
+          "missing_data",
+          "no_cause",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "quality.sample_rows",
+        "metric": "sample_rows",
+        "scope": "NYC 311 prepared extract",
+        "value": 10000.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.valid_resolution_days",
+        "metric": "valid_resolution_days",
+        "scope": "closed requests with valid resolution duration",
+        "value": 9285.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.open_requests",
+        "metric": "not_closed_requests",
+        "scope": "prepared extract with a valid creation date",
+        "value": 709.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:26:38.523116+00:00",
+        "elapsed_ms": 0.07770000956952572,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 944.3567999405786
+    }
+  },
+  "agent": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "ad400d127cb945f5a8a4716cb4252a87",
+    "generated_at": "2026-10-28T10:27:00.178995+00:00",
+    "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?",
+    "model": "granite3.3:2b",
+    "data_kind": "real",
+    "status": "validated",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "ad400d127cb945f5a8a4716cb4252a87-001",
+        "category": "data_quality",
+        "finding": "descriptive",
+        "insight": "Les demandes ouvertes et les clôtures sans durée valide doivent être distinguées dans l'analyse. Les preuves distinguent les demandes non clôturées des clôtures sans durée valide. Les délais non valides ne sont pas remplacés par zéro.",
+        "recommendation": "Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.",
+        "evidence_fact_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "limitation_codes": [
+          "missing_data",
+          "no_cause",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "quality.sample_rows",
+        "metric": "sample_rows",
+        "scope": "NYC 311 prepared extract",
+        "value": 10000.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.valid_resolution_days",
+        "metric": "valid_resolution_days",
+        "scope": "closed requests with valid resolution duration",
+        "value": 9285.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.open_requests",
+        "metric": "not_closed_requests",
+        "scope": "prepared extract with a valid creation date",
+        "value": 709.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:26:39.390766+00:00",
+        "elapsed_ms": 0.04509999416768551,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "model_preflight": 24.66270001605153,
+      "data_validation": 793.7631999375299,
+      "inference_attempt_1": 20771.626799949445,
+      "ollama_load_duration_attempt_1": 5.6347,
+      "ollama_prompt_eval_duration_attempt_1": 145.391,
+      "ollama_eval_duration_attempt_1": 20546.583,
+      "validation_attempt_1": 2.6354999281466007,
+      "total": 21648.342699976638
+    }
+  },
+  "agent_wall_time_ms": 21656.382300076075,
+  "execution": {
+    "scenario_id": "missing_data",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\n  \"finding\": \"descriptive\",\n  \"evidence_ids\": [\"quality.sample_rows\", \"quality.valid_resolution_days\", \"quality.missing_resolution_days\", \"quality.open_requests\"],\n  \"insight\": \"Les demandes ouvertes et les clôtures sans durée valide doivent être distinguées dans l'analyse.\",\n  \"recommendation\": \"Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.\",\n  \"limitation_codes\": [\"missing_data\", \"no_cause\", \"nonrandom_sample\", \"partial_month\", \"sample_only\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 24.66270001605153,
+      "data_validation": 793.7631999375299,
+      "inference_attempt_1": 20771.626799949445,
+      "ollama_load_duration_attempt_1": 5.6347,
+      "ollama_prompt_eval_duration_attempt_1": 145.391,
+      "ollama_eval_duration_attempt_1": 20546.583,
+      "validation_attempt_1": 2.6354999281466007,
+      "total": 21648.342699976638
+    },
+    "evidence_used": [
+      "quality.sample_rows",
+      "quality.valid_resolution_days",
+      "quality.missing_resolution_days",
+      "quality.open_requests"
+    ],
+    "audit_dir": "audit\\ad400d127cb945f5a8a4716cb4252a87"
+  },
+  "factual_metrics": {
+    "expected_metric_facts": 1,
+    "expected_metric_present": true,
+    "missing_metrics": [],
+    "source_and_denominator_complete": true,
+    "invalid_fact_ids": []
+  }
+}

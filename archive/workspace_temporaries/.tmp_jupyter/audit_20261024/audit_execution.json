@@ -1,0 +1,25 @@
+{
+  "python": "D:\\Analyst_Agent\\.venv\\Scripts\\python.exe",
+  "stage": "D:\\Analyst_Agent\\.tmp_jupyter\\audit_20261024",
+  "notebooks": [
+    {
+      "name": "01_etl_kpi.ipynb",
+      "syntax_errors": [],
+      "skipped_cells": [],
+      "status": "passed",
+      "executed_code_cells": 13,
+      "errors": []
+    },
+    {
+      "name": "02_bi_analyst.ipynb",
+      "syntax_errors": [],
+      "skipped_cells": [
+        25
+      ],
+      "status": "passed",
+      "executed_code_cells": 12,
+      "errors": []
+    }
+  ],
+  "existing_files_unchanged": true
+}

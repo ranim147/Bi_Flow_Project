@@ -1,0 +1,246 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "f9d97a99537645e4b77c9010427d0659",
+  "generated_at": "2026-10-26T14:06:32.648658+00:00",
+  "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "insufficient_data",
+  "finding": "insufficient_history",
+  "insights": [
+    {
+      "insight_id": "f9d97a99537645e4b77c9010427d0659-baseline",
+      "category": "summary",
+      "finding": "insufficient_history",
+      "insight": "Synthèse déterministe des faits calculés; aucune conclusion causale n’est établie.",
+      "recommendation": "Aucune recommandation opérationnelle forte n’est justifiée; compléter ou vérifier les données.",
+      "evidence_fact_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "kpi.request_volume",
+        "kpi.mean_resolution_days",
+        "kpi.median_resolution_days",
+        "kpi.closure_rate",
+        "delay.borough.STATEN ISLAND"
+      ],
+      "limitation_codes": [
+        "closed_only",
+        "insufficient_history",
+        "missing_data",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "partial_month",
+        "population_not_sample",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "quality.sample_rows",
+      "metric": "sample_rows",
+      "scope": "NYC 311 prepared extract",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "quality.valid_resolution_days",
+      "metric": "valid_resolution_days",
+      "scope": "closed requests with valid resolution duration",
+      "value": 9285.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "prepared extract",
+      "value": 715.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "kpi.request_volume",
+      "metric": "request_volume",
+      "scope": "prepared NYC 311 sample",
+      "value": 10000.0,
+      "unit": "demandes",
+      "n": 10000,
+      "source": "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "kpi.mean_resolution_days",
+      "metric": "mean_resolution_days",
+      "scope": "prepared NYC 311 sample",
+      "value": 4.106830597189813,
+      "unit": "jours calendaires",
+      "n": 9285,
+      "source": "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "kpi.median_resolution_days",
+      "metric": "median_resolution_days",
+      "scope": "prepared NYC 311 sample",
+      "value": 0.1819560185185185,
+      "unit": "jours calendaires",
+      "n": 9285,
+      "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "kpi.closure_rate",
+      "metric": "closure_rate",
+      "scope": "prepared NYC 311 sample",
+      "value": 92.91,
+      "unit": "%",
+      "n": 10000,
+      "source": "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "delay.borough.STATEN ISLAND",
+      "metric": "median_resolution_days",
+      "scope": "borough=STATEN ISLAND",
+      "value": 0.33226851851851846,
+      "unit": "calendar days",
+      "n": 386,
+      "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    }
+  ],
+  "limitations": [
+    "Les délais concernent les demandes clôturées avec durée valide.",
+    "L’historique est trop court pour détecter une anomalie mensuelle.",
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+    "data/processed/nyc311_clean.csv",
+    "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:06:31.779372+00:00",
+      "elapsed_ms": 0.11549994815140963,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "summarize_kpis",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:06:31.781593+00:00",
+      "elapsed_ms": 1.070900005288422,
+      "evidence_ids": [
+        "kpi.request_volume",
+        "kpi.mean_resolution_days",
+        "kpi.median_resolution_days",
+        "kpi.closure_rate"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "compare_groups",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:06:31.783713+00:00",
+      "elapsed_ms": 119.64590003481135,
+      "evidence_ids": [
+        "delay.borough.STATEN ISLAND",
+        "delay.borough.BROOKLYN",
+        "delay.borough.MANHATTAN",
+        "delay.borough.BRONX",
+        "delay.borough.QUEENS",
+        "delay.borough.peer_p75",
+        "delay.complaint_type.APPLIANCE",
+        "delay.complaint_type.Sidewalk Condition",
+        "delay.complaint_type.Maintenance or Facility",
+        "delay.complaint_type.Water System",
+        "delay.complaint_type.Vendor Enforcement",
+        "delay.complaint_type.peer_p75"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "analyze_trend",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:06:31.906053+00:00",
+      "elapsed_ms": 7.534900039900094,
+      "evidence_ids": [
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "detect_anomalies",
+      "parameters": {
+        "question": "Quels sont les effets des données manquantes sur l'analyse des délais ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T14:06:31.915464+00:00",
+      "elapsed_ms": 731.6711000166833,
+      "evidence_ids": [],
+      "detail": "insufficient_history"
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "total": 1724.4838000042364
+  }
+}

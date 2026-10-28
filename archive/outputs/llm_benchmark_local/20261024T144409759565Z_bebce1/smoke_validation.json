@@ -1,0 +1,27 @@
+{
+  "purpose": "technical_smoke_test_one_case_per_model_not_selection",
+  "output": "D:\\Analyst_Agent\\outputs\\llm_benchmark_local\\20261024T144409759565Z_bebce1",
+  "results": [
+    {
+      "model": "qwen3:4b",
+      "case_id": "BF-01",
+      "status": "success",
+      "latency_seconds": 121.86086590000195,
+      "error": ""
+    },
+    {
+      "model": "gemma3:4b",
+      "case_id": "BF-01",
+      "status": "warmup_timeout",
+      "latency_seconds": null,
+      "error": "timed out"
+    },
+    {
+      "model": "granite3.3:2b",
+      "case_id": "BF-01",
+      "status": "success",
+      "latency_seconds": 101.86488410001039,
+      "error": ""
+    }
+  ]
+}

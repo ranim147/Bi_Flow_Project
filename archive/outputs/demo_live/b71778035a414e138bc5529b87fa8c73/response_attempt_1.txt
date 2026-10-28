@@ -1,0 +1,7 @@
+{
+  "finding": "descriptive",
+  "evidence_ids": ["delay.borough.STATEN ISLAND", "delay.borough.BROOKLYN", "delay.borough.MANHATTAN", "delay.borough.BRONX", "delay.borough.QUEENS"],
+  "insight": "Les écarts observés entre groupes ne suffisent pas à justifier une décision opérationnelle.",
+  "recommendation": "Vérifier la composition des dossiers et la comparabilité des groupes avant toute action.",
+  "limitation_codes": ["closed_only", "missing_data", "no_cause", "no_sla", "nonrandom_sample", "partial_month", "sample_only", "small_sample"]
+}

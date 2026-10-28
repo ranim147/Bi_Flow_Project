@@ -1,0 +1,77 @@
+{
+  "excluded_from_genuine_model_metrics": true,
+  "genuine_model_run": false,
+  "model_response_count": 2,
+  "json_valid_responses": 2,
+  "correct_reference_responses": 0,
+  "validation_response_count": 2,
+  "initial_validated": false,
+  "validated_after_correction": false,
+  "correction_requests": 1,
+  "fallback": true,
+  "failed": false,
+  "justified_insufficient_data": false,
+  "rejected_responses": 2,
+  "blocked_unverified_assertion_flags": 10,
+  "blocked_flag_details": [
+    {
+      "problem_id": "main",
+      "attempt": 1,
+      "category": "unsupported_causal_text"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 1,
+      "category": "unsupported_numeric_text"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 1,
+      "category": "unsupported_recommendation"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 1,
+      "category": "unverified_interpretation"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 1,
+      "category": "unverified_reference"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 2,
+      "category": "unsupported_causal_text"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 2,
+      "category": "unsupported_numeric_text"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 2,
+      "category": "unsupported_recommendation"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 2,
+      "category": "unverified_interpretation"
+    },
+    {
+      "problem_id": "main",
+      "attempt": 2,
+      "category": "unverified_reference"
+    }
+  ],
+  "validation_error_histogram": {
+    "unknown_evidence_fact_ids": 2,
+    "required_evidence_missing": 2,
+    "unverified_numeric_text": 2,
+    "possible_unsupported_causal_claim": 2,
+    "insight_outside_verified_language": 2,
+    "unsupported_recommendation": 2,
+    "context_schema_violation": 2
+  }
+}

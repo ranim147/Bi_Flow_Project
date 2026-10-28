@@ -1,0 +1,454 @@
+[
+  {
+    "kpi_name": "request_volume",
+    "definition": "Nombre de demandes de la cohorte préparée",
+    "formula": "count(unique nonmissing unique_key)",
+    "source_columns": [
+      "unique_key"
+    ],
+    "unit": "demandes",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "closed_request_count",
+    "definition": "Clôtures observées et cohérentes à l'extraction",
+    "formula": "sum(state == 'closed')",
+    "source_columns": [
+      "state",
+      "created_date",
+      "closed_date"
+    ],
+    "unit": "demandes",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "open_request_count",
+    "definition": "Demandes ouvertes observables de la cohorte",
+    "formula": "sum(state == 'open')",
+    "source_columns": [
+      "state"
+    ],
+    "unit": "demandes",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "inconsistent_request_count",
+    "definition": "Demandes aux dates ou états non interprétables",
+    "formula": "sum(state == 'inconsistent')",
+    "source_columns": [
+      "state"
+    ],
+    "unit": "demandes",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "closure_rate",
+    "definition": "Part clôturée des créations valides de la cohorte à la date d'extraction",
+    "formula": "100 * closed_request_count / count(created_date nonmissing)",
+    "source_columns": [
+      "state",
+      "created_date"
+    ],
+    "unit": "%",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "mean_resolution_days",
+    "definition": "Délai calendaire moyen observé des clôtures valides",
+    "formula": "mean((closed_utc - created_utc).total_seconds / 86400), valid only",
+    "source_columns": [
+      "created_date",
+      "closed_date",
+      "resolution_days"
+    ],
+    "unit": "jours calendaires",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "median_resolution_days",
+    "definition": "Médiane exacte des mêmes durées valides",
+    "formula": "median(resolution_days), not a mean of group medians",
+    "source_columns": [
+      "resolution_days"
+    ],
+    "unit": "jours calendaires",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "invalid_or_missing_resolution_rate",
+    "definition": "Part sans durée valide, y compris demandes ouvertes",
+    "formula": "100 * (request_volume - valid_delay_n) / request_volume",
+    "source_columns": [
+      "resolution_days"
+    ],
+    "unit": "%",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "monthly_request_volume",
+    "definition": "Volume mensuel officiel, distinct du détail échantillonné",
+    "formula": "official API count(*) grouped by local creation month",
+    "source_columns": [
+      "created_date"
+    ],
+    "unit": "demandes",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "delay_distribution",
+    "definition": "Quantiles exacts et histogramme des durées valides",
+    "formula": "quantile(.05,.25,.5,.75,.9,.95,.99); disjoint histogram bins",
+    "source_columns": [
+      "resolution_days"
+    ],
+    "unit": "jours calendaires",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "sample_backlog",
+    "definition": "Stock reconstitué de la seule cohorte échantillonnée",
+    "formula": "count(created_date < month_end AND (closed_date IS NULL OR closed_date >= month_end)), coherent rows",
+    "source_columns": [
+      "created_date",
+      "closed_date",
+      "state"
+    ],
+    "unit": "demandes échantillonnées",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  },
+  {
+    "kpi_name": "open_age",
+    "definition": "Ancienneté du stock reconstitué, non de toute la ville",
+    "formula": "quantile((snapshot_utc-created_utc)/86400, .5,.9)",
+    "source_columns": [
+      "created_date",
+      "closed_date"
+    ],
+    "unit": "jours calendaires",
+    "period": {
+      "start": "2026-06-01T00:00:00",
+      "end_exclusive": "2026-10-18T00:00:00",
+      "as_of": "2026-10-17T20:09:21.151537+00:00",
+      "timezone": "UTC"
+    },
+    "allowed_dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_month",
+      "closed_month"
+    ],
+    "inclusions": "Unique keyed cohort; delay KPI: observable valid dates, nonnegative elapsed duration <=3650 days",
+    "exclusions": "Missing keys and repeated keys excluded from clean rows; invalid/missing durations excluded only from delay denominators; n<30 not ranked",
+    "limitations": [
+      "Unweighted nonrandom systematic sample for detailed durations; no population inference",
+      "Monthly cohort closure rate changes with follow-up time",
+      "Monthly official volumes are not sample volumes",
+      "Agency case mix and missing rare strata limit comparisons",
+      "No causal, staffing or SLA conclusion; backlog excludes pre-cohort requests and unobserved reopenings"
+    ],
+    "data_version": "legacy_windows_v1",
+    "semantic_version": "kpi-2.0",
+    "provenance": {
+      "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+      "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e"
+    }
+  }
+]

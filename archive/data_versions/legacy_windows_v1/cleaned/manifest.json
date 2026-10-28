@@ -1,0 +1,46 @@
+{
+  "version": "etl-2.0",
+  "generated_at": "2026-10-28T19:22:47.147160+00:00",
+  "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+  "profile_sha256": "c65fa7cee895d0807d86623b25d1637d2f1ad89e2ec9322ca855e0ea973e0cdb",
+  "policy": {
+    "version": "etl-2.0",
+    "minimum_group_n": 30,
+    "maximum_resolution_days": 3650,
+    "review_resolution_days": 90,
+    "max_missing_key_fraction": 0.01,
+    "max_invalid_creation_fraction": 0.01,
+    "max_temporal_conflict_fraction": 0.01,
+    "duplicate_rule": "First occurrence in sorted immutable raw part order; all later occurrences retained in quarantine"
+  },
+  "counts": {
+    "input_rows": 8000,
+    "cleaned_rows": 8000,
+    "excluded_rows": 0,
+    "review_rows": 21
+  },
+  "parts": [
+    {
+      "path": "cleaned/part-00000.parquet",
+      "rows": 5000,
+      "sha256": "008094a1792b5b8823c7f88920647c77700aaf0c27b7d5e0d8b4763531cfbdb2"
+    },
+    {
+      "path": "cleaned/part-00001.parquet",
+      "rows": 3000,
+      "sha256": "4753f039ec0a3e0f74b89b1321b75b463947f49845d2c6746afa3161e52fa518"
+    }
+  ],
+  "quarantine_parts": [
+    {
+      "path": "quarantine/part-00000.parquet",
+      "rows": 13,
+      "sha256": "72b3d447b30e4084b8d6673c47b8cee8cb36c2f5efad59f6ab90e196d36f37ea"
+    },
+    {
+      "path": "quarantine/part-00001.parquet",
+      "rows": 8,
+      "sha256": "3f215d725da55c90e3850871569105582220ce3e60d25bea0a0731d06b1e5448"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "plan": {
+    "intent": "comparison",
+    "metric": "closure_rate",
+    "dimensions": [
+      "agency"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": true,
+    "operation_sequence": [
+      "filter_scope",
+      "compare_scoped_groups"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {}
+  },
+  "sections": [
+    {
+      "key": "comparison_agency",
+      "text": "Comparaison descriptive limitée à {} par agency : {\"agency\": \"DOE\"} : taux de clôture=100.000000, n=107; {\"agency\": \"DOB\"} : taux de clôture=99.987511, n=8007; {\"agency\": \"NYPD\"} : taux de clôture=99.973147, n=119168; {\"agency\": \"DSNY\"} : taux de clôture=99.150978, n=24381; {\"agency\": \"DEP\"} : taux de clôture=98.735839, n=14476; {\"agency\": \"HPD\"} : taux de clôture=98.719823, n=56086; {\"agency\": \"DOT\"} : taux de clôture=96.185728, n=16648; {\"agency\": \"DCWP\"} : taux de clôture=95.000000, n=1560; {\"agency\": \"DOHMH\"} : taux de clôture=94.316770, n=6440; {\"agency\": \"OOS\"} : taux de clôture=93.548387, n=93; {\"agency\": \"DPR\"} : taux de clôture=83.810888, n=9772; {\"agency\": \"TLC\"} : taux de clôture=77.761939, n=2806; {\"agency\": \"EDC\"} : taux de clôture=71.073298, n=2292; {\"agency\": \"DHS\"} : taux de clôture=69.727248, n=3703.",
+      "evidence_ids": [
+        "plan.b9ed360dd998ee7f",
+        "plan.351a9b45ec9aa442",
+        "plan.7bfba593ea83df1e",
+        "plan.c3cd3c8dc28d7667",
+        "plan.faaa2e0e689f3a71",
+        "plan.80857e5839882d83",
+        "plan.73566f8a453f415a",
+        "plan.5d7da00a098093f7",
+        "plan.0546961e7396a9aa",
+        "plan.bc6069ab0147a435",
+        "plan.9fe36dee7362b867",
+        "plan.879227c7519b04a7",
+        "plan.82b80d4db5128f58",
+        "plan.9fd6d15b5dff255d"
+      ],
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "category": "comparison"
+    }
+  ],
+  "tables": {
+    "comparison_agency": [
+      {
+        "filters": {
+          "agency": "DOE"
+        },
+        "value": 100.0,
+        "n": 107,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "NYC311-PRD"
+        },
+        "value": 100.0,
+        "n": 9,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "agency": "DOB"
+        },
+        "value": 99.98751092793806,
+        "n": 8007,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "NYPD"
+        },
+        "value": 99.97314715359828,
+        "n": 119168,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DSNY"
+        },
+        "value": 99.15097822074566,
+        "n": 24381,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DEP"
+        },
+        "value": 98.73583862945566,
+        "n": 14476,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "HPD"
+        },
+        "value": 98.71982312876654,
+        "n": 56086,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DOT"
+        },
+        "value": 96.18572801537722,
+        "n": 16648,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DCWP"
+        },
+        "value": 95.0,
+        "n": 1560,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DOHMH"
+        },
+        "value": 94.3167701863354,
+        "n": 6440,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "OOS"
+        },
+        "value": 93.54838709677419,
+        "n": 93,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "OTI"
+        },
+        "value": 88.0,
+        "n": 25,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "agency": "DPR"
+        },
+        "value": 83.810888252149,
+        "n": 9772,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "TLC"
+        },
+        "value": 77.76193870277976,
+        "n": 2806,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "EDC"
+        },
+        "value": 71.07329842931937,
+        "n": 2292,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "agency": "DHS"
+        },
+        "value": 69.72724817715365,
+        "n": 3703,
+        "eligible": true
+      }
+    ]
+  },
+  "limitations": [
+    "case_mix",
+    "closed_only",
+    "cohort_followup",
+    "no_cause",
+    "no_sla",
+    "nonrandom_sample",
+    "sample_only",
+    "small_sample"
+  ],
+  "decision": "answer",
+  "finding": "descriptive",
+  "complete_periods": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "primary_evidence_ids": [
+    "plan.b9ed360dd998ee7f",
+    "plan.879227c7519b04a7",
+    "plan.82b80d4db5128f58",
+    "plan.9fd6d15b5dff255d",
+    "plan.351a9b45ec9aa442",
+    "plan.7bfba593ea83df1e"
+  ]
+}

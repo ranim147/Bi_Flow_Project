@@ -1,0 +1,226 @@
+[
+  {
+    "scenario_id": "borough_resolution_delays",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\n  \"finding\": \"descriptive\",\n  \"evidence_ids\": [\"delay.borough.STATEN ISLAND\", \"delay.borough.BROOKLYN\", \"delay.borough.MANHATTAN\", \"delay.borough.BRONX\", \"delay.borough.QUEENS\"],\n  \"insight\": \"La comparaison des groupes est descriptive; la comparabilité des dossiers reste à vérifier.\",\n  \"recommendation\": \"Examiner les groupes concernés et vérifier la comparabilité des dossiers avant toute action.\",\n  \"limitation_codes\": [\"closed_only\", \"missing_data\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"partial_month\", \"sample_only\", \"small_sample\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 21.577399922534823,
+      "data_validation": 362.6907999860123,
+      "inference_attempt_1": 25376.969899982214,
+      "ollama_load_duration_attempt_1": 7.6844,
+      "ollama_prompt_eval_duration_attempt_1": 345.38,
+      "ollama_eval_duration_attempt_1": 25014.263,
+      "validation_attempt_1": 2.1777000511065125,
+      "total": 25927.560099982657
+    },
+    "evidence_used": [
+      "delay.borough.STATEN ISLAND",
+      "delay.borough.BROOKLYN",
+      "delay.borough.MANHATTAN",
+      "delay.borough.BRONX",
+      "delay.borough.QUEENS",
+      "quality.missing_resolution_days",
+      "quality.small_delay_groups.borough"
+    ],
+    "audit_dir": "audit\\877b6d7aa97c458699fdd9356171dba4"
+  },
+  {
+    "scenario_id": "complaint_type_comparison",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\"finding\": \"descriptive\", \"evidence_ids\": [\"delay.complaint_type.APPLIANCE\", \"delay.complaint_type.Sidewalk Condition\", \"delay.complaint_type.Maintenance or Facility\", \"delay.complaint_type.Water System\", \"delay.complaint_type.Vendor Enforcement\", \"volume.complaint_type.Illegal Parking\", \"volume.complaint_type.Noise - Residential\", \"volume.complaint_type.Noise - Street/Sidewalk\"], \"insight\": \"Les écarts observés entre groupes ne suffisent pas à justifier une décision opérationnelle.\", \"recommendation\": \"Vérifier la composition des dossiers et la comparabilité des groupes avant toute action.\", \"limitation_codes\": [\"closed_only\", \"missing_data\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"partial_month\", \"sample_only\", \"small_sample\"]}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 67.52709997817874,
+      "data_validation": 772.5971000036225,
+      "inference_attempt_1": 41079.38569993712,
+      "ollama_load_duration_attempt_1": 15.3505,
+      "ollama_prompt_eval_duration_attempt_1": 232.652,
+      "ollama_eval_duration_attempt_1": 40696.992,
+      "validation_attempt_1": 3.8846000097692013,
+      "total": 42145.83989989478
+    },
+    "evidence_used": [
+      "delay.complaint_type.APPLIANCE",
+      "delay.complaint_type.Sidewalk Condition",
+      "delay.complaint_type.Maintenance or Facility",
+      "delay.complaint_type.Water System",
+      "delay.complaint_type.Vendor Enforcement",
+      "volume.complaint_type.Illegal Parking",
+      "volume.complaint_type.Noise - Residential",
+      "volume.complaint_type.Noise - Street/Sidewalk",
+      "quality.missing_resolution_days",
+      "quality.small_delay_groups.complaint_type"
+    ],
+    "audit_dir": "audit\\dbf02f9f1682472a9c1e9caac3a84078"
+  },
+  {
+    "scenario_id": "monthly_anomaly",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "initial_response": "{\n  \"finding\": \"insufficient_history\",\n  \"evidence_ids\": [\"history.trend.complete_periods\", \"trend.change_pct.2026-07\", \"trend.change_pct.2026-08\", \"trend.change_pct.2026-09\", \"history.anomaly.complete_periods\"],\n  \"insight\": \"L'historique complet est insuffisant pour conclure sur le signal temporel demandé.\",\n  \"recommendation\": \"Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.\",\n  \"limitation_codes\": [\"insufficient_history\", \"missing_data\", \"no_cause\", \"nonrandom_sample\", \"partial_month\", \"population_not_sample\", \"sample_only\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 61.08829996082932,
+      "data_validation": 1318.451900035143,
+      "inference_attempt_1": 23054.07500010915,
+      "ollama_load_duration_attempt_1": 8.4727,
+      "ollama_prompt_eval_duration_attempt_1": 1758.762,
+      "ollama_eval_duration_attempt_1": 21192.92,
+      "validation_attempt_1": 2.800700021907687,
+      "total": 26333.74199992977
+    },
+    "evidence_used": [
+      "history.trend.complete_periods",
+      "trend.change_pct.2026-07",
+      "trend.change_pct.2026-08",
+      "trend.change_pct.2026-09",
+      "history.anomaly.complete_periods",
+      "quality.missing_resolution_days"
+    ],
+    "audit_dir": "audit\\2f28a2b3adde4f7ba301b8fdad7d7ebc"
+  },
+  {
+    "scenario_id": "steering_committee",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\"finding\": \"descriptive\", \"evidence_ids\": [\"kpi.request_volume\", \"kpi.mean_resolution_days\", \"kpi.median_resolution_days\", \"kpi.closure_rate\"], \"insight\": \"Ces indicateurs décrivent l'extrait préparé et doivent être présentés avec leurs dénominateurs.\", \"recommendation\": \"Présenter ces KPI avec leur population, leur dénominateur et leurs limites d'échantillonnage.\", \"limitation_codes\": [\"closed_only\", \"missing_data\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"partial_month\", \"sample_only\"]}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 122.52930004615337,
+      "data_validation": 1244.456599932164,
+      "inference_attempt_1": 22636.458500055596,
+      "ollama_load_duration_attempt_1": 11.1478,
+      "ollama_prompt_eval_duration_attempt_1": 167.084,
+      "ollama_eval_duration_attempt_1": 22354.305,
+      "validation_attempt_1": 1.3416999718174338,
+      "total": 24131.65949995164
+    },
+    "evidence_used": [
+      "kpi.request_volume",
+      "kpi.mean_resolution_days",
+      "kpi.median_resolution_days",
+      "kpi.closure_rate",
+      "quality.missing_resolution_days"
+    ],
+    "audit_dir": "audit\\143676203ee1402b8199b05cd03ba744"
+  },
+  {
+    "scenario_id": "missing_data",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\n  \"finding\": \"descriptive\",\n  \"evidence_ids\": [\"quality.sample_rows\", \"quality.valid_resolution_days\", \"quality.missing_resolution_days\", \"quality.open_requests\"],\n  \"insight\": \"Les demandes ouvertes et les clôtures sans durée valide doivent être distinguées dans l'analyse.\",\n  \"recommendation\": \"Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.\",\n  \"limitation_codes\": [\"missing_data\", \"no_cause\", \"nonrandom_sample\", \"partial_month\", \"sample_only\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 32.53810002934188,
+      "data_validation": 1258.3720999537036,
+      "inference_attempt_1": 20989.923499990255,
+      "ollama_load_duration_attempt_1": 19.2428,
+      "ollama_prompt_eval_duration_attempt_1": 240.574,
+      "ollama_eval_duration_attempt_1": 20625.395,
+      "validation_attempt_1": 1.5953000402078032,
+      "total": 22413.725599995814
+    },
+    "evidence_used": [
+      "quality.sample_rows",
+      "quality.valid_resolution_days",
+      "quality.missing_resolution_days",
+      "quality.open_requests"
+    ],
+    "audit_dir": "audit\\70fa572428ea45a2ab05f15d4ab0251a"
+  },
+  {
+    "scenario_id": "insufficient_history",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "initial_response": "{\n  \"finding\": \"insufficient_history\",\n  \"evidence_ids\": [\"history.trend.complete_periods\", \"trend.change_pct.2026-07\", \"trend.change_pct.2026-08\", \"trend.change_pct.2026-09\", \"history.anomaly.complete_periods\"],\n  \"insight\": \"L'historique complet est insuffisant pour conclure sur le signal temporel demandé.\",\n  \"recommendation\": \"Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.\",\n  \"limitation_codes\": [\"insufficient_history\", \"missing_data\", \"no_cause\", \"nonrandom_sample\", \"partial_month\", \"population_not_sample\", \"sample_only\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 35.49439995549619,
+      "data_validation": 573.1268000090495,
+      "inference_attempt_1": 18024.64920002967,
+      "ollama_load_duration_attempt_1": 3.5403,
+      "ollama_prompt_eval_duration_attempt_1": 1655.023,
+      "ollama_eval_duration_attempt_1": 16291.758,
+      "validation_attempt_1": 3.560699988156557,
+      "total": 19529.804899939336
+    },
+    "evidence_used": [
+      "history.trend.complete_periods",
+      "trend.change_pct.2026-07",
+      "trend.change_pct.2026-08",
+      "trend.change_pct.2026-09",
+      "history.anomaly.complete_periods",
+      "quality.missing_resolution_days"
+    ],
+    "audit_dir": "audit\\8a0dab06a6e249fd9c60719131295c70"
+  }
+]

@@ -1,0 +1,805 @@
+{
+  "passed": true,
+  "errors": [],
+  "oracle": {
+    "winner": "STATEN ISLAND",
+    "ranking": [
+      {
+        "borough": "STATEN ISLAND",
+        "median": 0.6556770833333334,
+        "count": 9874
+      },
+      {
+        "borough": "BRONX",
+        "median": 0.5054108796296296,
+        "count": 55022
+      },
+      {
+        "borough": "MANHATTAN",
+        "median": 0.42180555555555554,
+        "count": 52097
+      },
+      {
+        "borough": "BROOKLYN",
+        "median": 0.2607291666666667,
+        "count": 79395
+      },
+      {
+        "borough": "QUEENS",
+        "median": 0.19266203703703705,
+        "count": 62712
+      }
+    ],
+    "drilldowns": {
+      "complaint_type": [
+        {
+          "complaint_type": "ABANDONED VEHICLE",
+          "median": 0.059131944444444445,
+          "count": 374
+        },
+        {
+          "complaint_type": "ADOPT-A-BASKET",
+          "median": 683.9680555555556,
+          "count": 1
+        },
+        {
+          "complaint_type": "AIR QUALITY",
+          "median": 2.1552083333333334,
+          "count": 20
+        },
+        {
+          "complaint_type": "ANIMAL FACILITY - NO PERMIT",
+          "median": 10.142013888888888,
+          "count": 2
+        },
+        {
+          "complaint_type": "ANIMAL IN A PARK",
+          "median": 0.018414351851851852,
+          "count": 18
+        },
+        {
+          "complaint_type": "ANIMAL-ABUSE",
+          "median": 0.04583333333333333,
+          "count": 53
+        },
+        {
+          "complaint_type": "APPLIANCE",
+          "median": 8.24228587962963,
+          "count": 26
+        },
+        {
+          "complaint_type": "ASBESTOS",
+          "median": 0.4409722222222222,
+          "count": 3
+        },
+        {
+          "complaint_type": "BEACH/POOL/SAUNA COMPLAINT",
+          "median": 0.5865277777777778,
+          "count": 4
+        },
+        {
+          "complaint_type": "BEST/SITE SAFETY",
+          "median": 0.0,
+          "count": 2
+        },
+        {
+          "complaint_type": "BIKE RACK CONDITION",
+          "median": 8.153703703703703,
+          "count": 1
+        },
+        {
+          "complaint_type": "BIKE/ROLLER/SKATE",
+          "median": 0.14552662037037037,
+          "count": 2
+        },
+        {
+          "complaint_type": "BIKE/ROLLER/SKATE CHRONIC",
+          "median": 0.036626157407407406,
+          "count": 12
+        },
+        {
+          "complaint_type": "BLOCKED DRIVEWAY",
+          "median": 0.0571412037037037,
+          "count": 361
+        },
+        {
+          "complaint_type": "BOILERS",
+          "median": 8.366875,
+          "count": 5
+        },
+        {
+          "complaint_type": "BROKEN PARKING METER",
+          "median": 0.6576041666666667,
+          "count": 4
+        },
+        {
+          "complaint_type": "BUILDING/USE",
+          "median": 51.642361111111114,
+          "count": 113
+        },
+        {
+          "complaint_type": "BUS STOP SHELTER COMPLAINT",
+          "median": 0.7178877314814816,
+          "count": 6
+        },
+        {
+          "complaint_type": "BUS STOP SHELTER PLACEMENT",
+          "median": 1.6409837962962963,
+          "count": 1
+        },
+        {
+          "complaint_type": "CANNABIS RETAILER",
+          "median": 40.07899305555556,
+          "count": 3
+        },
+        {
+          "complaint_type": "COMMERCIAL DISPOSAL COMPLAINT",
+          "median": 0.8461226851851852,
+          "count": 1
+        },
+        {
+          "complaint_type": "CONSTRUCTION SAFETY ENFORCEMENT",
+          "median": 0.0,
+          "count": 2
+        },
+        {
+          "complaint_type": "CONSUMER COMPLAINT",
+          "median": 4.404872685185185,
+          "count": 47
+        },
+        {
+          "complaint_type": "CURB CONDITION",
+          "median": 12.18866898148148,
+          "count": 25
+        },
+        {
+          "complaint_type": "DAMAGED TREE",
+          "median": 2.957048611111111,
+          "count": 301
+        },
+        {
+          "complaint_type": "DAY CARE",
+          "median": 231.80266203703704,
+          "count": 6
+        },
+        {
+          "complaint_type": "DEAD ANIMAL",
+          "median": 2.0234027777777777,
+          "count": 89
+        },
+        {
+          "complaint_type": "DEAD/DYING TREE",
+          "median": 25.891550925925927,
+          "count": 93
+        },
+        {
+          "complaint_type": "DERELICT VEHICLES",
+          "median": 0.6402777777777777,
+          "count": 131
+        },
+        {
+          "complaint_type": "DIRTY CONDITION",
+          "median": 1.137175925925926,
+          "count": 275
+        },
+        {
+          "complaint_type": "DISORDERLY YOUTH",
+          "median": 0.03695601851851852,
+          "count": 1
+        },
+        {
+          "complaint_type": "DOOR/WINDOW",
+          "median": 11.815405092592592,
+          "count": 56
+        },
+        {
+          "complaint_type": "DRINKING",
+          "median": 0.04790509259259259,
+          "count": 6
+        },
+        {
+          "complaint_type": "DRINKING WATER",
+          "median": 7.826226851851851,
+          "count": 2
+        },
+        {
+          "complaint_type": "DRUG ACTIVITY",
+          "median": 0.04753472222222222,
+          "count": 11
+        },
+        {
+          "complaint_type": "DUMPSTER COMPLAINT",
+          "median": 1.734351851851852,
+          "count": 10
+        },
+        {
+          "complaint_type": "ELECTRIC",
+          "median": 6.011539351851852,
+          "count": 56
+        },
+        {
+          "complaint_type": "ELECTRICAL",
+          "median": 4.600416666666667,
+          "count": 11
+        },
+        {
+          "complaint_type": "ELECTRONICS WASTE APPOINTMENT",
+          "median": 1.8840277777777779,
+          "count": 185
+        },
+        {
+          "complaint_type": "ELEVATOR",
+          "median": 18.201469907407407,
+          "count": 23
+        },
+        {
+          "complaint_type": "EMERGENCY RESPONSE TEAM (ERT)",
+          "median": 5.697413194444444,
+          "count": 20
+        },
+        {
+          "complaint_type": "ENCAMPMENT",
+          "median": 0.046238425925925926,
+          "count": 9
+        },
+        {
+          "complaint_type": "FLOORING/STAIRS",
+          "median": 9.805671296296296,
+          "count": 43
+        },
+        {
+          "complaint_type": "FOOD ESTABLISHMENT",
+          "median": 60.01965277777778,
+          "count": 31
+        },
+        {
+          "complaint_type": "FOOD POISONING",
+          "median": 15.845902777777777,
+          "count": 10
+        },
+        {
+          "complaint_type": "FOR HIRE VEHICLE COMPLAINT",
+          "median": 109.050625,
+          "count": 3
+        },
+        {
+          "complaint_type": "GENERAL",
+          "median": 15.92068287037037,
+          "count": 41
+        },
+        {
+          "complaint_type": "GENERAL CONSTRUCTION/PLUMBING",
+          "median": 10.473101851851851,
+          "count": 177
+        },
+        {
+          "complaint_type": "GRAFFITI",
+          "median": 0.1944212962962963,
+          "count": 59
+        },
+        {
+          "complaint_type": "HAZARDOUS MATERIAL",
+          "median": 0.2746296296296296,
+          "count": 1
+        },
+        {
+          "complaint_type": "HAZARDOUS MATERIALS",
+          "median": 0.15694444444444444,
+          "count": 8
+        },
+        {
+          "complaint_type": "HEAT/HOT WATER",
+          "median": 1.5766030092592591,
+          "count": 200
+        },
+        {
+          "complaint_type": "HIGHWAY CONDITION",
+          "median": 2.794884259259259,
+          "count": 39
+        },
+        {
+          "complaint_type": "HIGHWAY SIGN - DAMAGED",
+          "median": 4.604340277777778,
+          "count": 1
+        },
+        {
+          "complaint_type": "HOMELESS PERSON ASSISTANCE",
+          "median": 0.11476851851851852,
+          "count": 13
+        },
+        {
+          "complaint_type": "ILLEGAL ANIMAL KEPT AS PET",
+          "median": 0.0,
+          "count": 3
+        },
+        {
+          "complaint_type": "ILLEGAL ANIMAL SOLD",
+          "median": 0.0,
+          "count": 1
+        },
+        {
+          "complaint_type": "ILLEGAL DUMPING",
+          "median": 2.009502314814815,
+          "count": 135
+        },
+        {
+          "complaint_type": "ILLEGAL FIREWORKS",
+          "median": 0.027644675925925927,
+          "count": 88
+        },
+        {
+          "complaint_type": "ILLEGAL PARKING",
+          "median": 0.05310185185185185,
+          "count": 1183
+        },
+        {
+          "complaint_type": "ILLEGAL POSTING",
+          "median": 3.1841840277777775,
+          "count": 100
+        },
+        {
+          "complaint_type": "ILLEGAL TREE DAMAGE",
+          "median": 14.794409722222223,
+          "count": 30
+        },
+        {
+          "complaint_type": "INCORRECT DATA",
+          "median": 10.941226851851852,
+          "count": 1
+        },
+        {
+          "complaint_type": "INDOOR AIR QUALITY",
+          "median": 0.5926388888888889,
+          "count": 15
+        },
+        {
+          "complaint_type": "INDOOR SEWAGE",
+          "median": 20.070387731481482,
+          "count": 2
+        },
+        {
+          "complaint_type": "INDUSTRIAL WASTE",
+          "median": 0.14228009259259258,
+          "count": 7
+        },
+        {
+          "complaint_type": "INVESTIGATIONS AND DISCIPLINE (IAD)",
+          "median": 31.078587962962963,
+          "count": 1
+        },
+        {
+          "complaint_type": "LEAD",
+          "median": 1.9902777777777778,
+          "count": 44
+        },
+        {
+          "complaint_type": "LINKNYC",
+          "median": 25.10939814814815,
+          "count": 1
+        },
+        {
+          "complaint_type": "LITTER BASKET COMPLAINT",
+          "median": 1.0180381944444443,
+          "count": 6
+        },
+        {
+          "complaint_type": "LITTER BASKET REQUEST",
+          "median": 2.017795138888889,
+          "count": 14
+        },
+        {
+          "complaint_type": "LOST PROPERTY",
+          "median": 0.00755787037037037,
+          "count": 1
+        },
+        {
+          "complaint_type": "LOT CONDITION",
+          "median": 259.61953703703705,
+          "count": 3
+        },
+        {
+          "complaint_type": "MAINTENANCE OR FACILITY",
+          "median": 1.2026736111111112,
+          "count": 67
+        },
+        {
+          "complaint_type": "MISSED COLLECTION",
+          "median": 2.1847569444444446,
+          "count": 433
+        },
+        {
+          "complaint_type": "MOLD",
+          "median": 1.378587962962963,
+          "count": 3
+        },
+        {
+          "complaint_type": "MOSQUITOES",
+          "median": 0.04586226851851852,
+          "count": 2
+        },
+        {
+          "complaint_type": "NEW TREE REQUEST",
+          "median": 483.7145891203704,
+          "count": 34
+        },
+        {
+          "complaint_type": "NOISE",
+          "median": 3.765972222222222,
+          "count": 133
+        },
+        {
+          "complaint_type": "NOISE - COMMERCIAL",
+          "median": 0.034479166666666665,
+          "count": 95
+        },
+        {
+          "complaint_type": "NOISE - HELICOPTER",
+          "median": 38.69790509259259,
+          "count": 18
+        },
+        {
+          "complaint_type": "NOISE - HOUSE OF WORSHIP",
+          "median": 0.03594328703703704,
+          "count": 2
+        },
+        {
+          "complaint_type": "NOISE - PARK",
+          "median": 0.034762731481481485,
+          "count": 16
+        },
+        {
+          "complaint_type": "NOISE - RESIDENTIAL",
+          "median": 0.03706018518518518,
+          "count": 724
+        },
+        {
+          "complaint_type": "NOISE - STREET/SIDEWALK",
+          "median": 0.031828703703703706,
+          "count": 143
+        },
+        {
+          "complaint_type": "NOISE - VEHICLE",
+          "median": 0.03200231481481482,
+          "count": 91
+        },
+        {
+          "complaint_type": "NON-EMERGENCY POLICE MATTER",
+          "median": 0.05628472222222222,
+          "count": 81
+        },
+        {
+          "complaint_type": "NON-RESIDENTIAL HEAT",
+          "median": 60.01898148148148,
+          "count": 1
+        },
+        {
+          "complaint_type": "OBSTRUCTION",
+          "median": 1.5067939814814815,
+          "count": 128
+        },
+        {
+          "complaint_type": "OUTDOOR DINING",
+          "median": 13.378686342592594,
+          "count": 2
+        },
+        {
+          "complaint_type": "OUTSIDE BUILDING",
+          "median": 20.595827546296295,
+          "count": 4
+        },
+        {
+          "complaint_type": "OVERGROWN TREE/BRANCHES",
+          "median": 4.261354166666667,
+          "count": 211
+        },
+        {
+          "complaint_type": "PAINT/PLASTER",
+          "median": 6.918784722222222,
+          "count": 80
+        },
+        {
+          "complaint_type": "PANHANDLING",
+          "median": 0.07906250000000001,
+          "count": 16
+        },
+        {
+          "complaint_type": "PLUMBING",
+          "median": 8.144768518518518,
+          "count": 138
+        },
+        {
+          "complaint_type": "POISON IVY",
+          "median": 33.26442708333333,
+          "count": 4
+        },
+        {
+          "complaint_type": "REAL TIME ENFORCEMENT",
+          "median": 0.0,
+          "count": 5
+        },
+        {
+          "complaint_type": "RESIDENTIAL DISPOSAL COMPLAINT",
+          "median": 1.0662905092592592,
+          "count": 78
+        },
+        {
+          "complaint_type": "RODENT",
+          "median": 0.0,
+          "count": 79
+        },
+        {
+          "complaint_type": "ROOT/SEWER/SIDEWALK CONDITION",
+          "median": 149.6166724537037,
+          "count": 74
+        },
+        {
+          "complaint_type": "SAFETY",
+          "median": 9.757060185185185,
+          "count": 17
+        },
+        {
+          "complaint_type": "SANITATION WORKER OR VEHICLE COMPLAINT",
+          "median": 3.811608796296296,
+          "count": 33
+        },
+        {
+          "complaint_type": "SCAFFOLD SAFETY",
+          "median": 0.18828703703703703,
+          "count": 1
+        },
+        {
+          "complaint_type": "SCHOOL MAINTENANCE",
+          "median": 118.99372685185185,
+          "count": 3
+        },
+        {
+          "complaint_type": "SEASONAL COLLECTION",
+          "median": 0.7444097222222222,
+          "count": 1
+        },
+        {
+          "complaint_type": "SEWER",
+          "median": 0.31840277777777776,
+          "count": 196
+        },
+        {
+          "complaint_type": "SEWER MAINTENANCE",
+          "median": 0.14930555555555555,
+          "count": 22
+        },
+        {
+          "complaint_type": "SIDEWALK CONDITION",
+          "median": 8.04148726851852,
+          "count": 122
+        },
+        {
+          "complaint_type": "SMOKING",
+          "median": 458.8630092592593,
+          "count": 1
+        },
+        {
+          "complaint_type": "SMOKING OR VAPING",
+          "median": 42.068385416666665,
+          "count": 10
+        },
+        {
+          "complaint_type": "SNOW OR ICE",
+          "median": 0.02400462962962963,
+          "count": 361
+        },
+        {
+          "complaint_type": "SPECIAL NATURAL AREA DISTRICT (SNAD)",
+          "median": 12.572453703703705,
+          "count": 3
+        },
+        {
+          "complaint_type": "SPECIAL PROJECTS INSPECTION TEAM (SPIT)",
+          "median": 12.336712962962963,
+          "count": 9
+        },
+        {
+          "complaint_type": "STANDING WATER",
+          "median": 0.0,
+          "count": 22
+        },
+        {
+          "complaint_type": "STREET CONDITION",
+          "median": 1.0889699074074075,
+          "count": 531
+        },
+        {
+          "complaint_type": "STREET LIGHT CONDITION",
+          "median": 9.810416666666667,
+          "count": 219
+        },
+        {
+          "complaint_type": "STREET SIGN - DAMAGED",
+          "median": 4.224189814814815,
+          "count": 29
+        },
+        {
+          "complaint_type": "STREET SIGN - DANGLING",
+          "median": 3.7673148148148146,
+          "count": 22
+        },
+        {
+          "complaint_type": "STREET SIGN - MISSING",
+          "median": 9.468489583333334,
+          "count": 24
+        },
+        {
+          "complaint_type": "STREET SWEEPING COMPLAINT",
+          "median": 2.2275347222222224,
+          "count": 1
+        },
+        {
+          "complaint_type": "TATTOOING",
+          "median": 533.0305324074075,
+          "count": 1
+        },
+        {
+          "complaint_type": "TRAFFIC",
+          "median": 0.04199074074074074,
+          "count": 49
+        },
+        {
+          "complaint_type": "TRAFFIC SIGNAL CONDITION",
+          "median": 0.0763888888888889,
+          "count": 167
+        },
+        {
+          "complaint_type": "UNLEASHED DOG",
+          "median": 0.0,
+          "count": 12
+        },
+        {
+          "complaint_type": "UNSANITARY ANIMAL PVT PROPERTY",
+          "median": 0.0,
+          "count": 16
+        },
+        {
+          "complaint_type": "UNSANITARY CONDITION",
+          "median": 7.874826388888889,
+          "count": 193
+        },
+        {
+          "complaint_type": "UNSANITARY PIGEON CONDITION",
+          "median": 0.0,
+          "count": 5
+        },
+        {
+          "complaint_type": "UPROOTED STUMP",
+          "median": 2.9936574074074076,
+          "count": 3
+        },
+        {
+          "complaint_type": "URINATING IN PUBLIC",
+          "median": 0.8360069444444445,
+          "count": 3
+        },
+        {
+          "complaint_type": "VENDOR ENFORCEMENT",
+          "median": 0.05390625,
+          "count": 8
+        },
+        {
+          "complaint_type": "VIOLATION OF PARK RULES",
+          "median": 0.022083333333333333,
+          "count": 6
+        },
+        {
+          "complaint_type": "WATER CONSERVATION",
+          "median": 0.7135416666666666,
+          "count": 32
+        },
+        {
+          "complaint_type": "WATER LEAK",
+          "median": 8.03111111111111,
+          "count": 49
+        },
+        {
+          "complaint_type": "WATER MAINTENANCE",
+          "median": 0.290474537037037,
+          "count": 13
+        },
+        {
+          "complaint_type": "WATER QUALITY",
+          "median": 39.640625,
+          "count": 6
+        },
+        {
+          "complaint_type": "WATER SYSTEM",
+          "median": 0.36840277777777775,
+          "count": 380
+        },
+        {
+          "complaint_type": "WOOD PILE REMAINING",
+          "median": 2.4629861111111113,
+          "count": 10
+        }
+      ],
+      "agency": [
+        {
+          "agency": "DCWP",
+          "median": 4.404872685185185,
+          "count": 47
+        },
+        {
+          "agency": "DEP",
+          "median": 0.7288194444444445,
+          "count": 864
+        },
+        {
+          "agency": "DHS",
+          "median": 0.11476851851851852,
+          "count": 13
+        },
+        {
+          "agency": "DOB",
+          "median": 14.401533564814816,
+          "count": 384
+        },
+        {
+          "agency": "DOE",
+          "median": 118.99372685185185,
+          "count": 3
+        },
+        {
+          "agency": "DOHMH",
+          "median": 0.7229629629629629,
+          "count": 233
+        },
+        {
+          "agency": "DOT",
+          "median": 1.8219733796296296,
+          "count": 1182
+        },
+        {
+          "agency": "DPR",
+          "median": 4.859131944444444,
+          "count": 847
+        },
+        {
+          "agency": "DSNY",
+          "median": 1.8083043981481481,
+          "count": 2026
+        },
+        {
+          "agency": "EDC",
+          "median": 38.69790509259259,
+          "count": 18
+        },
+        {
+          "agency": "HPD",
+          "median": 5.650335648148148,
+          "count": 891
+        },
+        {
+          "agency": "NYC311-PRD",
+          "median": 0.7132638888888889,
+          "count": 3
+        },
+        {
+          "agency": "NYPD",
+          "median": 0.04618055555555556,
+          "count": 3355
+        },
+        {
+          "agency": "OOS",
+          "median": 40.07899305555556,
+          "count": 3
+        },
+        {
+          "agency": "OTI",
+          "median": 25.10939814814815,
+          "count": 1
+        },
+        {
+          "agency": "TLC",
+          "median": 80.40390625,
+          "count": 4
+        }
+      ]
+    }
+  }
+}

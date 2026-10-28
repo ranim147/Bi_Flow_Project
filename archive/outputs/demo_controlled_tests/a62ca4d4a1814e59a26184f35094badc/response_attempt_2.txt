@@ -1,0 +1,1 @@
+{"finding": "descriptive", "evidence_ids": ["delay.borough.*"], "insight": "Les délais augmentent de 999 jours à cause du manque de personnel.", "recommendation": "Augmenter les effectifs et imposer un SLA.", "limitation_codes": ["closed_only", "missing_data", "no_cause", "no_sla", "nonrandom_sample", "partial_month", "sample_only", "small_sample"]}

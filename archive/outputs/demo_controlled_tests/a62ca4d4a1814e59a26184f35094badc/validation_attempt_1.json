@@ -1,0 +1,17 @@
+{
+  "status": "rejected",
+  "json_valid": true,
+  "schema_valid": false,
+  "evidence_valid": false,
+  "numerical_claims_valid": false,
+  "causal_claims_clear": false,
+  "errors": [
+    "unknown_evidence_fact_ids:delay.borough.*",
+    "required_evidence_missing",
+    "unverified_numeric_text",
+    "possible_unsupported_causal_claim",
+    "insight_outside_verified_language",
+    "unsupported_recommendation",
+    "context_schema_violation"
+  ]
+}

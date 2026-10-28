@@ -1,0 +1,7 @@
+kpi_name,business_definition,formula,unit,filters,limitations
+request_volume,Volume de demandes dans l’échantillon préparé,nunique(unique_key) + lignes sans clé ; sinon nombre de lignes,demandes,df_clean après dédoublonnage,Portée et qualité des identifiants dépendent de l’export.
+mean_resolution_days,Délai calendaire moyen de fermeture,mean(resolution_days non manquant),jours,"Dates valides, cohérentes ; durées > 10 ans exclues comme suspectes",Sensible aux longues durées ; ne porte que sur demandes fermées calculables.
+median_resolution_days,Délai calendaire médian de fermeture,median(resolution_days non manquant),jours,Même population que le délai moyen,"Décrit le centre, sans résumer la queue longue."
+closure_rate,Part des demandes de la cohorte datée ayant une fermeture datée,100 × fermetures datées parmi créations datées / créations datées,pour cent,created_date valide ; closed_date valide au numérateur,Dépend de la fenêtre d’extraction et du temps d’observation ; statut non utilisé.
+monthly_request_volume,Demandes selon leur mois de création,count par période created_month,demandes/mois,created_date interprétable,Mois partiel et extrait non exhaustif possibles.
+median_resolution_by_group,Médiane du délai parmi demandes fermées valides par catégorie,median(resolution_days) groupé par catégorie ; afficher sample_size,jours,Catégorie et durée non manquantes,Comparer avec prudence les groupes de petite taille.

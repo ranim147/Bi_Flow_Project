@@ -1,0 +1,428 @@
+{
+  "scenario": {
+    "id": "borough_resolution_delays",
+    "question": "Compare les délais de résolution par arrondissement.",
+    "expected_metrics": [
+      "median_resolution_days"
+    ]
+  },
+  "baseline": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "8e3b8a2620414608b920ea9df83397cc",
+    "generated_at": "2026-10-26T15:07:12.749719+00:00",
+    "question": "Compare les délais de résolution par arrondissement.",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "8e3b8a2620414608b920ea9df83397cc-baseline",
+        "category": "comparison",
+        "finding": "descriptive",
+        "insight": "Parmi les groupes retenus, la médiane la plus élevée concerne borough=STATEN ISLAND (0,332 jours calendaires) et la plus faible borough=BRONX (0,147 jours calendaires); l’écart descriptif calculé est de 0,185 jours calendaires. Les effectifs associés figurent dans les preuves.",
+        "recommendation": "Examiner les groupes concernés et vérifier la comparabilité des dossiers avant toute action.",
+        "evidence_fact_ids": [
+          "delay.borough.STATEN ISLAND",
+          "delay.borough.BROOKLYN",
+          "delay.borough.MANHATTAN",
+          "delay.borough.BRONX",
+          "delay.borough.QUEENS"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only",
+          "small_sample"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "delay.borough.STATEN ISLAND",
+        "metric": "median_resolution_days",
+        "scope": "borough=STATEN ISLAND",
+        "value": 0.33226851851851846,
+        "unit": "jours calendaires",
+        "n": 386,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.BROOKLYN",
+        "metric": "median_resolution_days",
+        "scope": "borough=BROOKLYN",
+        "value": 0.22848379629629623,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=BROOKLYN&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.MANHATTAN",
+        "metric": "median_resolution_days",
+        "scope": "borough=MANHATTAN",
+        "value": 0.17066550925925922,
+        "unit": "jours calendaires",
+        "n": 1712,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=MANHATTAN&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.BRONX",
+        "metric": "median_resolution_days",
+        "scope": "borough=BRONX",
+        "value": 0.14743634259259253,
+        "unit": "jours calendaires",
+        "n": 1828,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=BRONX&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.QUEENS",
+        "metric": "median_resolution_days",
+        "scope": "borough=QUEENS",
+        "value": 0.16594328703703698,
+        "unit": "jours calendaires",
+        "n": 2274,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=QUEENS&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.small_delay_groups.borough",
+        "metric": "small_sample_group_count",
+        "scope": "borough groups excluded from delay ranking",
+        "value": 1.0,
+        "unit": "groups",
+        "n": 6,
+        "source": "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York.",
+      "Les groupes avec moins de 30 délais valides ne sont pas classés opérationnellement."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=BRONX&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=BROOKLYN&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=MANHATTAN&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=QUEENS&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Compare les délais de résolution par arrondissement."
+        },
+        "status": "success",
+        "started_at": "2026-10-26T15:07:12.426698+00:00",
+        "elapsed_ms": 0.09390001650899649,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "compare_groups",
+        "parameters": {
+          "question": "Compare les délais de résolution par arrondissement."
+        },
+        "status": "success",
+        "started_at": "2026-10-26T15:07:12.721026+00:00",
+        "elapsed_ms": 27.496700000483543,
+        "evidence_ids": [
+          "quality.small_delay_groups.borough",
+          "delay.borough.STATEN ISLAND",
+          "delay.borough.BROOKLYN",
+          "delay.borough.MANHATTAN",
+          "delay.borough.BRONX",
+          "delay.borough.QUEENS",
+          "delay.borough.peer_p75"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 1060.21269998746
+    }
+  },
+  "agent": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "57bb2b8c8f0a4b06bc46bf1e509998de",
+    "generated_at": "2026-10-26T15:07:26.178879+00:00",
+    "question": "Compare les délais de résolution par arrondissement.",
+    "model": "granite3.3:2b",
+    "data_kind": "real",
+    "status": "validated",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "57bb2b8c8f0a4b06bc46bf1e509998de-001",
+        "category": "comparison",
+        "finding": "descriptive",
+        "insight": "Parmi les groupes retenus, la médiane la plus élevée concerne borough=STATEN ISLAND (0,332 jours calendaires) et la plus faible borough=BRONX (0,147 jours calendaires); l’écart descriptif calculé est de 0,185 jours calendaires. Les effectifs associés figurent dans les preuves.",
+        "recommendation": "Examiner les groupes concernés et vérifier la comparabilité des dossiers avant toute action.",
+        "evidence_fact_ids": [
+          "delay.borough.STATEN ISLAND",
+          "delay.borough.BROOKLYN",
+          "delay.borough.MANHATTAN",
+          "delay.borough.BRONX"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only",
+          "small_sample"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "delay.borough.STATEN ISLAND",
+        "metric": "median_resolution_days",
+        "scope": "borough=STATEN ISLAND",
+        "value": 0.33226851851851846,
+        "unit": "jours calendaires",
+        "n": 386,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.BROOKLYN",
+        "metric": "median_resolution_days",
+        "scope": "borough=BROOKLYN",
+        "value": 0.22848379629629623,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=BROOKLYN&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.MANHATTAN",
+        "metric": "median_resolution_days",
+        "scope": "borough=MANHATTAN",
+        "value": 0.17066550925925922,
+        "unit": "jours calendaires",
+        "n": 1712,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=MANHATTAN&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "delay.borough.BRONX",
+        "metric": "median_resolution_days",
+        "scope": "borough=BRONX",
+        "value": 0.14743634259259253,
+        "unit": "jours calendaires",
+        "n": 1828,
+        "source": "data/processed/nyc311_clean.csv#dimension=borough&group_value=BRONX&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.small_delay_groups.borough",
+        "metric": "small_sample_group_count",
+        "scope": "borough groups excluded from delay ranking",
+        "value": 1.0,
+        "unit": "groups",
+        "n": 6,
+        "source": "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York.",
+      "Les groupes avec moins de 30 délais valides ne sont pas classés opérationnellement."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=BRONX&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=BROOKLYN&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=MANHATTAN&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=borough&group_value=STATEN ISLAND&field=median_days"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Compare les délais de résolution par arrondissement."
+        },
+        "status": "success",
+        "started_at": "2026-10-26T15:07:13.475861+00:00",
+        "elapsed_ms": 0.08790002902969718,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "compare_groups",
+        "parameters": {
+          "question": "Compare les délais de résolution par arrondissement."
+        },
+        "status": "success",
+        "started_at": "2026-10-26T15:07:13.477721+00:00",
+        "elapsed_ms": 39.45089998887852,
+        "evidence_ids": [
+          "quality.small_delay_groups.borough",
+          "delay.borough.STATEN ISLAND",
+          "delay.borough.BROOKLYN",
+          "delay.borough.MANHATTAN",
+          "delay.borough.BRONX",
+          "delay.borough.QUEENS",
+          "delay.borough.peer_p75"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "model_preflight": 45.169100048951805,
+      "data_validation": 721.6015000012703,
+      "inference_attempt_1": 12652.334699989296,
+      "total": 13424.63919997681
+    }
+  },
+  "agent_wall_time_ms": 13432.74650000967,
+  "factual_metrics": {
+    "expected_metric_facts": 4,
+    "expected_metric_present": true,
+    "source_and_denominator_complete": true,
+    "invalid_fact_ids": []
+  }
+}

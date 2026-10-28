@@ -1,0 +1,143 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "8c5064741fe54340a1654f12fd3c1ee6",
+  "generated_at": "2026-10-28T12:16:47.038389+00:00",
+  "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "8c5064741fe54340a1654f12fd3c1ee6-001",
+      "category": "data_quality",
+      "finding": "descriptive",
+      "insight": "Les demandes ouvertes et les clôtures sans durée valide doivent être distinguées dans l'analyse. Les preuves distinguent les demandes non clôturées des clôtures sans durée valide. Les délais non valides ne sont pas remplacés par zéro.",
+      "recommendation": "Vérifier la complétude et les règles de saisie des données avant d'interpréter les délais.",
+      "evidence_fact_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "limitation_codes": [
+        "missing_data",
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "quality.sample_rows",
+      "metric": "sample_rows",
+      "scope": "NYC 311 prepared extract",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.valid_resolution_days",
+      "metric": "valid_resolution_days",
+      "scope": "closed requests with valid resolution duration",
+      "value": 9285.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.open_requests",
+      "metric": "not_closed_requests",
+      "scope": "prepared extract with a valid creation date",
+      "value": 709.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter."
+      },
+      "status": "success",
+      "started_at": "2026-10-28T12:16:33.096048+00:00",
+      "elapsed_ms": 0.062400009483098984,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 47.70530003588647,
+    "data_validation": 399.99020006507635,
+    "inference_attempt_1": 13928.88319992926,
+    "ollama_load_duration_attempt_1": 5.3886,
+    "ollama_prompt_eval_duration_attempt_1": 1838.449,
+    "ollama_eval_duration_attempt_1": 11742.395,
+    "validation_attempt_1": 1.7100999830290675,
+    "total": 14415.406199987046
+  }
+}

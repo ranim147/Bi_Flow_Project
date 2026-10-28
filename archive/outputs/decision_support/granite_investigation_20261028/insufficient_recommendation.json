@@ -1,0 +1,473 @@
+{
+  "result": {
+    "scenario_id": "insufficient_recommendation",
+    "data_kind": "synthetic",
+    "status": "fallback",
+    "decision": "insufficient_data",
+    "finding": "small_scope",
+    "automatic_checks": {
+      "passed": true,
+      "errors": [],
+      "truthful_findings": true,
+      "evidence_references_valid": true,
+      "scope_and_period_precision": true,
+      "hypotheses_explicitly_unverified": true,
+      "concrete_steps_present": true,
+      "both_verification_outcomes_present": true
+    },
+    "elapsed_ms": 59936.06690003071,
+    "execution_id": "c6a86ba6225c40f49c44726872903da0",
+    "accepted_without_fallback": false,
+    "problem_count": 1,
+    "attempts": 2,
+    "correction_count": 1,
+    "fallback_count": 1
+  },
+  "report": {
+    "contract_version": "biflow-bi-analyst-v2",
+    "execution_id": "c6a86ba6225c40f49c44726872903da0",
+    "generated_at": "2026-10-28T11:06:19.182776+00:00",
+    "question": "Recommande des actions pour investiguer la dégradation des délais à Brooklyn.",
+    "model": "granite3.3:2b",
+    "data_kind": "synthetic",
+    "status": "fallback",
+    "decision": "insufficient_data",
+    "finding": "small_scope",
+    "insights": [
+      {
+        "insight_id": "c6a86ba6225c40f49c44726872903da0-scope_0",
+        "category": "comparison",
+        "finding": "small_scope",
+        "insight": "Les observations sont insuffisantes pour établir une dégradation ou classer les segments demandés. Périmètre : {\"borough\": \"BROOKLYN\"}; périodes : ('2026-08', '2026-09')",
+        "recommendation": "Contrôler les dossiers exclus et compléter les observations avant toute attribution ou décision opérationnelle. Cible : {\"borough\": \"BROOKLYN\"}",
+        "evidence_fact_ids": [
+          "ds.232d0cde6a",
+          "ds.9b95f4b741",
+          "ds.3a042fe288",
+          "ds.be58076ee1"
+        ],
+        "limitation_codes": [
+          "closed_work_selection",
+          "descriptive_not_causal",
+          "mean_not_median",
+          "no_sla",
+          "no_staffing_or_budget_evidence",
+          "nonrandom_sample",
+          "partial_period_excluded",
+          "sample_backlog_only",
+          "small_scope",
+          "small_segments",
+          "synthetic_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "ds.63280b208f",
+        "metric": "invalid_closed_duration_n",
+        "scope": "{\"scope\": \"quality\"}",
+        "value": 0.0,
+        "unit": "requests",
+        "n": 10,
+        "source": "synthetic://decision-fixture/requests.csv#quality/invalid_closed_duration_n",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.6d71d3d2c7",
+        "metric": "sample_requests_n",
+        "scope": "{\"scope\": \"quality\"}",
+        "value": 10.0,
+        "unit": "requests",
+        "n": 10,
+        "source": "synthetic://decision-fixture/requests.csv#quality/sample_requests_n",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.232d0cde6a",
+        "metric": "delta_mean_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 6.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/delta_mean_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.9b95f4b741",
+        "metric": "within_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 6.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/within_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.3a042fe288",
+        "metric": "composition_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 0.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/composition_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.be58076ee1",
+        "metric": "unmatched_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 0.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/unmatched_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.81ca112104",
+        "metric": "mean_delay_baseline",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 2.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/mean_delay_baseline",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.56f08d9f00",
+        "metric": "mean_delay_current",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 8.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/mean_delay_current",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.5a93f78616",
+        "metric": "valid_closed_baseline_n",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 5.0,
+        "unit": "requests",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/valid_closed_baseline_n",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.28523fa1e4",
+        "metric": "valid_closed_current_n",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 5.0,
+        "unit": "requests",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/valid_closed_current_n",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.ffab63e2e6",
+        "metric": "median_change_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 6.0,
+        "unit": "days",
+        "n": 5,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/median_change_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.983c363314",
+        "metric": "backlog_sample_change",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 0.0,
+        "unit": "sample requests",
+        "n": 10,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/backlog_sample_change",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.e299c086ad",
+        "metric": "current_backlog_sample_n",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 0.0,
+        "unit": "sample requests",
+        "n": 10,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/current_backlog_sample_n",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.59a4f2e12a",
+        "metric": "current_open_age_p90_days",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": null,
+        "unit": "days",
+        "n": 0,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/current_open_age_p90_days",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.3e6b48cfe4",
+        "metric": "incoming_sample_change",
+        "scope": "{\"borough\": \"BROOKLYN\"}",
+        "value": 0.0,
+        "unit": "sample requests",
+        "n": 10,
+        "source": "synthetic://decision-fixture/requests.csv#scope_0/incoming_sample_change",
+        "source_sha256": "340baaaac88148164e0a0539dd0d070c93edd4c010788e155b22dacd89dad4ec",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": "2026-08/2026-09",
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Aucun SLA métier n'a été fourni.",
+      "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+      "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+      "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+      "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+      "Le périmètre ne possède pas assez de clôtures valides dans chaque période pour établir une dégradation.",
+      "Les contributions arithmétiques ne démontrent aucune cause.",
+      "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+      "Les périodes partielles sont exclues de la comparaison.",
+      "Les segments avec un effectif insuffisant dans une période sont exclus du classement, mais conservés dans la décomposition.",
+      "SCÉNARIO SYNTHÉTIQUE DE TEST; ces résultats ne décrivent pas NYC 311 réel."
+    ],
+    "source_refs": [
+      "synthetic://decision-fixture/requests.csv#quality/invalid_closed_duration_n",
+      "synthetic://decision-fixture/requests.csv#quality/sample_requests_n",
+      "synthetic://decision-fixture/requests.csv#scope_0/backlog_sample_change",
+      "synthetic://decision-fixture/requests.csv#scope_0/composition_days",
+      "synthetic://decision-fixture/requests.csv#scope_0/current_backlog_sample_n",
+      "synthetic://decision-fixture/requests.csv#scope_0/current_open_age_p90_days",
+      "synthetic://decision-fixture/requests.csv#scope_0/delta_mean_days",
+      "synthetic://decision-fixture/requests.csv#scope_0/incoming_sample_change",
+      "synthetic://decision-fixture/requests.csv#scope_0/mean_delay_baseline",
+      "synthetic://decision-fixture/requests.csv#scope_0/mean_delay_current",
+      "synthetic://decision-fixture/requests.csv#scope_0/median_change_days",
+      "synthetic://decision-fixture/requests.csv#scope_0/unmatched_days",
+      "synthetic://decision-fixture/requests.csv#scope_0/valid_closed_baseline_n",
+      "synthetic://decision-fixture/requests.csv#scope_0/valid_closed_current_n",
+      "synthetic://decision-fixture/requests.csv#scope_0/within_days"
+    ],
+    "validation": {
+      "status": "rejected",
+      "json_valid": true,
+      "schema_valid": false,
+      "evidence_valid": true,
+      "numerical_claims_valid": false,
+      "causal_claims_clear": false,
+      "errors": [
+        "context_schema_violation",
+        "hypothesis_operation_mismatch:recommended_actions"
+      ]
+    },
+    "tool_trace": [
+      {
+        "tool": "investigate_degradation",
+        "parameters": {
+          "question": "Recommande des actions pour investiguer la dégradation des délais à Brooklyn."
+        },
+        "status": "success",
+        "started_at": "2026-10-28T11:05:19.449373+00:00",
+        "elapsed_ms": 60.691699967719615,
+        "evidence_ids": [
+          "ds.63280b208f",
+          "ds.6d71d3d2c7",
+          "ds.232d0cde6a",
+          "ds.9b95f4b741",
+          "ds.3a042fe288",
+          "ds.be58076ee1",
+          "ds.81ca112104",
+          "ds.56f08d9f00",
+          "ds.5a93f78616",
+          "ds.28523fa1e4",
+          "ds.ffab63e2e6",
+          "ds.983c363314",
+          "ds.e299c086ad",
+          "ds.59a4f2e12a",
+          "ds.3e6b48cfe4"
+        ],
+        "detail": "EXPLICIT SYNTHETIC FIXTURE"
+      }
+    ],
+    "errors": [
+      "context_schema_violation",
+      "hypothesis_operation_mismatch:recommended_actions"
+    ],
+    "timing_ms": {
+      "model_preflight": 68.0908999638632,
+      "data_validation": 0.001100008375942707,
+      "analytics": 60.691699967719615,
+      "problem_0_inference_1": 32650.401500053704,
+      "problem_0_load_duration_1": 10.6289,
+      "problem_0_prompt_eval_duration_1": 4230.352,
+      "problem_0_eval_duration_1": 28315.525,
+      "problem_0_validation_1": 3.2367000821977854,
+      "problem_0_inference_2": 26757.126199896447,
+      "problem_0_load_duration_2": 10.0236,
+      "problem_0_prompt_eval_duration_2": 661.056,
+      "problem_0_eval_duration_2": 26072.53,
+      "problem_0_validation_2": 2.853199956007302,
+      "total": 59928.25220001396
+    },
+    "decision_support": [
+      {
+        "problem_id": "scope_0",
+        "problem": "Les observations sont insuffisantes pour établir une dégradation ou classer les segments demandés.",
+        "priority_scope": {
+          "scope_id": "scope_0",
+          "filters": {
+            "borough": "BROOKLYN"
+          },
+          "baseline_period": "2026-08",
+          "current_period": "2026-09",
+          "period_basis": "closure_month"
+        },
+        "evidence_ids": [
+          "ds.232d0cde6a",
+          "ds.9b95f4b741",
+          "ds.3a042fe288",
+          "ds.be58076ee1"
+        ],
+        "investigation_hypotheses": [
+          {
+            "hypothesis_id": "data_quality",
+            "statement": "La couverture des durées et des catégories doit être vérifiée avant d'attribuer la variation à un segment.",
+            "status": "unverified",
+            "evidence_ids": [
+              "ds.232d0cde6a",
+              "ds.9b95f4b741",
+              "ds.3a042fe288",
+              "ds.be58076ee1"
+            ],
+            "additional_data": [
+              "Dates et catégories manquantes des dossiers exclus",
+              "Historique de statut pour valider les dates de clôture",
+              "Extrait couvrant les périodes complètes avec davantage d'observations"
+            ]
+          }
+        ],
+        "investigation_steps": [
+          {
+            "hypothesis_id": "data_quality",
+            "dataset": "additional_data",
+            "filters": {
+              "borough": "BROOKLYN",
+              "baseline_closure_month": "2026-08",
+              "current_closure_month": "2026-09"
+            },
+            "fields": [
+              "unique_key",
+              "created_date",
+              "closed_date",
+              "agency",
+              "complaint_type",
+              "status_history"
+            ],
+            "comparison": "Comparer les taux d'exclusion et les effectifs entre périodes et segments; recalculer après correction des dates, sans remplacer les durées absentes par zéro."
+          }
+        ],
+        "recommended_actions": [
+          {
+            "hypothesis_id": "data_quality",
+            "priority": 1,
+            "action": "Contrôler les dossiers exclus et compléter les observations avant toute attribution ou décision opérationnelle.",
+            "priority_reason": "Le contrôle de la couverture et de la comparabilité précède une attribution à un segment. La couverture ou les effectifs insuffisants rendent prématurée une attribution métier.",
+            "decision_if_supported": "Corriger la qualité et republier les indicateurs avant toute action métier.",
+            "decision_if_refuted": "Poursuivre l'investigation descriptive sur les segments documentés."
+          }
+        ],
+        "expected_verification": [
+          {
+            "hypothesis_id": "data_quality",
+            "supports": "La variation se réduit après correction des dates ou récupération des observations exclues.",
+            "refutes": "La variation persiste avec couverture et règles de saisie comparables."
+          }
+        ],
+        "limitations": [
+          "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+          "Les contributions arithmétiques ne démontrent aucune cause.",
+          "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+          "Aucun SLA métier n'a été fourni.",
+          "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+          "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+          "Les périodes partielles sont exclues de la comparaison.",
+          "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+          "Le périmètre ne possède pas assez de clôtures valides dans chaque période pour établir une dégradation.",
+          "Les segments avec un effectif insuffisant dans une période sont exclus du classement, mais conservés dans la décomposition.",
+          "SCÉNARIO SYNTHÉTIQUE DE TEST; ces résultats ne décrivent pas NYC 311 réel."
+        ],
+        "origin": "python_fallback"
+      }
+    ]
+  }
+}

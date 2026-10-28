@@ -1,0 +1,32 @@
+{
+  "problem": "no_observed_increase",
+  "priority_scope": "scope_0",
+  "evidence_ids": ["ds.fe68aace59", "ds.7e4dadae31", "ds.95165e0d5a", "ds.abbbc8d43b", "ds.12c1678e76", "ds.73c15b318d", "ds.39967a1473"],
+  "investigation_hypotheses": ["validate_no_increase"],
+  "investigation_steps": [
+    "check_validate_no_increase",
+    "check_validate_no_increase",
+    "check_validate_no_increase"
+  ],
+  "recommended_actions": [
+    "investigate_validate_no_increase"
+  ],
+  "expected_verification": [
+    "verify_validate_no_increase"
+  ],
+  "limitations": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11",
+    "L12"
+  ]
+}

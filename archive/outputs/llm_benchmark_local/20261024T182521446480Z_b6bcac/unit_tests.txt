@@ -1,0 +1,171 @@
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_5a11a68b9b3047888a5c71c56b92dc05\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_5a11a68b9b3047888a5c71c56b92dc05\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_5a11a68b9b3047888a5c71c56b92dc05\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : timeout — enregistré
+  BF-02 (1/1) : remaining_cases_skipped_after_timeout — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_ee3784036b1c4b2cbcc49f1f3401996c\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : timeout — enregistré
+  BF-02 (1/1) : remaining_cases_skipped_after_timeout — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_ee3784036b1c4b2cbcc49f1f3401996c\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : timeout — enregistré
+  BF-02 (1/1) : remaining_cases_skipped_after_timeout — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_ee3784036b1c4b2cbcc49f1f3401996c\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : truncated_response — enregistré
+  BF-02 (1/1) : truncated_response — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_33e2b1e1f0724103a393cbfcbc77a71f\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : truncated_response — enregistré
+  BF-02 (1/1) : truncated_response — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_33e2b1e1f0724103a393cbfcbc77a71f\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : truncated_response — enregistré
+  BF-02 (1/1) : truncated_response — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_33e2b1e1f0724103a393cbfcbc77a71f\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : model_absent — enregistré
+  BF-02 (1/1) : model_absent — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_8c7c4f00603843d092499ab9b2957526\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : model_absent — enregistré
+  BF-02 (1/1) : model_absent — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_8c7c4f00603843d092499ab9b2957526\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : model_absent — enregistré
+  BF-02 (1/1) : model_absent — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_8c7c4f00603843d092499ab9b2957526\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : unexpected_model_identity — enregistré
+  BF-02 (1/1) : unexpected_model_identity — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_546e7019f44b4099b30051368978e3eb\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : unexpected_model_identity — enregistré
+  BF-02 (1/1) : unexpected_model_identity — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_546e7019f44b4099b30051368978e3eb\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : unexpected_model_identity — enregistré
+  BF-02 (1/1) : unexpected_model_identity — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_546e7019f44b4099b30051368978e3eb\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_18cd5530fe684c71b80b1e1a05b23f4b\models\qwen3_4b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_569726f7c3a94b74a55649b1e62e7a48\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+RAM libre : 5.90 Gio ; repère indicatif : 6.5 Gio. Essai du modèle seul ; Ollama vérifie le chargement réel.
+  BF-01 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_569726f7c3a94b74a55649b1e62e7a48\models\gemma3_4b
+
+Modèle qwen3:4b — 2 cas prévus
+RAM libre : 5.89 Gio ; repère indicatif : 1000.0 Gio. Essai du modèle seul ; Ollama vérifie le chargement réel.
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_0709fd9370554389a45d7c978dedccbb\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+RAM libre : 5.90 Gio ; repère indicatif : 1000.0 Gio. Essai du modèle seul ; Ollama vérifie le chargement réel.
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_0709fd9370554389a45d7c978dedccbb\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+RAM libre : 5.91 Gio ; repère indicatif : 1000.0 Gio. Essai du modèle seul ; Ollama vérifie le chargement réel.
+  BF-01 (1/1) : success — enregistré
+  BF-02 (1/1) : success — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_0709fd9370554389a45d7c978dedccbb\models\granite3.3_2b
+
+Modèle qwen3:4b — 2 cas prévus
+  BF-01 (1/1) : warmup_insufficient_memory_preflight — enregistré
+  BF-02 (1/1) : warmup_insufficient_memory_preflight — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_71df1e095e874fa680559c4c43bfa102\models\qwen3_4b
+
+Modèle gemma3:4b — 2 cas prévus
+  BF-01 (1/1) : warmup_insufficient_memory_preflight — enregistré
+  BF-02 (1/1) : warmup_insufficient_memory_preflight — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_71df1e095e874fa680559c4c43bfa102\models\gemma3_4b
+
+Modèle granite3.3:2b — 2 cas prévus
+  BF-01 (1/1) : warmup_insufficient_memory_preflight — enregistré
+  BF-02 (1/1) : warmup_insufficient_memory_preflight — enregistré
+Résultats sauvegardés : D:\Analyst_Agent\.tmp_jupyter\benchmark_test_71df1e095e874fa680559c4c43bfa102\models\granite3.3_2b
+test_connection_refusal_classification (test_benchmark_llm.ClientTests.test_connection_refusal_classification) ... ok
+test_remote_server_rejected (test_benchmark_llm.ClientTests.test_remote_server_rejected) ... ok
+test_success_path_with_mock_responses_only (test_benchmark_llm.ClientTests.test_success_path_with_mock_responses_only) ... ok
+test_timeout_classification (test_benchmark_llm.ClientTests.test_timeout_classification) ... ok
+test_timeout_stops_remaining_cases_of_each_model (test_benchmark_llm.ClientTests.test_timeout_stops_remaining_cases_of_each_model) ... ok
+test_truncated_json_is_not_a_successful_generation (test_benchmark_llm.ClientTests.test_truncated_json_is_not_a_successful_generation) ... ok
+test_unavailable_models_have_blank_scores_and_no_winner (test_benchmark_llm.ClientTests.test_unavailable_models_have_blank_scores_and_no_winner) ... ok
+test_unexpected_model_identity_rejected (test_benchmark_llm.ClientTests.test_unexpected_model_identity_rejected) ... ok
+test_corrupt_present_data_does_not_silently_fallback (test_benchmark_llm.DataTests.test_corrupt_present_data_does_not_silently_fallback) ... ok
+test_fallback_is_explicit_and_covers_twenty_cases (test_benchmark_llm.DataTests.test_fallback_is_explicit_and_covers_twenty_cases) ... ok
+test_at_least_twenty_cases_and_both_origins (test_benchmark_llm.EvaluationTests.test_at_least_twenty_cases_and_both_origins) ... ok
+test_boolean_not_number (test_benchmark_llm.EvaluationTests.test_boolean_not_number) ... ok
+test_duplicate_fact (test_benchmark_llm.EvaluationTests.test_duplicate_fact) ... ok
+test_duplicate_keys (test_benchmark_llm.EvaluationTests.test_duplicate_keys) ... ok
+test_empty_claims_cannot_pass_by_silence (test_benchmark_llm.EvaluationTests.test_empty_claims_cannot_pass_by_silence) ... ok
+test_explicit_cause_is_flagged (test_benchmark_llm.EvaluationTests.test_explicit_cause_is_flagged) ... ok
+test_extra_field (test_benchmark_llm.EvaluationTests.test_extra_field) ... ok
+test_fenced_json_not_silently_repaired (test_benchmark_llm.EvaluationTests.test_fenced_json_not_silently_repaired) ... ok
+test_invalid_json (test_benchmark_llm.EvaluationTests.test_invalid_json) ... ok
+test_invented_value (test_benchmark_llm.EvaluationTests.test_invented_value) ... ok
+test_lexical_causal_flag_is_not_a_semantic_verdict (test_benchmark_llm.EvaluationTests.test_lexical_causal_flag_is_not_a_semantic_verdict) ... ok
+test_missing_field (test_benchmark_llm.EvaluationTests.test_missing_field) ... ok
+test_missing_value_cannot_be_zero (test_benchmark_llm.EvaluationTests.test_missing_value_cannot_be_zero) ... ok
+test_nonfinite_json (test_benchmark_llm.EvaluationTests.test_nonfinite_json) ... ok
+test_numeric_hallucination_in_prose (test_benchmark_llm.EvaluationTests.test_numeric_hallucination_in_prose) ... ok
+test_prompt_is_identical_except_model_and_no_reference_leak (test_benchmark_llm.EvaluationTests.test_prompt_is_identical_except_model_and_no_reference_leak) ... ok
+test_real_synthetic_confusion (test_benchmark_llm.EvaluationTests.test_real_synthetic_confusion) ... ok
+test_reference_contracts_all_cases (test_benchmark_llm.EvaluationTests.test_reference_contracts_all_cases) ... ok
+test_required_limit_omission (test_benchmark_llm.EvaluationTests.test_required_limit_omission) ... ok
+test_unavailable_response_has_no_quality_scores (test_benchmark_llm.EvaluationTests.test_unavailable_response_has_no_quality_scores) ... ok
+test_unknown_fact (test_benchmark_llm.EvaluationTests.test_unknown_fact) ... ok
+test_wrong_decision_and_finding (test_benchmark_llm.EvaluationTests.test_wrong_decision_and_finding) ... ok
+test_wrong_group_even_with_existing_number (test_benchmark_llm.EvaluationTests.test_wrong_group_even_with_existing_number) ... ok
+test_wrong_numeric_type (test_benchmark_llm.EvaluationTests.test_wrong_numeric_type) ... ok
+test_wrong_sample_size (test_benchmark_llm.EvaluationTests.test_wrong_sample_size) ... ok
+test_wrong_source (test_benchmark_llm.EvaluationTests.test_wrong_source) ... ok
+test_wrong_unit (test_benchmark_llm.EvaluationTests.test_wrong_unit) ... ok
+test_existing_journal_is_never_overwritten (test_benchmark_sequential.SequentialTests.test_existing_journal_is_never_overwritten) ... ok
+test_interrupt_during_warmup_also_unloads (test_benchmark_sequential.SequentialTests.test_interrupt_during_warmup_also_unloads) ... ok
+test_interruption_keeps_previous_and_partial_model_results (test_benchmark_sequential.SequentialTests.test_interruption_keeps_previous_and_partial_model_results) ... ok
+test_low_estimated_ram_does_not_skip_models_in_attempt_mode (test_benchmark_sequential.SequentialTests.test_low_estimated_ram_does_not_skip_models_in_attempt_mode) ... ok
+test_manifest_write_retries_transient_windows_file_lock (test_benchmark_sequential.SequentialTests.test_manifest_write_retries_transient_windows_file_lock) ... ok
+test_strict_memory_policy_remains_optional (test_benchmark_sequential.SequentialTests.test_strict_memory_policy_remains_optional) ... ok
+test_stuck_resident_model_prevents_next_load (test_benchmark_sequential.SequentialTests.test_stuck_resident_model_prevents_next_load) ... ok
+test_unload_also_targets_model_missing_from_running_list (test_benchmark_sequential.SequentialTests.test_unload_also_targets_model_missing_from_running_list) ... ok
+
+----------------------------------------------------------------------
+Ran 45 tests in 38.217s
+
+OK

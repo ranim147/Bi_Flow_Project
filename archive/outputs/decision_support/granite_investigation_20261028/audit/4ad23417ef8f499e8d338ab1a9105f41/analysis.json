@@ -1,0 +1,392 @@
+{
+  "data_kind": "synthetic",
+  "periods": [
+    "2026-08",
+    "2026-09"
+  ],
+  "as_of": "2026-10-17T20:00:00Z",
+  "period_basis": "closure_month",
+  "min_group_n": 30,
+  "method": "Exact symmetric decomposition of mean closed-request duration; no causal attribution",
+  "quality": {
+    "invalid_closed_n": 0,
+    "unknown_creation_n": 0
+  },
+  "problems": [
+    {
+      "problem_id": "scope_0",
+      "kind": "within_segment_increase",
+      "filters": {
+        "borough": "BROOKLYN",
+        "complaint_type": "TARGET",
+        "agency": "A"
+      },
+      "evidence_ids": [
+        "ds.232d0cde6a",
+        "ds.9b95f4b741",
+        "ds.3a042fe288",
+        "ds.be58076ee1",
+        "ds.81ca112104",
+        "ds.56f08d9f00",
+        "ds.5a93f78616",
+        "ds.28523fa1e4",
+        "ds.ffab63e2e6",
+        "ds.55c790bdb8",
+        "ds.3c5d127933",
+        "ds.983c363314",
+        "ds.e299c086ad",
+        "ds.59a4f2e12a",
+        "ds.3e6b48cfe4",
+        "ds.c3ad989769"
+      ],
+      "limitation_codes": [
+        "agency_case_mix",
+        "closed_work_selection",
+        "descriptive_not_causal",
+        "mean_not_median",
+        "no_sla",
+        "no_staffing_or_budget_evidence",
+        "nonrandom_sample",
+        "partial_period_excluded",
+        "sample_backlog_only",
+        "synthetic_only"
+      ],
+      "llm_evidence_ids": [
+        "ds.232d0cde6a",
+        "ds.9b95f4b741",
+        "ds.3a042fe288",
+        "ds.be58076ee1",
+        "ds.55c790bdb8",
+        "ds.983c363314",
+        "ds.59a4f2e12a",
+        "ds.c3ad989769"
+      ],
+      "priority_basis": "Contribution descriptive de 3.000 jour à la variation de moyenne; 60 clôtures valides avant et 60 après; priorité calculée par contribution positive, volume observé et complétude, sans interprétation causale.",
+      "backlog_increase": true,
+      "comparable_segment": true,
+      "segment": {
+        "complaint_type": "TARGET",
+        "agency": "A",
+        "n_baseline": 60,
+        "closed_baseline": 60,
+        "missing_baseline": 0,
+        "mean_baseline": 2.0,
+        "median_baseline": 2.0,
+        "n_current": 60,
+        "closed_current": 60,
+        "missing_current": 0,
+        "mean_current": 8.0,
+        "median_current": 8.0,
+        "eligible": true,
+        "delta_mean_days": 6.0,
+        "deterioration_observed": true,
+        "weight_baseline": 0.5,
+        "weight_current": 0.5,
+        "within_days": 3.0,
+        "composition_days": 0.0,
+        "unmatched_days": 0.0,
+        "contribution_days": 3.0,
+        "evidence_coverage": 1.0,
+        "rankable": true,
+        "priority_score": 23.237900077244504
+      },
+      "agency_mix_warning": true
+    }
+  ],
+  "borough_comparisons": [
+    {
+      "borough": "BROOKLYN",
+      "n_baseline": 120,
+      "closed_baseline": 120,
+      "missing_baseline": 0,
+      "mean_baseline": 2.0,
+      "median_baseline": 2.0,
+      "n_current": 120,
+      "closed_current": 120,
+      "missing_current": 0,
+      "mean_current": 5.0,
+      "median_current": 5.0,
+      "eligible": true,
+      "delta_mean_days": 3.0,
+      "deterioration_observed": true
+    }
+  ],
+  "drilldowns": {
+    "BROOKLYN": {
+      "joint_segments": {
+        "status": "computed",
+        "dimensions": [
+          "complaint_type",
+          "agency"
+        ],
+        "baseline": "2026-08",
+        "current": "2026-09",
+        "mean_baseline": 2.0,
+        "mean_current": 5.0,
+        "n_baseline": 120,
+        "n_current": 120,
+        "delta_mean_days": 3.0,
+        "within_days": 3.0,
+        "composition_days": 0.0,
+        "unmatched_days": 0.0,
+        "residual_days": 0.0,
+        "groups": [
+          {
+            "complaint_type": "TARGET",
+            "agency": "A",
+            "n_baseline": 60,
+            "closed_baseline": 60,
+            "missing_baseline": 0,
+            "mean_baseline": 2.0,
+            "median_baseline": 2.0,
+            "n_current": 60,
+            "closed_current": 60,
+            "missing_current": 0,
+            "mean_current": 8.0,
+            "median_current": 8.0,
+            "eligible": true,
+            "delta_mean_days": 6.0,
+            "deterioration_observed": true,
+            "weight_baseline": 0.5,
+            "weight_current": 0.5,
+            "within_days": 3.0,
+            "composition_days": 0.0,
+            "unmatched_days": 0.0,
+            "contribution_days": 3.0,
+            "evidence_coverage": 1.0,
+            "rankable": true,
+            "priority_score": 23.237900077244504
+          },
+          {
+            "complaint_type": "OTHER",
+            "agency": "B",
+            "n_baseline": 60,
+            "closed_baseline": 60,
+            "missing_baseline": 0,
+            "mean_baseline": 2.0,
+            "median_baseline": 2.0,
+            "n_current": 60,
+            "closed_current": 60,
+            "missing_current": 0,
+            "mean_current": 2.0,
+            "median_current": 2.0,
+            "eligible": true,
+            "delta_mean_days": 0.0,
+            "deterioration_observed": false,
+            "weight_baseline": 0.5,
+            "weight_current": 0.5,
+            "within_days": 0.0,
+            "composition_days": 0.0,
+            "unmatched_days": 0.0,
+            "contribution_days": 0.0,
+            "evidence_coverage": 1.0,
+            "rankable": true,
+            "priority_score": 0.0
+          }
+        ]
+      },
+      "marginal_partitions": {
+        "complaint_type": {
+          "status": "computed",
+          "dimensions": [
+            "complaint_type"
+          ],
+          "baseline": "2026-08",
+          "current": "2026-09",
+          "mean_baseline": 2.0,
+          "mean_current": 5.0,
+          "n_baseline": 120,
+          "n_current": 120,
+          "delta_mean_days": 3.0,
+          "within_days": 3.0,
+          "composition_days": 0.0,
+          "unmatched_days": 0.0,
+          "residual_days": 0.0,
+          "groups": [
+            {
+              "complaint_type": "TARGET",
+              "n_baseline": 60,
+              "closed_baseline": 60,
+              "missing_baseline": 0,
+              "mean_baseline": 2.0,
+              "median_baseline": 2.0,
+              "n_current": 60,
+              "closed_current": 60,
+              "missing_current": 0,
+              "mean_current": 8.0,
+              "median_current": 8.0,
+              "eligible": true,
+              "delta_mean_days": 6.0,
+              "deterioration_observed": true,
+              "weight_baseline": 0.5,
+              "weight_current": 0.5,
+              "within_days": 3.0,
+              "composition_days": 0.0,
+              "unmatched_days": 0.0,
+              "contribution_days": 3.0,
+              "evidence_coverage": 1.0,
+              "rankable": true,
+              "priority_score": 23.237900077244504
+            },
+            {
+              "complaint_type": "OTHER",
+              "n_baseline": 60,
+              "closed_baseline": 60,
+              "missing_baseline": 0,
+              "mean_baseline": 2.0,
+              "median_baseline": 2.0,
+              "n_current": 60,
+              "closed_current": 60,
+              "missing_current": 0,
+              "mean_current": 2.0,
+              "median_current": 2.0,
+              "eligible": true,
+              "delta_mean_days": 0.0,
+              "deterioration_observed": false,
+              "weight_baseline": 0.5,
+              "weight_current": 0.5,
+              "within_days": 0.0,
+              "composition_days": 0.0,
+              "unmatched_days": 0.0,
+              "contribution_days": 0.0,
+              "evidence_coverage": 1.0,
+              "rankable": true,
+              "priority_score": 0.0
+            }
+          ]
+        },
+        "agency": {
+          "status": "computed",
+          "dimensions": [
+            "agency"
+          ],
+          "baseline": "2026-08",
+          "current": "2026-09",
+          "mean_baseline": 2.0,
+          "mean_current": 5.0,
+          "n_baseline": 120,
+          "n_current": 120,
+          "delta_mean_days": 3.0,
+          "within_days": 3.0,
+          "composition_days": 0.0,
+          "unmatched_days": 0.0,
+          "residual_days": 0.0,
+          "groups": [
+            {
+              "agency": "A",
+              "n_baseline": 60,
+              "closed_baseline": 60,
+              "missing_baseline": 0,
+              "mean_baseline": 2.0,
+              "median_baseline": 2.0,
+              "n_current": 60,
+              "closed_current": 60,
+              "missing_current": 0,
+              "mean_current": 8.0,
+              "median_current": 8.0,
+              "eligible": true,
+              "delta_mean_days": 6.0,
+              "deterioration_observed": true,
+              "weight_baseline": 0.5,
+              "weight_current": 0.5,
+              "within_days": 3.0,
+              "composition_days": 0.0,
+              "unmatched_days": 0.0,
+              "contribution_days": 3.0,
+              "evidence_coverage": 1.0,
+              "rankable": true,
+              "priority_score": 23.237900077244504
+            },
+            {
+              "agency": "B",
+              "n_baseline": 60,
+              "closed_baseline": 60,
+              "missing_baseline": 0,
+              "mean_baseline": 2.0,
+              "median_baseline": 2.0,
+              "n_current": 60,
+              "closed_current": 60,
+              "missing_current": 0,
+              "mean_current": 2.0,
+              "median_current": 2.0,
+              "eligible": true,
+              "delta_mean_days": 0.0,
+              "deterioration_observed": false,
+              "weight_baseline": 0.5,
+              "weight_current": 0.5,
+              "within_days": 0.0,
+              "composition_days": 0.0,
+              "unmatched_days": 0.0,
+              "contribution_days": 0.0,
+              "evidence_coverage": 1.0,
+              "rankable": true,
+              "priority_score": 0.0
+            }
+          ]
+        }
+      },
+      "backlog": [
+        {
+          "period": "2026-08",
+          "backlog_n": 0,
+          "age_median_days": null,
+          "age_p90_days": null,
+          "incoming_sample_n": 120,
+          "unknown_creation_n": 0
+        },
+        {
+          "period": "2026-09",
+          "backlog_n": 40,
+          "age_median_days": 26.0,
+          "age_p90_days": 26.0,
+          "incoming_sample_n": 160,
+          "unknown_creation_n": 0
+        }
+      ],
+      "agency_comparability": [
+        {
+          "agency_left": "A",
+          "agency_right": "B",
+          "category_overlap": 0.0,
+          "eligible_common_categories": [],
+          "directly_comparable": false,
+          "reason": "Raw agency averages do not control case mix; use common categories and periods."
+        }
+      ],
+      "period_profile": [
+        {
+          "closure_month": "2026-08",
+          "n_baseline": 120,
+          "closed_baseline": 120,
+          "missing_baseline": 0,
+          "mean_baseline": 2.0,
+          "median_baseline": 2.0,
+          "n_current": 0,
+          "closed_current": 0,
+          "missing_current": 0,
+          "mean_current": null,
+          "median_current": null,
+          "eligible": false,
+          "delta_mean_days": null,
+          "deterioration_observed": false
+        },
+        {
+          "closure_month": "2026-09",
+          "n_baseline": 0,
+          "closed_baseline": 0,
+          "missing_baseline": 0,
+          "mean_baseline": null,
+          "median_baseline": null,
+          "n_current": 120,
+          "closed_current": 120,
+          "missing_current": 0,
+          "mean_current": 5.0,
+          "median_current": 5.0,
+          "eligible": false,
+          "delta_mean_days": null,
+          "deterioration_observed": false
+        }
+      ]
+    }
+  }
+}

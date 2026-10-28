@@ -1,0 +1,643 @@
+{
+  "data_version": "nyc311_202301_202609_v2",
+  "data_kind": "real",
+  "source_url": "https://data.cityofnewyork.us/resource/erm2-nwe9.json",
+  "extracted_at_utc": "2026-10-28T19:31:19.361247+00:00",
+  "extraction_started_at_utc": "2026-10-28T19:24:27.431630+00:00",
+  "source_timezone": "America/New_York",
+  "source_revision_start": 1793151360,
+  "source_revision_end": 1793151360,
+  "source_changed_during_extraction": false,
+  "period_start_inclusive": "2023-01-01",
+  "period_end_exclusive": "2026-10-01",
+  "sample_method": "Month/borough stratified systematic selection by seeded identifier suffixes; not a probability sample or a population estimate",
+  "sample_rows": 265609,
+  "sample_monthly_counts": {
+    "2023-02": 4506,
+    "2023-01": 4759,
+    "2023-04": 4954,
+    "2023-03": 5040,
+    "2023-05": 5572,
+    "2023-06": 5214,
+    "2023-07": 5881,
+    "2023-08": 5707,
+    "2023-09": 5701,
+    "2023-11": 5587,
+    "2023-12": 5420,
+    "2023-10": 6102,
+    "2024-01": 5700,
+    "2024-02": 4822,
+    "2024-04": 5371,
+    "2024-03": 5297,
+    "2024-05": 5571,
+    "2024-06": 6003,
+    "2024-07": 5886,
+    "2024-08": 5717,
+    "2024-10": 6106,
+    "2024-09": 6017,
+    "2024-11": 5730,
+    "2024-12": 6412,
+    "2025-01": 6973,
+    "2025-02": 5097,
+    "2025-03": 5574,
+    "2025-04": 5463,
+    "2025-06": 6124,
+    "2025-05": 5954,
+    "2025-08": 6026,
+    "2025-09": 6070,
+    "2025-07": 6339,
+    "2025-10": 6643,
+    "2026-01": 6939,
+    "2025-11": 6015,
+    "2025-12": 6673,
+    "2026-02": 6616,
+    "2026-03": 6765,
+    "2026-04": 5951,
+    "2026-07": 6978,
+    "2026-06": 6775,
+    "2026-05": 6702,
+    "2026-08": 6472,
+    "2026-09": 6385
+  },
+  "population_monthly_counts": {
+    "2023-01": 242173,
+    "2023-02": 225002,
+    "2023-03": 251716,
+    "2023-04": 247496,
+    "2023-05": 280932,
+    "2023-06": 267168,
+    "2023-07": 289330,
+    "2023-08": 282757,
+    "2023-09": 283517,
+    "2023-10": 302769,
+    "2023-11": 280046,
+    "2023-12": 271817,
+    "2024-01": 287186,
+    "2024-02": 240436,
+    "2024-03": 266604,
+    "2024-04": 267565,
+    "2024-05": 283982,
+    "2024-06": 306200,
+    "2024-07": 298936,
+    "2024-08": 284823,
+    "2024-09": 306770,
+    "2024-10": 306803,
+    "2024-11": 293516,
+    "2024-12": 313949,
+    "2025-01": 348180,
+    "2025-02": 255364,
+    "2025-03": 281221,
+    "2025-04": 272549,
+    "2025-05": 295060,
+    "2025-06": 306442,
+    "2025-07": 315883,
+    "2025-08": 304039,
+    "2025-09": 302684,
+    "2025-10": 336612,
+    "2025-11": 304905,
+    "2025-12": 332103,
+    "2026-01": 348511,
+    "2026-02": 334691,
+    "2026-03": 342390,
+    "2026-04": 302190,
+    "2026-05": 331980,
+    "2026-06": 334834,
+    "2026-07": 343133,
+    "2026-08": 328922,
+    "2026-09": 323632
+  },
+  "partial_months": [],
+  "parts": [
+    {
+      "path": "raw/2023-01/part-00000.parquet",
+      "sha256": "ddbb9b055532c1a3ec3cc9b8dcb726819932c4ed948f3afcac5db2b0ae602810",
+      "rows": 4759,
+      "last_key": "56702063"
+    },
+    {
+      "path": "raw/2023-02/part-00000.parquet",
+      "sha256": "2bc64896c03a492544f953e14084bd0463772c0a53070866e503d551b3889052",
+      "rows": 4506,
+      "last_key": "56932580"
+    },
+    {
+      "path": "raw/2023-03/part-00000.parquet",
+      "sha256": "e61949224bcd475031c183d1a17f2ddb50f534c67c3c4bf82f8b29b39bb83e52",
+      "rows": 5000,
+      "last_key": "57197500"
+    },
+    {
+      "path": "raw/2023-03/part-00001.parquet",
+      "sha256": "4a9d8599d6640ae89235f26f55513b0bb09b68f3e5fff9053e2ea9f18c2024e0",
+      "rows": 40,
+      "last_key": "57202652"
+    },
+    {
+      "path": "raw/2023-04/part-00000.parquet",
+      "sha256": "ad942751a0f754bbe47fa0ba812424199542ec819dbc24754843a1ac816e6f74",
+      "rows": 4954,
+      "last_key": "57479306"
+    },
+    {
+      "path": "raw/2023-05/part-00000.parquet",
+      "sha256": "fe4c0d614ed525ab55d9592024cadf6e760b85088130fdd45adf46d6b009af35",
+      "rows": 5000,
+      "last_key": "57737108"
+    },
+    {
+      "path": "raw/2023-05/part-00001.parquet",
+      "sha256": "82dfc4833e3f77dfecdd0cd93ba774a8f6bd5bfccc16f0c2ac9da074a6876900",
+      "rows": 572,
+      "last_key": "57780509"
+    },
+    {
+      "path": "raw/2023-06/part-00000.parquet",
+      "sha256": "274da38c1d95ba106f2593cffba3ba348b3cc31fe60888882a1834355a683bf7",
+      "rows": 5000,
+      "last_key": "58048942"
+    },
+    {
+      "path": "raw/2023-06/part-00001.parquet",
+      "sha256": "f17b241b2c4cefe4548e0cce4ff23eca47084707e06d8c37574c1854a898c410",
+      "rows": 214,
+      "last_key": "58085558"
+    },
+    {
+      "path": "raw/2023-07/part-00000.parquet",
+      "sha256": "8447dbd575bf616a618a47959d4a37a2e5364257ca1a98ed0b6a473c3d8ec0a9",
+      "rows": 5000,
+      "last_key": "58329307"
+    },
+    {
+      "path": "raw/2023-07/part-00001.parquet",
+      "sha256": "3154f63a163374a76c2ccd8454b3af67daaaf6cb2844f52088aafd6ff630580c",
+      "rows": 881,
+      "last_key": "60711168"
+    },
+    {
+      "path": "raw/2023-08/part-00000.parquet",
+      "sha256": "9649948d7fd6a89a6d06ac4ad7433645ccf64bd70911e268d0b44fecfaec4ce2",
+      "rows": 5000,
+      "last_key": "58642621"
+    },
+    {
+      "path": "raw/2023-08/part-00001.parquet",
+      "sha256": "705862dd35725e1e4bb8c37602db71cb1bb5d36775156d7bace76396b2ea6def",
+      "rows": 707,
+      "last_key": "60042519"
+    },
+    {
+      "path": "raw/2023-09/part-00000.parquet",
+      "sha256": "b1d44508a803f352652ead9f21b2333d28562d7b9c81ff546ecfb3d5c5c1de47",
+      "rows": 5000,
+      "last_key": "58951224"
+    },
+    {
+      "path": "raw/2023-09/part-00001.parquet",
+      "sha256": "9b8fddfb0ed7d6e9b44f5f1c00ce8fe20db8e793ab750031e0d2ca984101dda1",
+      "rows": 701,
+      "last_key": "60756271"
+    },
+    {
+      "path": "raw/2023-10/part-00000.parquet",
+      "sha256": "df4c0646f5cbaaca54955b78a641163f73ec89b5ac233b654a70957a82ce50bb",
+      "rows": 5000,
+      "last_key": "59242290"
+    },
+    {
+      "path": "raw/2023-10/part-00001.parquet",
+      "sha256": "17d42b235e9fb1087e074ad4d39d201129ca7b5146e2282c3ed8cde18400e576",
+      "rows": 1102,
+      "last_key": "59461192"
+    },
+    {
+      "path": "raw/2023-11/part-00000.parquet",
+      "sha256": "0111a7d2dbb0a17611c61d8e40bb59b8e75ec084a537b823afb8847b291f3693",
+      "rows": 5000,
+      "last_key": "59573298"
+    },
+    {
+      "path": "raw/2023-11/part-00001.parquet",
+      "sha256": "fbe709fa3001fbae786578bc830695e98309786dc5fa35e62cff1f92307e5bbe",
+      "rows": 587,
+      "last_key": "61765892"
+    },
+    {
+      "path": "raw/2023-12/part-00000.parquet",
+      "sha256": "d8b97ba955033e23b4683964c4068451c85ddee2c4a725794beb9609781f716e",
+      "rows": 5000,
+      "last_key": "59871415"
+    },
+    {
+      "path": "raw/2023-12/part-00001.parquet",
+      "sha256": "67d2273b2f405217c654273287727132056276553427d35fd6bea249947a8993",
+      "rows": 420,
+      "last_key": "61771244"
+    },
+    {
+      "path": "raw/2024-01/part-00000.parquet",
+      "sha256": "ba438bc2c9e5f0d450c18224f89398dcdcc557e7dfa4b4aa1a50958aac7c929c",
+      "rows": 5000,
+      "last_key": "60161790"
+    },
+    {
+      "path": "raw/2024-01/part-00001.parquet",
+      "sha256": "a847da7dbdcb1cb5d32817bbd23a5aaa939402381c8ef0036a2647fef33662fb",
+      "rows": 700,
+      "last_key": "60316070"
+    },
+    {
+      "path": "raw/2024-02/part-00000.parquet",
+      "sha256": "f570f7d576bb10c891e7eb27114d0940c85aef950b1cc745ff825cce8c94c6b8",
+      "rows": 4822,
+      "last_key": "60490184"
+    },
+    {
+      "path": "raw/2024-03/part-00000.parquet",
+      "sha256": "53709a43771547355346c68fe115c2c70ecb392317859824728b0fba30df747d",
+      "rows": 5000,
+      "last_key": "60724170"
+    },
+    {
+      "path": "raw/2024-03/part-00001.parquet",
+      "sha256": "0f7233ecb18e1caa3a004183426313e8fa1234d4e2ee5c4e0ac77942689fd617",
+      "rows": 297,
+      "last_key": "60747442"
+    },
+    {
+      "path": "raw/2024-04/part-00000.parquet",
+      "sha256": "ca8f4a9a5e5469cbf169e3eb8124f2eb88745c358403cb31ab62c390416a112e",
+      "rows": 5000,
+      "last_key": "61004328"
+    },
+    {
+      "path": "raw/2024-04/part-00001.parquet",
+      "sha256": "a5676361d3645f0b17d61f1e184aca73382721c2e68e46be8e133d9e2cef1168",
+      "rows": 371,
+      "last_key": "61033839"
+    },
+    {
+      "path": "raw/2024-05/part-00000.parquet",
+      "sha256": "c6c61247923de84eb5449a5889312b04315cec86cd478fe0fdd796eb95900b50",
+      "rows": 5000,
+      "last_key": "61299574"
+    },
+    {
+      "path": "raw/2024-05/part-00001.parquet",
+      "sha256": "e550845ca6808cc26d36f3f017b094c7ac5b74c6c52386daaa7bf90d8f63d290",
+      "rows": 571,
+      "last_key": "63796299"
+    },
+    {
+      "path": "raw/2024-06/part-00000.parquet",
+      "sha256": "3e4657bc2a8f2ef16d65aaaa641bd286d2b05266607dc00b072f5a0b712b8989",
+      "rows": 5000,
+      "last_key": "61608179"
+    },
+    {
+      "path": "raw/2024-06/part-00001.parquet",
+      "sha256": "4b2222df2eddb9e020e019ef5bd2c36883f2568e34b75b99a4d6ccce9086317e",
+      "rows": 1003,
+      "last_key": "61672729"
+    },
+    {
+      "path": "raw/2024-07/part-00000.parquet",
+      "sha256": "e0b488c390fa07adcac7cba045ff83fd5034440e2f8668c0490882ea56fda23d",
+      "rows": 5000,
+      "last_key": "61936006"
+    },
+    {
+      "path": "raw/2024-07/part-00001.parquet",
+      "sha256": "b62c704efbb9a69f5907aa5155589527b4af58d1885a33b22491b8b51a3dd3e4",
+      "rows": 886,
+      "last_key": "62013428"
+    },
+    {
+      "path": "raw/2024-08/part-00000.parquet",
+      "sha256": "8b4fa80218670a3c3360119a2b29c0e6e1f4e9afc836920a7024d6fcad5f3d7b",
+      "rows": 5000,
+      "last_key": "62253533"
+    },
+    {
+      "path": "raw/2024-08/part-00001.parquet",
+      "sha256": "6f193e87bcf8f858c6d7e87cb0acee134b0a083886bd1daccbf814eaef0d3935",
+      "rows": 717,
+      "last_key": "62322880"
+    },
+    {
+      "path": "raw/2024-09/part-00000.parquet",
+      "sha256": "1cc2ac8a0dc9524f45d05cc035b7751d06744c768c98853d5a0dc2b9b9d0157b",
+      "rows": 5000,
+      "last_key": "62565730"
+    },
+    {
+      "path": "raw/2024-09/part-00001.parquet",
+      "sha256": "a7ba5c603c18ee13099b14c958007cefc8a4dbff5fd987242c32126fb0373157",
+      "rows": 1017,
+      "last_key": "62632380"
+    },
+    {
+      "path": "raw/2024-10/part-00000.parquet",
+      "sha256": "4184d1057aff46a0ab2d585adc594ca82a9a9ef05a667352fbad3b1e049ce67c",
+      "rows": 5000,
+      "last_key": "62886707"
+    },
+    {
+      "path": "raw/2024-10/part-00001.parquet",
+      "sha256": "e5997c1b1f8c0e8a7e44ef693cf0cbf68ae76fb20bfbca9cf88bf56350a14f4b",
+      "rows": 1106,
+      "last_key": "62956607"
+    },
+    {
+      "path": "raw/2024-11/part-00000.parquet",
+      "sha256": "3a0891b2849b1cffe48460e605c1ad12db079733e323601368f08bb085c5de2f",
+      "rows": 5000,
+      "last_key": "63217710"
+    },
+    {
+      "path": "raw/2024-11/part-00001.parquet",
+      "sha256": "811730a4ae50108c1ca4dbf8f3654a764fedbd0d63e68a59d0c39468e40b1ea3",
+      "rows": 730,
+      "last_key": "63264838"
+    },
+    {
+      "path": "raw/2024-12/part-00000.parquet",
+      "sha256": "5898b48ba3e04be752dd4b2f6e979152a082c8e65012aa3a3010124927cd24ad",
+      "rows": 5000,
+      "last_key": "63511507"
+    },
+    {
+      "path": "raw/2024-12/part-00001.parquet",
+      "sha256": "1a8efc0d8f540b54753beb612240d5058ec8691f190ef08a789ac5c476cbb0d8",
+      "rows": 1412,
+      "last_key": "63609145"
+    },
+    {
+      "path": "raw/2025-01/part-00000.parquet",
+      "sha256": "463adc33588964e305d67b8e68ce9c5a68e9831b18b7d65e6923f5bf330cf887",
+      "rows": 5000,
+      "last_key": "63846164"
+    },
+    {
+      "path": "raw/2025-01/part-00001.parquet",
+      "sha256": "c618f767e234bade0c292a27cde1d460d66405872b6938d7d422fbc341ed545e",
+      "rows": 1973,
+      "last_key": "63972514"
+    },
+    {
+      "path": "raw/2025-02/part-00000.parquet",
+      "sha256": "69d7175ab97271690ddf765c6f8a99267950c10d84f130207ecbc1072798b561",
+      "rows": 5000,
+      "last_key": "64217652"
+    },
+    {
+      "path": "raw/2025-02/part-00001.parquet",
+      "sha256": "9d4d4f8b23e3b92c3c98510c58334ec536fe9937d8ff1c186b78d6de98771428",
+      "rows": 97,
+      "last_key": "64329407"
+    },
+    {
+      "path": "raw/2025-03/part-00000.parquet",
+      "sha256": "d542c35c7f6e35181844576bb1a0733697f3ec3e38fb88e9a544eae056bd1177",
+      "rows": 5000,
+      "last_key": "64492960"
+    },
+    {
+      "path": "raw/2025-03/part-00001.parquet",
+      "sha256": "9e6d7988ca0791e3bd55f399d1a0bb5ff375d92480ff62e18f9717ddae90c2f9",
+      "rows": 574,
+      "last_key": "64530560"
+    },
+    {
+      "path": "raw/2025-04/part-00000.parquet",
+      "sha256": "cfc48d9690eb3265c54a7e1ee07c6cc284c511709db749cb7f8797bf5d760cbc",
+      "rows": 5000,
+      "last_key": "64786412"
+    },
+    {
+      "path": "raw/2025-04/part-00001.parquet",
+      "sha256": "ecb0efe8eb7441c2aa6e59329cb5f132d5c3a659b6d50c091524fe8dc5138901",
+      "rows": 463,
+      "last_key": "64837412"
+    },
+    {
+      "path": "raw/2025-05/part-00000.parquet",
+      "sha256": "a10441d769a1e5305d5b302f3b4ea06dd7e275abe0c159c21250a28206aae6e3",
+      "rows": 5000,
+      "last_key": "65073679"
+    },
+    {
+      "path": "raw/2025-05/part-00001.parquet",
+      "sha256": "adc292e893249e2bd93aee4abc02b6c7900bfed325a0a7324db39e14ed429c22",
+      "rows": 954,
+      "last_key": "65145915"
+    },
+    {
+      "path": "raw/2025-06/part-00000.parquet",
+      "sha256": "e4687b052b07e7948137ede252800da1552b24d8caa9b4e796baaac783a502a8",
+      "rows": 5000,
+      "last_key": "65395407"
+    },
+    {
+      "path": "raw/2025-06/part-00001.parquet",
+      "sha256": "6fb37956b4a0e0f5805302e317a911cb8ec5145fcc8fcbf8872a1aaffcc1659a",
+      "rows": 1124,
+      "last_key": "67966457"
+    },
+    {
+      "path": "raw/2025-07/part-00000.parquet",
+      "sha256": "34307a52ed7f045bd679eab93e0b832a3484aea3ba9647a6722d206b1820fcf6",
+      "rows": 5000,
+      "last_key": "65697830"
+    },
+    {
+      "path": "raw/2025-07/part-00001.parquet",
+      "sha256": "86e07ae93a8c6e1984c41b98a9420c177f1f195e7b17038b5acc071b5a22a654",
+      "rows": 1339,
+      "last_key": "67966670"
+    },
+    {
+      "path": "raw/2025-08/part-00000.parquet",
+      "sha256": "fea4098c4d2e25c5a1ec2394962c15042e33e8ad953ed747abb585f6bda9eea9",
+      "rows": 5000,
+      "last_key": "65995732"
+    },
+    {
+      "path": "raw/2025-08/part-00001.parquet",
+      "sha256": "6708bd43e7d6e635005f670c5eed99248f7be486b361d33dabc66fed7bd4b93a",
+      "rows": 1026,
+      "last_key": "67966635"
+    },
+    {
+      "path": "raw/2025-09/part-00000.parquet",
+      "sha256": "bdf1695e3953b5686e2365900fdb8da5ba368ae8417a0d43bfffc1fead608bb6",
+      "rows": 5000,
+      "last_key": "66276647"
+    },
+    {
+      "path": "raw/2025-09/part-00001.parquet",
+      "sha256": "b91bdf2c6f1f271a222c92b2018f85456e9cd020c966054be693dcd2b99e8e94",
+      "rows": 1070,
+      "last_key": "66332697"
+    },
+    {
+      "path": "raw/2025-10/part-00000.parquet",
+      "sha256": "f4716a6116e3c22c6afe016781ae88e456c4232311517971df611980bca2ecf1",
+      "rows": 5000,
+      "last_key": "66601142"
+    },
+    {
+      "path": "raw/2025-10/part-00001.parquet",
+      "sha256": "2eb01baf172c88370a50cf34370a197fb4e0aabc4f9df91a4c94a7dee6f60aef",
+      "rows": 1643,
+      "last_key": "66694469"
+    },
+    {
+      "path": "raw/2025-11/part-00000.parquet",
+      "sha256": "1642a1db36879c7c32a32087f4b7f1ca0bea6057b3e5a5274034e8bc8ed03342",
+      "rows": 5000,
+      "last_key": "66954483"
+    },
+    {
+      "path": "raw/2025-11/part-00001.parquet",
+      "sha256": "f23693d6fed37b4fd989d902d4d9a4025ba19e2a31c514464c794b9527779340",
+      "rows": 1015,
+      "last_key": "67021233"
+    },
+    {
+      "path": "raw/2025-12/part-00000.parquet",
+      "sha256": "1dde54d2429c8a30a329d3fbe98bb190e58d5d5f68dce291ac30c359d63e3f7b",
+      "rows": 5000,
+      "last_key": "67266355"
+    },
+    {
+      "path": "raw/2025-12/part-00001.parquet",
+      "sha256": "84a03d77255431de980d0daec59c0df7a68dda313709ced658d5e3db8d088d13",
+      "rows": 1673,
+      "last_key": "67398423"
+    },
+    {
+      "path": "raw/2026-01/part-00000.parquet",
+      "sha256": "c7461ef9154712a4a9491b552d0688edddc3d9670231d814f0591fbce96f762f",
+      "rows": 5000,
+      "last_key": "67615274"
+    },
+    {
+      "path": "raw/2026-01/part-00001.parquet",
+      "sha256": "f139684e37c12f8a4acf4c3013c09cd8ed000fecc355763f1224ee3243997d37",
+      "rows": 1939,
+      "last_key": "67955366"
+    },
+    {
+      "path": "raw/2026-02/part-00000.parquet",
+      "sha256": "8bf917ea5828a4d4bf41347a7a2ae7311902cdf15de59b55007472edef1ba5b3",
+      "rows": 5000,
+      "last_key": "68082592"
+    },
+    {
+      "path": "raw/2026-02/part-00001.parquet",
+      "sha256": "6db4d827f1fd64b4af795a8309b5c54ae7002841ecd444288cb5a99099d30dac",
+      "rows": 1616,
+      "last_key": "68207429"
+    },
+    {
+      "path": "raw/2026-03/part-00000.parquet",
+      "sha256": "c8403e36253308160b21abea43fecaeaa31c4d7631133efca9b61a44a8201add",
+      "rows": 5000,
+      "last_key": "68433248"
+    },
+    {
+      "path": "raw/2026-03/part-00001.parquet",
+      "sha256": "da35ebd1aa5ce211a3d7b92a90378ba81c7467c7f329a6aebfba66e9a750bf0a",
+      "rows": 1765,
+      "last_key": "68543498"
+    },
+    {
+      "path": "raw/2026-04/part-00000.parquet",
+      "sha256": "e4a3302554f374d1a199f3e0e7647b8fae63fbd0ab9e3a26607994aaac082bde",
+      "rows": 5000,
+      "last_key": "68794096"
+    },
+    {
+      "path": "raw/2026-04/part-00001.parquet",
+      "sha256": "caa2644a45a9fddec33729b9eb11a488979ee94cdb42a8a3854f2a7753b4f8d9",
+      "rows": 951,
+      "last_key": "68860679"
+    },
+    {
+      "path": "raw/2026-05/part-00000.parquet",
+      "sha256": "d0301e7e3339f459bee5105de0968cf786e8afc5f06d8b30832183e53ad2dffb",
+      "rows": 5000,
+      "last_key": "69107829"
+    },
+    {
+      "path": "raw/2026-05/part-00001.parquet",
+      "sha256": "372a3384ac8fb0d19d0409750f8576feee1a245c28110dc1ce25f13783a4d1fb",
+      "rows": 1702,
+      "last_key": "69205829"
+    },
+    {
+      "path": "raw/2026-06/part-00000.parquet",
+      "sha256": "606264f8e01e5f52a58d3c056f525f500bbdc38ac906288398b285997bb5045f",
+      "rows": 5000,
+      "last_key": "69459533"
+    },
+    {
+      "path": "raw/2026-06/part-00001.parquet",
+      "sha256": "0dacf1bf23779cae9f9d0eda31e5a03b8d1b8ede916a88bb40189ce6dd319fa2",
+      "rows": 1775,
+      "last_key": "69563336"
+    },
+    {
+      "path": "raw/2026-07/part-00000.parquet",
+      "sha256": "c6ff2783e3739474453ac9933773887903bd738d61a3a5c2cf55c2d731a41930",
+      "rows": 5000,
+      "last_key": "69811878"
+    },
+    {
+      "path": "raw/2026-07/part-00001.parquet",
+      "sha256": "d37ca031216f42d07e5622c74f218ad51e2ed722b268ef9d2a89d798f48e5fdb",
+      "rows": 1978,
+      "last_key": "69944098"
+    },
+    {
+      "path": "raw/2026-08/part-00000.parquet",
+      "sha256": "65d28f07b2fbd4586dc2c8ce629dcf4742ec1eba11aa1aedd60b55298d3061a0",
+      "rows": 5000,
+      "last_key": "70180946"
+    },
+    {
+      "path": "raw/2026-08/part-00001.parquet",
+      "sha256": "9856218dc8bb812f8e1d91ccada98597bfdd5e8b2d2b1b413e9919503095fbb4",
+      "rows": 1472,
+      "last_key": "70266349"
+    },
+    {
+      "path": "raw/2026-09/part-00000.parquet",
+      "sha256": "1e3c713bf48eb5a4d82a561975b074e4536889226fc71857e884c8104c8800cc",
+      "rows": 5000,
+      "last_key": "70530455"
+    },
+    {
+      "path": "raw/2026-09/part-00001.parquet",
+      "sha256": "bd333e30a2344ed57eb3f136bc6f0a3d0b8d619ba87772d7aaf5b6ca733b44fc",
+      "rows": 1385,
+      "last_key": "70613010"
+    }
+  ],
+  "config": {
+    "start": "2023-01",
+    "end": "2026-10",
+    "suffix_count": 2,
+    "seed": 42,
+    "page_size": 5000,
+    "max_rows": 500000,
+    "max_bytes": 536870912
+  },
+  "limitations": [
+    "Identifier periodicity and assignment processes may bias systematic selection.",
+    "Rare category/agency strata may be absent; coverage is measured against official joint aggregates.",
+    "API requests are not a transactionally frozen snapshot; changes are recorded.",
+    "No historical status or staffing/capacity data is present."
+  ]
+}

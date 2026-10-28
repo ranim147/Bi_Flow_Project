@@ -1,0 +1,25 @@
+{
+  "model_calls": 0,
+  "all_passed": true,
+  "historical_files_unchanged": true,
+  "results": [
+    {
+      "test": "A",
+      "execution_id": "2c4492324c464b609a16bec09cd811d4",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "test": "B",
+      "execution_id": "7f77fcf858cc46d1a07297f60537a0b2",
+      "passed": true,
+      "errors": []
+    },
+    {
+      "test": "7",
+      "execution_id": "0bfc38e2d76d4a61af3e1407de09b61a",
+      "passed": true,
+      "errors": []
+    }
+  ]
+}

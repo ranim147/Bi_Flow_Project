@@ -1,0 +1,3094 @@
+{
+  "plan": {
+    "intent": "ranking",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": true,
+    "operation_sequence": [
+      "filter_scope",
+      "rank_groups",
+      "lock_scope",
+      "compare_scoped_groups",
+      "prioritize_segments"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {
+      "borough": "STATEN ISLAND"
+    }
+  },
+  "sections": [
+    {
+      "key": "ranking",
+      "text": "Classement par médiane décroissante des groupes éligibles (n ≥ 30) : {\"borough\": \"STATEN ISLAND\"} : médiane=0.655677, n=9874; {\"borough\": \"BRONX\"} : médiane=0.505411, n=55022; {\"borough\": \"MANHATTAN\"} : médiane=0.421806, n=52097; {\"borough\": \"BROOKLYN\"} : médiane=0.260729, n=79395; {\"borough\": \"QUEENS\"} : médiane=0.192662, n=62712. Maximum éligible : {\"borough\": \"STATEN ISLAND\"}.",
+      "evidence_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.8e5a720326276809",
+        "plan.7104fe0a2d77b1d9",
+        "plan.9e2ef20707b629bf",
+        "plan.8e1ef57c5ac61a28"
+      ],
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "category": "comparison"
+    },
+    {
+      "key": "comparison_complaint_type",
+      "text": "Comparaison descriptive limitée à {\"borough\": \"STATEN ISLAND\"} par complaint_type : {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NEW TREE REQUEST\"} : médiane=483.714589, n=34; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ROOT/SEWER/SIDEWALK CONDITION\"} : médiane=149.616672, n=74; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"FOOD ESTABLISHMENT\"} : médiane=60.019653, n=31; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"BUILDING/USE\"} : médiane=51.642361, n=113; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DEAD/DYING TREE\"} : médiane=25.891551, n=93; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"GENERAL\"} : médiane=15.920683, n=41; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ILLEGAL TREE DAMAGE\"} : médiane=14.794410, n=30; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DOOR/WINDOW\"} : médiane=11.815405, n=56; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"GENERAL CONSTRUCTION/PLUMBING\"} : médiane=10.473102, n=177; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"STREET LIGHT CONDITION\"} : médiane=9.810417, n=219; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"FLOORING/STAIRS\"} : médiane=9.805671, n=43; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"PLUMBING\"} : médiane=8.144769, n=138; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"SIDEWALK CONDITION\"} : médiane=8.041487, n=122; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"WATER LEAK\"} : médiane=8.031111, n=49; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"UNSANITARY CONDITION\"} : médiane=7.874826, n=193; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"PAINT/PLASTER\"} : médiane=6.918785, n=80; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ELECTRIC\"} : médiane=6.011539, n=56; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"CONSUMER COMPLAINT\"} : médiane=4.404873, n=47; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"OVERGROWN TREE/BRANCHES\"} : médiane=4.261354, n=211; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"SANITATION WORKER OR VEHICLE COMPLAINT\"} : médiane=3.811609, n=33; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NOISE\"} : médiane=3.765972, n=133; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ILLEGAL POSTING\"} : médiane=3.184184, n=100; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DAMAGED TREE\"} : médiane=2.957049, n=301; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"HIGHWAY CONDITION\"} : médiane=2.794884, n=39; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"MISSED COLLECTION\"} : médiane=2.184757, n=433; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DEAD ANIMAL\"} : médiane=2.023403, n=89; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ILLEGAL DUMPING\"} : médiane=2.009502, n=135; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"LEAD\"} : médiane=1.990278, n=44; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ELECTRONICS WASTE APPOINTMENT\"} : médiane=1.884028, n=185; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"HEAT/HOT WATER\"} : médiane=1.576603, n=200; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"OBSTRUCTION\"} : médiane=1.506794, n=128; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"MAINTENANCE OR FACILITY\"} : médiane=1.202674, n=67; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DIRTY CONDITION\"} : médiane=1.137176, n=275; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"STREET CONDITION\"} : médiane=1.088970, n=531; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"RESIDENTIAL DISPOSAL COMPLAINT\"} : médiane=1.066291, n=78; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"WATER CONSERVATION\"} : médiane=0.713542, n=32; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"DERELICT VEHICLES\"} : médiane=0.640278, n=131; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"WATER SYSTEM\"} : médiane=0.368403, n=380; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"SEWER\"} : médiane=0.318403, n=196; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"GRAFFITI\"} : médiane=0.194421, n=59; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"TRAFFIC SIGNAL CONDITION\"} : médiane=0.076389, n=167; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ABANDONED VEHICLE\"} : médiane=0.059132, n=374; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"BLOCKED DRIVEWAY\"} : médiane=0.057141, n=361; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NON-EMERGENCY POLICE MATTER\"} : médiane=0.056285, n=81; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ILLEGAL PARKING\"} : médiane=0.053102, n=1183; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ANIMAL-ABUSE\"} : médiane=0.045833, n=53; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"TRAFFIC\"} : médiane=0.041991, n=49; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NOISE - RESIDENTIAL\"} : médiane=0.037060, n=724; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NOISE - COMMERCIAL\"} : médiane=0.034479, n=95; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NOISE - VEHICLE\"} : médiane=0.032002, n=91; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NOISE - STREET/SIDEWALK\"} : médiane=0.031829, n=143; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ILLEGAL FIREWORKS\"} : médiane=0.027645, n=88; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"SNOW OR ICE\"} : médiane=0.024005, n=361; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"RODENT\"} : médiane=0.000000, n=79.",
+      "evidence_ids": [
+        "plan.bcaa15d13931b226",
+        "plan.a77eb2b3d4eec50e",
+        "plan.ef9b12c0f49565f8",
+        "plan.f05cfc950a94b964",
+        "plan.f7142b9a7ac0cff6",
+        "plan.30c781227c807862",
+        "plan.22f13348a7a015e1",
+        "plan.1f401eff49d3395c",
+        "plan.30ca783129ebaeff",
+        "plan.b64ce9f9f27dac09",
+        "plan.620c40577e82d503",
+        "plan.d00d4649aef0359e",
+        "plan.2f6964090da24569",
+        "plan.a8afd30bcefdeb4b",
+        "plan.b6800a085430bcde",
+        "plan.cde6e156eb8d354b",
+        "plan.aba6804c03294742",
+        "plan.e54c85bbfedf2565",
+        "plan.c373d7dc642de05a",
+        "plan.2e817d91e2495784",
+        "plan.e4fe26bb5501df2f",
+        "plan.155cc4d19fede319",
+        "plan.bb003c11dcf1b70b",
+        "plan.f05cf6488a4d5318",
+        "plan.f1a1c09ad1fa46a3",
+        "plan.ccd5b7a72dfd4a62",
+        "plan.38c3d9ebaf116119",
+        "plan.e09c45baa4aa8925",
+        "plan.954c502f8c34859f",
+        "plan.d575e79a282e80c8",
+        "plan.580cfea17e295660",
+        "plan.30503062203ddcc7",
+        "plan.d7c67232631bc7cc",
+        "plan.3cc9988604bc2353",
+        "plan.119a479779cdce15",
+        "plan.8b4a76f0b16e95e8",
+        "plan.0dfb648e41b7ac01",
+        "plan.ddf2de0217e53c2b",
+        "plan.1b66fa89f378b4bd",
+        "plan.f0e1c58d6912ac71",
+        "plan.66b4b0a0141c53a1",
+        "plan.8fdaa203c19f1469",
+        "plan.fc755a9e80fe553c",
+        "plan.0a7bc729bc327f1a",
+        "plan.941fc17eda858c9f",
+        "plan.cfee9c87db75cea5",
+        "plan.7c53cac26535bf01",
+        "plan.6dc3ec802d6f84ce",
+        "plan.e40b3794773b541f",
+        "plan.9f24fd4afd372a2a",
+        "plan.8cdcdb3afb89f88d",
+        "plan.26e5ea190e7c4af6",
+        "plan.32fa5114727e9b49",
+        "plan.2693415e7c7a769e"
+      ],
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "category": "comparison"
+    },
+    {
+      "key": "comparison_agency",
+      "text": "Comparaison descriptive limitée à {\"borough\": \"STATEN ISLAND\"} par agency : {\"borough\": \"STATEN ISLAND\", \"agency\": \"DOB\"} : médiane=14.401534, n=384; {\"borough\": \"STATEN ISLAND\", \"agency\": \"HPD\"} : médiane=5.650336, n=891; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DPR\"} : médiane=4.859132, n=847; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DCWP\"} : médiane=4.404873, n=47; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DOT\"} : médiane=1.821973, n=1182; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DSNY\"} : médiane=1.808304, n=2026; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DEP\"} : médiane=0.728819, n=864; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DOHMH\"} : médiane=0.722963, n=233; {\"borough\": \"STATEN ISLAND\", \"agency\": \"NYPD\"} : médiane=0.046181, n=3355.",
+      "evidence_ids": [
+        "plan.d050fdf43813adf3",
+        "plan.c4b580ace5cceea7",
+        "plan.eb621edc8407f189",
+        "plan.ad3c9dd7af7e8209",
+        "plan.d452f9d9c8efcd0d",
+        "plan.91560cb818dc558a",
+        "plan.41f53a5374758555",
+        "plan.0f1e55d12b39f45f",
+        "plan.9e7f34fdb96246dc"
+      ],
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "category": "comparison"
+    },
+    {
+      "key": "priorities",
+      "text": "Segments à investiguer par médiane décroissante, puis ordre lexical, hors groupes de faible effectif : {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"NEW TREE REQUEST\", \"agency\": \"DPR\"} : médiane=483.714589, n=34; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"ROOT/SEWER/SIDEWALK CONDITION\", \"agency\": \"DPR\"} : médiane=149.616672, n=74; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"FOOD ESTABLISHMENT\", \"agency\": \"DOHMH\"} : médiane=60.019653, n=31.",
+      "evidence_ids": [
+        "plan.ee51cb78eb706b33",
+        "plan.b2e97b4cc1d330df",
+        "plan.482f6691ff15ebca"
+      ],
+      "recommendation": "Dans les segments cités uniquement, extraire les horodatages des étapes, affectations et complexité; distinguer temps d'attente et de traitement, comparer des dossiers de même catégorie et vérifier les exclusions. L'hypothèse d'une étape plus lente serait soutenue par des temps d'étape supérieurs à complexité comparable, et réfutée si l'écart disparaît après ce contrôle.",
+      "category": "comparison"
+    }
+  ],
+  "tables": {
+    "ranking": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND"
+        },
+        "value": 0.6556770833333334,
+        "n": 9874,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "BRONX"
+        },
+        "value": 0.5054108796296296,
+        "n": 55022,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "MANHATTAN"
+        },
+        "value": 0.42180555555555554,
+        "n": 52097,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "BROOKLYN"
+        },
+        "value": 0.2607291666666667,
+        "n": 79395,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "QUEENS"
+        },
+        "value": 0.19266203703703705,
+        "n": 62712,
+        "eligible": true
+      }
+    ],
+    "comparison_complaint_type": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ADOPT-A-BASKET"
+        },
+        "value": 683.9680555555556,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TATTOOING"
+        },
+        "value": 533.0305324074075,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NEW TREE REQUEST"
+        },
+        "value": 483.7145891203704,
+        "n": 34,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SMOKING"
+        },
+        "value": 458.8630092592593,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LOT CONDITION"
+        },
+        "value": 259.61953703703705,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DAY CARE"
+        },
+        "value": 231.80266203703704,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ROOT/SEWER/SIDEWALK CONDITION"
+        },
+        "value": 149.6166724537037,
+        "n": 74,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SCHOOL MAINTENANCE"
+        },
+        "value": 118.99372685185185,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOR HIRE VEHICLE COMPLAINT"
+        },
+        "value": 109.050625,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOOD ESTABLISHMENT"
+        },
+        "value": 60.01965277777778,
+        "n": 31,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NON-RESIDENTIAL HEAT"
+        },
+        "value": 60.01898148148148,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUILDING/USE"
+        },
+        "value": 51.642361111111114,
+        "n": 113,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SMOKING OR VAPING"
+        },
+        "value": 42.068385416666665,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CANNABIS RETAILER"
+        },
+        "value": 40.07899305555556,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER QUALITY"
+        },
+        "value": 39.640625,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - HELICOPTER"
+        },
+        "value": 38.69790509259259,
+        "n": 18,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "POISON IVY"
+        },
+        "value": 33.26442708333333,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INVESTIGATIONS AND DISCIPLINE (IAD)"
+        },
+        "value": 31.078587962962963,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DEAD/DYING TREE"
+        },
+        "value": 25.891550925925927,
+        "n": 93,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LINKNYC"
+        },
+        "value": 25.10939814814815,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OUTSIDE BUILDING"
+        },
+        "value": 20.595827546296295,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDOOR SEWAGE"
+        },
+        "value": 20.070387731481482,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELEVATOR"
+        },
+        "value": 18.201469907407407,
+        "n": 23,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GENERAL"
+        },
+        "value": 15.92068287037037,
+        "n": 41,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOOD POISONING"
+        },
+        "value": 15.845902777777777,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL TREE DAMAGE"
+        },
+        "value": 14.794409722222223,
+        "n": 30,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OUTDOOR DINING"
+        },
+        "value": 13.378686342592594,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SPECIAL NATURAL AREA DISTRICT (SNAD)"
+        },
+        "value": 12.572453703703705,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SPECIAL PROJECTS INSPECTION TEAM (SPIT)"
+        },
+        "value": 12.336712962962963,
+        "n": 9,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CURB CONDITION"
+        },
+        "value": 12.18866898148148,
+        "n": 25,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DOOR/WINDOW"
+        },
+        "value": 11.815405092592592,
+        "n": 56,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INCORRECT DATA"
+        },
+        "value": 10.941226851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GENERAL CONSTRUCTION/PLUMBING"
+        },
+        "value": 10.473101851851851,
+        "n": 177,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL FACILITY - NO PERMIT"
+        },
+        "value": 10.142013888888888,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET LIGHT CONDITION"
+        },
+        "value": 9.810416666666667,
+        "n": 219,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FLOORING/STAIRS"
+        },
+        "value": 9.805671296296296,
+        "n": 43,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SAFETY"
+        },
+        "value": 9.757060185185185,
+        "n": 17,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - MISSING"
+        },
+        "value": 9.468489583333334,
+        "n": 24,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BOILERS"
+        },
+        "value": 8.366875,
+        "n": 5,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "APPLIANCE"
+        },
+        "value": 8.24228587962963,
+        "n": 26,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE RACK CONDITION"
+        },
+        "value": 8.153703703703703,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PLUMBING"
+        },
+        "value": 8.144768518518518,
+        "n": 138,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SIDEWALK CONDITION"
+        },
+        "value": 8.04148726851852,
+        "n": 122,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER LEAK"
+        },
+        "value": 8.03111111111111,
+        "n": 49,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY CONDITION"
+        },
+        "value": 7.874826388888889,
+        "n": 193,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRINKING WATER"
+        },
+        "value": 7.826226851851851,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PAINT/PLASTER"
+        },
+        "value": 6.918784722222222,
+        "n": 80,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRIC"
+        },
+        "value": 6.011539351851852,
+        "n": 56,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "EMERGENCY RESPONSE TEAM (ERT)"
+        },
+        "value": 5.697413194444444,
+        "n": 20,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HIGHWAY SIGN - DAMAGED"
+        },
+        "value": 4.604340277777778,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRICAL"
+        },
+        "value": 4.600416666666667,
+        "n": 11,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CONSUMER COMPLAINT"
+        },
+        "value": 4.404872685185185,
+        "n": 47,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OVERGROWN TREE/BRANCHES"
+        },
+        "value": 4.261354166666667,
+        "n": 211,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - DAMAGED"
+        },
+        "value": 4.224189814814815,
+        "n": 29,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SANITATION WORKER OR VEHICLE COMPLAINT"
+        },
+        "value": 3.811608796296296,
+        "n": 33,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - DANGLING"
+        },
+        "value": 3.7673148148148146,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE"
+        },
+        "value": 3.765972222222222,
+        "n": 133,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL POSTING"
+        },
+        "value": 3.1841840277777775,
+        "n": 100,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UPROOTED STUMP"
+        },
+        "value": 2.9936574074074076,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DAMAGED TREE"
+        },
+        "value": 2.957048611111111,
+        "n": 301,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HIGHWAY CONDITION"
+        },
+        "value": 2.794884259259259,
+        "n": 39,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WOOD PILE REMAINING"
+        },
+        "value": 2.4629861111111113,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SWEEPING COMPLAINT"
+        },
+        "value": 2.2275347222222224,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MISSED COLLECTION"
+        },
+        "value": 2.1847569444444446,
+        "n": 433,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "AIR QUALITY"
+        },
+        "value": 2.1552083333333334,
+        "n": 20,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DEAD ANIMAL"
+        },
+        "value": 2.0234027777777777,
+        "n": 89,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LITTER BASKET REQUEST"
+        },
+        "value": 2.017795138888889,
+        "n": 14,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL DUMPING"
+        },
+        "value": 2.009502314814815,
+        "n": 135,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LEAD"
+        },
+        "value": 1.9902777777777778,
+        "n": 44,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRONICS WASTE APPOINTMENT"
+        },
+        "value": 1.8840277777777779,
+        "n": 185,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DUMPSTER COMPLAINT"
+        },
+        "value": 1.734351851851852,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUS STOP SHELTER PLACEMENT"
+        },
+        "value": 1.6409837962962963,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HEAT/HOT WATER"
+        },
+        "value": 1.5766030092592591,
+        "n": 200,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OBSTRUCTION"
+        },
+        "value": 1.5067939814814815,
+        "n": 128,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MOLD"
+        },
+        "value": 1.378587962962963,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MAINTENANCE OR FACILITY"
+        },
+        "value": 1.2026736111111112,
+        "n": 67,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DIRTY CONDITION"
+        },
+        "value": 1.137175925925926,
+        "n": 275,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET CONDITION"
+        },
+        "value": 1.0889699074074075,
+        "n": 531,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "RESIDENTIAL DISPOSAL COMPLAINT"
+        },
+        "value": 1.0662905092592592,
+        "n": 78,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LITTER BASKET COMPLAINT"
+        },
+        "value": 1.0180381944444443,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "COMMERCIAL DISPOSAL COMPLAINT"
+        },
+        "value": 0.8461226851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "URINATING IN PUBLIC"
+        },
+        "value": 0.8360069444444445,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEASONAL COLLECTION"
+        },
+        "value": 0.7444097222222222,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUS STOP SHELTER COMPLAINT"
+        },
+        "value": 0.7178877314814816,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER CONSERVATION"
+        },
+        "value": 0.7135416666666666,
+        "n": 32,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BROKEN PARKING METER"
+        },
+        "value": 0.6576041666666667,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DERELICT VEHICLES"
+        },
+        "value": 0.6402777777777777,
+        "n": 131,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDOOR AIR QUALITY"
+        },
+        "value": 0.5926388888888889,
+        "n": 15,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BEACH/POOL/SAUNA COMPLAINT"
+        },
+        "value": 0.5865277777777778,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ASBESTOS"
+        },
+        "value": 0.4409722222222222,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER SYSTEM"
+        },
+        "value": 0.36840277777777775,
+        "n": 380,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEWER"
+        },
+        "value": 0.31840277777777776,
+        "n": 196,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER MAINTENANCE"
+        },
+        "value": 0.290474537037037,
+        "n": 13,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HAZARDOUS MATERIAL"
+        },
+        "value": 0.2746296296296296,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GRAFFITI"
+        },
+        "value": 0.1944212962962963,
+        "n": 59,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SCAFFOLD SAFETY"
+        },
+        "value": 0.18828703703703703,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HAZARDOUS MATERIALS"
+        },
+        "value": 0.15694444444444444,
+        "n": 8,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEWER MAINTENANCE"
+        },
+        "value": 0.14930555555555555,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE/ROLLER/SKATE"
+        },
+        "value": 0.14552662037037037,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDUSTRIAL WASTE"
+        },
+        "value": 0.14228009259259258,
+        "n": 7,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HOMELESS PERSON ASSISTANCE"
+        },
+        "value": 0.11476851851851852,
+        "n": 13,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PANHANDLING"
+        },
+        "value": 0.07906250000000001,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TRAFFIC SIGNAL CONDITION"
+        },
+        "value": 0.0763888888888889,
+        "n": 167,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ABANDONED VEHICLE"
+        },
+        "value": 0.059131944444444445,
+        "n": 374,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BLOCKED DRIVEWAY"
+        },
+        "value": 0.0571412037037037,
+        "n": 361,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NON-EMERGENCY POLICE MATTER"
+        },
+        "value": 0.05628472222222222,
+        "n": 81,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "VENDOR ENFORCEMENT"
+        },
+        "value": 0.05390625,
+        "n": 8,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL PARKING"
+        },
+        "value": 0.05310185185185185,
+        "n": 1183,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRINKING"
+        },
+        "value": 0.04790509259259259,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRUG ACTIVITY"
+        },
+        "value": 0.04753472222222222,
+        "n": 11,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ENCAMPMENT"
+        },
+        "value": 0.046238425925925926,
+        "n": 9,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MOSQUITOES"
+        },
+        "value": 0.04586226851851852,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL-ABUSE"
+        },
+        "value": 0.04583333333333333,
+        "n": 53,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TRAFFIC"
+        },
+        "value": 0.04199074074074074,
+        "n": 49,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - RESIDENTIAL"
+        },
+        "value": 0.03706018518518518,
+        "n": 724,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DISORDERLY YOUTH"
+        },
+        "value": 0.03695601851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE/ROLLER/SKATE CHRONIC"
+        },
+        "value": 0.036626157407407406,
+        "n": 12,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - HOUSE OF WORSHIP"
+        },
+        "value": 0.03594328703703704,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - PARK"
+        },
+        "value": 0.034762731481481485,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - COMMERCIAL"
+        },
+        "value": 0.034479166666666665,
+        "n": 95,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - VEHICLE"
+        },
+        "value": 0.03200231481481482,
+        "n": 91,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - STREET/SIDEWALK"
+        },
+        "value": 0.031828703703703706,
+        "n": 143,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL FIREWORKS"
+        },
+        "value": 0.027644675925925927,
+        "n": 88,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SNOW OR ICE"
+        },
+        "value": 0.02400462962962963,
+        "n": 361,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "VIOLATION OF PARK RULES"
+        },
+        "value": 0.022083333333333333,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL IN A PARK"
+        },
+        "value": 0.018414351851851852,
+        "n": 18,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LOST PROPERTY"
+        },
+        "value": 0.00755787037037037,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BEST/SITE SAFETY"
+        },
+        "value": 0.0,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CONSTRUCTION SAFETY ENFORCEMENT"
+        },
+        "value": 0.0,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL ANIMAL KEPT AS PET"
+        },
+        "value": 0.0,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL ANIMAL SOLD"
+        },
+        "value": 0.0,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "REAL TIME ENFORCEMENT"
+        },
+        "value": 0.0,
+        "n": 5,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "RODENT"
+        },
+        "value": 0.0,
+        "n": 79,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STANDING WATER"
+        },
+        "value": 0.0,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNLEASHED DOG"
+        },
+        "value": 0.0,
+        "n": 12,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY ANIMAL PVT PROPERTY"
+        },
+        "value": 0.0,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY PIGEON CONDITION"
+        },
+        "value": 0.0,
+        "n": 5,
+        "eligible": false
+      }
+    ],
+    "comparison_agency": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DOE"
+        },
+        "value": 118.99372685185185,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "TLC"
+        },
+        "value": 80.40390625,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "OOS"
+        },
+        "value": 40.07899305555556,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "EDC"
+        },
+        "value": 38.69790509259259,
+        "n": 18,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "OTI"
+        },
+        "value": 25.10939814814815,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DOB"
+        },
+        "value": 14.401533564814816,
+        "n": 384,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "HPD"
+        },
+        "value": 5.650335648148148,
+        "n": 891,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DPR"
+        },
+        "value": 4.859131944444444,
+        "n": 847,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DCWP"
+        },
+        "value": 4.404872685185185,
+        "n": 47,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DOT"
+        },
+        "value": 1.8219733796296296,
+        "n": 1182,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DSNY"
+        },
+        "value": 1.8083043981481481,
+        "n": 2026,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DEP"
+        },
+        "value": 0.7288194444444445,
+        "n": 864,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DOHMH"
+        },
+        "value": 0.7229629629629629,
+        "n": 233,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "NYC311-PRD"
+        },
+        "value": 0.7132638888888889,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "DHS"
+        },
+        "value": 0.11476851851851852,
+        "n": 13,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "agency": "NYPD"
+        },
+        "value": 0.04618055555555556,
+        "n": 3355,
+        "eligible": true
+      }
+    ],
+    "priorities": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NEW TREE REQUEST",
+          "agency": "DPR"
+        },
+        "value": 483.7145891203704,
+        "n": 34,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ROOT/SEWER/SIDEWALK CONDITION",
+          "agency": "DPR"
+        },
+        "value": 149.6166724537037,
+        "n": 74,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOOD ESTABLISHMENT",
+          "agency": "DOHMH"
+        },
+        "value": 60.01965277777778,
+        "n": 31,
+        "eligible": true
+      }
+    ],
+    "all_segments": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ADOPT-A-BASKET",
+          "agency": "DSNY"
+        },
+        "value": 683.9680555555556,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TATTOOING",
+          "agency": "DOHMH"
+        },
+        "value": 533.0305324074075,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NEW TREE REQUEST",
+          "agency": "DPR"
+        },
+        "value": 483.7145891203704,
+        "n": 34,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SMOKING",
+          "agency": "DOHMH"
+        },
+        "value": 458.8630092592593,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LOT CONDITION",
+          "agency": "DSNY"
+        },
+        "value": 259.61953703703705,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DAY CARE",
+          "agency": "DOHMH"
+        },
+        "value": 231.80266203703704,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ROOT/SEWER/SIDEWALK CONDITION",
+          "agency": "DPR"
+        },
+        "value": 149.6166724537037,
+        "n": 74,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SCHOOL MAINTENANCE",
+          "agency": "DOE"
+        },
+        "value": 118.99372685185185,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOR HIRE VEHICLE COMPLAINT",
+          "agency": "TLC"
+        },
+        "value": 109.050625,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOOD ESTABLISHMENT",
+          "agency": "DOHMH"
+        },
+        "value": 60.01965277777778,
+        "n": 31,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NON-RESIDENTIAL HEAT",
+          "agency": "DOHMH"
+        },
+        "value": 60.01898148148148,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUILDING/USE",
+          "agency": "DOB"
+        },
+        "value": 51.642361111111114,
+        "n": 113,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ASBESTOS",
+          "agency": "DOHMH"
+        },
+        "value": 44.94538194444444,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SMOKING OR VAPING",
+          "agency": "DOHMH"
+        },
+        "value": 42.068385416666665,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CANNABIS RETAILER",
+          "agency": "OOS"
+        },
+        "value": 40.07899305555556,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER QUALITY",
+          "agency": "DEP"
+        },
+        "value": 39.640625,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - HELICOPTER",
+          "agency": "EDC"
+        },
+        "value": 38.69790509259259,
+        "n": 18,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GRAFFITI",
+          "agency": "DSNY"
+        },
+        "value": 35.559328703703706,
+        "n": 24,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "POISON IVY",
+          "agency": "DOHMH"
+        },
+        "value": 33.26442708333333,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INVESTIGATIONS AND DISCIPLINE (IAD)",
+          "agency": "DOB"
+        },
+        "value": 31.078587962962963,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DEAD/DYING TREE",
+          "agency": "DPR"
+        },
+        "value": 25.891550925925927,
+        "n": 93,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LINKNYC",
+          "agency": "OTI"
+        },
+        "value": 25.10939814814815,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELEVATOR",
+          "agency": "DOB"
+        },
+        "value": 22.457858796296296,
+        "n": 19,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OUTSIDE BUILDING",
+          "agency": "HPD"
+        },
+        "value": 20.595827546296295,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDOOR SEWAGE",
+          "agency": "DOHMH"
+        },
+        "value": 20.070387731481482,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HIGHWAY CONDITION",
+          "agency": "DSNY"
+        },
+        "value": 17.473859953703702,
+        "n": 8,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GENERAL",
+          "agency": "HPD"
+        },
+        "value": 15.92068287037037,
+        "n": 41,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FOOD POISONING",
+          "agency": "DOHMH"
+        },
+        "value": 15.845902777777777,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL TREE DAMAGE",
+          "agency": "DPR"
+        },
+        "value": 14.794409722222223,
+        "n": 30,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OUTDOOR DINING",
+          "agency": "DOT"
+        },
+        "value": 13.378686342592594,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SPECIAL NATURAL AREA DISTRICT (SNAD)",
+          "agency": "DOB"
+        },
+        "value": 12.572453703703705,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SPECIAL PROJECTS INSPECTION TEAM (SPIT)",
+          "agency": "DOB"
+        },
+        "value": 12.336712962962963,
+        "n": 9,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CURB CONDITION",
+          "agency": "DOT"
+        },
+        "value": 12.18866898148148,
+        "n": 25,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DOOR/WINDOW",
+          "agency": "HPD"
+        },
+        "value": 11.815405092592592,
+        "n": 56,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PLUMBING",
+          "agency": "DOB"
+        },
+        "value": 11.028749999999999,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INCORRECT DATA",
+          "agency": "DSNY"
+        },
+        "value": 10.941226851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GENERAL CONSTRUCTION/PLUMBING",
+          "agency": "DOB"
+        },
+        "value": 10.473101851851851,
+        "n": 177,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL FACILITY - NO PERMIT",
+          "agency": "DOHMH"
+        },
+        "value": 10.142013888888888,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET LIGHT CONDITION",
+          "agency": "DOT"
+        },
+        "value": 9.810416666666667,
+        "n": 219,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "FLOORING/STAIRS",
+          "agency": "HPD"
+        },
+        "value": 9.805671296296296,
+        "n": 43,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SAFETY",
+          "agency": "HPD"
+        },
+        "value": 9.757060185185185,
+        "n": 17,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - MISSING",
+          "agency": "DOT"
+        },
+        "value": 9.468489583333334,
+        "n": 24,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BOILERS",
+          "agency": "DOB"
+        },
+        "value": 8.366875,
+        "n": 5,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "APPLIANCE",
+          "agency": "HPD"
+        },
+        "value": 8.24228587962963,
+        "n": 26,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE RACK CONDITION",
+          "agency": "DOT"
+        },
+        "value": 8.153703703703703,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PLUMBING",
+          "agency": "HPD"
+        },
+        "value": 8.055428240740742,
+        "n": 122,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SIDEWALK CONDITION",
+          "agency": "DOT"
+        },
+        "value": 8.04148726851852,
+        "n": 122,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER LEAK",
+          "agency": "HPD"
+        },
+        "value": 8.03111111111111,
+        "n": 49,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY CONDITION",
+          "agency": "HPD"
+        },
+        "value": 7.874826388888889,
+        "n": 193,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRINKING WATER",
+          "agency": "DOHMH"
+        },
+        "value": 7.826226851851851,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELEVATOR",
+          "agency": "HPD"
+        },
+        "value": 7.070815972222222,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PAINT/PLASTER",
+          "agency": "HPD"
+        },
+        "value": 6.918784722222222,
+        "n": 80,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRIC",
+          "agency": "HPD"
+        },
+        "value": 6.011539351851852,
+        "n": 56,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "EMERGENCY RESPONSE TEAM (ERT)",
+          "agency": "DOB"
+        },
+        "value": 5.697413194444444,
+        "n": 20,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HIGHWAY SIGN - DAMAGED",
+          "agency": "DOT"
+        },
+        "value": 4.604340277777778,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRICAL",
+          "agency": "DOB"
+        },
+        "value": 4.600416666666667,
+        "n": 11,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CONSUMER COMPLAINT",
+          "agency": "DCWP"
+        },
+        "value": 4.404872685185185,
+        "n": 47,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OVERGROWN TREE/BRANCHES",
+          "agency": "DPR"
+        },
+        "value": 4.261354166666667,
+        "n": 211,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - DAMAGED",
+          "agency": "DOT"
+        },
+        "value": 4.224189814814815,
+        "n": 29,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SANITATION WORKER OR VEHICLE COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 3.811608796296296,
+        "n": 33,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SIGN - DANGLING",
+          "agency": "DOT"
+        },
+        "value": 3.7673148148148146,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE",
+          "agency": "DEP"
+        },
+        "value": 3.765972222222222,
+        "n": 133,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL POSTING",
+          "agency": "DSNY"
+        },
+        "value": 3.1841840277777775,
+        "n": 100,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UPROOTED STUMP",
+          "agency": "DPR"
+        },
+        "value": 2.9936574074074076,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DAMAGED TREE",
+          "agency": "DPR"
+        },
+        "value": 2.957048611111111,
+        "n": 301,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WOOD PILE REMAINING",
+          "agency": "DPR"
+        },
+        "value": 2.4629861111111113,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET SWEEPING COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 2.2275347222222224,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MISSED COLLECTION",
+          "agency": "DSNY"
+        },
+        "value": 2.1847569444444446,
+        "n": 433,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "AIR QUALITY",
+          "agency": "DEP"
+        },
+        "value": 2.1552083333333334,
+        "n": 20,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DEAD ANIMAL",
+          "agency": "DSNY"
+        },
+        "value": 2.0234027777777777,
+        "n": 89,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LITTER BASKET REQUEST",
+          "agency": "DSNY"
+        },
+        "value": 2.017795138888889,
+        "n": 14,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL DUMPING",
+          "agency": "DSNY"
+        },
+        "value": 2.009502314814815,
+        "n": 135,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LEAD",
+          "agency": "DEP"
+        },
+        "value": 1.9902777777777778,
+        "n": 44,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ELECTRONICS WASTE APPOINTMENT",
+          "agency": "DSNY"
+        },
+        "value": 1.8840277777777779,
+        "n": 185,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HIGHWAY CONDITION",
+          "agency": "DOT"
+        },
+        "value": 1.7906712962962963,
+        "n": 31,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DUMPSTER COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 1.734351851851852,
+        "n": 10,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUS STOP SHELTER PLACEMENT",
+          "agency": "DOT"
+        },
+        "value": 1.6409837962962963,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HEAT/HOT WATER",
+          "agency": "HPD"
+        },
+        "value": 1.5766030092592591,
+        "n": 200,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "OBSTRUCTION",
+          "agency": "DSNY"
+        },
+        "value": 1.5067939814814815,
+        "n": 128,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MOLD",
+          "agency": "DOHMH"
+        },
+        "value": 1.378587962962963,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MAINTENANCE OR FACILITY",
+          "agency": "DPR"
+        },
+        "value": 1.2026736111111112,
+        "n": 67,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DIRTY CONDITION",
+          "agency": "DSNY"
+        },
+        "value": 1.137175925925926,
+        "n": 275,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET CONDITION",
+          "agency": "DOT"
+        },
+        "value": 1.091898148148148,
+        "n": 528,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "RESIDENTIAL DISPOSAL COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 1.0662905092592592,
+        "n": 78,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LITTER BASKET COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 1.0180381944444443,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "COMMERCIAL DISPOSAL COMPLAINT",
+          "agency": "DSNY"
+        },
+        "value": 0.8461226851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "URINATING IN PUBLIC",
+          "agency": "NYPD"
+        },
+        "value": 0.8360069444444445,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEASONAL COLLECTION",
+          "agency": "DSNY"
+        },
+        "value": 0.7444097222222222,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BUS STOP SHELTER COMPLAINT",
+          "agency": "DOT"
+        },
+        "value": 0.7178877314814816,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER CONSERVATION",
+          "agency": "DEP"
+        },
+        "value": 0.7135416666666666,
+        "n": 32,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STREET CONDITION",
+          "agency": "NYC311-PRD"
+        },
+        "value": 0.7132638888888889,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BROKEN PARKING METER",
+          "agency": "DOT"
+        },
+        "value": 0.6576041666666667,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DERELICT VEHICLES",
+          "agency": "DSNY"
+        },
+        "value": 0.6402777777777777,
+        "n": 131,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDOOR AIR QUALITY",
+          "agency": "DOHMH"
+        },
+        "value": 0.5926388888888889,
+        "n": 15,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BEACH/POOL/SAUNA COMPLAINT",
+          "agency": "DOHMH"
+        },
+        "value": 0.5865277777777778,
+        "n": 4,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER SYSTEM",
+          "agency": "DEP"
+        },
+        "value": 0.36840277777777775,
+        "n": 380,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEWER",
+          "agency": "DEP"
+        },
+        "value": 0.31840277777777776,
+        "n": 196,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "WATER MAINTENANCE",
+          "agency": "DEP"
+        },
+        "value": 0.290474537037037,
+        "n": 13,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HAZARDOUS MATERIAL",
+          "agency": "DEP"
+        },
+        "value": 0.2746296296296296,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ASBESTOS",
+          "agency": "DEP"
+        },
+        "value": 0.22118055555555555,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SCAFFOLD SAFETY",
+          "agency": "DOB"
+        },
+        "value": 0.18828703703703703,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HAZARDOUS MATERIALS",
+          "agency": "DEP"
+        },
+        "value": 0.15694444444444444,
+        "n": 8,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SEWER MAINTENANCE",
+          "agency": "DEP"
+        },
+        "value": 0.14930555555555555,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE/ROLLER/SKATE",
+          "agency": "NYPD"
+        },
+        "value": 0.14552662037037037,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "INDUSTRIAL WASTE",
+          "agency": "DEP"
+        },
+        "value": 0.14228009259259258,
+        "n": 7,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "HOMELESS PERSON ASSISTANCE",
+          "agency": "DHS"
+        },
+        "value": 0.11476851851851852,
+        "n": 13,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "PANHANDLING",
+          "agency": "NYPD"
+        },
+        "value": 0.07906250000000001,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TRAFFIC SIGNAL CONDITION",
+          "agency": "DOT"
+        },
+        "value": 0.0763888888888889,
+        "n": 167,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ABANDONED VEHICLE",
+          "agency": "NYPD"
+        },
+        "value": 0.059131944444444445,
+        "n": 374,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BLOCKED DRIVEWAY",
+          "agency": "NYPD"
+        },
+        "value": 0.0571412037037037,
+        "n": 361,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NON-EMERGENCY POLICE MATTER",
+          "agency": "NYPD"
+        },
+        "value": 0.05628472222222222,
+        "n": 81,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "VENDOR ENFORCEMENT",
+          "agency": "DSNY"
+        },
+        "value": 0.05390625,
+        "n": 8,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL PARKING",
+          "agency": "NYPD"
+        },
+        "value": 0.05310185185185185,
+        "n": 1183,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRINKING",
+          "agency": "NYPD"
+        },
+        "value": 0.04790509259259259,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DRUG ACTIVITY",
+          "agency": "NYPD"
+        },
+        "value": 0.04753472222222222,
+        "n": 11,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ENCAMPMENT",
+          "agency": "NYPD"
+        },
+        "value": 0.046238425925925926,
+        "n": 9,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "MOSQUITOES",
+          "agency": "DOHMH"
+        },
+        "value": 0.04586226851851852,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL-ABUSE",
+          "agency": "NYPD"
+        },
+        "value": 0.04583333333333333,
+        "n": 53,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "TRAFFIC",
+          "agency": "NYPD"
+        },
+        "value": 0.04199074074074074,
+        "n": 49,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - RESIDENTIAL",
+          "agency": "NYPD"
+        },
+        "value": 0.03706018518518518,
+        "n": 724,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "DISORDERLY YOUTH",
+          "agency": "NYPD"
+        },
+        "value": 0.03695601851851852,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BIKE/ROLLER/SKATE CHRONIC",
+          "agency": "NYPD"
+        },
+        "value": 0.036626157407407406,
+        "n": 12,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - HOUSE OF WORSHIP",
+          "agency": "NYPD"
+        },
+        "value": 0.03594328703703704,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - PARK",
+          "agency": "NYPD"
+        },
+        "value": 0.034762731481481485,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - COMMERCIAL",
+          "agency": "NYPD"
+        },
+        "value": 0.034479166666666665,
+        "n": 95,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - VEHICLE",
+          "agency": "NYPD"
+        },
+        "value": 0.03200231481481482,
+        "n": 91,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "NOISE - STREET/SIDEWALK",
+          "agency": "NYPD"
+        },
+        "value": 0.031828703703703706,
+        "n": 143,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "GRAFFITI",
+          "agency": "NYPD"
+        },
+        "value": 0.029907407407407407,
+        "n": 35,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL FIREWORKS",
+          "agency": "NYPD"
+        },
+        "value": 0.027644675925925927,
+        "n": 88,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "SNOW OR ICE",
+          "agency": "DSNY"
+        },
+        "value": 0.02400462962962963,
+        "n": 361,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "VIOLATION OF PARK RULES",
+          "agency": "DPR"
+        },
+        "value": 0.022083333333333333,
+        "n": 6,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ANIMAL IN A PARK",
+          "agency": "DPR"
+        },
+        "value": 0.018414351851851852,
+        "n": 18,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "LOST PROPERTY",
+          "agency": "TLC"
+        },
+        "value": 0.00755787037037037,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "BEST/SITE SAFETY",
+          "agency": "DOB"
+        },
+        "value": 0.0,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "CONSTRUCTION SAFETY ENFORCEMENT",
+          "agency": "DOB"
+        },
+        "value": 0.0,
+        "n": 2,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "REAL TIME ENFORCEMENT",
+          "agency": "DOB"
+        },
+        "value": 0.0,
+        "n": 5,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL ANIMAL KEPT AS PET",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 3,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "ILLEGAL ANIMAL SOLD",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 1,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "RODENT",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 79,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "STANDING WATER",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 22,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNLEASHED DOG",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 12,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY ANIMAL PVT PROPERTY",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 16,
+        "eligible": false
+      },
+      {
+        "filters": {
+          "borough": "STATEN ISLAND",
+          "complaint_type": "UNSANITARY PIGEON CONDITION",
+          "agency": "DOHMH"
+        },
+        "value": 0.0,
+        "n": 5,
+        "eligible": false
+      }
+    ]
+  },
+  "limitations": [
+    "case_mix",
+    "closed_only",
+    "no_cause",
+    "no_sla",
+    "nonrandom_sample",
+    "sample_only",
+    "small_sample"
+  ],
+  "decision": "answer",
+  "finding": "descriptive",
+  "complete_periods": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "winner": {
+    "filters": {
+      "borough": "STATEN ISLAND"
+    },
+    "value": 0.6556770833333334,
+    "n": 9874,
+    "eligible": true
+  },
+  "primary_evidence_ids": [
+    "plan.4dca9856f74d9eca",
+    "plan.bcaa15d13931b226",
+    "plan.d050fdf43813adf3",
+    "plan.ee51cb78eb706b33",
+    "plan.b2e97b4cc1d330df",
+    "plan.482f6691ff15ebca"
+  ]
+}

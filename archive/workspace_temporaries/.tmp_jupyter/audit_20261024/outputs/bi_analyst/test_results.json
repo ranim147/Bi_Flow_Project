@@ -1,0 +1,71 @@
+{
+  "all_passed": true,
+  "tests": [
+    {
+      "test": "pic_artificiel",
+      "passed": true,
+      "detail": "{'period': 'synthetic-spike', 'value': 200.0, 'z': 62.24436215006967, 'robust_z': 67.45}"
+    },
+    {
+      "test": "baisse_artificielle",
+      "passed": true,
+      "detail": "{'period': 'synthetic-drop', 'value': 20.0, 'direction': 'negative'}"
+    },
+    {
+      "test": "serie_sans_anomalie",
+      "passed": true,
+      "detail": "aucune méthode n'a signalé la valeur ordinaire"
+    },
+    {
+      "test": "pic_apparent_doublons",
+      "passed": true,
+      "detail": "{'before_rows': 1303, 'after_unique_rows': 1203, 'duplicate_rows': 100, 'z_before': 59.405880609804896, 'z_after': -0.16245910832216084}"
+    },
+    {
+      "test": "signal_qualite_doublons",
+      "passed": true,
+      "detail": "insight étiqueté comme potentiellement lié aux doublons, sans conclure à une cause réelle"
+    },
+    {
+      "test": "court_nan_constant",
+      "passed": true,
+      "detail": "{'short': 'insufficient_history_or_invalid_value', 'constant_z': 'zero_or_invalid_std', 'constant_mad': 'zero_or_invalid_mad', 'nan_reference_n': 7}"
+    },
+    {
+      "test": "stl_historique_irrégulier_court",
+      "passed": true,
+      "detail": "{'irregular': 'index mensuel irrégulier ou périodes manquantes ; aucune interpolation appliquée', 'short': 'historique insuffisant : minimum 24 mois requis'}"
+    },
+    {
+      "test": "stl_serie_reguliere",
+      "passed": true,
+      "detail": "décomposition synthétique produite"
+    },
+    {
+      "test": "signal_résidu_STL_synthétique",
+      "passed": true,
+      "detail": "{'period': '2025-01', 'score': np.float64(29.977777777777778)}"
+    },
+    {
+      "test": "tendance_persistante_vs_isolee",
+      "passed": true,
+      "detail": "trois hausses successives reconnues ; variation isolée non déclarée persistante"
+    },
+    {
+      "test": "reproductibilite",
+      "passed": true,
+      "detail": "scores, règles, preuves et observations identiques"
+    },
+    {
+      "test": "pas_de_fuite_vers_reel",
+      "passed": true,
+      "detail": "DataFrame réel et CSV source inchangés"
+    },
+    {
+      "test": "contrôles_sorties_réelles",
+      "passed": true,
+      "detail": "{'months': 4, 'groups': 143, 'target': 'cible métier non configurée'}"
+    }
+  ],
+  "note": "Synthetic tests are in-memory and separate from NYC 311."
+}

@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "errors": [],
+  "proofs_recomputed": true,
+  "real_input_sha256": {
+    "data/processed/nyc311_clean.csv": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+    "data/processed/kpi_summary.csv": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+    "data/processed/kpi_by_borough.csv": "56978fb385320815a1675e092cd4e3852fd1e45fd36b0df750505e59d0728ddc",
+    "data/processed/kpi_monthly.csv": "9195e798b419df3f7f5494c1044040f270f018ad4020753b3d7c010664247383",
+    "outputs/bi_analyst/group_comparisons.csv": "9a4513acb5b635d581d6b2c9abc880ef288bc78842947d3b8235985de5412dc1",
+    "outputs/bi_analyst/trend_analysis.csv": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+    "data/raw/nyc311_sample_metadata.json": "2fca59a3e25e32416704bd2a96d03255e37c04b6b829101f42b43e1fe48387c4"
+  }
+}

@@ -1,0 +1,7 @@
+﻿scenario_id,data_kind,insight_relevance_0_to_3,action_usefulness_0_to_3,causal_caution_0_to_3,reviewer,comments
+borough_resolution_delays,real,,,,,
+complaint_type_comparison,real,,,,,
+monthly_anomaly,real,,,,,
+steering_committee,real,,,,,
+missing_data,real,,,,,
+insufficient_history,real,,,,,

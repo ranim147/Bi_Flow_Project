@@ -1,0 +1,204 @@
+{
+  "environment": {
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "physical_cores": 4,
+    "logical_cores": 8,
+    "ram_total_gib": 15.746696472167969,
+    "ram_available_gib": 3.3904647827148438,
+    "gpu": {
+      "status": "observed",
+      "detail": "name, memory.total [MiB], memory.free [MiB]\nNVIDIA GeForce MX350, 2048 MiB, 1307 MiB"
+    },
+    "disks": {
+      "C:\\": {
+        "free_gib": 1.8007049560546875,
+        "total_gib": 237.3785858154297
+      },
+      "D:\\": {
+        "free_gib": 731.4383392333984,
+        "total_gib": 931.5117149353027
+      }
+    },
+    "ollama_cli": "D:\\Analyst_Agent\\tools\\ollama\\ollama.EXE",
+    "model_storage_configured_for_notebook": "D:\\OllamaModels",
+    "model_storage_free_gib": 731.4383392333984,
+    "storage_note": "Le dossier du serveur déjà lancé doit être configuré séparément via OLLAMA_MODELS.",
+    "resource_policy": {
+      "qwen3:4b": 5.5,
+      "gemma3:4b": 6.5,
+      "granite3.3:2b": 3.5
+    },
+    "resource_note": "Estimations prudentes incluant contexte/cache. GPU non requis : CPU ou offload partiel possible."
+  },
+  "packages": {
+    "streamlit": {
+      "name": "streamlit",
+      "version": "1.66.1"
+    },
+    "watchdog": {
+      "name": "watchdog",
+      "version": "6.0.0"
+    },
+    "itsdangerous": {
+      "name": "itsdangerous",
+      "version": "2.2.0"
+    },
+    "websockets": {
+      "name": "websockets",
+      "version": "16.1.1"
+    },
+    "python-multipart": {
+      "name": "python-multipart",
+      "version": "0.0.32"
+    },
+    "anyio": {
+      "name": "anyio",
+      "version": "4.15.1"
+    },
+    "typing-extensions": {
+      "name": "typing_extensions",
+      "version": "4.16.0"
+    },
+    "idna": {
+      "name": "idna",
+      "version": "3.20"
+    },
+    "uvicorn": {
+      "name": "uvicorn",
+      "version": "0.54.0"
+    },
+    "h11": {
+      "name": "h11",
+      "version": "0.16.0"
+    },
+    "click": {
+      "name": "click",
+      "version": "8.5.0"
+    },
+    "starlette": {
+      "name": "starlette",
+      "version": "1.10.0"
+    },
+    "requests": {
+      "name": "requests",
+      "version": "2.34.2"
+    },
+    "certifi": {
+      "name": "certifi",
+      "version": "2026.7.22"
+    },
+    "urllib3": {
+      "name": "urllib3",
+      "version": "2.8.0"
+    },
+    "charset-normalizer": {
+      "name": "charset-normalizer",
+      "version": "3.5.2"
+    },
+    "pyarrow": {
+      "name": "pyarrow",
+      "version": "26.0.0"
+    },
+    "protobuf": {
+      "name": "protobuf",
+      "version": "7.36.2"
+    },
+    "pydeck": {
+      "name": "pydeck",
+      "version": "0.9.3"
+    },
+    "numpy": {
+      "name": "numpy",
+      "version": "2.5.4"
+    },
+    "jinja2": {
+      "name": "Jinja2",
+      "version": "3.1.6"
+    },
+    "markupsafe": {
+      "name": "MarkupSafe",
+      "version": "3.0.4"
+    },
+    "pillow": {
+      "name": "pillow",
+      "version": "12.3.0"
+    },
+    "pandas": {
+      "name": "pandas",
+      "version": "3.0.6"
+    },
+    "tzdata": {
+      "name": "tzdata",
+      "version": "2026.5"
+    },
+    "python-dateutil": {
+      "name": "python-dateutil",
+      "version": "2.9.0.post0"
+    },
+    "six": {
+      "name": "six",
+      "version": "1.17.0"
+    },
+    "packaging": {
+      "name": "packaging",
+      "version": "26.3"
+    },
+    "altair": {
+      "name": "altair",
+      "version": "6.3.0"
+    },
+    "narwhals": {
+      "name": "narwhals",
+      "version": "2.27.1"
+    },
+    "jsonschema": {
+      "name": "jsonschema",
+      "version": "4.26.0"
+    },
+    "rpds-py": {
+      "name": "rpds-py",
+      "version": "2026.9.1"
+    },
+    "referencing": {
+      "name": "referencing",
+      "version": "0.37.0"
+    },
+    "attrs": {
+      "name": "attrs",
+      "version": "26.1.0"
+    },
+    "jsonschema-specifications": {
+      "name": "jsonschema-specifications",
+      "version": "2025.9.1"
+    },
+    "pydantic": {
+      "name": "pydantic",
+      "version": "2.14.1"
+    },
+    "typing-inspection": {
+      "name": "typing-inspection",
+      "version": "0.4.4"
+    },
+    "pydantic-core": {
+      "name": "pydantic_core",
+      "version": "2.50.1"
+    },
+    "annotated-types": {
+      "name": "annotated-types",
+      "version": "0.8.0"
+    },
+    "psutil": {
+      "name": "psutil",
+      "version": "7.2.2"
+    }
+  },
+  "ollama": {
+    "available": true,
+    "version": "0.40.11",
+    "model": "granite3.3:2b",
+    "digest": "07bd1f170855240f9e162bf54ea494a8bc1c73d8cbd1365d7fccbeb7d2504947",
+    "inference_performed": false
+  }
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "case_id": "BF-01",
+    "category": "interprétation KPI",
+    "data_kind": "real",
+    "task": "Interprète le KPI fourni, sa population et sa limite. finding=descriptive.",
+    "evidence": [
+      {
+        "fact_id": "summary_request_volume",
+        "metric": "request_volume",
+        "scope": "échantillon",
+        "value": 10000.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=request_volume/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "summary_request_volume"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  }
+]

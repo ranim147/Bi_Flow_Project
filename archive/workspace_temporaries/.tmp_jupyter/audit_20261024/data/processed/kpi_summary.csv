@@ -1,0 +1,5 @@
+kpi_name,value,unit,population_or_denominator
+request_volume,10000.0,demandes,clés unique_key distinctes + lignes sans clé; population df_clean
+mean_resolution_days,4.106830597189813,jours calendaires,moyenne sur 9285 durées valides
+median_resolution_days,0.18195601851851853,jours calendaires,médiane sur 9285 durées valides
+closure_rate,92.91,%,9291 fermées / 10000 créations datées

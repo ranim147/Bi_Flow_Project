@@ -1,0 +1,521 @@
+{
+  "version": "profiler-2.0",
+  "generated_at": "2026-10-28T19:22:44.451299+00:00",
+  "input_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+  "policy": {
+    "version": "etl-2.0",
+    "minimum_group_n": 30,
+    "maximum_resolution_days": 3650,
+    "review_resolution_days": 90,
+    "max_missing_key_fraction": 0.01,
+    "max_invalid_creation_fraction": 0.01,
+    "max_temporal_conflict_fraction": 0.01,
+    "duplicate_rule": "First occurrence in sorted immutable raw part order; all later occurrences retained in quarantine"
+  },
+  "counts": {
+    "rows": 8000,
+    "missing_key_rows": 0,
+    "created_date_parse_error": 0,
+    "closed_date_parse_error": 0,
+    "temporal_inconsistency": 10,
+    "future_creation": 0,
+    "future_closure": 0,
+    "duration_suspicious": 10,
+    "long_duration_review": 0,
+    "invalid_creation_rows": 0
+  },
+  "columns": 44,
+  "types": {
+    "unique_key": [
+      "string"
+    ],
+    "created_date": [
+      "string"
+    ],
+    "closed_date": [
+      "string"
+    ],
+    "agency": [
+      "string"
+    ],
+    "agency_name": [
+      "string"
+    ],
+    "complaint_type": [
+      "string"
+    ],
+    "descriptor": [
+      "string"
+    ],
+    "descriptor_2": [
+      "string"
+    ],
+    "location_type": [
+      "string"
+    ],
+    "incident_zip": [
+      "string"
+    ],
+    "incident_address": [
+      "string"
+    ],
+    "street_name": [
+      "string"
+    ],
+    "cross_street_1": [
+      "string"
+    ],
+    "cross_street_2": [
+      "string"
+    ],
+    "intersection_street_1": [
+      "string"
+    ],
+    "intersection_street_2": [
+      "string"
+    ],
+    "address_type": [
+      "string"
+    ],
+    "city": [
+      "string"
+    ],
+    "landmark": [
+      "string"
+    ],
+    "facility_type": [
+      "string"
+    ],
+    "status": [
+      "string"
+    ],
+    "due_date": [
+      "string"
+    ],
+    "resolution_description": [
+      "string"
+    ],
+    "resolution_action_updated_date": [
+      "string"
+    ],
+    "community_board": [
+      "string"
+    ],
+    "council_district": [
+      "string"
+    ],
+    "police_precinct": [
+      "string"
+    ],
+    "bbl": [
+      "string"
+    ],
+    "borough": [
+      "string"
+    ],
+    "x_coordinate_state_plane": [
+      "string"
+    ],
+    "y_coordinate_state_plane": [
+      "string"
+    ],
+    "open_data_channel_type": [
+      "string"
+    ],
+    "park_facility_name": [
+      "string"
+    ],
+    "park_borough": [
+      "string"
+    ],
+    "vehicle_type": [
+      "string"
+    ],
+    "taxi_company_borough": [
+      "string"
+    ],
+    "taxi_pick_up_location": [
+      "string"
+    ],
+    "bridge_highway_name": [
+      "string"
+    ],
+    "bridge_highway_direction": [
+      "string"
+    ],
+    "road_ramp": [
+      "string"
+    ],
+    "bridge_highway_segment": [
+      "string"
+    ],
+    "latitude": [
+      "string"
+    ],
+    "longitude": [
+      "string"
+    ],
+    "location": [
+      "string"
+    ]
+  },
+  "missing": {
+    "unique_key": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "created_date": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "closed_date": {
+      "count": 4381,
+      "percent": 54.7625
+    },
+    "agency": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "agency_name": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "complaint_type": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "descriptor": {
+      "count": 146,
+      "percent": 1.825
+    },
+    "descriptor_2": {
+      "count": 5121,
+      "percent": 64.0125
+    },
+    "location_type": {
+      "count": 704,
+      "percent": 8.8
+    },
+    "incident_zip": {
+      "count": 77,
+      "percent": 0.9625
+    },
+    "incident_address": {
+      "count": 226,
+      "percent": 2.825
+    },
+    "street_name": {
+      "count": 226,
+      "percent": 2.825
+    },
+    "cross_street_1": {
+      "count": 2248,
+      "percent": 28.1
+    },
+    "cross_street_2": {
+      "count": 2240,
+      "percent": 28.0
+    },
+    "intersection_street_1": {
+      "count": 2234,
+      "percent": 27.925
+    },
+    "intersection_street_2": {
+      "count": 2224,
+      "percent": 27.8
+    },
+    "address_type": {
+      "count": 58,
+      "percent": 0.725
+    },
+    "city": {
+      "count": 543,
+      "percent": 6.7875
+    },
+    "landmark": {
+      "count": 2851,
+      "percent": 35.6375
+    },
+    "facility_type": {
+      "count": 7995,
+      "percent": 99.9375
+    },
+    "status": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "due_date": {
+      "count": 7977,
+      "percent": 99.7125
+    },
+    "resolution_description": {
+      "count": 2522,
+      "percent": 31.525
+    },
+    "resolution_action_updated_date": {
+      "count": 2446,
+      "percent": 30.575
+    },
+    "community_board": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "council_district": {
+      "count": 190,
+      "percent": 2.375
+    },
+    "police_precinct": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "bbl": {
+      "count": 950,
+      "percent": 11.875
+    },
+    "borough": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "x_coordinate_state_plane": {
+      "count": 145,
+      "percent": 1.8125
+    },
+    "y_coordinate_state_plane": {
+      "count": 144,
+      "percent": 1.8
+    },
+    "open_data_channel_type": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "park_facility_name": {
+      "count": 5,
+      "percent": 0.0625
+    },
+    "park_borough": {
+      "count": 0,
+      "percent": 0.0
+    },
+    "vehicle_type": {
+      "count": 7562,
+      "percent": 94.525
+    },
+    "taxi_company_borough": {
+      "count": 7990,
+      "percent": 99.875
+    },
+    "taxi_pick_up_location": {
+      "count": 7921,
+      "percent": 99.0125
+    },
+    "bridge_highway_name": {
+      "count": 7948,
+      "percent": 99.35
+    },
+    "bridge_highway_direction": {
+      "count": 7968,
+      "percent": 99.6
+    },
+    "road_ramp": {
+      "count": 7973,
+      "percent": 99.6625
+    },
+    "bridge_highway_segment": {
+      "count": 7948,
+      "percent": 99.35
+    },
+    "latitude": {
+      "count": 145,
+      "percent": 1.8125
+    },
+    "longitude": {
+      "count": 145,
+      "percent": 1.8125
+    },
+    "location": {
+      "count": 145,
+      "percent": 1.8125
+    }
+  },
+  "distributions": {
+    "borough": {
+      "BROOKLYN": 2625,
+      "QUEENS": 1794,
+      "BRONX": 1675,
+      "MANHATTAN": 1583,
+      "STATEN ISLAND": 312,
+      "__MISSING__": 11
+    },
+    "complaint_type": {
+      "ILLEGAL PARKING": 1263,
+      "NOISE - RESIDENTIAL": 637,
+      "NOISE - STREET/SIDEWALK": 435,
+      "BLOCKED DRIVEWAY": 391,
+      "UNSANITARY CONDITION": 411,
+      "STREET CONDITION": 220,
+      "NOISE": 185,
+      "NOISE - VEHICLE": 160,
+      "HEAT/HOT WATER": 167,
+      "STREET LIGHT CONDITION": 164,
+      "PLUMBING": 210,
+      "ABANDONED VEHICLE": 166,
+      "NOISE - COMMERCIAL": 98,
+      "DIRTY CONDITION": 162,
+      "WATER MAINTENANCE": 136,
+      "PAINT/PLASTER": 196,
+      "DOOR/WINDOW": 169,
+      "HOMELESS PERSON ASSISTANCE": 99,
+      "TRAFFIC": 70,
+      "ILLEGAL DUMPING": 96,
+      "WATER LEAK": 137,
+      "ELECTRIC": 104,
+      "ENCAMPMENT": 95,
+      "RODENT": 81,
+      "GENERAL": 118,
+      "DAMAGED TREE": 76,
+      "NON-EMERGENCY POLICE MATTER": 74,
+      "GENERAL CONSTRUCTION/PLUMBING": 105,
+      "OVERGROWN TREE/BRANCHES": 86,
+      "SIDEWALK CONDITION": 78,
+      "APPLIANCE": 75,
+      "FLOORING/STAIRS": 94,
+      "TRAFFIC SIGNAL CONDITION": 78,
+      "SEWER MAINTENANCE": 60,
+      "VENDOR ENFORCEMENT": 67,
+      "OBSTRUCTION": 49,
+      "BUILDING/USE": 54,
+      "FOOD ESTABLISHMENT": 44,
+      "PANHANDLING": 39,
+      "ANIMAL-ABUSE": 35,
+      "ELEVATOR": 41,
+      "MAINTENANCE OR FACILITY": 45,
+      "CONSUMER COMPLAINT": 56,
+      "RESIDENTIAL DISPOSAL COMPLAINT": 36,
+      "ILLEGAL TREE DAMAGE": 31,
+      "GRAFFITI": 34,
+      "DEAD ANIMAL": 33,
+      "FOR HIRE VEHICLE COMPLAINT": 29,
+      "AIR QUALITY": 38,
+      "ROOT/SEWER/SIDEWALK CONDITION": 34,
+      "TAXI COMPLAINT": 28,
+      "INDOOR AIR QUALITY": 31,
+      "LEAD": 35,
+      "CANNABIS RETAILER": 19,
+      "DRUG ACTIVITY": 26,
+      "DRINKING": 14,
+      "LOST PROPERTY": 18,
+      "ILLEGAL POSTING": 11,
+      "STREET SWEEPING COMPLAINT": 17,
+      "VIOLATION OF PARK RULES": 15,
+      "DEAD/DYING TREE": 28,
+      "STREET SIGN - DAMAGED": 15,
+      "CURB CONDITION": 24,
+      "SPECIAL PROJECTS INSPECTION TEAM (SPIT)": 9,
+      "SAFETY": 36,
+      "NOISE - PARK": 7,
+      "OUTDOOR DINING": 11,
+      "NOISE - HELICOPTER": 7,
+      "DAY CARE": 9,
+      "STREET SIGN - MISSING": 7,
+      "ABANDONED BIKE": 9,
+      "UNSANITARY ANIMAL PVT PROPERTY": 11,
+      "SMOKING OR VAPING": 7,
+      "LITTER BASKET REQUEST": 8,
+      "BIKE/ROLLER/SKATE": 6,
+      "NOISE - HOUSE OF WORSHIP": 10,
+      "HIGHWAY CONDITION": 19,
+      "EMERGENCY RESPONSE TEAM (ERT)": 6,
+      "ANIMAL IN A PARK": 6,
+      "REAL TIME ENFORCEMENT": 16,
+      "UNLEASHED DOG": 5,
+      "DUMPSTER COMPLAINT": 5,
+      "DERELICT VEHICLES": 15,
+      "SANITATION WORKER OR VEHICLE COMPLAINT": 7,
+      "INDUSTRIAL WASTE": 5,
+      "WATER CONSERVATION": 10,
+      "MOBILE FOOD VENDOR": 10,
+      "STREET SIGN - DANGLING": 6,
+      "WATER QUALITY": 6,
+      "LOT CONDITION": 7,
+      "TAXI REPORT": 3,
+      "HAZARDOUS MATERIAL": 6,
+      "BROKEN PARKING METER": 8,
+      "URINATING IN PUBLIC": 4,
+      "FOR HIRE VEHICLE REPORT": 2,
+      "CONSTRUCTION LEAD DUST": 3,
+      "ELECTRICAL": 4,
+      "UNSANITARY PIGEON CONDITION": 3,
+      "WOOD PILE REMAINING": 4,
+      "BOILERS": 4,
+      "BEST/SITE SAFETY": 2,
+      "BRIDGE CONDITION": 1,
+      "LITTER BASKET COMPLAINT": 3,
+      "NON-RESIDENTIAL HEAT": 1,
+      "ILLEGAL ANIMAL KEPT AS PET": 1,
+      "FOOD POISONING": 10,
+      "UPROOTED STUMP": 1,
+      "COMMERCIAL DISPOSAL COMPLAINT": 3,
+      "MOSQUITOES": 1,
+      "MOLD": 1,
+      "FERRY INQUIRY": 1,
+      "INDOOR SEWAGE": 1,
+      "HARBORING BEES/WASPS": 1,
+      "BIKE RACK": 3,
+      "NEW TREE REQUEST": 5,
+      "OUTSIDE BUILDING": 5,
+      "UNSANITARY ANIMAL FACILITY": 1,
+      "RECYCLING BASKET COMPLAINT": 1,
+      "BUS STOP SHELTER COMPLAINT": 6,
+      "ASBESTOS": 1,
+      "INVESTIGATIONS AND DISCIPLINE (IAD)": 1,
+      "TATTOOING": 1,
+      "FHV LICENSEE COMPLAINT": 1,
+      "BUS STOP SHELTER PLACEMENT": 1,
+      "STANDING WATER": 1,
+      "X-RAY MACHINE/EQUIPMENT": 1,
+      "ANIMAL FACILITY - NO PERMIT": 1,
+      "TOBACCO OR NON-TOBACCO SALE": 1
+    },
+    "agency": {
+      "NYPD": 3438,
+      "HPD": 1720,
+      "DOT": 641,
+      "DSNY": 561,
+      "DEP": 481,
+      "DPR": 331,
+      "DOHMH": 227,
+      "DHS": 194,
+      "DOB": 244,
+      "TLC": 81,
+      "DCWP": 56,
+      "OOS": 19,
+      "EDC": 7
+    },
+    "status": {
+      "CLOSED": 3374,
+      "IN PROGRESS": 2407,
+      "OPEN": 2197,
+      "ASSIGNED": 21,
+      "PENDING": 1
+    },
+    "created_month": {
+      "2026-10": 8000
+    }
+  },
+  "temporal_coverage": {
+    "minimum": "2026-10-14T10:57:21+00:00",
+    "maximum": "2026-10-15T02:06:16+00:00",
+    "partial_months": [
+      "2026-10"
+    ]
+  },
+  "alerts": [
+    {
+      "code": "temporal_inconsistency",
+      "observed_fraction": 0.00125,
+      "critical_threshold": 0.01,
+      "severity": "warning"
+    }
+  ],
+  "quality_gate": "pass"
+}

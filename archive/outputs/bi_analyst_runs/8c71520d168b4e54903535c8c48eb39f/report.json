@@ -1,0 +1,172 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "8c71520d168b4e54903535c8c48eb39f",
+  "generated_at": "2026-10-26T14:53:54.967976+00:00",
+  "question": "La tendance des volumes mensuels est-elle significative ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "failed",
+  "decision": "refuse",
+  "finding": "insufficient_data",
+  "insights": [],
+  "evidence": [
+    {
+      "fact_id": "quality.sample_rows",
+      "metric": "sample_rows",
+      "scope": "NYC 311 prepared extract",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.valid_resolution_days",
+      "metric": "valid_resolution_days",
+      "scope": "closed requests with valid resolution duration",
+      "value": 9285.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.open_requests",
+      "metric": "not_closed_requests",
+      "scope": "prepared extract with a valid creation date",
+      "value": 709.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-07",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-07",
+      "value": 2.478541605691187,
+      "unit": "percent",
+      "n": 334834,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-08",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-08",
+      "value": -4.142708512442694,
+      "unit": "percent",
+      "n": 343133,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-09",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-09",
+      "value": -1.6086076164880003,
+      "unit": "percent",
+      "n": 328918,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct"
+  ],
+  "validation": {
+    "status": "not_run",
+    "json_valid": false,
+    "schema_valid": false,
+    "evidence_valid": false,
+    "numerical_claims_valid": false,
+    "causal_claims_clear": false,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "La tendance des volumes mensuels est-elle significative ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:53:54.953595+00:00",
+      "elapsed_ms": 0.2682000049389899,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "analyze_trend",
+      "parameters": {
+        "question": "La tendance des volumes mensuels est-elle significative ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T14:53:54.957328+00:00",
+      "elapsed_ms": 9.310800000093877,
+      "evidence_ids": [
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "detail": "insufficient evidence"
+    }
+  ],
+  "errors": [
+    "tool_execution_failed:ValueError:Out of range float values are not JSON compliant: nan"
+  ],
+  "timing_ms": {}
+}

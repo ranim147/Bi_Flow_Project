@@ -1,0 +1,516 @@
+{
+  "contract_version": "biflow-bi-analyst-v2",
+  "execution_id": "7f77fcf858cc46d1a07297f60537a0b2",
+  "generated_at": "2026-10-28T18:22:32.440594+00:00",
+  "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "7f77fcf858cc46d1a07297f60537a0b2-ranking",
+      "category": "comparison",
+      "finding": "descriptive",
+      "insight": "Le classement et les comparaisons portent sur le KPI demandé et le périmètre verrouillé par Python. Classement par médiane décroissante des groupes éligibles (n ≥ 30) : {\"borough\": \"STATEN ISLAND\"} : médiane=0.332269, n=386; {\"borough\": \"BROOKLYN\"} : médiane=0.228484, n=3080; {\"borough\": \"MANHATTAN\"} : médiane=0.170666, n=1712; {\"borough\": \"QUEENS\"} : médiane=0.165943, n=2274; {\"borough\": \"BRONX\"} : médiane=0.147436, n=1828. Maximum éligible : {\"borough\": \"STATEN ISLAND\"}.",
+      "recommendation": "Examiner les étapes de traitement et la composition des dossiers dans les segments éligibles du périmètre retenu. Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "evidence_fact_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.9e2ef20707b629bf",
+        "plan.7104fe0a2d77b1d9",
+        "plan.8e1ef57c5ac61a28",
+        "plan.8e5a720326276809"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    },
+    {
+      "insight_id": "7f77fcf858cc46d1a07297f60537a0b2-comparison_complaint_type",
+      "category": "comparison",
+      "finding": "descriptive",
+      "insight": "Comparaison descriptive limitée à {\"borough\": \"STATEN ISLAND\"} par complaint_type : {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Damaged Tree\"} : médiane=2.052124, n=44; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Illegal Parking\"} : médiane=0.098802, n=46; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Noise - Residential\"} : médiane=0.037905, n=47.",
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "evidence_fact_ids": [
+        "plan.e64e6b1929863aaf",
+        "plan.61240e44358671f9",
+        "plan.8f23d40c7b8e7335"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    },
+    {
+      "insight_id": "7f77fcf858cc46d1a07297f60537a0b2-comparison_agency",
+      "category": "comparison",
+      "finding": "descriptive",
+      "insight": "Comparaison descriptive limitée à {\"borough\": \"STATEN ISLAND\"} par agency : {\"borough\": \"STATEN ISLAND\", \"agency\": \"DOT\"} : médiane=6.523414, n=37; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DPR\"} : médiane=2.052124, n=56; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DSNY\"} : médiane=1.863258, n=40; {\"borough\": \"STATEN ISLAND\", \"agency\": \"DEP\"} : médiane=0.515972, n=37; {\"borough\": \"STATEN ISLAND\", \"agency\": \"NYPD\"} : médiane=0.050556, n=175.",
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "evidence_fact_ids": [
+        "plan.d452f9d9c8efcd0d",
+        "plan.eb621edc8407f189",
+        "plan.91560cb818dc558a",
+        "plan.41f53a5374758555",
+        "plan.9e7f34fdb96246dc"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    },
+    {
+      "insight_id": "7f77fcf858cc46d1a07297f60537a0b2-priorities",
+      "category": "comparison",
+      "finding": "descriptive",
+      "insight": "Segments à investiguer par médiane décroissante, puis ordre lexical, hors groupes de faible effectif : {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Damaged Tree\", \"agency\": \"DPR\"} : médiane=2.052124, n=44; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Illegal Parking\", \"agency\": \"NYPD\"} : médiane=0.098802, n=46; {\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Noise - Residential\", \"agency\": \"NYPD\"} : médiane=0.037905, n=47.",
+      "recommendation": "Dans les segments cités uniquement, extraire les horodatages des étapes, affectations et complexité; distinguer temps d'attente et de traitement, comparer des dossiers de même catégorie et vérifier les exclusions. L'hypothèse d'une étape plus lente serait soutenue par des temps d'étape supérieurs à complexité comparable, et réfutée si l'écart disparaît après ce contrôle.",
+      "evidence_fact_ids": [
+        "plan.4976cefd75c89d3d",
+        "plan.386e9b92144c05e6",
+        "plan.f49fb78bb1557f9b"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "plan.1e8a36f11dda4af9",
+      "metric": "scope_valid_delay_n",
+      "scope": "{}",
+      "value": 9285.0,
+      "unit": "dossiers",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv#plan=1e8a36f11dda4af9",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Count after categorical filters, before requested time filtering; complete prepared extract",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.4dca9856f74d9eca",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"STATEN ISLAND\"}",
+      "value": 0.3322685185185185,
+      "unit": "jours calendaires",
+      "n": 386,
+      "source": "data/processed/nyc311_clean.csv#plan=4dca9856f74d9eca",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.9e2ef20707b629bf",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 0.22848379629629628,
+      "unit": "jours calendaires",
+      "n": 3080,
+      "source": "data/processed/nyc311_clean.csv#plan=9e2ef20707b629bf",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.7104fe0a2d77b1d9",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"MANHATTAN\"}",
+      "value": 0.17066550925925927,
+      "unit": "jours calendaires",
+      "n": 1712,
+      "source": "data/processed/nyc311_clean.csv#plan=7104fe0a2d77b1d9",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.8e1ef57c5ac61a28",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"QUEENS\"}",
+      "value": 0.16594328703703703,
+      "unit": "jours calendaires",
+      "n": 2274,
+      "source": "data/processed/nyc311_clean.csv#plan=8e1ef57c5ac61a28",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.8e5a720326276809",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"BRONX\"}",
+      "value": 0.14743634259259258,
+      "unit": "jours calendaires",
+      "n": 1828,
+      "source": "data/processed/nyc311_clean.csv#plan=8e5a720326276809",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.e64e6b1929863aaf",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Damaged Tree\"}",
+      "value": 2.0521238425925925,
+      "unit": "jours calendaires",
+      "n": 44,
+      "source": "data/processed/nyc311_clean.csv#plan=e64e6b1929863aaf",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.61240e44358671f9",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Illegal Parking\"}",
+      "value": 0.09880208333333333,
+      "unit": "jours calendaires",
+      "n": 46,
+      "source": "data/processed/nyc311_clean.csv#plan=61240e44358671f9",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.8f23d40c7b8e7335",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Noise - Residential\"}",
+      "value": 0.037905092592592594,
+      "unit": "jours calendaires",
+      "n": 47,
+      "source": "data/processed/nyc311_clean.csv#plan=8f23d40c7b8e7335",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.d452f9d9c8efcd0d",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"DOT\", \"borough\": \"STATEN ISLAND\"}",
+      "value": 6.5234143518518515,
+      "unit": "jours calendaires",
+      "n": 37,
+      "source": "data/processed/nyc311_clean.csv#plan=d452f9d9c8efcd0d",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.eb621edc8407f189",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"DPR\", \"borough\": \"STATEN ISLAND\"}",
+      "value": 2.0521238425925925,
+      "unit": "jours calendaires",
+      "n": 56,
+      "source": "data/processed/nyc311_clean.csv#plan=eb621edc8407f189",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.91560cb818dc558a",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"DSNY\", \"borough\": \"STATEN ISLAND\"}",
+      "value": 1.863258101851852,
+      "unit": "jours calendaires",
+      "n": 40,
+      "source": "data/processed/nyc311_clean.csv#plan=91560cb818dc558a",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.41f53a5374758555",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"DEP\", \"borough\": \"STATEN ISLAND\"}",
+      "value": 0.5159722222222223,
+      "unit": "jours calendaires",
+      "n": 37,
+      "source": "data/processed/nyc311_clean.csv#plan=41f53a5374758555",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.9e7f34fdb96246dc",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"NYPD\", \"borough\": \"STATEN ISLAND\"}",
+      "value": 0.050555555555555555,
+      "unit": "jours calendaires",
+      "n": 175,
+      "source": "data/processed/nyc311_clean.csv#plan=9e7f34fdb96246dc",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.4976cefd75c89d3d",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"DPR\", \"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Damaged Tree\"}",
+      "value": 2.0521238425925925,
+      "unit": "jours calendaires",
+      "n": 44,
+      "source": "data/processed/nyc311_clean.csv#plan=4976cefd75c89d3d",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.386e9b92144c05e6",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"NYPD\", \"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Illegal Parking\"}",
+      "value": 0.09880208333333333,
+      "unit": "jours calendaires",
+      "n": 46,
+      "source": "data/processed/nyc311_clean.csv#plan=386e9b92144c05e6",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.f49fb78bb1557f9b",
+      "metric": "median_resolution_days",
+      "scope": "{\"agency\": \"NYPD\", \"borough\": \"STATEN ISLAND\", \"complaint_type\": \"Noise - Residential\"}",
+      "value": 0.037905092592592594,
+      "unit": "jours calendaires",
+      "n": 47,
+      "source": "data/processed/nyc311_clean.csv#plan=f49fb78bb1557f9b",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Les catégories traitées peuvent différer entre agences; leurs délais bruts ne permettent pas de classer leur performance.",
+    "Les délais portent sur les dossiers clôturés observables avec durée valide; aucune durée manquante n'est remplacée par zéro.",
+    "Les écarts descriptifs ne démontrent aucune causalité.",
+    "Aucun SLA métier n'est disponible.",
+    "Les fenêtres d'échantillonnage ne sont pas aléatoires; un biais de sélection reste possible.",
+    "Ces résultats décrivent uniquement l'extrait préparé, pas la population NYC.",
+    "Les groupes de moins de 30 délais valides sont exclus du classement opérationnel."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv#plan=1e8a36f11dda4af9",
+    "data/processed/nyc311_clean.csv#plan=386e9b92144c05e6",
+    "data/processed/nyc311_clean.csv#plan=41f53a5374758555",
+    "data/processed/nyc311_clean.csv#plan=4976cefd75c89d3d",
+    "data/processed/nyc311_clean.csv#plan=4dca9856f74d9eca",
+    "data/processed/nyc311_clean.csv#plan=61240e44358671f9",
+    "data/processed/nyc311_clean.csv#plan=7104fe0a2d77b1d9",
+    "data/processed/nyc311_clean.csv#plan=8e1ef57c5ac61a28",
+    "data/processed/nyc311_clean.csv#plan=8e5a720326276809",
+    "data/processed/nyc311_clean.csv#plan=8f23d40c7b8e7335",
+    "data/processed/nyc311_clean.csv#plan=91560cb818dc558a",
+    "data/processed/nyc311_clean.csv#plan=9e2ef20707b629bf",
+    "data/processed/nyc311_clean.csv#plan=9e7f34fdb96246dc",
+    "data/processed/nyc311_clean.csv#plan=d452f9d9c8efcd0d",
+    "data/processed/nyc311_clean.csv#plan=e64e6b1929863aaf",
+    "data/processed/nyc311_clean.csv#plan=eb621edc8407f189",
+    "data/processed/nyc311_clean.csv#plan=f49fb78bb1557f9b"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "filter_scope",
+      "parameters": {
+        "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+        "metric": "median_resolution_days",
+        "filters": "{}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T18:21:35.592723+00:00",
+      "elapsed_ms": 446.21740002185106,
+      "evidence_ids": [
+        "plan.1e8a36f11dda4af9"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "rank_groups",
+      "parameters": {
+        "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+        "metric": "median_resolution_days"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T18:21:35.678842+00:00",
+      "elapsed_ms": 35.734000033698976,
+      "evidence_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.9e2ef20707b629bf",
+        "plan.7104fe0a2d77b1d9",
+        "plan.8e1ef57c5ac61a28",
+        "plan.8e5a720326276809"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "lock_scope",
+      "parameters": {
+        "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+        "metric": "median_resolution_days",
+        "filters": "{\"borough\": \"STATEN ISLAND\"}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T18:21:35.686563+00:00",
+      "elapsed_ms": 7.686699973419309,
+      "evidence_ids": [],
+      "detail": null
+    },
+    {
+      "tool": "compare_scoped_groups",
+      "parameters": {
+        "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+        "metric": "median_resolution_days",
+        "dimensions": "complaint_type,agency",
+        "filters": "{\"borough\": \"STATEN ISLAND\"}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T18:21:35.792130+00:00",
+      "elapsed_ms": 105.47980002593249,
+      "evidence_ids": [
+        "plan.e64e6b1929863aaf",
+        "plan.61240e44358671f9",
+        "plan.8f23d40c7b8e7335",
+        "plan.d452f9d9c8efcd0d",
+        "plan.eb621edc8407f189",
+        "plan.91560cb818dc558a",
+        "plan.41f53a5374758555",
+        "plan.9e7f34fdb96246dc"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "prioritize_segments",
+      "parameters": {
+        "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+        "metric": "median_resolution_days",
+        "filters": "{\"borough\": \"STATEN ISLAND\"}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T18:21:35.937545+00:00",
+      "elapsed_ms": 145.39489999879152,
+      "evidence_ids": [
+        "plan.4976cefd75c89d3d",
+        "plan.386e9b92144c05e6",
+        "plan.f49fb78bb1557f9b"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 401.23550000134856,
+    "data_validation": 1390.3813000069931,
+    "analytics": 740.5128000536934,
+    "inference_attempt_1": 56473.7798999995,
+    "total": 59230.08749994915
+  },
+  "decision_support": [],
+  "analytical_plan": {
+    "intent": "ranking",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": true,
+    "operation_sequence": [
+      "filter_scope",
+      "rank_groups",
+      "lock_scope",
+      "compare_scoped_groups",
+      "prioritize_segments"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {
+      "borough": "STATEN ISLAND"
+    }
+  }
+}

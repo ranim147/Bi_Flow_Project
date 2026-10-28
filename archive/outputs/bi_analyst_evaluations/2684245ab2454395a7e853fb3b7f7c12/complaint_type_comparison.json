@@ -1,0 +1,409 @@
+{
+  "scenario": {
+    "id": "complaint_type_comparison",
+    "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?",
+    "expected_metrics": [
+      "median_resolution_days"
+    ]
+  },
+  "baseline": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "378acf0546894d95a44f2a51f39ac3f9",
+    "generated_at": "2026-10-26T14:04:19.843217+00:00",
+    "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "378acf0546894d95a44f2a51f39ac3f9-baseline",
+        "category": "summary",
+        "finding": "descriptive",
+        "insight": "Synthèse déterministe des faits calculés; aucune conclusion causale n’est établie.",
+        "recommendation": "Examiner les preuves déterministes et vérifier les limites avant toute décision.",
+        "evidence_fact_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "delay.complaint_type.APPLIANCE",
+          "delay.complaint_type.Sidewalk Condition",
+          "delay.complaint_type.Maintenance or Facility",
+          "delay.complaint_type.Water System",
+          "delay.complaint_type.Vendor Enforcement"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "quality.sample_rows",
+        "metric": "sample_rows",
+        "scope": "NYC 311 prepared extract",
+        "value": 10000.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "quality.valid_resolution_days",
+        "metric": "valid_resolution_days",
+        "scope": "closed requests with valid resolution duration",
+        "value": 9285.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "prepared extract",
+        "value": 715.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.APPLIANCE",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=APPLIANCE",
+        "value": 17.245416666666667,
+        "unit": "calendar days",
+        "n": 52,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=APPLIANCE&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Sidewalk Condition",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Sidewalk Condition",
+        "value": 11.91623263888889,
+        "unit": "calendar days",
+        "n": 80,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Sidewalk Condition&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Maintenance or Facility",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Maintenance or Facility",
+        "value": 10.728501157407408,
+        "unit": "calendar days",
+        "n": 84,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Maintenance or Facility&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Water System",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Water System",
+        "value": 0.0,
+        "unit": "calendar days",
+        "n": 176,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Water System&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Vendor Enforcement",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Vendor Enforcement",
+        "value": 0.0142592592592592,
+        "unit": "calendar days",
+        "n": 53,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Vendor Enforcement&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=APPLIANCE&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Maintenance or Facility&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Sidewalk Condition&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Vendor Enforcement&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Water System&field=median_days"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-26T14:04:19.697175+00:00",
+        "elapsed_ms": 0.05080003757029772,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "compare_groups",
+        "parameters": {
+          "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-26T14:04:19.699531+00:00",
+        "elapsed_ms": 141.27979998011142,
+        "evidence_ids": [
+          "delay.complaint_type.APPLIANCE",
+          "delay.complaint_type.Sidewalk Condition",
+          "delay.complaint_type.Maintenance or Facility",
+          "delay.complaint_type.Water System",
+          "delay.complaint_type.Vendor Enforcement",
+          "delay.complaint_type.peer_p75",
+          "volume.complaint_type.Illegal Parking",
+          "volume.complaint_type.Noise - Residential",
+          "volume.complaint_type.Noise - Street/Sidewalk"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 750.1300000003539
+    }
+  },
+  "agent": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "378acf0546894d95a44f2a51f39ac3f9",
+    "generated_at": "2026-10-26T14:04:19.843217+00:00",
+    "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "378acf0546894d95a44f2a51f39ac3f9-baseline",
+        "category": "summary",
+        "finding": "descriptive",
+        "insight": "Synthèse déterministe des faits calculés; aucune conclusion causale n’est établie.",
+        "recommendation": "Examiner les preuves déterministes et vérifier les limites avant toute décision.",
+        "evidence_fact_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "delay.complaint_type.APPLIANCE",
+          "delay.complaint_type.Sidewalk Condition",
+          "delay.complaint_type.Maintenance or Facility",
+          "delay.complaint_type.Water System",
+          "delay.complaint_type.Vendor Enforcement"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "quality.sample_rows",
+        "metric": "sample_rows",
+        "scope": "NYC 311 prepared extract",
+        "value": 10000.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "quality.valid_resolution_days",
+        "metric": "valid_resolution_days",
+        "scope": "closed requests with valid resolution duration",
+        "value": 9285.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "prepared extract",
+        "value": 715.0,
+        "unit": "requests",
+        "n": 10000,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.APPLIANCE",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=APPLIANCE",
+        "value": 17.245416666666667,
+        "unit": "calendar days",
+        "n": 52,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=APPLIANCE&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Sidewalk Condition",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Sidewalk Condition",
+        "value": 11.91623263888889,
+        "unit": "calendar days",
+        "n": 80,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Sidewalk Condition&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Maintenance or Facility",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Maintenance or Facility",
+        "value": 10.728501157407408,
+        "unit": "calendar days",
+        "n": 84,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Maintenance or Facility&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Water System",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Water System",
+        "value": 0.0,
+        "unit": "calendar days",
+        "n": 176,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Water System&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      },
+      {
+        "fact_id": "delay.complaint_type.Vendor Enforcement",
+        "metric": "median_resolution_days",
+        "scope": "complaint_type=Vendor Enforcement",
+        "value": 0.0142592592592592,
+        "unit": "calendar days",
+        "n": 53,
+        "source": "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Vendor Enforcement&field=median_days",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real"
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=APPLIANCE&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Maintenance or Facility&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Sidewalk Condition&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Vendor Enforcement&field=median_days",
+      "data/processed/nyc311_clean.csv#dimension=complaint_type&group_value=Water System&field=median_days"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-26T14:04:19.697175+00:00",
+        "elapsed_ms": 0.05080003757029772,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "compare_groups",
+        "parameters": {
+          "question": "Quels types de plaintes ont des délais de résolution relativement élevés ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-26T14:04:19.699531+00:00",
+        "elapsed_ms": 141.27979998011142,
+        "evidence_ids": [
+          "delay.complaint_type.APPLIANCE",
+          "delay.complaint_type.Sidewalk Condition",
+          "delay.complaint_type.Maintenance or Facility",
+          "delay.complaint_type.Water System",
+          "delay.complaint_type.Vendor Enforcement",
+          "delay.complaint_type.peer_p75",
+          "volume.complaint_type.Illegal Parking",
+          "volume.complaint_type.Noise - Residential",
+          "volume.complaint_type.Noise - Street/Sidewalk"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 750.1300000003539
+    }
+  },
+  "agent_wall_time_ms": 0.001100008375942707,
+  "factual_metrics": {
+    "expected_metric_facts": 5,
+    "source_and_denominator_complete": true,
+    "invalid_fact_ids": []
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "58b9d171f5fc40a1b74f1763820c12d0",
+  "generated_at": "2026-10-26T15:00:51.300873+00:00",
+  "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "insufficient_data",
+  "finding": "insufficient_history",
+  "insights": [
+    {
+      "insight_id": "58b9d171f5fc40a1b74f1763820c12d0-001",
+      "category": "trend",
+      "finding": "insufficient_history",
+      "insight": "Les périodes complètes disponibles ne suffisent pas à établir une conclusion sur la présence ou l’absence d’une anomalie. Les chiffres d’appui et leurs périodes figurent dans les preuves.",
+      "recommendation": "Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.",
+      "evidence_fact_ids": [
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "limitation_codes": [
+        "insufficient_history",
+        "missing_data",
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "population_not_sample",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "trend.change_pct.2026-07",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-07",
+      "value": 2.478541605691187,
+      "unit": "percent",
+      "n": 334834,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-08",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-08",
+      "value": -4.142708512442694,
+      "unit": "percent",
+      "n": 343133,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-09",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-09",
+      "value": -1.6086076164880003,
+      "unit": "percent",
+      "n": 328918,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "L’historique complet est insuffisant pour le test temporel demandé.",
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T15:00:43.949971+00:00",
+      "elapsed_ms": 0.06510003004223108,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "analyze_trend",
+      "parameters": {
+        "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T15:00:44.084453+00:00",
+      "elapsed_ms": 4.109500034246594,
+      "evidence_ids": [
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "detail": "insufficient evidence"
+    },
+    {
+      "tool": "detect_anomalies",
+      "parameters": {
+        "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T15:00:44.089642+00:00",
+      "elapsed_ms": 573.4736999729648,
+      "evidence_ids": [],
+      "detail": "insufficient_history"
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 78.50860001053661,
+    "data_validation": 663.6737000080757,
+    "inference_attempt_1": 6632.091899984516,
+    "total": 8014.585900004022
+  }
+}

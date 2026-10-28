@@ -1,0 +1,38 @@
+{
+  "data_kind": "synthetic",
+  "periods": null,
+  "as_of": "2026-10-17T20:00:00Z",
+  "period_basis": "closure_month",
+  "min_group_n": 30,
+  "method": "Exact symmetric decomposition of mean closed-request duration; no causal attribution",
+  "quality": {
+    "invalid_closed_n": 0,
+    "unknown_creation_n": 0
+  },
+  "problems": [
+    {
+      "problem_id": "history",
+      "kind": "insufficient_history",
+      "filters": {},
+      "evidence_ids": [
+        "ds.63280b208f",
+        "ds.6d71d3d2c7"
+      ],
+      "limitation_codes": [
+        "descriptive_not_causal",
+        "nonrandom_sample",
+        "closed_work_selection",
+        "sample_backlog_only",
+        "no_staffing_or_budget_evidence",
+        "no_sla",
+        "mean_not_median",
+        "partial_period_excluded",
+        "synthetic_only",
+        "insufficient_history"
+      ],
+      "priority_basis": "Les périodes disponibles ne permettent pas la comparaison demandée."
+    }
+  ],
+  "borough_comparisons": [],
+  "drilldowns": {}
+}

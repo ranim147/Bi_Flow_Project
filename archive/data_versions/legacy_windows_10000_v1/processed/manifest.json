@@ -1,0 +1,112 @@
+{
+  "contract_version": "biflow-prepared-v2",
+  "data_version": "legacy_windows_10000_v1",
+  "data_kind": "real",
+  "generated_at": "2026-10-28T19:25:45.612542+00:00",
+  "raw_manifest_sha256": "905912a6e210bff1deeada992820590bda841f8dad02ece99a9926f747abe3cf",
+  "cleaned_manifest_sha256": "a6c655acdbfc838adbffd9aaa51fd1627472a4761b1339e218663c4f680e6715",
+  "semantic_catalog_sha256": "f33cba71d7f5c279907530a426b199d37cc340bee75d19770508d3dc1a384db5",
+  "files": {
+    "summary": {
+      "path": "processed/summary.parquet",
+      "rows": 8,
+      "sha256": "3fe90b8f288c8e0966628a6cdf208e4e010e2a53f633f433bfb7ce5c4f04bffd"
+    },
+    "groups": {
+      "path": "processed/groups.parquet",
+      "rows": 153,
+      "sha256": "a7fcb917c8c494849889c8c04ea2d92b395ce5609cee18c80274245d2da86357"
+    },
+    "borough": {
+      "path": "processed/borough.parquet",
+      "rows": 6,
+      "sha256": "24d7b5057602b35ad6075fd62db1515507ca3855832c37ae7b449b4eb61da64f"
+    },
+    "monthly": {
+      "path": "processed/monthly.parquet",
+      "rows": 5,
+      "sha256": "a48068d2780b061af696f6cfae4ed0305d1f3e8fc5dadfa235adbf8389807a70"
+    },
+    "trend": {
+      "path": "processed/trend.parquet",
+      "rows": 4,
+      "sha256": "2b4c17dbd2fa4af06c433dda407f16a8a7a842fc35047c7874cb4f30a9d6e730"
+    },
+    "distribution": {
+      "path": "processed/distribution.parquet",
+      "rows": 7,
+      "sha256": "361221fbb40661822e5025f304ba7cae19a470f130376ee4833b26e01fbeb74a"
+    },
+    "histogram": {
+      "path": "processed/histogram.parquet",
+      "rows": 7,
+      "sha256": "106c64667b3b365ee19106ff1225dcdc2ed3622c0b50fac4098475452df4d820"
+    },
+    "backlog": {
+      "path": "processed/backlog.parquet",
+      "rows": 4,
+      "sha256": "31fe67da5d51d24018c4f9da84ee4cf22ec294da4bb98cfaf4415e31ec7f52d6"
+    },
+    "coverage": {
+      "path": "processed/coverage.parquet",
+      "rows": 0,
+      "sha256": "2ef96db8844e1f24ba3a53a475a6723619da54e032ff472a00102465f23d22a9"
+    }
+  },
+  "memory_contract": {
+    "max_rows": 500000,
+    "max_dataframe_bytes": 536870912
+  },
+  "metadata": {
+    "source": "NYC Open Data — 311 Service Requests from 2020 to Present",
+    "dataset_id": "erm2-nwe9",
+    "source_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+    "extracted_at_utc": "2026-10-17T20:09:21.151537+00:00",
+    "period_start_inclusive": "2026-06-01T00:00:00",
+    "period_end_exclusive": "2026-10-18T00:00:00",
+    "note": "Octobre est partiel : données limitées à ce qui était publié au moment de l'extraction.",
+    "sample_method": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+    "population_monthly_counts": {
+      "2026-06": 334834,
+      "2026-07": 343133,
+      "2026-08": 328918,
+      "2026-09": 323627,
+      "2026-10": 162811
+    },
+    "sample_monthly_counts": {
+      "2026-06": 2242,
+      "2026-07": 2298,
+      "2026-08": 2203,
+      "2026-09": 2167,
+      "2026-10": 1090
+    },
+    "population_rows": 1493323,
+    "sample_rows": 10000,
+    "api_requests": 20,
+    "source_raw_preserved": "data/raw/nyc311_sample.csv",
+    "partial_months": [
+      "2026-10"
+    ],
+    "data_kind": "real",
+    "data_version": "legacy_windows_10000_v1",
+    "source_timezone": "UTC",
+    "source_csv": "D:\\Analyst_Agent\\data\\raw\\nyc311_sample_jun_oct_2026.csv",
+    "source_csv_sha256": "c01f31d93de78a68668275d5c1025ba97f20d57e9436959ff2a695f24b83207f",
+    "source_metadata_sha256": "2fca59a3e25e32416704bd2a96d03255e37c04b6b829101f42b43e1fe48387c4",
+    "imported_at_utc": "2026-10-28T19:25:30.991309+00:00",
+    "limitations": [
+      "Local immutable import of the earlier window-sampled extract; not a new remote extraction."
+    ],
+    "raw_sample_rows": 10000
+  },
+  "quality": {
+    "rows": 10000,
+    "valid_delay_n": 9285,
+    "missing_delay_n": 715,
+    "closed_missing_delay_n": 0,
+    "open_request_n": 709,
+    "valid_creation_n": 10000,
+    "valid_closure_n": 9285,
+    "inconsistent_n": 6
+  }
+}

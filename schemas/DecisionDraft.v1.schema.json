@@ -1,0 +1,80 @@
+{
+  "additionalProperties": false,
+  "description": "Granite assembles operations and hypotheses; Python binds scopes and facts.",
+  "properties": {
+    "problem": {
+      "title": "Problem",
+      "type": "string"
+    },
+    "priority_scope": {
+      "title": "Priority Scope",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 20,
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "investigation_hypotheses": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Investigation Hypotheses",
+      "type": "array"
+    },
+    "investigation_steps": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Investigation Steps",
+      "type": "array"
+    },
+    "recommended_actions": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Recommended Actions",
+      "type": "array"
+    },
+    "expected_verification": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 3,
+      "minItems": 1,
+      "title": "Expected Verification",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 18,
+      "minItems": 1,
+      "title": "Limitations",
+      "type": "array"
+    }
+  },
+  "required": [
+    "problem",
+    "priority_scope",
+    "evidence_ids",
+    "investigation_hypotheses",
+    "investigation_steps",
+    "recommended_actions",
+    "expected_verification",
+    "limitations"
+  ],
+  "title": "DecisionDraft",
+  "type": "object"
+}

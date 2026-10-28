@@ -1,0 +1,299 @@
+{
+  "automatic_checks_only": true,
+  "human_evaluation_included": false,
+  "all_scenarios_verified": true,
+  "previous_campaign": "D:\\Analyst_Agent\\outputs\\bi_analyst_evaluations\\fd44245e94c34707a59d2d3e7e152db6",
+  "previous_metrics": {
+    "scenario_count": 6,
+    "baseline_validated_rate": 1.0,
+    "agent_fully_validated_rate": 1.0,
+    "structured_facts_compared": 33,
+    "numeric_mismatches": 0,
+    "provenance_mismatches": 0,
+    "factual_evidence_accuracy": 1.0,
+    "unsupported_evidence_selection_errors": 0,
+    "agent_mean_elapsed_ms": 10035.468550001193,
+    "agent_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "baseline_mean_elapsed_ms": 1372.8786833332076,
+    "baseline_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "run_id": "fd44245e94c34707a59d2d3e7e152db6",
+    "data_kind": "real",
+    "model_inference_enabled": true,
+    "scenario_ids": [
+      "borough_resolution_delays",
+      "complaint_type_comparison",
+      "monthly_anomaly",
+      "steering_committee",
+      "missing_data",
+      "insufficient_history"
+    ]
+  },
+  "current_metrics": {
+    "scenario_count": 6,
+    "baseline_validated_rate": 1.0,
+    "agent_fully_validated_rate": 1.0,
+    "structured_facts_compared": 38,
+    "numeric_mismatches": 0,
+    "provenance_mismatches": 0,
+    "factual_evidence_accuracy": 1.0,
+    "unsupported_evidence_selection_errors": 0,
+    "human_insight_relevance": null,
+    "agent_mean_elapsed_ms": 26747.055333282333,
+    "agent_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "baseline_mean_elapsed_ms": 1568.1372833787464,
+    "baseline_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "human_evaluation_included": false,
+    "human_ratings_note": "Automatic checks only; human evaluation is outside this phase.",
+    "expected_metrics_coverage_rate": 1.0,
+    "run_id": "ffad52db1e1441968ed735984f7bd82b",
+    "data_kind": "real",
+    "model_inference_enabled": true,
+    "scenario_ids": [
+      "borough_resolution_delays",
+      "complaint_type_comparison",
+      "monthly_anomaly",
+      "steering_committee",
+      "missing_data",
+      "insufficient_history"
+    ],
+    "internal_contract": "granite-draft-v2",
+    "initial_validated_count": 6,
+    "correction_count": 0,
+    "fallback_count": 0,
+    "failed_count": 0
+  },
+  "scenarios": [
+    {
+      "scenario_id": "borough_resolution_delays",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 13424.63919997681,
+      "current_elapsed_ms": 25927.560099982657,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 5,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 21.577399922534823,
+        "data_validation": 362.6907999860123,
+        "inference_attempt_1": 25376.969899982214,
+        "ollama_load_duration_attempt_1": 7.6844,
+        "ollama_prompt_eval_duration_attempt_1": 345.38,
+        "ollama_eval_duration_attempt_1": 25014.263,
+        "validation_attempt_1": 2.1777000511065125,
+        "total": 25927.560099982657
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 25374824600,
+          "load_duration": 7684400,
+          "prompt_eval_count": 509,
+          "prompt_eval_duration": 345380000,
+          "eval_count": 182,
+          "eval_duration": 25014263000
+        }
+      ]
+    },
+    {
+      "scenario_id": "complaint_type_comparison",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 11501.623900025152,
+      "current_elapsed_ms": 42145.83989989478,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 5,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 67.52709997817874,
+        "data_validation": 772.5971000036225,
+        "inference_attempt_1": 41079.38569993712,
+        "ollama_load_duration_attempt_1": 15.3505,
+        "ollama_prompt_eval_duration_attempt_1": 232.652,
+        "ollama_eval_duration_attempt_1": 40696.992,
+        "validation_attempt_1": 3.8846000097692013,
+        "total": 42145.83989989478
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 41076372500,
+          "load_duration": 15350500,
+          "prompt_eval_count": 613,
+          "prompt_eval_duration": 232652000,
+          "eval_count": 220,
+          "eval_duration": 40696992000
+        }
+      ]
+    },
+    {
+      "scenario_id": "monthly_anomaly",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 9402.637099963613,
+      "current_elapsed_ms": 26333.74199992977,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 3,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 61.08829996082932,
+        "data_validation": 1318.451900035143,
+        "inference_attempt_1": 23054.07500010915,
+        "ollama_load_duration_attempt_1": 8.4727,
+        "ollama_prompt_eval_duration_attempt_1": 1758.762,
+        "ollama_eval_duration_attempt_1": 21192.92,
+        "validation_attempt_1": 2.800700021907687,
+        "total": 26333.74199992977
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 23050600700,
+          "load_duration": 8472700,
+          "prompt_eval_count": 545,
+          "prompt_eval_duration": 1758762000,
+          "eval_count": 192,
+          "eval_duration": 21192920000
+        }
+      ]
+    },
+    {
+      "scenario_id": "steering_committee",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8704.641999967862,
+      "current_elapsed_ms": 24131.65949995164,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 2,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 122.52930004615337,
+        "data_validation": 1244.456599932164,
+        "inference_attempt_1": 22636.458500055596,
+        "ollama_load_duration_attempt_1": 11.1478,
+        "ollama_prompt_eval_duration_attempt_1": 167.084,
+        "ollama_eval_duration_attempt_1": 22354.305,
+        "validation_attempt_1": 1.3416999718174338,
+        "total": 24131.65949995164
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 22617935200,
+          "load_duration": 11147800,
+          "prompt_eval_count": 479,
+          "prompt_eval_duration": 167084000,
+          "eval_count": 163,
+          "eval_duration": 22354305000
+        }
+      ]
+    },
+    {
+      "scenario_id": "missing_data",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8820.598300022539,
+      "current_elapsed_ms": 22413.725599995814,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 1,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 32.53810002934188,
+        "data_validation": 1258.3720999537036,
+        "inference_attempt_1": 20989.923499990255,
+        "ollama_load_duration_attempt_1": 19.2428,
+        "ollama_prompt_eval_duration_attempt_1": 240.574,
+        "ollama_eval_duration_attempt_1": 20625.395,
+        "validation_attempt_1": 1.5953000402078032,
+        "total": 22413.725599995814
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 20987343800,
+          "load_duration": 19242800,
+          "prompt_eval_count": 460,
+          "prompt_eval_duration": 240574000,
+          "eval_count": 156,
+          "eval_duration": 20625395000
+        }
+      ]
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8358.670800051186,
+      "current_elapsed_ms": 19529.804899939336,
+      "previous_expected_metric_present": false,
+      "current_factual_metrics": {
+        "expected_metric_facts": 3,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 35.49439995549619,
+        "data_validation": 573.1268000090495,
+        "inference_attempt_1": 18024.64920002967,
+        "ollama_load_duration_attempt_1": 3.5403,
+        "ollama_prompt_eval_duration_attempt_1": 1655.023,
+        "ollama_eval_duration_attempt_1": 16291.758,
+        "validation_attempt_1": 3.560699988156557,
+        "total": 19529.804899939336
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 18022874100,
+          "load_duration": 3540300,
+          "prompt_eval_count": 549,
+          "prompt_eval_duration": 1655023000,
+          "eval_count": 192,
+          "eval_duration": 16291758000
+        }
+      ]
+    }
+  ],
+  "failed_demo_reference": {
+    "execution_id": "58dbda6a956a4c3d8490070a3bedb61b",
+    "status": "fallback",
+    "errors": [
+      "unknown_evidence_fact_ids:delay.borough.*",
+      "unverified_numeric_text",
+      "correction_attempt_rejected"
+    ],
+    "elapsed_ms": 223596.7454999918
+  }
+}

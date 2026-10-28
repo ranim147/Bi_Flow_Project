@@ -1,0 +1,5 @@
+month,request_count,sample_count,count_basis,month_start,change_abs,change_pct,rolling_mean_3,change_direction
+2026-06,334834,2242,official monthly aggregate; sample used for dimensions/delays,2026-06-01,,,,flat
+2026-07,343133,2298,official monthly aggregate; sample used for dimensions/delays,2026-07-01,8299.0,2.478541605691187,,up
+2026-08,328918,2203,official monthly aggregate; sample used for dimensions/delays,2026-08-01,-14215.0,-4.142708512442694,335628.3333333333,down
+2026-09,323627,2167,official monthly aggregate; sample used for dimensions/delays,2026-09-01,-5291.0,-1.6086076164880003,331892.6666666667,down

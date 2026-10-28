@@ -1,0 +1,452 @@
+{
+  "$defs": {
+    "BIInsight": {
+      "additionalProperties": false,
+      "properties": {
+        "insight_id": {
+          "title": "Insight Id",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "comparison",
+            "trend",
+            "anomaly",
+            "data_quality",
+            "summary"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "finding": {
+          "title": "Finding",
+          "type": "string"
+        },
+        "insight": {
+          "title": "Insight",
+          "type": "string"
+        },
+        "recommendation": {
+          "title": "Recommendation",
+          "type": "string"
+        },
+        "evidence_fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Fact Ids",
+          "type": "array"
+        },
+        "limitation_codes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitation Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "insight_id",
+        "category",
+        "finding",
+        "insight",
+        "recommendation",
+        "evidence_fact_ids",
+        "limitation_codes"
+      ],
+      "title": "BIInsight",
+      "type": "object"
+    },
+    "EvidenceFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "minLength": 1,
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "metric": {
+          "minLength": 1,
+          "title": "Metric",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "N"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Sha256"
+        },
+        "data_kind": {
+          "const": "real",
+          "default": "real",
+          "title": "Data Kind",
+          "type": "string"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "reference_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Period"
+        },
+        "p_value": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "P Value"
+        }
+      },
+      "required": [
+        "fact_id",
+        "metric",
+        "scope",
+        "value",
+        "unit",
+        "n",
+        "source"
+      ],
+      "title": "EvidenceFact",
+      "type": "object"
+    },
+    "ToolTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "title": "Tool",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Parameters",
+          "type": "object"
+        },
+        "status": {
+          "enum": [
+            "success",
+            "skipped",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "started_at": {
+          "title": "Started At",
+          "type": "string"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "title": "Elapsed Ms",
+          "type": "number"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "detail": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detail"
+        }
+      },
+      "required": [
+        "tool",
+        "parameters",
+        "status",
+        "started_at",
+        "elapsed_ms"
+      ],
+      "title": "ToolTrace",
+      "type": "object"
+    },
+    "ValidationResult": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "validated",
+            "rejected",
+            "not_run"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "json_valid": {
+          "title": "Json Valid",
+          "type": "boolean"
+        },
+        "schema_valid": {
+          "title": "Schema Valid",
+          "type": "boolean"
+        },
+        "evidence_valid": {
+          "title": "Evidence Valid",
+          "type": "boolean"
+        },
+        "numerical_claims_valid": {
+          "title": "Numerical Claims Valid",
+          "type": "boolean"
+        },
+        "causal_claims_clear": {
+          "title": "Causal Claims Clear",
+          "type": "boolean"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "json_valid",
+        "schema_valid",
+        "evidence_valid",
+        "numerical_claims_valid",
+        "causal_claims_clear"
+      ],
+      "title": "ValidationResult",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "const": "biflow-bi-analyst-v1",
+      "default": "biflow-bi-analyst-v1",
+      "title": "Contract Version",
+      "type": "string"
+    },
+    "execution_id": {
+      "title": "Execution Id",
+      "type": "string"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "const": "granite3.3:2b",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "data_kind": {
+      "const": "real",
+      "default": "real",
+      "title": "Data Kind",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "validated",
+        "fallback",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "answer",
+        "insufficient_data",
+        "refuse"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "finding": {
+      "title": "Finding",
+      "type": "string"
+    },
+    "insights": {
+      "items": {
+        "$ref": "#/$defs/BIInsight"
+      },
+      "title": "Insights",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/EvidenceFact"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "source_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Refs",
+      "type": "array"
+    },
+    "validation": {
+      "$ref": "#/$defs/ValidationResult"
+    },
+    "tool_trace": {
+      "items": {
+        "$ref": "#/$defs/ToolTrace"
+      },
+      "title": "Tool Trace",
+      "type": "array"
+    },
+    "errors": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "timing_ms": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Timing Ms",
+      "type": "object"
+    }
+  },
+  "required": [
+    "execution_id",
+    "generated_at",
+    "question",
+    "status",
+    "decision",
+    "finding",
+    "insights",
+    "evidence",
+    "limitations",
+    "source_refs",
+    "validation",
+    "tool_trace"
+  ],
+  "title": "BIAnalysisReport",
+  "type": "object"
+}

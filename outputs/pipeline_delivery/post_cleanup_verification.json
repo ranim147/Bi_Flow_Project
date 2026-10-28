@@ -1,0 +1,41 @@
+{
+  "passed": true,
+  "dataset_version": "nyc311_202301_202609_v2",
+  "regression_tests": 28,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "latest_ui": [
+    {
+      "scenario": "A",
+      "execution_id": "adddd0d6624e4ba2925dae1789a01d28",
+      "passed": true
+    },
+    {
+      "scenario": "B",
+      "execution_id": "d7d56684c106487ea308d1c180691815",
+      "passed": true
+    },
+    {
+      "scenario": "7",
+      "execution_id": "9bf20515b53e4ae3a90006c79f9c9264",
+      "passed": true
+    },
+    {
+      "scenario": "trend",
+      "execution_id": "7e086c55679c4024b04af0cbc91b0686",
+      "passed": true
+    },
+    {
+      "scenario": "anomalies",
+      "execution_id": "d283a7e20a5b46358566f36d09e0203f",
+      "passed": true
+    },
+    {
+      "scenario": "rates",
+      "execution_id": "7d3ccf6b86ca4c719577b4acdc93e949",
+      "passed": true
+    }
+  ],
+  "additional_model_calls": 0
+}

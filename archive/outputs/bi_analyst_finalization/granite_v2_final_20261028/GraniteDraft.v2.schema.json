@@ -1,0 +1,51 @@
+{
+  "additionalProperties": false,
+  "description": "Internal v2 contract: no copied values, sources, denominators or decision.",
+  "properties": {
+    "finding": {
+      "maxLength": 40,
+      "minLength": 1,
+      "title": "Finding",
+      "type": "string"
+    },
+    "evidence_ids": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Evidence Ids",
+      "type": "array"
+    },
+    "insight": {
+      "maxLength": 360,
+      "minLength": 1,
+      "title": "Insight",
+      "type": "string"
+    },
+    "recommendation": {
+      "maxLength": 240,
+      "minLength": 1,
+      "title": "Recommendation",
+      "type": "string"
+    },
+    "limitation_codes": {
+      "items": {
+        "type": "string"
+      },
+      "maxItems": 12,
+      "minItems": 1,
+      "title": "Limitation Codes",
+      "type": "array"
+    }
+  },
+  "required": [
+    "finding",
+    "evidence_ids",
+    "insight",
+    "recommendation",
+    "limitation_codes"
+  ],
+  "title": "LLMDraft",
+  "type": "object"
+}

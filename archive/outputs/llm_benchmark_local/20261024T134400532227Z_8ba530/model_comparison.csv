@@ -1,0 +1,7 @@
+model,data_kind,scheduled,responses_received,complete_responses,availability_rate,objective_pass_rate_all_scheduled,mean_latency_seconds,p95_latency_seconds,quality_denominator,json_valid_mean,schema_valid_mean,objective_pass_mean,numeric_accuracy_mean,source_accuracy_mean,sample_size_accuracy_mean,scope_accuracy_mean,required_fact_recall_mean,decision_ok_mean,finding_ok_mean,limits_ok_mean,unsupported_claims,numeric_mismatches,prose_numeric_flags,causal_flags
+qwen3:4b,real,24,0,0,0.0,,,,0,,,,,,,,,,,,,,,
+qwen3:4b,synthetic,3,0,0,0.0,,,,0,,,,,,,,,,,,,,,
+gemma3:4b,real,24,0,0,0.0,,,,0,,,,,,,,,,,,,,,
+gemma3:4b,synthetic,3,0,0,0.0,,,,0,,,,,,,,,,,,,,,
+granite3.3:2b,real,24,24,24,1.0,0.0,68.44098360416683,92.46981200001318,24,1.0,0.9166666666666666,0.0,0.8863636363636364,0.8863636363636364,0.8863636363636364,0.8863636363636364,0.9166666666666666,0.2916666666666667,0.20833333333333334,0.25,8.0,0.0,69.0,15.0
+granite3.3:2b,synthetic,3,3,3,1.0,0.0,69.07308056667291,82.8091964600084,3,1.0,1.0,0.0,1.0,1.0,1.0,1.0,1.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,5.0,1.0

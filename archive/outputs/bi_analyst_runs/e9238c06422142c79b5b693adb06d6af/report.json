@@ -1,0 +1,175 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "e9238c06422142c79b5b693adb06d6af",
+  "generated_at": "2026-10-28T10:19:25.870134+00:00",
+  "question": "La tendance des volumes mensuels est-elle significative ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "insufficient_data",
+  "finding": "insufficient_history",
+  "insights": [
+    {
+      "insight_id": "e9238c06422142c79b5b693adb06d6af-baseline",
+      "category": "trend",
+      "finding": "insufficient_history",
+      "insight": "L'historique mensuel complet est trop court pour le test de tendance Mann–Kendall saisonnier requis (36 périodes contiguës). Les variations observées restent descriptives; aucune conclusion de significativité n'est tirée.",
+      "recommendation": "Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.",
+      "evidence_fact_ids": [
+        "history.trend.complete_periods",
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "limitation_codes": [
+        "insufficient_history",
+        "missing_data",
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "population_not_sample",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "history.trend.complete_periods",
+      "metric": "available_complete_periods",
+      "scope": "complete monthly periods for seasonal trend test",
+      "value": 4.0,
+      "unit": "months",
+      "n": 4,
+      "source": "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": "Seasonal Mann-Kendall prerequisites",
+      "threshold": 36.0,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-07",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-07",
+      "value": 2.478541605691187,
+      "unit": "percent",
+      "n": 334834,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-08",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-08",
+      "value": -4.142708512442694,
+      "unit": "percent",
+      "n": 343133,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "trend.change_pct.2026-09",
+      "metric": "monthly_request_volume_change",
+      "scope": "population volume change during 2026-09",
+      "value": -1.6086076164880003,
+      "unit": "percent",
+      "n": 328918,
+      "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct",
+      "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "L’historique complet est insuffisant pour le test temporel demandé.",
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv",
+    "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+    "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "La tendance des volumes mensuels est-elle significative ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T10:19:25.848207+00:00",
+      "elapsed_ms": 0.21550001110881567,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "analyze_trend",
+      "parameters": {
+        "question": "La tendance des volumes mensuels est-elle significative ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-28T10:19:25.852091+00:00",
+      "elapsed_ms": 15.623699990101159,
+      "evidence_ids": [
+        "history.trend.complete_periods",
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "detail": "insufficient evidence"
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "total": 1319.2040000576526
+  }
+}

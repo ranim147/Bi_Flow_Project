@@ -1,0 +1,47 @@
+{
+  "python": "3.13.2",
+  "streamlit_version": "1.66.1",
+  "replay_ready": true,
+  "recordings": [
+    {
+      "id": "compare_boroughs",
+      "execution_id": "ce0eaccccbb949a7bfa8656aefc2ecd1",
+      "source_mode": "live",
+      "status": "validated",
+      "contract_verified": true
+    },
+    {
+      "id": "drilldown_brooklyn",
+      "execution_id": "f27707502a354f6f8b4185973cbfc8e7",
+      "source_mode": "live",
+      "status": "validated",
+      "contract_verified": true
+    },
+    {
+      "id": "insufficient_history",
+      "execution_id": "5f07953a64c9441cae0a20f1a64b2858",
+      "source_mode": "live",
+      "status": "validated",
+      "contract_verified": true
+    },
+    {
+      "id": "controlled_rejection",
+      "execution_id": "a62ca4d4a1814e59a26184f35094badc",
+      "source_mode": "controlled_test",
+      "status": "fallback",
+      "contract_verified": true
+    }
+  ],
+  "data_hashes_verified": true,
+  "ollama": {
+    "available": true,
+    "version": "0.40.11",
+    "model": "granite3.3:2b",
+    "digest": "07bd1f170855240f9e162bf54ea494a8bc1c73d8cbd1365d7fccbeb7d2504947",
+    "inference_performed": false
+  },
+  "live_readiness_checked": true,
+  "no_model_inference_performed": true,
+  "errors": [],
+  "ready": true
+}

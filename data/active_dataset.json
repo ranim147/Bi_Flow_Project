@@ -1,0 +1,6 @@
+{
+  "dataset_version": "nyc311_202301_202609_v2",
+  "activated_at": "2026-10-28T21:35:30.290720+00:00",
+  "processed_manifest_sha256": "84f4d0fc9ef0e95e4629d2fdeb2bc4ceb327fab0d28fb3d0d8162d889fa3de7a",
+  "rows": 265609
+}

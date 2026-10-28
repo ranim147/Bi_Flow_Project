@@ -1,0 +1,6 @@
+{
+  "status": "invalidated",
+  "reason": "The existing nyc311_sample.csv contains 8000 rows from a different extraction, while nyc311_sample_metadata.json describes the 10000-row nyc311_sample_jun_oct_2026.csv. This import must not be used for comparisons or BI inference.",
+  "replacement_version": "legacy_windows_10000_v1",
+  "action": "Retained for audit; no raw file or earlier result was modified. Local import now validates both row counts and monthly counts before publication."
+}

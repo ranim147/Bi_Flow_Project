@@ -1,0 +1,62 @@
+{
+  "environment": {
+    "python": "3.13.2",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "cpu": "Intel64 Family 6 Model 140 Stepping 1, GenuineIntel",
+    "physical_cores": 4,
+    "logical_cores": 8,
+    "ram_total_gib": 15.746696472167969,
+    "ram_available_gib": 3.30047607421875,
+    "gpu": {
+      "status": "observed",
+      "detail": "name, memory.total [MiB], memory.free [MiB]\nNVIDIA GeForce MX350, 2048 MiB, 1307 MiB"
+    },
+    "disks": {
+      "D:\\": {
+        "free_gib": 731.7842559814453,
+        "total_gib": 931.5117149353027
+      },
+      "C:\\": {
+        "free_gib": 3.549774169921875,
+        "total_gib": 237.3785858154297
+      }
+    },
+    "ollama_cli": "D:\\Analyst_Agent\\tools\\ollama\\ollama.EXE",
+    "model_storage_configured_for_notebook": "D:\\OllamaModels",
+    "model_storage_free_gib": 731.7842559814453,
+    "storage_note": "Le dossier du serveur déjà lancé doit être configuré séparément via OLLAMA_MODELS.",
+    "resource_policy": {
+      "qwen3:4b": 5.5,
+      "gemma3:4b": 6.5,
+      "granite3.3:2b": 3.5
+    },
+    "resource_note": "Estimations prudentes incluant contexte/cache. GPU non requis : CPU ou offload partiel possible."
+  },
+  "ollama_version": {
+    "version": "0.40.11"
+  },
+  "resident_models": {
+    "models": [
+      {
+        "name": "granite3.3:2b",
+        "model": "granite3.3:2b",
+        "size": 2072007145,
+        "digest": "07bd1f170855240f9e162bf54ea494a8bc1c73d8cbd1365d7fccbeb7d2504947",
+        "details": {
+          "parent_model": "",
+          "format": "gguf",
+          "family": "granite",
+          "families": [
+            "granite"
+          ],
+          "parameter_size": "2.5B",
+          "quantization_level": "Q4_K_M"
+        },
+        "expires_at": "2026-10-28T11:37:24.3810071+01:00",
+        "size_vram": 630036889,
+        "context_length": 4096,
+        "runner": "llamacpp"
+      }
+    ]
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "old_period": {
+    "period_start_inclusive": "2026-06-01T00:00:00",
+    "period_end_exclusive": "2026-10-18T00:00:00",
+    "extracted_at_utc": "2026-10-17T20:09:21.151537+00:00",
+    "sample_method": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+  },
+  "new_period": {
+    "period_start_inclusive": "2023-01-01",
+    "period_end_exclusive": "2026-10-01",
+    "extracted_at_utc": "2026-10-28T19:31:19.361247+00:00",
+    "sample_method": "Month/borough stratified systematic selection by seeded identifier suffixes; not a probability sample or a population estimate",
+    "source_timezone": "America/New_York"
+  },
+  "old_summary": [
+    {
+      "kpi_name": "request_volume",
+      "value": 10000.0,
+      "unit": "demandes",
+      "population_or_denominator": "clés unique_key distinctes + lignes sans clé; population df_clean"
+    },
+    {
+      "kpi_name": "mean_resolution_days",
+      "value": 4.106830597189813,
+      "unit": "jours calendaires",
+      "population_or_denominator": "moyenne sur 9285 durées valides"
+    },
+    {
+      "kpi_name": "median_resolution_days",
+      "value": 0.1819560185185185,
+      "unit": "jours calendaires",
+      "population_or_denominator": "médiane sur 9285 durées valides"
+    },
+    {
+      "kpi_name": "closure_rate",
+      "value": 92.91,
+      "unit": "%",
+      "population_or_denominator": "9291 fermées / 10000 créations datées"
+    }
+  ],
+  "new_summary": [
+    {
+      "kpi_name": "request_volume",
+      "value": 265609.0,
+      "unit": "demandes",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "closed_request_count",
+      "value": 259354.0,
+      "unit": "demandes",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "open_request_count",
+      "value": 4975.0,
+      "unit": "demandes",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "inconsistent_request_count",
+      "value": 1280.0,
+      "unit": "demandes",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "mean_resolution_days",
+      "value": 12.330657237326704,
+      "unit": "jours calendaires",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "median_resolution_days",
+      "value": 0.30484953703703704,
+      "unit": "jours calendaires",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "closure_rate",
+      "value": 97.65827098387261,
+      "unit": "%",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    },
+    {
+      "kpi_name": "invalid_or_missing_resolution_rate",
+      "value": 2.3549653814441527,
+      "unit": "%",
+      "population_or_denominator": "prepared cohort 2023-01-01 / 2026-10-01; valid delay n=259354; valid creation n=265573; as_of=2026-10-28T19:31:19.361247+00:00"
+    }
+  ],
+  "shared_month_official_counts": [
+    {
+      "month": "2026-06",
+      "old": 334834,
+      "new": 334834
+    },
+    {
+      "month": "2026-07",
+      "old": 343133,
+      "new": 343133
+    },
+    {
+      "month": "2026-08",
+      "old": 328918,
+      "new": 328922
+    },
+    {
+      "month": "2026-09",
+      "old": 323627,
+      "new": 323632
+    }
+  ],
+  "interpretation": "Different creation cohorts, sampling designs, reporting timezones and follow-up cutoffs. Differences in delay/closure KPIs are not service improvements. Official shared-month counts may be revised by the source. Detailed statistics are unweighted sample statistics, not population estimates."
+}

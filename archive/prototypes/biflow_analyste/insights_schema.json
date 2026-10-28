@@ -1,0 +1,191 @@
+{
+  "$defs": {
+    "Evidence": {
+      "description": "Une trace de calcul : quel outil, avec quels param\u00e8tres, quel r\u00e9sultat.",
+      "properties": {
+        "tool": {
+          "title": "Tool",
+          "type": "string"
+        },
+        "params": {
+          "additionalProperties": true,
+          "title": "Params",
+          "type": "object"
+        },
+        "result": {
+          "additionalProperties": true,
+          "title": "Result",
+          "type": "object"
+        }
+      },
+      "required": [
+        "tool",
+        "params",
+        "result"
+      ],
+      "title": "Evidence",
+      "type": "object"
+    },
+    "Insight": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "trend",
+            "anomaly",
+            "comparison",
+            "ranking",
+            "target_gap"
+          ],
+          "title": "Type",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "kpi": {
+          "title": "Kpi",
+          "type": "string"
+        },
+        "dimension": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dimension"
+        },
+        "dimension_value": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Dimension Value"
+        },
+        "period_start": {
+          "format": "date",
+          "title": "Period Start",
+          "type": "string"
+        },
+        "period_end": {
+          "format": "date",
+          "title": "Period End",
+          "type": "string"
+        },
+        "magnitude": {
+          "title": "Magnitude",
+          "type": "number"
+        },
+        "magnitude_unit": {
+          "title": "Magnitude Unit",
+          "type": "string"
+        },
+        "evidence": {
+          "items": {
+            "$ref": "#/$defs/Evidence"
+          },
+          "title": "Evidence",
+          "type": "array"
+        },
+        "confidence": {
+          "maximum": 1,
+          "minimum": 0,
+          "title": "Confidence",
+          "type": "number"
+        },
+        "possible_causes": {
+          "default": [],
+          "items": {
+            "type": "string"
+          },
+          "title": "Possible Causes",
+          "type": "array"
+        },
+        "recommendation": {
+          "title": "Recommendation",
+          "type": "string"
+        },
+        "priority": {
+          "enum": [
+            "high",
+            "medium",
+            "low"
+          ],
+          "title": "Priority",
+          "type": "string"
+        },
+        "suggested_visual": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Suggested Visual"
+        }
+      },
+      "required": [
+        "id",
+        "type",
+        "title",
+        "kpi",
+        "period_start",
+        "period_end",
+        "magnitude",
+        "magnitude_unit",
+        "evidence",
+        "confidence",
+        "recommendation",
+        "priority"
+      ],
+      "title": "Insight",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "business_question": {
+      "title": "Business Question",
+      "type": "string"
+    },
+    "generated_at": {
+      "format": "date-time",
+      "title": "Generated At",
+      "type": "string"
+    },
+    "dataset_version": {
+      "title": "Dataset Version",
+      "type": "string"
+    },
+    "insights": {
+      "items": {
+        "$ref": "#/$defs/Insight"
+      },
+      "title": "Insights",
+      "type": "array"
+    }
+  },
+  "required": [
+    "business_question",
+    "generated_at",
+    "dataset_version",
+    "insights"
+  ],
+  "title": "InsightsReport",
+  "type": "object"
+}

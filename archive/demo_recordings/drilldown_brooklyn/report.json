@@ -1,0 +1,499 @@
+{
+  "contract_version": "biflow-bi-analyst-v2",
+  "execution_id": "f27707502a354f6f8b4185973cbfc8e7",
+  "generated_at": "2026-10-28T10:58:56.801564+00:00",
+  "question": "Investiguer la hausse des délais à Brooklyn; préciser les catégories, agences et périodes prioritaires.",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "answer",
+  "finding": "within_segment_increase",
+  "insights": [
+    {
+      "insight_id": "f27707502a354f6f8b4185973cbfc8e7-scope_0",
+      "category": "comparison",
+      "finding": "within_segment_increase",
+      "insight": "Une hausse descriptive de la moyenne des délais de clôture est observée; examiner les segments contributeurs sans présumer leur cause. Périmètre : {\"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\", \"agency\": \"HPD\"}; périodes : ('2026-08', '2026-09')",
+      "recommendation": "Extraire les journaux de traitement du segment ciblé et localiser l'étape où les durées diffèrent. Cible : {\"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\", \"agency\": \"HPD\"}",
+      "evidence_fact_ids": [
+        "ds.232d0cde6a",
+        "ds.9b95f4b741",
+        "ds.3a042fe288",
+        "ds.be58076ee1",
+        "ds.06a767ea94",
+        "ds.c3ad989769"
+      ],
+      "limitation_codes": [
+        "agency_case_mix",
+        "closed_work_selection",
+        "descriptive_not_causal",
+        "mean_not_median",
+        "missing_values",
+        "no_sla",
+        "no_staffing_or_budget_evidence",
+        "nonrandom_sample",
+        "partial_period_excluded",
+        "sample_backlog_only",
+        "small_segments",
+        "unmatched_groups"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "ds.63280b208f",
+      "metric": "invalid_closed_duration_n",
+      "scope": "{\"scope\": \"quality\"}",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv#quality/invalid_closed_duration_n",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.6d71d3d2c7",
+      "metric": "sample_requests_n",
+      "scope": "{\"scope\": \"quality\"}",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv#quality/sample_requests_n",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.232d0cde6a",
+      "metric": "delta_mean_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 3.3960576497620494,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/delta_mean_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.9b95f4b741",
+      "metric": "within_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 3.1459419103577995,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/within_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.3a042fe288",
+      "metric": "composition_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 0.018167940185678386,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/composition_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.be58076ee1",
+      "metric": "unmatched_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 0.23194779921857028,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/unmatched_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.81ca112104",
+      "metric": "mean_delay_baseline",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 3.9215263723544975,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/mean_delay_baseline",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.56f08d9f00",
+      "metric": "mean_delay_current",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 7.317584022116547,
+      "unit": "days",
+      "n": 736,
+      "source": "data/processed/nyc311_clean.csv#scope_0/mean_delay_current",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.5a93f78616",
+      "metric": "valid_closed_baseline_n",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 700.0,
+      "unit": "requests",
+      "n": 701,
+      "source": "data/processed/nyc311_clean.csv#scope_0/valid_closed_baseline_n",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.28523fa1e4",
+      "metric": "valid_closed_current_n",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 736.0,
+      "unit": "requests",
+      "n": 737,
+      "source": "data/processed/nyc311_clean.csv#scope_0/valid_closed_current_n",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.ffab63e2e6",
+      "metric": "median_change_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": -0.07723379629629629,
+      "unit": "days",
+      "n": 700,
+      "source": "data/processed/nyc311_clean.csv#scope_0/median_change_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.06a767ea94",
+      "metric": "segment_contribution_days",
+      "scope": "{\"agency\": \"HPD\", \"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\"}",
+      "value": 0.6483893885150677,
+      "unit": "days",
+      "n": 37,
+      "source": "data/processed/nyc311_clean.csv#scope_0/segment_contribution_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.a4badb6323",
+      "metric": "segment_priority_score",
+      "scope": "{\"agency\": \"HPD\", \"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\"}",
+      "value": 3.943998677502428,
+      "unit": "heuristic score",
+      "n": 37,
+      "source": "data/processed/nyc311_clean.csv#scope_0/segment_priority_score",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.983c363314",
+      "metric": "backlog_sample_change",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": -27.0,
+      "unit": "sample requests",
+      "n": 3337,
+      "source": "data/processed/nyc311_clean.csv#scope_0/backlog_sample_change",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.e299c086ad",
+      "metric": "current_backlog_sample_n",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 243.0,
+      "unit": "sample requests",
+      "n": 3337,
+      "source": "data/processed/nyc311_clean.csv#scope_0/current_backlog_sample_n",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.59a4f2e12a",
+      "metric": "current_open_age_p90_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 103.31307638888889,
+      "unit": "days",
+      "n": 243,
+      "source": "data/processed/nyc311_clean.csv#scope_0/current_open_age_p90_days",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.3e6b48cfe4",
+      "metric": "incoming_sample_change",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": -86.0,
+      "unit": "sample requests",
+      "n": 3337,
+      "source": "data/processed/nyc311_clean.csv#scope_0/incoming_sample_change",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "ds.c3ad989769",
+      "metric": "agency_category_overlap_min",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 0.0,
+      "unit": "share",
+      "n": 3337,
+      "source": "data/processed/nyc311_clean.csv#scope_0/agency_category_overlap_min",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": "Descriptive completed-work monthly comparison",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Aucun SLA métier n'a été fourni.",
+    "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+    "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+    "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+    "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+    "Les contributions arithmétiques ne démontrent aucune cause.",
+    "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+    "Les groupes nouveaux ou absents ne permettent pas d'estimer une évolution interne; leur contribution reste séparée.",
+    "Les moyennes brutes des agences ne sont pas directement comparables sans contrôler les catégories.",
+    "Les périodes partielles sont exclues de la comparaison.",
+    "Les segments avec un effectif insuffisant dans une période sont exclus du classement, mais conservés dans la décomposition.",
+    "Les valeurs manquantes ou incohérentes sont comptées sans remplacement par zéro."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv#quality/invalid_closed_duration_n",
+    "data/processed/nyc311_clean.csv#quality/sample_requests_n",
+    "data/processed/nyc311_clean.csv#scope_0/agency_category_overlap_min",
+    "data/processed/nyc311_clean.csv#scope_0/backlog_sample_change",
+    "data/processed/nyc311_clean.csv#scope_0/composition_days",
+    "data/processed/nyc311_clean.csv#scope_0/current_backlog_sample_n",
+    "data/processed/nyc311_clean.csv#scope_0/current_open_age_p90_days",
+    "data/processed/nyc311_clean.csv#scope_0/delta_mean_days",
+    "data/processed/nyc311_clean.csv#scope_0/incoming_sample_change",
+    "data/processed/nyc311_clean.csv#scope_0/mean_delay_baseline",
+    "data/processed/nyc311_clean.csv#scope_0/mean_delay_current",
+    "data/processed/nyc311_clean.csv#scope_0/median_change_days",
+    "data/processed/nyc311_clean.csv#scope_0/segment_contribution_days",
+    "data/processed/nyc311_clean.csv#scope_0/segment_priority_score",
+    "data/processed/nyc311_clean.csv#scope_0/unmatched_days",
+    "data/processed/nyc311_clean.csv#scope_0/valid_closed_baseline_n",
+    "data/processed/nyc311_clean.csv#scope_0/valid_closed_current_n",
+    "data/processed/nyc311_clean.csv#scope_0/within_days"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "investigate_degradation",
+      "parameters": {
+        "question": "Investiguer la hausse des délais à Brooklyn; préciser les catégories, agences et périodes prioritaires."
+      },
+      "status": "success",
+      "started_at": "2026-10-28T10:58:13.035971+00:00",
+      "elapsed_ms": 825.6357999052852,
+      "evidence_ids": [
+        "ds.63280b208f",
+        "ds.6d71d3d2c7",
+        "ds.232d0cde6a",
+        "ds.9b95f4b741",
+        "ds.3a042fe288",
+        "ds.be58076ee1",
+        "ds.81ca112104",
+        "ds.56f08d9f00",
+        "ds.5a93f78616",
+        "ds.28523fa1e4",
+        "ds.ffab63e2e6",
+        "ds.06a767ea94",
+        "ds.a4badb6323",
+        "ds.983c363314",
+        "ds.e299c086ad",
+        "ds.59a4f2e12a",
+        "ds.3e6b48cfe4",
+        "ds.c3ad989769"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 84.03199992608279,
+    "data_validation": 581.1994000105187,
+    "analytics": 825.6357999052852,
+    "problem_0_inference_1": 42927.51870001666,
+    "problem_0_load_duration_1": 5.3095,
+    "problem_0_prompt_eval_duration_1": 8450.264999,
+    "problem_0_eval_duration_1": 34301.833,
+    "problem_0_validation_1": 1.2271000305190682,
+    "total": 44470.06099997088
+  },
+  "decision_support": [
+    {
+      "problem_id": "scope_0",
+      "problem": "Une hausse descriptive de la moyenne des délais de clôture est observée; examiner les segments contributeurs sans présumer leur cause.",
+      "priority_scope": {
+        "scope_id": "scope_0",
+        "filters": {
+          "borough": "BROOKLYN",
+          "complaint_type": "UNSANITARY CONDITION",
+          "agency": "HPD"
+        },
+        "baseline_period": "2026-08",
+        "current_period": "2026-09",
+        "period_basis": "closure_month"
+      },
+      "evidence_ids": [
+        "ds.232d0cde6a",
+        "ds.9b95f4b741",
+        "ds.3a042fe288",
+        "ds.be58076ee1",
+        "ds.06a767ea94",
+        "ds.c3ad989769"
+      ],
+      "investigation_hypotheses": [
+        {
+          "hypothesis_id": "segment_processing",
+          "statement": "Un changement des étapes de traitement dans le segment pourrait accompagner l'évolution observée; cette hypothèse reste à vérifier.",
+          "status": "unverified",
+          "evidence_ids": [
+            "ds.232d0cde6a",
+            "ds.9b95f4b741",
+            "ds.3a042fe288",
+            "ds.be58076ee1",
+            "ds.06a767ea94",
+            "ds.c3ad989769"
+          ],
+          "additional_data": [
+            "Historique horodaté des affectations et étapes de traitement",
+            "Complexité et priorité des dossiers dans les périodes comparées"
+          ]
+        }
+      ],
+      "investigation_steps": [
+        {
+          "hypothesis_id": "segment_processing",
+          "dataset": "additional_data",
+          "filters": {
+            "borough": "BROOKLYN",
+            "complaint_type": "UNSANITARY CONDITION",
+            "agency": "HPD",
+            "baseline_closure_month": "2026-08",
+            "current_closure_month": "2026-09"
+          },
+          "fields": [
+            "unique_key",
+            "assignment_timestamp",
+            "processing_started_at",
+            "processing_completed_at",
+            "complexity",
+            "priority"
+          ],
+          "comparison": "Comparer les durées d'attente et de traitement dans la même catégorie et agence entre les périodes, puis stratifier par complexité et priorité."
+        }
+      ],
+      "recommended_actions": [
+        {
+          "hypothesis_id": "segment_processing",
+          "priority": 1,
+          "action": "Extraire les journaux de traitement du segment ciblé et localiser l'étape où les durées diffèrent.",
+          "priority_reason": "Contribution descriptive de 0.648 jour à la variation de moyenne; 37 clôtures valides avant et 37 après; priorité calculée par contribution positive, volume observé et complétude, sans interprétation causale. La variation interne au segment justifie de localiser l'étape concernée, après contrôle de la complexité.",
+          "decision_if_supported": "Envisager un essai ciblé sur l'étape identifiée, avec suivi des délais et revue métier préalable.",
+          "decision_if_refuted": "Écarter cette piste et examiner la composition ou la qualité des dates avant toute modification du processus."
+        }
+      ],
+      "expected_verification": [
+        {
+          "hypothesis_id": "segment_processing",
+          "supports": "Un écart persiste dans la même étape après comparaison de dossiers de complexité et priorité similaires.",
+          "refutes": "L'écart disparaît à composition et complexité comparables, ou les journaux ne montrent aucune étape plus longue."
+        }
+      ],
+      "limitations": [
+        "Les moyennes brutes des agences ne sont pas directement comparables sans contrôler les catégories.",
+        "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+        "Les contributions arithmétiques ne démontrent aucune cause.",
+        "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+        "Les valeurs manquantes ou incohérentes sont comptées sans remplacement par zéro.",
+        "Aucun SLA métier n'a été fourni.",
+        "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+        "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+        "Les périodes partielles sont exclues de la comparaison.",
+        "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+        "Les segments avec un effectif insuffisant dans une période sont exclus du classement, mais conservés dans la décomposition.",
+        "Les groupes nouveaux ou absents ne permettent pas d'estimer une évolution interne; leur contribution reste séparée."
+      ],
+      "origin": "granite_validated"
+    }
+  ]
+}

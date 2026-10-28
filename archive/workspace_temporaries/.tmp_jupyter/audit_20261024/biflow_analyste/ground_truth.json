@@ -1,0 +1,32 @@
+[
+  {
+    "id": "A",
+    "type": "true_anomaly",
+    "kpi": "volume_demandes",
+    "borough": "Brooklyn",
+    "complaint_type": "Noise - Residential",
+    "start": "2025-07-04",
+    "end": "2025-07-06",
+    "should_alert": true
+  },
+  {
+    "id": "B",
+    "type": "drift",
+    "kpi": "delai_moyen_h",
+    "borough": "Bronx",
+    "complaint_type": "Street Condition",
+    "start": "2025-06-01",
+    "end": "2025-12-31",
+    "should_alert": true
+  },
+  {
+    "id": "C",
+    "type": "false_alarm_duplicates",
+    "kpi": "volume_demandes",
+    "borough": "Queens",
+    "complaint_type": "Illegal Parking",
+    "start": "2025-03-15",
+    "end": "2025-03-15",
+    "should_alert": false
+  }
+]

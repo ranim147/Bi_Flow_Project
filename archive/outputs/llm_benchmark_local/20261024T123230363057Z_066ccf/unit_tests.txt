@@ -1,0 +1,38 @@
+test_connection_refusal_classification (test_benchmark_llm.ClientTests.test_connection_refusal_classification) ... ok
+test_remote_server_rejected (test_benchmark_llm.ClientTests.test_remote_server_rejected) ... ok
+test_timeout_classification (test_benchmark_llm.ClientTests.test_timeout_classification) ... ok
+test_unavailable_models_have_blank_scores_and_no_winner (test_benchmark_llm.ClientTests.test_unavailable_models_have_blank_scores_and_no_winner) ... ok
+test_corrupt_present_data_does_not_silently_fallback (test_benchmark_llm.DataTests.test_corrupt_present_data_does_not_silently_fallback) ... ok
+test_fallback_is_explicit_and_covers_twenty_cases (test_benchmark_llm.DataTests.test_fallback_is_explicit_and_covers_twenty_cases) ... ok
+test_at_least_twenty_cases_and_both_origins (test_benchmark_llm.EvaluationTests.test_at_least_twenty_cases_and_both_origins) ... ok
+test_boolean_not_number (test_benchmark_llm.EvaluationTests.test_boolean_not_number) ... ok
+test_duplicate_fact (test_benchmark_llm.EvaluationTests.test_duplicate_fact) ... ok
+test_duplicate_keys (test_benchmark_llm.EvaluationTests.test_duplicate_keys) ... ok
+test_empty_claims_cannot_pass_by_silence (test_benchmark_llm.EvaluationTests.test_empty_claims_cannot_pass_by_silence) ... ok
+test_explicit_cause_is_flagged (test_benchmark_llm.EvaluationTests.test_explicit_cause_is_flagged) ... ok
+test_extra_field (test_benchmark_llm.EvaluationTests.test_extra_field) ... ok
+test_fenced_json_not_silently_repaired (test_benchmark_llm.EvaluationTests.test_fenced_json_not_silently_repaired) ... ok
+test_invalid_json (test_benchmark_llm.EvaluationTests.test_invalid_json) ... ok
+test_invented_value (test_benchmark_llm.EvaluationTests.test_invented_value) ... ok
+test_lexical_causal_flag_is_not_a_semantic_verdict (test_benchmark_llm.EvaluationTests.test_lexical_causal_flag_is_not_a_semantic_verdict) ... ok
+test_missing_field (test_benchmark_llm.EvaluationTests.test_missing_field) ... ok
+test_missing_value_cannot_be_zero (test_benchmark_llm.EvaluationTests.test_missing_value_cannot_be_zero) ... ok
+test_nonfinite_json (test_benchmark_llm.EvaluationTests.test_nonfinite_json) ... ok
+test_numeric_hallucination_in_prose (test_benchmark_llm.EvaluationTests.test_numeric_hallucination_in_prose) ... ok
+test_prompt_is_identical_except_model_and_no_reference_leak (test_benchmark_llm.EvaluationTests.test_prompt_is_identical_except_model_and_no_reference_leak) ... ok
+test_real_synthetic_confusion (test_benchmark_llm.EvaluationTests.test_real_synthetic_confusion) ... ok
+test_reference_contracts_all_cases (test_benchmark_llm.EvaluationTests.test_reference_contracts_all_cases) ... ok
+test_required_limit_omission (test_benchmark_llm.EvaluationTests.test_required_limit_omission) ... ok
+test_unavailable_response_has_no_quality_scores (test_benchmark_llm.EvaluationTests.test_unavailable_response_has_no_quality_scores) ... ok
+test_unknown_fact (test_benchmark_llm.EvaluationTests.test_unknown_fact) ... ok
+test_wrong_decision_and_finding (test_benchmark_llm.EvaluationTests.test_wrong_decision_and_finding) ... ok
+test_wrong_group_even_with_existing_number (test_benchmark_llm.EvaluationTests.test_wrong_group_even_with_existing_number) ... ok
+test_wrong_numeric_type (test_benchmark_llm.EvaluationTests.test_wrong_numeric_type) ... ok
+test_wrong_sample_size (test_benchmark_llm.EvaluationTests.test_wrong_sample_size) ... ok
+test_wrong_source (test_benchmark_llm.EvaluationTests.test_wrong_source) ... ok
+test_wrong_unit (test_benchmark_llm.EvaluationTests.test_wrong_unit) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 1.723s
+
+OK

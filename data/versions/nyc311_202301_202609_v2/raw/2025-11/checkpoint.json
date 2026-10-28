@@ -1,0 +1,22 @@
+{
+  "month": "2025-11",
+  "pages": [
+    {
+      "path": "raw/2025-11/part-00000.parquet",
+      "sha256": "1642a1db36879c7c32a32087f4b7f1ca0bea6057b3e5a5274034e8bc8ed03342",
+      "rows": 5000,
+      "last_key": "66954483"
+    },
+    {
+      "path": "raw/2025-11/part-00001.parquet",
+      "sha256": "f23693d6fed37b4fd989d902d4d9a4025ba19e2a31c514464c794b9527779340",
+      "rows": 1015,
+      "last_key": "67021233"
+    }
+  ],
+  "complete": true,
+  "expected_rows": 6015,
+  "predicate": "created_date >= '2025-11-01T00:00:00' AND created_date < '2025-12-01T00:00:00' AND ((borough='BRONX' AND (unique_key like '%29' OR unique_key like '%79')) OR (borough='BROOKLYN' AND (unique_key like '%33' OR unique_key like '%83')) OR (borough='MANHATTAN' AND (unique_key like '%44' OR unique_key like '%94')) OR (borough='QUEENS' AND (unique_key like '%35' OR unique_key like '%85')) OR (borough='STATEN ISLAND' AND (unique_key like '%37' OR unique_key like '%87')) OR (borough='Unspecified' AND (unique_key like '%39' OR unique_key like '%89')))",
+  "completed_at_utc": "2026-10-28T19:28:46.494464+00:00",
+  "population_strata_sha256": "a4aadae1130fdbdbc28532e9fa16a21202db849f673a514927467c84f176f73e"
+}

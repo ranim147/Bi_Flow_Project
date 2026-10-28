@@ -1,0 +1,824 @@
+{
+  "$defs": {
+    "AnalyticalPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "intent": {
+          "enum": [
+            "summary",
+            "comparison",
+            "ranking",
+            "trend",
+            "anomaly",
+            "drilldown",
+            "investigation",
+            "justified_refusal"
+          ],
+          "title": "Intent",
+          "type": "string"
+        },
+        "metric": {
+          "title": "Metric",
+          "type": "string"
+        },
+        "dimensions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Dimensions",
+          "type": "array"
+        },
+        "filters": {
+          "additionalProperties": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array"
+          },
+          "title": "Filters",
+          "type": "object"
+        },
+        "time_scope": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Time Scope",
+          "type": "array"
+        },
+        "temporal_forbidden": {
+          "default": false,
+          "title": "Temporal Forbidden",
+          "type": "boolean"
+        },
+        "operation_sequence": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Operation Sequence",
+          "type": "array"
+        },
+        "unsupported_request": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Unsupported Request",
+          "type": "array"
+        },
+        "executor": {
+          "enum": [
+            "scoped",
+            "investigation",
+            "legacy"
+          ],
+          "title": "Executor",
+          "type": "string"
+        },
+        "locked_filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Locked Filters",
+          "type": "object"
+        }
+      },
+      "required": [
+        "intent",
+        "metric",
+        "executor"
+      ],
+      "title": "AnalyticalPlan",
+      "type": "object"
+    },
+    "BIInsight": {
+      "additionalProperties": false,
+      "properties": {
+        "insight_id": {
+          "title": "Insight Id",
+          "type": "string"
+        },
+        "category": {
+          "enum": [
+            "comparison",
+            "trend",
+            "anomaly",
+            "data_quality",
+            "summary"
+          ],
+          "title": "Category",
+          "type": "string"
+        },
+        "finding": {
+          "title": "Finding",
+          "type": "string"
+        },
+        "insight": {
+          "title": "Insight",
+          "type": "string"
+        },
+        "recommendation": {
+          "title": "Recommendation",
+          "type": "string"
+        },
+        "evidence_fact_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Fact Ids",
+          "type": "array"
+        },
+        "limitation_codes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitation Codes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "insight_id",
+        "category",
+        "finding",
+        "insight",
+        "recommendation",
+        "evidence_fact_ids",
+        "limitation_codes"
+      ],
+      "title": "BIInsight",
+      "type": "object"
+    },
+    "DecisionProblem": {
+      "additionalProperties": false,
+      "properties": {
+        "problem_id": {
+          "title": "Problem Id",
+          "type": "string"
+        },
+        "problem": {
+          "title": "Problem",
+          "type": "string"
+        },
+        "priority_scope": {
+          "$ref": "#/$defs/PriorityScope"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "investigation_hypotheses": {
+          "items": {
+            "$ref": "#/$defs/InvestigationHypothesis"
+          },
+          "title": "Investigation Hypotheses",
+          "type": "array"
+        },
+        "investigation_steps": {
+          "items": {
+            "$ref": "#/$defs/InvestigationStep"
+          },
+          "title": "Investigation Steps",
+          "type": "array"
+        },
+        "recommended_actions": {
+          "items": {
+            "$ref": "#/$defs/InvestigationAction"
+          },
+          "title": "Recommended Actions",
+          "type": "array"
+        },
+        "expected_verification": {
+          "items": {
+            "$ref": "#/$defs/ExpectedVerification"
+          },
+          "title": "Expected Verification",
+          "type": "array"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "origin": {
+          "enum": [
+            "granite_validated",
+            "python_fallback"
+          ],
+          "title": "Origin",
+          "type": "string"
+        }
+      },
+      "required": [
+        "problem_id",
+        "problem",
+        "priority_scope",
+        "evidence_ids",
+        "investigation_hypotheses",
+        "investigation_steps",
+        "recommended_actions",
+        "expected_verification",
+        "limitations",
+        "origin"
+      ],
+      "title": "DecisionProblem",
+      "type": "object"
+    },
+    "EvidenceFact": {
+      "additionalProperties": false,
+      "properties": {
+        "fact_id": {
+          "minLength": 1,
+          "title": "Fact Id",
+          "type": "string"
+        },
+        "metric": {
+          "minLength": 1,
+          "title": "Metric",
+          "type": "string"
+        },
+        "scope": {
+          "minLength": 1,
+          "title": "Scope",
+          "type": "string"
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Value"
+        },
+        "unit": {
+          "minLength": 1,
+          "title": "Unit",
+          "type": "string"
+        },
+        "n": {
+          "anyOf": [
+            {
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "N"
+        },
+        "source": {
+          "minLength": 1,
+          "title": "Source",
+          "type": "string"
+        },
+        "source_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Source Sha256"
+        },
+        "data_kind": {
+          "const": "real",
+          "default": "real",
+          "type": "string"
+        },
+        "method": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Method"
+        },
+        "threshold": {
+          "anyOf": [
+            {
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Threshold"
+        },
+        "reference_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Reference Period"
+        },
+        "p_value": {
+          "anyOf": [
+            {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "P Value"
+        }
+      },
+      "required": [
+        "fact_id",
+        "metric",
+        "scope",
+        "value",
+        "unit",
+        "n",
+        "source"
+      ],
+      "title": "EvidenceFact",
+      "type": "object"
+    },
+    "ExpectedVerification": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "supports": {
+          "title": "Supports",
+          "type": "string"
+        },
+        "refutes": {
+          "title": "Refutes",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "supports",
+        "refutes"
+      ],
+      "title": "ExpectedVerification",
+      "type": "object"
+    },
+    "InvestigationAction": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "priority": {
+          "minimum": 1,
+          "title": "Priority",
+          "type": "integer"
+        },
+        "action": {
+          "title": "Action",
+          "type": "string"
+        },
+        "priority_reason": {
+          "title": "Priority Reason",
+          "type": "string"
+        },
+        "decision_if_supported": {
+          "title": "Decision If Supported",
+          "type": "string"
+        },
+        "decision_if_refuted": {
+          "title": "Decision If Refuted",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "priority",
+        "action",
+        "priority_reason",
+        "decision_if_supported",
+        "decision_if_refuted"
+      ],
+      "title": "InvestigationAction",
+      "type": "object"
+    },
+    "InvestigationHypothesis": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "statement": {
+          "title": "Statement",
+          "type": "string"
+        },
+        "status": {
+          "const": "unverified",
+          "default": "unverified",
+          "title": "Status",
+          "type": "string"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "additional_data": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Additional Data",
+          "type": "array"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "statement",
+        "evidence_ids",
+        "additional_data"
+      ],
+      "title": "InvestigationHypothesis",
+      "type": "object"
+    },
+    "InvestigationStep": {
+      "additionalProperties": false,
+      "properties": {
+        "hypothesis_id": {
+          "title": "Hypothesis Id",
+          "type": "string"
+        },
+        "dataset": {
+          "enum": [
+            "prepared_extract",
+            "additional_data"
+          ],
+          "title": "Dataset",
+          "type": "string"
+        },
+        "filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Filters",
+          "type": "object"
+        },
+        "fields": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Fields",
+          "type": "array"
+        },
+        "comparison": {
+          "title": "Comparison",
+          "type": "string"
+        }
+      },
+      "required": [
+        "hypothesis_id",
+        "dataset",
+        "filters",
+        "fields",
+        "comparison"
+      ],
+      "title": "InvestigationStep",
+      "type": "object"
+    },
+    "PriorityScope": {
+      "additionalProperties": false,
+      "properties": {
+        "scope_id": {
+          "title": "Scope Id",
+          "type": "string"
+        },
+        "filters": {
+          "additionalProperties": {
+            "type": "string"
+          },
+          "title": "Filters",
+          "type": "object"
+        },
+        "baseline_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Baseline Period"
+        },
+        "current_period": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "title": "Current Period"
+        },
+        "period_basis": {
+          "const": "closure_month",
+          "default": "closure_month",
+          "title": "Period Basis",
+          "type": "string"
+        }
+      },
+      "required": [
+        "scope_id",
+        "filters",
+        "baseline_period",
+        "current_period"
+      ],
+      "title": "PriorityScope",
+      "type": "object"
+    },
+    "ToolTrace": {
+      "additionalProperties": false,
+      "properties": {
+        "tool": {
+          "title": "Tool",
+          "type": "string"
+        },
+        "parameters": {
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              },
+              {
+                "type": "number"
+              },
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "title": "Parameters",
+          "type": "object"
+        },
+        "status": {
+          "enum": [
+            "success",
+            "skipped",
+            "error"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "started_at": {
+          "title": "Started At",
+          "type": "string"
+        },
+        "elapsed_ms": {
+          "minimum": 0,
+          "title": "Elapsed Ms",
+          "type": "number"
+        },
+        "evidence_ids": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Evidence Ids",
+          "type": "array"
+        },
+        "detail": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Detail"
+        }
+      },
+      "required": [
+        "tool",
+        "parameters",
+        "status",
+        "started_at",
+        "elapsed_ms"
+      ],
+      "title": "ToolTrace",
+      "type": "object"
+    },
+    "ValidationResult": {
+      "additionalProperties": false,
+      "properties": {
+        "status": {
+          "enum": [
+            "validated",
+            "rejected",
+            "not_run"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "json_valid": {
+          "title": "Json Valid",
+          "type": "boolean"
+        },
+        "schema_valid": {
+          "title": "Schema Valid",
+          "type": "boolean"
+        },
+        "evidence_valid": {
+          "title": "Evidence Valid",
+          "type": "boolean"
+        },
+        "numerical_claims_valid": {
+          "title": "Numerical Claims Valid",
+          "type": "boolean"
+        },
+        "causal_claims_clear": {
+          "title": "Causal Claims Clear",
+          "type": "boolean"
+        },
+        "errors": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Errors",
+          "type": "array"
+        }
+      },
+      "required": [
+        "status",
+        "json_valid",
+        "schema_valid",
+        "evidence_valid",
+        "numerical_claims_valid",
+        "causal_claims_clear"
+      ],
+      "title": "ValidationResult",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "contract_version": {
+      "default": "biflow-bi-analyst-v1",
+      "enum": [
+        "biflow-bi-analyst-v1",
+        "biflow-bi-analyst-v2"
+      ],
+      "title": "Contract Version",
+      "type": "string",
+      "const": "biflow-bi-analyst-v1"
+    },
+    "execution_id": {
+      "title": "Execution Id",
+      "type": "string"
+    },
+    "generated_at": {
+      "title": "Generated At",
+      "type": "string"
+    },
+    "question": {
+      "title": "Question",
+      "type": "string"
+    },
+    "model": {
+      "anyOf": [
+        {
+          "const": "granite3.3:2b",
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Model"
+    },
+    "data_kind": {
+      "const": "real",
+      "default": "real",
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "validated",
+        "fallback",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "answer",
+        "insufficient_data",
+        "refuse"
+      ],
+      "title": "Decision",
+      "type": "string"
+    },
+    "finding": {
+      "title": "Finding",
+      "type": "string"
+    },
+    "insights": {
+      "items": {
+        "$ref": "#/$defs/BIInsight"
+      },
+      "title": "Insights",
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "$ref": "#/$defs/EvidenceFact"
+      },
+      "title": "Evidence",
+      "type": "array"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Limitations",
+      "type": "array"
+    },
+    "source_refs": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Source Refs",
+      "type": "array"
+    },
+    "validation": {
+      "$ref": "#/$defs/ValidationResult"
+    },
+    "tool_trace": {
+      "items": {
+        "$ref": "#/$defs/ToolTrace"
+      },
+      "title": "Tool Trace",
+      "type": "array"
+    },
+    "errors": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Errors",
+      "type": "array"
+    },
+    "timing_ms": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Timing Ms",
+      "type": "object"
+    }
+  },
+  "required": [
+    "execution_id",
+    "generated_at",
+    "question",
+    "status",
+    "decision",
+    "finding",
+    "insights",
+    "evidence",
+    "limitations",
+    "source_refs",
+    "validation",
+    "tool_trace"
+  ],
+  "title": "BIAnalysisReport",
+  "type": "object"
+}

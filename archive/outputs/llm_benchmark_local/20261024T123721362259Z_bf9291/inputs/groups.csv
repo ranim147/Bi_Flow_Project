@@ -1,0 +1,144 @@
+sample_size,mean_days,median_days,p75_days,dimension,group_value,kpi_definition,rank_median_desc,sample_status
+1828,3.503329553397763,0.1474363425925925,2.02234375,borough,BRONX,median(resolution_days) groupé par catégorie ; afficher sample_size,6,meets_minimum
+3080,4.732281287578163,0.2284837962962962,3.8645283564814816,borough,BROOKLYN,median(resolution_days) groupé par catégorie ; afficher sample_size,3,meets_minimum
+1712,4.7482415182048285,0.1706655092592592,3.3826475694444444,borough,MANHATTAN,median(resolution_days) groupé par catégorie ; afficher sample_size,4,meets_minimum
+2274,3.3190916998517865,0.1659432870370369,1.1151446759259258,borough,QUEENS,median(resolution_days) groupé par catégorie ; afficher sample_size,5,meets_minimum
+386,3.6247074997601225,0.3322685185185184,2.294788773148148,borough,STATEN ISLAND,median(resolution_days) groupé par catégorie ; afficher sample_size,2,meets_minimum
+5,15.333641203703705,2.6284722222222223,23.17300925925926,borough,Unspecified,median(resolution_days) groupé par catégorie ; afficher sample_size,1,small_sample
+52,18.15657340633903,17.245416666666667,29.31709490740741,complaint_type,APPLIANCE,median(resolution_days) groupé par catégorie ; afficher sample_size,10,meets_minimum
+7,4.485117394179894,2.794664351851852,6.616996527777777,complaint_type,Abandoned Bike,median(resolution_days) groupé par catégorie ; afficher sample_size,61,small_sample
+203,0.160093219759168,0.0796296296296296,0.1911805555555555,complaint_type,Abandoned Vehicle,median(resolution_days) groupé par catégorie ; afficher sample_size,104,meets_minimum
+19,3.904387792397661,1.884675925925926,5.345659722222223,complaint_type,Air Quality,median(resolution_days) groupé par catégorie ; afficher sample_size,72,small_sample
+11,1.8700357744107745,0.0243055555555555,0.0931597222222221,complaint_type,Animal in a Park,median(resolution_days) groupé par catégorie ; afficher sample_size,120,small_sample
+34,0.1914239515250544,0.0761574074074073,0.2223148148148147,complaint_type,Animal-Abuse,median(resolution_days) groupé par catégorie ; afficher sample_size,106,meets_minimum
+5,15.777648148148147,4.081087962962963,27.88104166666667,complaint_type,Asbestos,median(resolution_days) groupé par catégorie ; afficher sample_size,46,small_sample
+2,0.4341030092592592,0.4341030092592592,0.4341406249999999,complaint_type,BEST/Site Safety,median(resolution_days) groupé par catégorie ; afficher sample_size,90,small_sample
+1,9.420381944444443,9.420381944444443,9.420381944444443,complaint_type,Beach/Pool/Sauna Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,28,small_sample
+5,10.389733796296296,0.2177662037037037,2.7700810185185185,complaint_type,Bike Rack,median(resolution_days) groupé par catégorie ; afficher sample_size,95,small_sample
+7,0.0957804232804232,0.0465162037037037,0.1010243055555555,complaint_type,Bike/Roller/Skate,median(resolution_days) groupé par catégorie ; afficher sample_size,113,small_sample
+496,0.1451248879928315,0.0769155092592592,0.1843721064814814,complaint_type,Blocked Driveway,median(resolution_days) groupé par catégorie ; afficher sample_size,105,meets_minimum
+3,11.992118055555556,10.29804398148148,13.76679976851852,complaint_type,Boilers,median(resolution_days) groupé par catégorie ; afficher sample_size,17,small_sample
+1,9.91894675925926,9.91894675925926,9.91894675925926,complaint_type,Bridge Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,23,small_sample
+6,12.15350115740741,12.690370370370369,18.592907986111115,complaint_type,Broken Parking Meter,median(resolution_days) groupé par catégorie ; afficher sample_size,13,small_sample
+63,23.53951682833627,9.505844907407408,43.58122685185185,complaint_type,Building/Use,median(resolution_days) groupé par catégorie ; afficher sample_size,26,meets_minimum
+4,7.062097800925927,3.602957175925926,8.112809606481482,complaint_type,Bus Stop Shelter Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,52,small_sample
+9,17.189791666666665,5.419988425925926,30.72304398148148,complaint_type,Cannabis Retailer,median(resolution_days) groupé par catégorie ; afficher sample_size,36,small_sample
+2,0.8018518518518518,0.8018518518518518,1.1993113425925923,complaint_type,Commercial Disposal Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,87,small_sample
+55,17.742987163299663,4.619965277777778,32.60554398148148,complaint_type,Consumer Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,41,meets_minimum
+20,29.566596064814814,25.02883680555556,49.81090277777778,complaint_type,Curb Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,8,small_sample
+88,12.978880076809764,10.241388888888888,16.966880787037038,complaint_type,DOOR/WINDOW,median(resolution_days) groupé par catégorie ; afficher sample_size,18,meets_minimum
+202,6.650761768885222,2.185758101851852,5.15250289351852,complaint_type,Damaged Tree,median(resolution_days) groupé par catégorie ; afficher sample_size,66,meets_minimum
+45,2.2642566872427983,1.9136226851851847,2.9111458333333333,complaint_type,Dead Animal,median(resolution_days) groupé par catégorie ; afficher sample_size,70,meets_minimum
+23,32.229598429951686,25.79657407407408,40.40829282407408,complaint_type,Dead/Dying Tree,median(resolution_days) groupé par catégorie ; afficher sample_size,7,small_sample
+81,1.5550068587105623,1.4368055555555554,2.202777777777778,complaint_type,Derelict Vehicles,median(resolution_days) groupé par catégorie ; afficher sample_size,78,meets_minimum
+191,2.396510749951522,1.7122337962962964,2.9920543981481487,complaint_type,Dirty Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,77,meets_minimum
+2,0.1685011574074074,0.1685011574074074,0.1722193287037037,complaint_type,Disorderly Youth,median(resolution_days) groupé par catégorie ; afficher sample_size,98,small_sample
+22,0.1263546927609427,0.0883391203703703,0.1655237268518518,complaint_type,Drinking,median(resolution_days) groupé par catégorie ; afficher sample_size,103,small_sample
+26,0.1205435363247862,0.108136574074074,0.1881655092592592,complaint_type,Drug Activity,median(resolution_days) groupé par catégorie ; afficher sample_size,101,small_sample
+11,2.164128787878788,2.024131944444445,3.228553240740741,complaint_type,Dumpster Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,68,small_sample
+6,1.6166319444444444,1.2338483796296296,1.989580439814815,complaint_type,E-Scooter,median(resolution_days) groupé par catégorie ; afficher sample_size,81,small_sample
+89,11.547991312942155,7.081030092592592,14.38820601851852,complaint_type,ELECTRIC,median(resolution_days) groupé par catégorie ; afficher sample_size,32,meets_minimum
+4,12.91175636574074,10.071840277777778,16.034386574074073,complaint_type,ELEVATOR,median(resolution_days) groupé par catégorie ; afficher sample_size,21,small_sample
+9,6.033400205761317,4.300138888888889,10.521793981481482,complaint_type,Electrical,median(resolution_days) groupé par catégorie ; afficher sample_size,43,small_sample
+98,13.154642266628874,2.305173611111111,13.423874421296295,complaint_type,Elevator,median(resolution_days) groupé par catégorie ; afficher sample_size,65,meets_minimum
+11,20.483089225589225,13.272395833333333,35.07217013888889,complaint_type,Emergency Response Team (ERT),median(resolution_days) groupé par catégorie ; afficher sample_size,11,small_sample
+102,1.8341019880174292,0.1276504629629629,0.2428790509259259,complaint_type,Encampment,median(resolution_days) groupé par catégorie ; afficher sample_size,99,meets_minimum
+58,13.091487068965517,8.17652199074074,18.22113715277778,complaint_type,FLOORING/STAIRS,median(resolution_days) groupé par catégorie ; afficher sample_size,31,meets_minimum
+3,1.36298225308642,0.7731481481481481,1.7008101851851851,complaint_type,Ferry Inquiry,median(resolution_days) groupé par catégorie ; afficher sample_size,88,small_sample
+21,59.09864252645502,60.00700231481481,60.01078703703703,complaint_type,Food Establishment,median(resolution_days) groupé par catégorie ; afficher sample_size,2,small_sample
+1,1.7275694444444445,1.7275694444444445,1.7275694444444445,complaint_type,Food Poisoning,median(resolution_days) groupé par catégorie ; afficher sample_size,76,small_sample
+91,14.130109635734636,8.353831018518518,22.830092592592592,complaint_type,GENERAL,median(resolution_days) groupé par catégorie ; afficher sample_size,29,meets_minimum
+82,14.697763098464318,3.3196932870370373,17.075752314814814,complaint_type,General Construction/Plumbing,median(resolution_days) groupé par catégorie ; afficher sample_size,54,meets_minimum
+16,9.084986255787037,1.905625,15.21887152777778,complaint_type,Graffiti,median(resolution_days) groupé par catégorie ; afficher sample_size,71,small_sample
+1,3.700763888888889,3.700763888888889,3.700763888888889,complaint_type,Green Taxi Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,51,small_sample
+115,1.6014966787439613,1.250925925925926,2.2777604166666663,complaint_type,HEAT/HOT WATER,median(resolution_days) groupé par catégorie ; afficher sample_size,80,meets_minimum
+1,3.025497685185185,3.025497685185185,3.025497685185185,complaint_type,Harboring Bees/Wasps,median(resolution_days) groupé par catégorie ; afficher sample_size,58,small_sample
+1,0.937962962962963,0.937962962962963,0.937962962962963,complaint_type,Hazardous Material,median(resolution_days) groupé par catégorie ; afficher sample_size,83,small_sample
+4,3.6795138888888888,3.025,4.371354166666666,complaint_type,Hazardous Materials,median(resolution_days) groupé par catégorie ; afficher sample_size,59,small_sample
+11,9.807478956228955,2.3343402777777778,7.201116898148149,complaint_type,Highway Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,64,small_sample
+80,0.3739456018518518,0.2044965277777777,0.4491087962962963,complaint_type,Homeless Person Assistance,median(resolution_days) groupé par catégorie ; afficher sample_size,96,meets_minimum
+2,11.646024305555557,11.646024305555557,11.901970486111113,complaint_type,Illegal Animal Sold,median(resolution_days) groupé par catégorie ; afficher sample_size,15,small_sample
+108,3.63584501457476,3.3278703703703707,4.89974537037037,complaint_type,Illegal Dumping,median(resolution_days) groupé par catégorie ; afficher sample_size,53,meets_minimum
+49,0.0892819349962206,0.0405092592592592,0.0902083333333333,complaint_type,Illegal Fireworks,median(resolution_days) groupé par catégorie ; afficher sample_size,115,meets_minimum
+1552,0.1375032141919625,0.072818287037037,0.1733564814814814,complaint_type,Illegal Parking,median(resolution_days) groupé par catégorie ; afficher sample_size,107,meets_minimum
+15,3.740720679012346,3.8368171296296296,5.387957175925926,complaint_type,Illegal Posting,median(resolution_days) groupé par catégorie ; afficher sample_size,49,small_sample
+21,41.02392471340388,33.98105324074074,46.05849537037037,complaint_type,Illegal Tree Damage,median(resolution_days) groupé par catégorie ; afficher sample_size,5,small_sample
+22,3.19481271043771,3.248246527777778,3.8982175925925926,complaint_type,Indoor Air Quality,median(resolution_days) groupé par catégorie ; afficher sample_size,55,small_sample
+1,18.79681712962963,18.79681712962963,18.79681712962963,complaint_type,Indoor Sewage,median(resolution_days) groupé par catégorie ; afficher sample_size,9,small_sample
+5,1.7702175925925925,0.8319212962962963,1.6895833333333334,complaint_type,Industrial Waste,median(resolution_days) groupé par catégorie ; afficher sample_size,86,small_sample
+6,0.7044000771604938,0.3702719907407407,1.124670138888889,complaint_type,Investigations and Discipline (IAD),median(resolution_days) groupé par catégorie ; afficher sample_size,91,small_sample
+32,6.303137659143519,0.9280555555555556,11.392526041666668,complaint_type,Lead,median(resolution_days) groupé par catégorie ; afficher sample_size,84,meets_minimum
+1,3.240127314814815,3.240127314814815,3.240127314814815,complaint_type,Litter Basket Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,56,small_sample
+13,3.161749465811966,1.8220833333333333,3.9576041666666666,complaint_type,Litter Basket Request,median(resolution_days) groupé par catégorie ; afficher sample_size,74,small_sample
+15,3.5241257716049383,3.8809027777777776,4.806226851851852,complaint_type,Lost Property,median(resolution_days) groupé par catégorie ; afficher sample_size,48,small_sample
+84,17.84675099206349,10.728501157407408,23.39011863425926,complaint_type,Maintenance or Facility,median(resolution_days) groupé par catégorie ; afficher sample_size,16,meets_minimum
+89,2.4098110434873075,2.0528819444444446,3.197511574074074,complaint_type,Missed Collection,median(resolution_days) groupé par catégorie ; afficher sample_size,67,meets_minimum
+2,60.00853587962963,60.00853587962963,60.01183738425926,complaint_type,Mobile Food Vendor,median(resolution_days) groupé par catégorie ; afficher sample_size,1,small_sample
+1,3.9255092592592593,3.9255092592592593,3.9255092592592593,complaint_type,Mold,median(resolution_days) groupé par catégorie ; afficher sample_size,47,small_sample
+7,0.0129315476190475,0.0131828703703703,0.0176273148148147,complaint_type,Mosquitoes,median(resolution_days) groupé par catégorie ; afficher sample_size,123,small_sample
+145,4.914430715197957,3.1631597222222223,7.011805555555555,complaint_type,Noise,median(resolution_days) groupé par catégorie ; afficher sample_size,57,meets_minimum
+189,0.0903432417205565,0.0554050925925925,0.1102430555555555,complaint_type,Noise - Commercial,median(resolution_days) groupé par catégorie ; afficher sample_size,112,meets_minimum
+2,0.0227662037037036,0.0227662037037036,0.032980324074074,complaint_type,Noise - House of Worship,median(resolution_days) groupé par catégorie ; afficher sample_size,121,small_sample
+34,0.1023628131808278,0.0256249999999999,0.0618489583333333,complaint_type,Noise - Park,median(resolution_days) groupé par catégorie ; afficher sample_size,118,meets_minimum
+1028,0.1041726338449343,0.055486111111111,0.1241116898148148,complaint_type,Noise - Residential,median(resolution_days) groupé par catégorie ; afficher sample_size,111,meets_minimum
+931,0.0994517046584715,0.0650810185185185,0.1112847222222221,complaint_type,Noise - Street/Sidewalk,median(resolution_days) groupé par catégorie ; afficher sample_size,108,meets_minimum
+202,0.0943126604327098,0.0456828703703703,0.0971961805555555,complaint_type,Noise - Vehicle,median(resolution_days) groupé par catégorie ; afficher sample_size,114,meets_minimum
+77,0.0981448412698412,0.0610416666666666,0.1470138888888889,complaint_type,Non-Emergency Police Matter,median(resolution_days) groupé par catégorie ; afficher sample_size,110,meets_minimum
+6,11.208917824074073,9.461880787037035,13.049296875,complaint_type,OUTSIDE BUILDING,median(resolution_days) groupé par catégorie ; afficher sample_size,27,small_sample
+56,2.3237088707010582,1.1755266203703705,2.366808449074074,complaint_type,Obstruction,median(resolution_days) groupé par catégorie ; afficher sample_size,82,meets_minimum
+8,25.002824074074077,27.404195601851853,34.71921875,complaint_type,Outdoor Dining,median(resolution_days) groupé par catégorie ; afficher sample_size,6,small_sample
+14,22.66477843915344,8.21232060185185,34.03061631944445,complaint_type,Overgrown Tree/Branches,median(resolution_days) groupé par catégorie ; afficher sample_size,30,small_sample
+160,9.21052980324074,6.198368055555555,10.813802083333334,complaint_type,PAINT/PLASTER,median(resolution_days) groupé par catégorie ; afficher sample_size,34,meets_minimum
+167,10.845044286427145,5.316840277777778,14.088969907407408,complaint_type,PLUMBING,median(resolution_days) groupé par catégorie ; afficher sample_size,37,meets_minimum
+34,0.1022395833333332,0.0330787037037036,0.0647280092592592,complaint_type,Panhandling,median(resolution_days) groupé par catégorie ; afficher sample_size,116,meets_minimum
+11,9.809607533670034,1.4292939814814816,3.8921875,complaint_type,Plumbing,median(resolution_days) groupé par catégorie ; afficher sample_size,79,small_sample
+2,4.161099537037037,4.161099537037037,5.456898148148149,complaint_type,Public Toilet,median(resolution_days) groupé par catégorie ; afficher sample_size,45,small_sample
+1,1.9587152777777777,1.9587152777777777,1.9587152777777777,complaint_type,Radioactive Material,median(resolution_days) groupé par catégorie ; afficher sample_size,69,small_sample
+14,0.6369031084656084,0.2700636574074073,0.9824826388888888,complaint_type,Real Time Enforcement,median(resolution_days) groupé par catégorie ; afficher sample_size,93,small_sample
+40,3.920074074074074,1.8754861111111112,4.521331018518518,complaint_type,Residential Disposal Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,73,meets_minimum
+64,13.487313910590276,9.97076388888889,14.388272569444446,complaint_type,Rodent,median(resolution_days) groupé par catégorie ; afficher sample_size,22,meets_minimum
+1,0.8561574074074074,0.8561574074074074,0.8561574074074074,complaint_type,Root/Sewer/Sidewalk Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,85,small_sample
+25,8.766743518518519,4.824537037037037,8.353831018518518,complaint_type,SAFETY,median(resolution_days) groupé par catégorie ; afficher sample_size,39,small_sample
+7,3.763764880952381,4.264247685185185,4.318373842592592,complaint_type,Sanitation Worker or Vehicle Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,44,small_sample
+1,0.3501967592592592,0.3501967592592592,0.3501967592592592,complaint_type,Scaffold Safety,median(resolution_days) groupé par catégorie ; afficher sample_size,92,small_sample
+34,1.015951797385621,0.1211805555555555,0.963888888888889,complaint_type,Sewer,median(resolution_days) groupé par catégorie ; afficher sample_size,100,meets_minimum
+39,2.516174323361823,0.2206018518518518,1.4855034722222222,complaint_type,Sewer Maintenance,median(resolution_days) groupé par catégorie ; afficher sample_size,94,meets_minimum
+80,14.626570167824074,11.91623263888889,19.907057291666668,complaint_type,Sidewalk Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,14,meets_minimum
+14,42.40830109126984,51.8569849537037,60.00409722222223,complaint_type,Smoking or Vaping,median(resolution_days) groupé par catégorie ; afficher sample_size,3,small_sample
+17,16.6859068627451,0.0,38.5152662037037,complaint_type,Special Projects Inspection Team (SPIT),median(resolution_days) groupé par catégorie ; afficher sample_size,124,small_sample
+13,43.62601584757835,39.05707175925926,46.9829050925926,complaint_type,Standing Water,median(resolution_days) groupé par catégorie ; afficher sample_size,4,small_sample
+245,3.127403202947846,1.815763888888889,4.700196759259259,complaint_type,Street Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,75,meets_minimum
+97,10.836139747995418,9.777083333333334,9.99375,complaint_type,Street Light Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,25,meets_minimum
+12,4.076874035493828,3.7946643518518512,5.039800347222222,complaint_type,Street Sign - Damaged,median(resolution_days) groupé par catégorie ; afficher sample_size,50,small_sample
+5,6.052844907407407,4.8144328703703705,5.9987615740740745,complaint_type,Street Sign - Dangling,median(resolution_days) groupé par catégorie ; afficher sample_size,40,small_sample
+8,4.843433159722222,2.725104166666667,5.868640046296296,complaint_type,Street Sign - Missing,median(resolution_days) groupé par catégorie ; afficher sample_size,62,small_sample
+9,2.385702160493827,2.915752314814815,2.988298611111111,complaint_type,Street Sweeping Complaint,median(resolution_days) groupé par catégorie ; afficher sample_size,60,small_sample
+1,4.455972222222222,4.455972222222222,4.455972222222222,complaint_type,Tanning,median(resolution_days) groupé par catégorie ; afficher sample_size,42,small_sample
+43,0.0545545327304047,0.0267361111111111,0.0613541666666666,complaint_type,Traffic,median(resolution_days) groupé par catégorie ; afficher sample_size,117,meets_minimum
+128,1.5550672743055554,0.0888888888888888,0.4409722222222222,complaint_type,Traffic Signal Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,102,meets_minimum
+299,14.720993628452868,10.17144675925926,19.956325231481483,complaint_type,UNSANITARY CONDITION,median(resolution_days) groupé par catégorie ; afficher sample_size,19,meets_minimum
+1,12.971539351851852,12.971539351851852,12.971539351851852,complaint_type,Unleashed Dog,median(resolution_days) groupé par catégorie ; afficher sample_size,12,small_sample
+3,6.833958333333334,5.290486111111111,8.278119212962963,complaint_type,Unsanitary Animal Pvt Property,median(resolution_days) groupé par catégorie ; afficher sample_size,38,small_sample
+7,12.227513227513228,9.804363425925926,18.51507523148148,complaint_type,Unsanitary Pigeon Condition,median(resolution_days) groupé par catégorie ; afficher sample_size,24,small_sample
+7,0.1697420634920634,0.1851967592592592,0.2594502314814814,complaint_type,Urinating in Public,median(resolution_days) groupé par catégorie ; afficher sample_size,97,small_sample
+53,0.0137434486373165,0.0142592592592592,0.0193171296296296,complaint_type,Vendor Enforcement,median(resolution_days) groupé par catégorie ; afficher sample_size,122,meets_minimum
+20,0.0470815972222221,0.0244849537037036,0.0466840277777777,complaint_type,Violation of Park Rules,median(resolution_days) groupé par catégorie ; afficher sample_size,119,small_sample
+98,13.329215443121694,10.15558449074074,18.654487847222224,complaint_type,WATER LEAK,median(resolution_days) groupé par catégorie ; afficher sample_size,20,meets_minimum
+1,0.0630555555555555,0.0630555555555555,0.0630555555555555,complaint_type,Waste Water Treatment Plant,median(resolution_days) groupé par catégorie ; afficher sample_size,109,small_sample
+16,2.6136740451388887,2.6251736111111112,4.071921296296296,complaint_type,Water Conservation,median(resolution_days) groupé par catégorie ; afficher sample_size,63,small_sample
+100,3.902998032407408,0.6847280092592593,3.7857957175925927,complaint_type,Water Maintenance,median(resolution_days) groupé par catégorie ; afficher sample_size,89,meets_minimum
+4,6.465517939814815,6.29724537037037,8.234623842592592,complaint_type,Water Quality,median(resolution_days) groupé par catégorie ; afficher sample_size,33,small_sample
+176,1.1361900252525252,0.0,0.1746527777777777,complaint_type,Water System,median(resolution_days) groupé par catégorie ; afficher sample_size,124,meets_minimum
+11,12.439047769360268,5.777488425925926,19.813032407407405,complaint_type,Wood Pile Remaining,median(resolution_days) groupé par catégorie ; afficher sample_size,35,small_sample
+55,17.742987163299663,4.619965277777778,32.60554398148148,agency,DCWP,median(resolution_days) groupé par catégorie ; afficher sample_size,4,meets_minimum
+578,3.127054858708189,0.7524247685185186,3.511111111111111,agency,DEP,median(resolution_days) groupé par catégorie ; afficher sample_size,10,meets_minimum
+101,2.003303424092409,0.1937731481481481,0.4310185185185185,agency,DHS,median(resolution_days) groupé par catégorie ; afficher sample_size,11,meets_minimum
+317,14.822963912256103,3.2569560185185185,19.334791666666668,agency,DOB,median(resolution_days) groupé par catégorie ; afficher sample_size,7,meets_minimum
+166,22.38732638888889,10.87788773148148,39.055908564814814,agency,DOHMH,median(resolution_days) groupé par catégorie ; afficher sample_size,1,meets_minimum
+637,6.7887722941740805,3.069259259259259,9.682638888888889,agency,DOT,median(resolution_days) groupé par catégorie ; afficher sample_size,8,meets_minimum
+387,12.718007105943151,3.706446759259259,11.989282407407403,agency,DPR,median(resolution_days) groupé par catégorie ; afficher sample_size,6,meets_minimum
+744,2.681646676498407,1.807054398148148,3.349539930555556,agency,DSNY,median(resolution_days) groupé par catégorie ; afficher sample_size,9,meets_minimum
+1252,11.720518633149922,7.401331018518518,16.934505208333334,agency,HPD,median(resolution_days) groupé par catégorie ; afficher sample_size,2,meets_minimum
+5023,0.1203043545984765,0.0646064814814814,0.1427951388888888,agency,NYPD,median(resolution_days) groupé par catégorie ; afficher sample_size,12,meets_minimum
+9,17.189791666666665,5.419988425925926,30.72304398148148,agency,OOS,median(resolution_days) groupé par catégorie ; afficher sample_size,3,small_sample
+16,3.535165653935185,3.7908333333333335,4.80599537037037,agency,TLC,median(resolution_days) groupé par catégorie ; afficher sample_size,5,small_sample

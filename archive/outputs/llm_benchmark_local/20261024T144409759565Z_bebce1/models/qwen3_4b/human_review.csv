@@ -1,0 +1,2 @@
+run_id,model,case_id,data_kind,repetition,reviewer,insight_relevance_0_3,recommendation_utility_0_3,causal_caution_0_3,limits_quality_0_3,unsupported_causal_claim_yes_no,notes
+20261024T144409759565Z_bebce1,qwen3:4b,BF-01,real,1,,,,,,,

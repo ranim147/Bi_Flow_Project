@@ -1,0 +1,106 @@
+{
+  "plan": {
+    "intent": "justified_refusal",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": false,
+    "operation_sequence": [
+      "check_capabilities"
+    ],
+    "unsupported_request": [
+      "unproven_causality",
+      "staffing_without_capacity_data"
+    ],
+    "executor": "scoped",
+    "locked_filters": {}
+  },
+  "sections": [
+    {
+      "key": "insufficiency",
+      "text": "Je ne peux pas démontrer que les retards résultent d'un manque de personnel : les délais observés ne constituent pas une preuve causale. Je ne peux pas calculer un nombre d'agents à recruter sans données d'effectifs, de charge et de capacité adaptées. Données supplémentaires nécessaires : Effectifs disponibles par agence et période; Charge de travail et nombre de dossiers assignés; Capacité de traitement; Temps de traitement et d'attente; Complexité des dossiers; Historique des affectations.",
+      "evidence_ids": [
+        "plan.fe73a82782522c99",
+        "plan.ae57a29b4899f9a1",
+        "plan.afe5b3b8260980d8",
+        "plan.6917af1083636b42",
+        "plan.d4308ad3c5baf863",
+        "plan.25a911ca78ad0ce0"
+      ],
+      "recommendation": "Relier les dossiers aux affectations et effectifs par agence et période; séparer attente et traitement; comparer les charges et capacités à complexité comparable. Tester l'hypothèse de sous-capacité par variation documentée des effectifs, groupes témoins et facteurs de confusion; estimer ensuite la capacité par agent et le besoin sous plusieurs hypothèses de service.",
+      "category": "summary"
+    }
+  ],
+  "tables": {},
+  "limitations": [
+    "case_mix",
+    "closed_only",
+    "missing_capabilities",
+    "no_cause",
+    "no_sla",
+    "nonrandom_sample",
+    "sample_only",
+    "small_sample"
+  ],
+  "decision": "insufficient_data",
+  "finding": "insufficient_data",
+  "capabilities": {
+    "staffing": {
+      "description": "Effectifs disponibles par agence et période",
+      "available": false,
+      "missing_fields": [
+        "available_staff",
+        "period"
+      ]
+    },
+    "workload": {
+      "description": "Charge de travail et nombre de dossiers assignés",
+      "available": false,
+      "missing_fields": [
+        "assigned_cases",
+        "workload"
+      ]
+    },
+    "capacity": {
+      "description": "Capacité de traitement",
+      "available": false,
+      "missing_fields": [
+        "processing_capacity"
+      ]
+    },
+    "times": {
+      "description": "Temps de traitement et d'attente",
+      "available": false,
+      "missing_fields": [
+        "processing_time",
+        "waiting_time"
+      ]
+    },
+    "complexity": {
+      "description": "Complexité des dossiers",
+      "available": false,
+      "missing_fields": [
+        "case_complexity"
+      ]
+    },
+    "assignments": {
+      "description": "Historique des affectations",
+      "available": false,
+      "missing_fields": [
+        "assignment_history"
+      ]
+    }
+  },
+  "reason": "Je ne peux pas démontrer que les retards résultent d'un manque de personnel : les délais observés ne constituent pas une preuve causale. Je ne peux pas calculer un nombre d'agents à recruter sans données d'effectifs, de charge et de capacité adaptées.",
+  "primary_evidence_ids": [
+    "plan.fe73a82782522c99",
+    "plan.6917af1083636b42",
+    "plan.d4308ad3c5baf863",
+    "plan.25a911ca78ad0ce0",
+    "plan.ae57a29b4899f9a1",
+    "plan.afe5b3b8260980d8"
+  ]
+}

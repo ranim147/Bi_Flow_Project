@@ -1,0 +1,344 @@
+{
+  "contract_version": "biflow-bi-analyst-v2",
+  "execution_id": "adddd0d6624e4ba2925dae1789a01d28",
+  "generated_at": "2026-10-28T19:45:43.866788+00:00",
+  "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "adddd0d6624e4ba2925dae1789a01d28-period_comparison",
+      "category": "trend",
+      "finding": "descriptive",
+      "insight": "La comparaison temporelle porte sur le KPI et les mois verrouillés par Python; les écarts restent descriptifs. Sur le périmètre global filtré {}, la moyenne de clôture passe de 10.443907 jours (n=6122) en 2026-08 à 11.800671 jours (n=6517) en 2026-09; variation descriptive +1.356764 jours. Une hausse globale est observée.",
+      "recommendation": "Examiner les segments éligibles et leurs étapes de traitement sur les périodes retenues. Examiner les contributions et les dossiers comparables avant d'interpréter cette variation.",
+      "evidence_fact_ids": [
+        "plan.fb095f41a2e4865e",
+        "plan.363b3db2d4607b94",
+        "plan.25632150233b8263"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "period_selection",
+        "sample_only",
+        "sample_window",
+        "small_sample"
+      ]
+    },
+    {
+      "insight_id": "adddd0d6624e4ba2925dae1789a01d28-contributions",
+      "category": "trend",
+      "finding": "descriptive",
+      "insight": "Décomposition de la variation globale : évolution interne -0.136720 jours; composition +0.928739; groupes nouveaux ou absents +0.564745; résidu 0.000000000. Tous les groupes entrent dans cette identité arithmétique. Priorités parmi les segments éligibles, par contribution positive décroissante (effectif minimal dans chaque mois) : {\"borough\": \"BRONX\", \"complaint_type\": \"UNSANITARY CONDITION\", \"agency\": \"HPD\"} : +0.375767 jours, n=53/126; {\"borough\": \"QUEENS\", \"complaint_type\": \"BUILDING/USE\", \"agency\": \"DOB\"} : +0.216390 jours, n=43/64; {\"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\", \"agency\": \"HPD\"} : +0.187638 jours, n=66/109; ",
+      "recommendation": "Pour les segments cités, extraire les étapes de traitement et les horodatages sur les mêmes mois; distinguer attente et traitement, contrôler les catégories et la complexité, puis confronter l'hypothèse de ralentissement aux journaux. Vérifier séparément la sélection des dossiers exclus.",
+      "evidence_fact_ids": [
+        "plan.924cf5a3730bd4e9",
+        "plan.9c6aa71d6ea09427",
+        "plan.bcc90db4bbf3c8f4",
+        "plan.ffd54bd6d4700b13",
+        "plan.d34ff80fabfef45a",
+        "plan.ec01bb5b11a587be",
+        "plan.e96742e37566d6d5"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "period_selection",
+        "sample_only",
+        "sample_window",
+        "small_sample"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "plan.1e8a36f11dda4af9",
+      "metric": "scope_valid_delay_n",
+      "scope": "{}",
+      "value": 259354.0,
+      "unit": "dossiers",
+      "n": 265609,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=1e8a36f11dda4af9",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Count after categorical filters, before requested time filtering; complete prepared extract",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.fb095f41a2e4865e",
+      "metric": "mean_resolution_days",
+      "scope": "{}",
+      "value": 10.443907140458819,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=fb095f41a2e4865e",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-08",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.363b3db2d4607b94",
+      "metric": "mean_resolution_days",
+      "scope": "{}",
+      "value": 11.800670660494776,
+      "unit": "jours calendaires",
+      "n": 6517,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=363b3db2d4607b94",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.25632150233b8263",
+      "metric": "delta_mean_resolution_days",
+      "scope": "{}",
+      "value": 1.3567635200359565,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=25632150233b8263",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.924cf5a3730bd4e9",
+      "metric": "within_days",
+      "scope": "{}",
+      "value": -0.13672013886333198,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=924cf5a3730bd4e9",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Exact symmetric mean decomposition: within + composition + unmatched",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.9c6aa71d6ea09427",
+      "metric": "composition_days",
+      "scope": "{}",
+      "value": 0.928739153820837,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=9c6aa71d6ea09427",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Exact symmetric mean decomposition: within + composition + unmatched",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.bcc90db4bbf3c8f4",
+      "metric": "unmatched_days",
+      "scope": "{}",
+      "value": 0.5647445050784511,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=bcc90db4bbf3c8f4",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Exact symmetric mean decomposition: within + composition + unmatched",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.ffd54bd6d4700b13",
+      "metric": "residual_days",
+      "scope": "{}",
+      "value": 2.220446049250313e-16,
+      "unit": "jours calendaires",
+      "n": 6122,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ffd54bd6d4700b13",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Exact symmetric mean decomposition: within + composition + unmatched",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.d34ff80fabfef45a",
+      "metric": "segment_contribution_days",
+      "scope": "{\"agency\": \"HPD\", \"borough\": \"BRONX\", \"complaint_type\": \"UNSANITARY CONDITION\"}",
+      "value": 0.3757670742699586,
+      "unit": "jours calendaires",
+      "n": 53,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=d34ff80fabfef45a",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.ec01bb5b11a587be",
+      "metric": "segment_contribution_days",
+      "scope": "{\"agency\": \"DOB\", \"borough\": \"QUEENS\", \"complaint_type\": \"BUILDING/USE\"}",
+      "value": 0.21639027606014055,
+      "unit": "jours calendaires",
+      "n": 43,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ec01bb5b11a587be",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.e96742e37566d6d5",
+      "metric": "segment_contribution_days",
+      "scope": "{\"agency\": \"HPD\", \"borough\": \"BROOKLYN\", \"complaint_type\": \"UNSANITARY CONDITION\"}",
+      "value": 0.18763835285362926,
+      "unit": "jours calendaires",
+      "n": 66,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=e96742e37566d6d5",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": "2026-08/2026-09",
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Les catégories traitées peuvent différer entre agences; leurs délais bruts ne permettent pas de classer leur performance.",
+    "Les délais portent sur les dossiers clôturés observables avec durée valide; aucune durée manquante n'est remplacée par zéro.",
+    "Les écarts descriptifs ne démontrent aucune causalité.",
+    "Aucun SLA métier n'est disponible.",
+    "Les fenêtres d'échantillonnage ne sont pas aléatoires; un biais de sélection reste possible.",
+    "Comparaison par mois de clôture, sur des mois calendaires entièrement couverts; les cohortes entrantes et la complexité ne sont pas contrôlées.",
+    "Ces résultats décrivent uniquement l'extrait préparé, pas la population NYC.",
+    "La couverture calendaire complète ne rend pas les fenêtres échantillonnées exhaustives; les dossiers créés avant le début de l'extrait ne sont pas observés.",
+    "Les groupes de moins de 30 délais valides sont exclus du classement opérationnel."
+  ],
+  "source_refs": [
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=1e8a36f11dda4af9",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=25632150233b8263",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=363b3db2d4607b94",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=924cf5a3730bd4e9",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=9c6aa71d6ea09427",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=bcc90db4bbf3c8f4",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=d34ff80fabfef45a",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=e96742e37566d6d5",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ec01bb5b11a587be",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=fb095f41a2e4865e",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ffd54bd6d4700b13"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "filter_scope",
+      "parameters": {
+        "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+        "metric": "mean_resolution_days",
+        "filters": "{}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T19:43:58.077953+00:00",
+      "elapsed_ms": 15273.350299918093,
+      "evidence_ids": [
+        "plan.1e8a36f11dda4af9"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "compare_periods",
+      "parameters": {
+        "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+        "metric": "mean_resolution_days"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T19:43:58.158410+00:00",
+      "elapsed_ms": 56.18379998486489,
+      "evidence_ids": [
+        "plan.fb095f41a2e4865e",
+        "plan.363b3db2d4607b94",
+        "plan.25632150233b8263"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "decompose_mean_change",
+      "parameters": {
+        "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+        "metric": "mean_resolution_days"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T19:44:03.010722+00:00",
+      "elapsed_ms": 4852.416899986565,
+      "evidence_ids": [
+        "plan.924cf5a3730bd4e9",
+        "plan.9c6aa71d6ea09427",
+        "plan.bcc90db4bbf3c8f4",
+        "plan.ffd54bd6d4700b13",
+        "plan.d34ff80fabfef45a",
+        "plan.ec01bb5b11a587be",
+        "plan.e96742e37566d6d5"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 201.0820999275893,
+    "data_validation": 4016.1608000053093,
+    "analytics": 20181.950999889523,
+    "inference_attempt_1": 100779.16899998672,
+    "total": 125381.7626000382
+  },
+  "decision_support": [],
+  "analytical_plan": {
+    "intent": "investigation",
+    "metric": "mean_resolution_days",
+    "dimensions": [],
+    "filters": {},
+    "time_scope": [
+      "2026-08",
+      "2026-09"
+    ],
+    "temporal_forbidden": false,
+    "operation_sequence": [
+      "filter_scope",
+      "compare_periods",
+      "decompose_mean_change"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {}
+  }
+}

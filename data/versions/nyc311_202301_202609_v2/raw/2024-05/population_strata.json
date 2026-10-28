@@ -1,0 +1,4622 @@
+[
+  {
+    "borough": "BRONX",
+    "complaint_type": "Abandoned Bike",
+    "agency": "DSNY",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Abandoned Vehicle",
+    "agency": "NYPD",
+    "request_count": "741"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Air Quality",
+    "agency": "DEP",
+    "request_count": "70"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Animal-Abuse",
+    "agency": "NYPD",
+    "request_count": "158"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Animal in a Park",
+    "agency": "DPR",
+    "request_count": "61"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "APPLIANCE",
+    "agency": "HPD",
+    "request_count": "658"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Asbestos",
+    "agency": "DEP",
+    "request_count": "15"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Asbestos",
+    "agency": "DOHMH",
+    "request_count": "12"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Beach/Pool/Sauna Complaint",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "BEST/Site Safety",
+    "agency": "DOB",
+    "request_count": "6"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Bike Rack Condition",
+    "agency": "DOT",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Bike/Roller/Skate Chronic",
+    "agency": "NYPD",
+    "request_count": "18"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Blocked Driveway",
+    "agency": "NYPD",
+    "request_count": "2123"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Boilers",
+    "agency": "DOB",
+    "request_count": "41"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Bridge Condition",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Broken Parking Meter",
+    "agency": "DOT",
+    "request_count": "20"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Building/Use",
+    "agency": "DOB",
+    "request_count": "202"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Bus Stop Shelter Complaint",
+    "agency": "DOT",
+    "request_count": "9"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Bus Stop Shelter Placement",
+    "agency": "DOT",
+    "request_count": "4"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Commercial Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "15"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Construction Lead Dust",
+    "agency": "DOHMH",
+    "request_count": "23"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "330"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Cooling Tower",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Cranes and Derricks",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Curb Condition",
+    "agency": "DOT",
+    "request_count": "40"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "211"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Day Care",
+    "agency": "DOHMH",
+    "request_count": "37"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Dead Animal",
+    "agency": "DSNY",
+    "request_count": "110"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "73"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "1045"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Dirty Condition",
+    "agency": "DSNY",
+    "request_count": "722"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "DOOR/WINDOW",
+    "agency": "HPD",
+    "request_count": "1156"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Drinking",
+    "agency": "NYPD",
+    "request_count": "115"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Drinking Water",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Drug Activity",
+    "agency": "NYPD",
+    "request_count": "102"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Dumpster Complaint",
+    "agency": "DSNY",
+    "request_count": "10"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "ELECTRIC",
+    "agency": "HPD",
+    "request_count": "729"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Electrical",
+    "agency": "DOB",
+    "request_count": "16"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Elevator",
+    "agency": "DOB",
+    "request_count": "639"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "ELEVATOR",
+    "agency": "HPD",
+    "request_count": "44"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Emergency Response Team (ERT)",
+    "agency": "DOB",
+    "request_count": "27"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Encampment",
+    "agency": "DHS",
+    "request_count": "32"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Encampment",
+    "agency": "NYPD",
+    "request_count": "120"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "E-Scooter",
+    "agency": "DOT",
+    "request_count": "21"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "FLOORING/STAIRS",
+    "agency": "HPD",
+    "request_count": "809"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "110"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "37"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "111"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "GENERAL",
+    "agency": "HPD",
+    "request_count": "793"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "General Construction/Plumbing",
+    "agency": "DOB",
+    "request_count": "370"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "208"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Graffiti",
+    "agency": "NYPD",
+    "request_count": "6"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Green Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Green Taxi Report",
+    "agency": "TLC",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Harboring Bees/Wasps",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Hazardous Materials",
+    "agency": "DEP",
+    "request_count": "9"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "HEAT/HOT WATER",
+    "agency": "HPD",
+    "request_count": "2250"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Highway Condition",
+    "agency": "DOT",
+    "request_count": "49"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Highway Sign - Missing",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "142"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Animal Kept as Pet",
+    "agency": "DOHMH",
+    "request_count": "10"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Animal Sold",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "569"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "60"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "6928"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Posting",
+    "agency": "DSNY",
+    "request_count": "23"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Illegal Tree Damage",
+    "agency": "DPR",
+    "request_count": "56"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Incorrect Data",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Indoor Air Quality",
+    "agency": "DOHMH",
+    "request_count": "142"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Indoor Sewage",
+    "agency": "DOHMH",
+    "request_count": "13"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Industrial Waste",
+    "agency": "DEP",
+    "request_count": "12"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Investigations and Discipline (IAD)",
+    "agency": "DOB",
+    "request_count": "15"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Lead",
+    "agency": "DEP",
+    "request_count": "89"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "LinkNYC",
+    "agency": "OTI",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Litter Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "8"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Litter Basket Request",
+    "agency": "DSNY",
+    "request_count": "27"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Lost Property",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Lot Condition",
+    "agency": "DSNY",
+    "request_count": "25"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Maintenance or Facility",
+    "agency": "DPR",
+    "request_count": "433"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Missed Collection",
+    "agency": "DSNY",
+    "request_count": "208"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Mobile Food Vendor",
+    "agency": "DOHMH",
+    "request_count": "22"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Mold",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Mosquitoes",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "New Tree Request",
+    "agency": "DPR",
+    "request_count": "200"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "523"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Commercial",
+    "agency": "NYPD",
+    "request_count": "876"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Helicopter",
+    "agency": "EDC",
+    "request_count": "47"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - House of Worship",
+    "agency": "NYPD",
+    "request_count": "8"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Park",
+    "agency": "NYPD",
+    "request_count": "170"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "7194"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "4090"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Noise - Vehicle",
+    "agency": "NYPD",
+    "request_count": "1469"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Non-Emergency Police Matter",
+    "agency": "NYPD",
+    "request_count": "244"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Non-Residential Heat",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Obstruction",
+    "agency": "DSNY",
+    "request_count": "172"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Outdoor Dining",
+    "agency": "DOT",
+    "request_count": "16"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "OUTSIDE BUILDING",
+    "agency": "HPD",
+    "request_count": "22"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Overgrown Tree/Branches",
+    "agency": "DPR",
+    "request_count": "224"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "PAINT/PLASTER",
+    "agency": "HPD",
+    "request_count": "1847"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Panhandling",
+    "agency": "NYPD",
+    "request_count": "83"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Pet Shop",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Plumbing",
+    "agency": "DOB",
+    "request_count": "39"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "PLUMBING",
+    "agency": "HPD",
+    "request_count": "1781"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Poison Ivy",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Posting Advertisement",
+    "agency": "NYPD",
+    "request_count": "6"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Real Time Enforcement",
+    "agency": "DOB",
+    "request_count": "35"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Recycling Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Residential Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "101"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Rodent",
+    "agency": "DOHMH",
+    "request_count": "621"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Root/Sewer/Sidewalk Condition",
+    "agency": "DPR",
+    "request_count": "106"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "SAFETY",
+    "agency": "HPD",
+    "request_count": "352"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "32"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Scaffold Safety",
+    "agency": "DOB",
+    "request_count": "4"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "School Maintenance",
+    "agency": "DOE",
+    "request_count": "35"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Sewer",
+    "agency": "DEP",
+    "request_count": "272"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Sidewalk Condition",
+    "agency": "DOT",
+    "request_count": "250"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Smoking or Vaping",
+    "agency": "DOHMH",
+    "request_count": "51"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Special Natural Area District (SNAD)",
+    "agency": "DOB",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Special Operations",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Special Projects Inspection Team (SPIT)",
+    "agency": "DOB",
+    "request_count": "29"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Standing Water",
+    "agency": "DOHMH",
+    "request_count": "19"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "662"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "415"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "48"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Sign - Dangling",
+    "agency": "DOT",
+    "request_count": "36"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "47"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Street Sweeping Complaint",
+    "agency": "DSNY",
+    "request_count": "96"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "5"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Traffic",
+    "agency": "NYPD",
+    "request_count": "79"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "503"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Unleashed Dog",
+    "agency": "DOHMH",
+    "request_count": "38"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Unsanitary Animal Facility",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Unsanitary Animal Pvt Property",
+    "agency": "DOHMH",
+    "request_count": "54"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "UNSANITARY CONDITION",
+    "agency": "HPD",
+    "request_count": "3094"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Unsanitary Pigeon Condition",
+    "agency": "DOHMH",
+    "request_count": "8"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Uprooted Stump",
+    "agency": "DPR",
+    "request_count": "4"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Urinating in Public",
+    "agency": "NYPD",
+    "request_count": "16"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "142"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Violation of Park Rules",
+    "agency": "DPR",
+    "request_count": "81"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Water Conservation",
+    "agency": "DEP",
+    "request_count": "100"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "WATER LEAK",
+    "agency": "HPD",
+    "request_count": "1120"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Water Maintenance",
+    "agency": "DEP",
+    "request_count": "1"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Water Quality",
+    "agency": "DEP",
+    "request_count": "19"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Water System",
+    "agency": "DEP",
+    "request_count": "574"
+  },
+  {
+    "borough": "BRONX",
+    "complaint_type": "Wood Pile Remaining",
+    "agency": "DPR",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Abandoned Bike",
+    "agency": "DSNY",
+    "request_count": "108"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Abandoned Vehicle",
+    "agency": "NYPD",
+    "request_count": "2316"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "AHV Inspection Unit",
+    "agency": "DOB",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Air Quality",
+    "agency": "DEP",
+    "request_count": "251"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Animal-Abuse",
+    "agency": "NYPD",
+    "request_count": "265"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Animal in a Park",
+    "agency": "DPR",
+    "request_count": "321"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "APPLIANCE",
+    "agency": "HPD",
+    "request_count": "473"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Asbestos",
+    "agency": "DEP",
+    "request_count": "20"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Asbestos",
+    "agency": "DOHMH",
+    "request_count": "8"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Beach/Pool/Sauna Complaint",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "BEST/Site Safety",
+    "agency": "DOB",
+    "request_count": "17"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Bike Rack Condition",
+    "agency": "DOT",
+    "request_count": "5"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Bike/Roller/Skate Chronic",
+    "agency": "NYPD",
+    "request_count": "50"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Blocked Driveway",
+    "agency": "NYPD",
+    "request_count": "5196"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Boilers",
+    "agency": "DOB",
+    "request_count": "46"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Borough Office",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Bridge Condition",
+    "agency": "DOT",
+    "request_count": "20"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Broken Parking Meter",
+    "agency": "DOT",
+    "request_count": "77"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Building Drinking Water Tank",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Building/Use",
+    "agency": "DOB",
+    "request_count": "453"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Bus Stop Shelter Complaint",
+    "agency": "DOT",
+    "request_count": "49"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Bus Stop Shelter Placement",
+    "agency": "DOT",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Calorie Labeling",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Commercial Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "140"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Construction Lead Dust",
+    "agency": "DOHMH",
+    "request_count": "29"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "579"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Cranes and Derricks",
+    "agency": "DOB",
+    "request_count": "6"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Curb Condition",
+    "agency": "DOT",
+    "request_count": "282"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "987"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Day Care",
+    "agency": "DOHMH",
+    "request_count": "50"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dead Animal",
+    "agency": "DSNY",
+    "request_count": "406"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "279"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dept of Investigations",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "1489"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dirty Condition",
+    "agency": "DSNY",
+    "request_count": "1736"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Disorderly Youth",
+    "agency": "NYPD",
+    "request_count": "6"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dispatched Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "DOOR/WINDOW",
+    "agency": "HPD",
+    "request_count": "1024"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Drinking",
+    "agency": "NYPD",
+    "request_count": "111"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Drinking Water",
+    "agency": "DOHMH",
+    "request_count": "7"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Drug Activity",
+    "agency": "NYPD",
+    "request_count": "83"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Dumpster Complaint",
+    "agency": "DSNY",
+    "request_count": "51"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "ELECTRIC",
+    "agency": "HPD",
+    "request_count": "604"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Electrical",
+    "agency": "DOB",
+    "request_count": "41"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Elevator",
+    "agency": "DOB",
+    "request_count": "382"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "ELEVATOR",
+    "agency": "HPD",
+    "request_count": "41"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Emergency Response Team (ERT)",
+    "agency": "DOB",
+    "request_count": "122"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Encampment",
+    "agency": "DHS",
+    "request_count": "131"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Encampment",
+    "agency": "NYPD",
+    "request_count": "388"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "FLOORING/STAIRS",
+    "agency": "HPD",
+    "request_count": "629"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "348"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "67"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "425"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "9"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "GENERAL",
+    "agency": "HPD",
+    "request_count": "689"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "General Construction/Plumbing",
+    "agency": "DOB",
+    "request_count": "1276"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "1050"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Graffiti",
+    "agency": "NYPD",
+    "request_count": "12"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Green Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "8"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Harboring Bees/Wasps",
+    "agency": "DOHMH",
+    "request_count": "39"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Hazardous Materials",
+    "agency": "DEP",
+    "request_count": "43"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "HEAT/HOT WATER",
+    "agency": "HPD",
+    "request_count": "1729"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Highway Condition",
+    "agency": "DOT",
+    "request_count": "47"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Highway Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Highway Sign - Missing",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "672"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Animal Kept as Pet",
+    "agency": "DOHMH",
+    "request_count": "13"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Animal Sold",
+    "agency": "DOHMH",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "1223"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "89"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "17964"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Posting",
+    "agency": "DSNY",
+    "request_count": "117"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Illegal Tree Damage",
+    "agency": "DPR",
+    "request_count": "207"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Incorrect Data",
+    "agency": "DSNY",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Indoor Air Quality",
+    "agency": "DOHMH",
+    "request_count": "170"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Indoor Sewage",
+    "agency": "DOHMH",
+    "request_count": "19"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Industrial Waste",
+    "agency": "DEP",
+    "request_count": "21"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Institution Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "3"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Investigations and Discipline (IAD)",
+    "agency": "DOB",
+    "request_count": "36"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Lead",
+    "agency": "DEP",
+    "request_count": "368"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Lifeguard",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "LinkNYC",
+    "agency": "OTI",
+    "request_count": "5"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Litter Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "47"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Litter Basket Request",
+    "agency": "DSNY",
+    "request_count": "141"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Lost Property",
+    "agency": "TLC",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Lot Condition",
+    "agency": "DSNY",
+    "request_count": "68"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Maintenance or Facility",
+    "agency": "DPR",
+    "request_count": "898"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Missed Collection",
+    "agency": "DSNY",
+    "request_count": "1120"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Mobile Food Vendor",
+    "agency": "DOHMH",
+    "request_count": "295"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Mold",
+    "agency": "DOHMH",
+    "request_count": "14"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Mosquitoes",
+    "agency": "DOHMH",
+    "request_count": "8"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "New Tree Request",
+    "agency": "DPR",
+    "request_count": "1019"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "1864"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Commercial",
+    "agency": "NYPD",
+    "request_count": "2491"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Helicopter",
+    "agency": "EDC",
+    "request_count": "155"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - House of Worship",
+    "agency": "NYPD",
+    "request_count": "50"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Park",
+    "agency": "NYPD",
+    "request_count": "256"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "8503"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "3762"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Noise - Vehicle",
+    "agency": "NYPD",
+    "request_count": "1589"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Non-Emergency Police Matter",
+    "agency": "NYPD",
+    "request_count": "390"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Non-Residential Heat",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Obstruction",
+    "agency": "DSNY",
+    "request_count": "461"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Outdoor Dining",
+    "agency": "DOT",
+    "request_count": "113"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "OUTSIDE BUILDING",
+    "agency": "HPD",
+    "request_count": "37"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Overgrown Tree/Branches",
+    "agency": "DPR",
+    "request_count": "1186"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "PAINT/PLASTER",
+    "agency": "HPD",
+    "request_count": "1460"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Panhandling",
+    "agency": "NYPD",
+    "request_count": "213"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Pet Shop",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Plant",
+    "agency": "DEP",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Plumbing",
+    "agency": "DOB",
+    "request_count": "83"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "PLUMBING",
+    "agency": "HPD",
+    "request_count": "1410"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Poison Ivy",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Posting Advertisement",
+    "agency": "NYPD",
+    "request_count": "5"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Public Toilet",
+    "agency": "DOT",
+    "request_count": "3"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Real Time Enforcement",
+    "agency": "DOB",
+    "request_count": "214"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Recycling Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "2"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Residential Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "337"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Rodent",
+    "agency": "DOHMH",
+    "request_count": "1658"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Root/Sewer/Sidewalk Condition",
+    "agency": "DPR",
+    "request_count": "349"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "SAFETY",
+    "agency": "HPD",
+    "request_count": "309"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "68"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Scaffold Safety",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "School Maintenance",
+    "agency": "DOE",
+    "request_count": "44"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Sewer",
+    "agency": "DEP",
+    "request_count": "649"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Sidewalk Condition",
+    "agency": "DOT",
+    "request_count": "900"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Smoking",
+    "agency": "DOHMH",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Smoking or Vaping",
+    "agency": "DOHMH",
+    "request_count": "81"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Special Natural Area District (SNAD)",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Special Projects Inspection Team (SPIT)",
+    "agency": "DOB",
+    "request_count": "110"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Standing Water",
+    "agency": "DOHMH",
+    "request_count": "63"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "1677"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "742"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "103"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Sign - Dangling",
+    "agency": "DOT",
+    "request_count": "46"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "101"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Street Sweeping Complaint",
+    "agency": "DSNY",
+    "request_count": "420"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Tattooing",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "18"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Taxi Report",
+    "agency": "TLC",
+    "request_count": "4"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Traffic",
+    "agency": "NYPD",
+    "request_count": "188"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "920"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Unleashed Dog",
+    "agency": "DOHMH",
+    "request_count": "43"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Unsanitary Animal Pvt Property",
+    "agency": "DOHMH",
+    "request_count": "96"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "UNSANITARY CONDITION",
+    "agency": "HPD",
+    "request_count": "3042"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Unsanitary Pigeon Condition",
+    "agency": "DOHMH",
+    "request_count": "33"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Uprooted Stump",
+    "agency": "DPR",
+    "request_count": "5"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Urinating in Public",
+    "agency": "NYPD",
+    "request_count": "35"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "434"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Violation of Park Rules",
+    "agency": "DPR",
+    "request_count": "130"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Water Conservation",
+    "agency": "DEP",
+    "request_count": "99"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "WATER LEAK",
+    "agency": "HPD",
+    "request_count": "1133"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Water Maintenance",
+    "agency": "DEP",
+    "request_count": "1"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Water Quality",
+    "agency": "DEP",
+    "request_count": "40"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Water System",
+    "agency": "DEP",
+    "request_count": "1159"
+  },
+  {
+    "borough": "BROOKLYN",
+    "complaint_type": "Wood Pile Remaining",
+    "agency": "DPR",
+    "request_count": "7"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Abandoned Bike",
+    "agency": "DSNY",
+    "request_count": "58"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Abandoned Vehicle",
+    "agency": "NYPD",
+    "request_count": "262"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "AHV Inspection Unit",
+    "agency": "DOB",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Air Quality",
+    "agency": "DEP",
+    "request_count": "282"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Animal-Abuse",
+    "agency": "NYPD",
+    "request_count": "113"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Animal in a Park",
+    "agency": "DPR",
+    "request_count": "170"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "APPLIANCE",
+    "agency": "HPD",
+    "request_count": "313"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Asbestos",
+    "agency": "DEP",
+    "request_count": "21"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Asbestos",
+    "agency": "DOHMH",
+    "request_count": "9"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Beach/Pool/Sauna Complaint",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "BEST/Site Safety",
+    "agency": "DOB",
+    "request_count": "5"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Bike Rack Condition",
+    "agency": "DOT",
+    "request_count": "11"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Bike/Roller/Skate Chronic",
+    "agency": "NYPD",
+    "request_count": "64"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Blocked Driveway",
+    "agency": "NYPD",
+    "request_count": "343"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Boilers",
+    "agency": "DOB",
+    "request_count": "67"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Borough Office",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Bridge Condition",
+    "agency": "DOT",
+    "request_count": "16"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Broken Parking Meter",
+    "agency": "DOT",
+    "request_count": "74"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Building Drinking Water Tank",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Building/Use",
+    "agency": "DOB",
+    "request_count": "101"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Bus Stop Shelter Complaint",
+    "agency": "DOT",
+    "request_count": "23"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Bus Stop Shelter Placement",
+    "agency": "DOT",
+    "request_count": "4"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Calorie Labeling",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Commercial Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "126"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Construction Lead Dust",
+    "agency": "DOHMH",
+    "request_count": "39"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "487"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Cooling Tower",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Cranes and Derricks",
+    "agency": "DOB",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Curb Condition",
+    "agency": "DOT",
+    "request_count": "128"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "168"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Day Care",
+    "agency": "DOHMH",
+    "request_count": "13"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dead Animal",
+    "agency": "DSNY",
+    "request_count": "82"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "88"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dept of Investigations",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "230"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dirty Condition",
+    "agency": "DSNY",
+    "request_count": "1034"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Disorderly Youth",
+    "agency": "NYPD",
+    "request_count": "13"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dispatched Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "4"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "DOOR/WINDOW",
+    "agency": "HPD",
+    "request_count": "786"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Drinking",
+    "agency": "NYPD",
+    "request_count": "51"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Drinking Water",
+    "agency": "DOHMH",
+    "request_count": "4"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Drug Activity",
+    "agency": "NYPD",
+    "request_count": "172"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Dumpster Complaint",
+    "agency": "DSNY",
+    "request_count": "37"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "ELECTRIC",
+    "agency": "HPD",
+    "request_count": "408"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Electrical",
+    "agency": "DOB",
+    "request_count": "18"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Elevator",
+    "agency": "DOB",
+    "request_count": "430"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "ELEVATOR",
+    "agency": "HPD",
+    "request_count": "25"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Emergency Response Team (ERT)",
+    "agency": "DOB",
+    "request_count": "93"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Encampment",
+    "agency": "DHS",
+    "request_count": "882"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Encampment",
+    "agency": "NYPD",
+    "request_count": "1714"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "E-Scooter",
+    "agency": "DOT",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "FLOORING/STAIRS",
+    "agency": "HPD",
+    "request_count": "470"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "461"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "102"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "1849"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "8"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Found Property",
+    "agency": "TLC",
+    "request_count": "6"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "GENERAL",
+    "agency": "HPD",
+    "request_count": "617"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "General Construction/Plumbing",
+    "agency": "DOB",
+    "request_count": "546"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "355"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Graffiti",
+    "agency": "NYPD",
+    "request_count": "17"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Green Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "7"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Harboring Bees/Wasps",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Hazardous Materials",
+    "agency": "DEP",
+    "request_count": "38"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "HEAT/HOT WATER",
+    "agency": "HPD",
+    "request_count": "1927"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Highway Condition",
+    "agency": "DOT",
+    "request_count": "45"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Highway Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "2367"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Animal Kept as Pet",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Animal Sold",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "452"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "50"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "7312"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Posting",
+    "agency": "DSNY",
+    "request_count": "25"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Illegal Tree Damage",
+    "agency": "DPR",
+    "request_count": "131"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Indoor Air Quality",
+    "agency": "DOHMH",
+    "request_count": "236"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Indoor Sewage",
+    "agency": "DOHMH",
+    "request_count": "9"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Industrial Waste",
+    "agency": "DEP",
+    "request_count": "6"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Institution Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Investigations and Discipline (IAD)",
+    "agency": "DOB",
+    "request_count": "6"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Lead",
+    "agency": "DEP",
+    "request_count": "194"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "LinkNYC",
+    "agency": "OTI",
+    "request_count": "4"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Litter Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "34"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Litter Basket Request",
+    "agency": "DSNY",
+    "request_count": "126"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Lost Property",
+    "agency": "TLC",
+    "request_count": "442"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Lot Condition",
+    "agency": "DSNY",
+    "request_count": "16"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Maintenance or Facility",
+    "agency": "DPR",
+    "request_count": "666"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Missed Collection",
+    "agency": "DSNY",
+    "request_count": "302"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Mobile Food Vendor",
+    "agency": "DOHMH",
+    "request_count": "364"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Mold",
+    "agency": "DOHMH",
+    "request_count": "12"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Mosquitoes",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "New Tree Request",
+    "agency": "DPR",
+    "request_count": "761"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "2058"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Commercial",
+    "agency": "NYPD",
+    "request_count": "2003"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Helicopter",
+    "agency": "EDC",
+    "request_count": "1922"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - House of Worship",
+    "agency": "NYPD",
+    "request_count": "25"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Park",
+    "agency": "NYPD",
+    "request_count": "221"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "6610"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "4934"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Noise - Vehicle",
+    "agency": "NYPD",
+    "request_count": "1389"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Non-Emergency Police Matter",
+    "agency": "NYPD",
+    "request_count": "701"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Non-Residential Heat",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Obstruction",
+    "agency": "DSNY",
+    "request_count": "473"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Outdoor Dining",
+    "agency": "DOT",
+    "request_count": "341"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "OUTSIDE BUILDING",
+    "agency": "HPD",
+    "request_count": "25"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Overgrown Tree/Branches",
+    "agency": "DPR",
+    "request_count": "90"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "PAINT/PLASTER",
+    "agency": "HPD",
+    "request_count": "1083"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Panhandling",
+    "agency": "NYPD",
+    "request_count": "535"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Pet Shop",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Plant",
+    "agency": "DEP",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Plumbing",
+    "agency": "DOB",
+    "request_count": "29"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "PLUMBING",
+    "agency": "HPD",
+    "request_count": "1082"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Public Payphone Complaint",
+    "agency": "OTI",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Public Toilet",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Real Time Enforcement",
+    "agency": "DOB",
+    "request_count": "115"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Residential Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "176"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Rodent",
+    "agency": "DOHMH",
+    "request_count": "1064"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Root/Sewer/Sidewalk Condition",
+    "agency": "DPR",
+    "request_count": "27"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "SAFETY",
+    "agency": "HPD",
+    "request_count": "202"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "68"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Scaffold Safety",
+    "agency": "DOB",
+    "request_count": "9"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "School Maintenance",
+    "agency": "DOE",
+    "request_count": "22"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Sewer",
+    "agency": "DEP",
+    "request_count": "246"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Sidewalk Condition",
+    "agency": "DOT",
+    "request_count": "330"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Smoking",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Smoking or Vaping",
+    "agency": "DOHMH",
+    "request_count": "114"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Special Projects Inspection Team (SPIT)",
+    "agency": "DOB",
+    "request_count": "155"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Standing Water",
+    "agency": "DOHMH",
+    "request_count": "32"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "1213"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "363"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "68"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Sign - Dangling",
+    "agency": "DOT",
+    "request_count": "37"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "57"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Street Sweeping Complaint",
+    "agency": "DSNY",
+    "request_count": "82"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Tattooing",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "330"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Taxi Compliment",
+    "agency": "TLC",
+    "request_count": "3"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Taxi Licensee Complaint",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Taxi Report",
+    "agency": "TLC",
+    "request_count": "38"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Traffic",
+    "agency": "NYPD",
+    "request_count": "170"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "566"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Unleashed Dog",
+    "agency": "DOHMH",
+    "request_count": "36"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Unsanitary Animal Pvt Property",
+    "agency": "DOHMH",
+    "request_count": "31"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "UNSANITARY CONDITION",
+    "agency": "HPD",
+    "request_count": "1884"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Unsanitary Pigeon Condition",
+    "agency": "DOHMH",
+    "request_count": "28"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Urinating in Public",
+    "agency": "NYPD",
+    "request_count": "38"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "1569"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Violation of Park Rules",
+    "agency": "DPR",
+    "request_count": "175"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Water Conservation",
+    "agency": "DEP",
+    "request_count": "40"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "WATER LEAK",
+    "agency": "HPD",
+    "request_count": "631"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Water Quality",
+    "agency": "DEP",
+    "request_count": "20"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Water System",
+    "agency": "DEP",
+    "request_count": "520"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "Wood Pile Remaining",
+    "agency": "DPR",
+    "request_count": "1"
+  },
+  {
+    "borough": "MANHATTAN",
+    "complaint_type": "X-Ray Machine/Equipment",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Abandoned Bike",
+    "agency": "DSNY",
+    "request_count": "30"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Abandoned Vehicle",
+    "agency": "NYPD",
+    "request_count": "2384"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "AHV Inspection Unit",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Air Quality",
+    "agency": "DEP",
+    "request_count": "231"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Animal-Abuse",
+    "agency": "NYPD",
+    "request_count": "217"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Animal Facility - No Permit",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Animal in a Park",
+    "agency": "DPR",
+    "request_count": "98"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "APPLIANCE",
+    "agency": "HPD",
+    "request_count": "198"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Asbestos",
+    "agency": "DEP",
+    "request_count": "24"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Asbestos",
+    "agency": "DOHMH",
+    "request_count": "13"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Beach/Pool/Sauna Complaint",
+    "agency": "DOHMH",
+    "request_count": "4"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "BEST/Site Safety",
+    "agency": "DOB",
+    "request_count": "8"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Bike Rack Condition",
+    "agency": "DOT",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Bike/Roller/Skate Chronic",
+    "agency": "NYPD",
+    "request_count": "26"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Blocked Driveway",
+    "agency": "NYPD",
+    "request_count": "5942"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Boilers",
+    "agency": "DOB",
+    "request_count": "26"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Bridge Condition",
+    "agency": "DOT",
+    "request_count": "8"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Broken Parking Meter",
+    "agency": "DOT",
+    "request_count": "58"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Building Drinking Water Tank",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Building/Use",
+    "agency": "DOB",
+    "request_count": "766"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Bus Stop Shelter Complaint",
+    "agency": "DOT",
+    "request_count": "22"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Bus Stop Shelter Placement",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Calorie Labeling",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Commercial Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "38"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Construction Lead Dust",
+    "agency": "DOHMH",
+    "request_count": "14"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "515"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Cranes and Derricks",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Curb Condition",
+    "agency": "DOT",
+    "request_count": "172"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "915"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Day Care",
+    "agency": "DOHMH",
+    "request_count": "19"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dead Animal",
+    "agency": "DSNY",
+    "request_count": "297"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "496"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "DEP Street Condition",
+    "agency": "DOT",
+    "request_count": "27"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dept of Investigations",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "1647"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dirty Condition",
+    "agency": "DSNY",
+    "request_count": "1103"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Disorderly Youth",
+    "agency": "NYPD",
+    "request_count": "6"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dispatched Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "DOOR/WINDOW",
+    "agency": "HPD",
+    "request_count": "434"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Drinking",
+    "agency": "NYPD",
+    "request_count": "169"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Drinking Water",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Drug Activity",
+    "agency": "NYPD",
+    "request_count": "1057"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Dumpster Complaint",
+    "agency": "DSNY",
+    "request_count": "41"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "ELECTRIC",
+    "agency": "HPD",
+    "request_count": "264"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Electrical",
+    "agency": "DOB",
+    "request_count": "60"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Elevator",
+    "agency": "DOB",
+    "request_count": "197"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "ELEVATOR",
+    "agency": "HPD",
+    "request_count": "12"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Emergency Response Team (ERT)",
+    "agency": "DOB",
+    "request_count": "59"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Encampment",
+    "agency": "DHS",
+    "request_count": "68"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Encampment",
+    "agency": "NYPD",
+    "request_count": "240"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "FLOORING/STAIRS",
+    "agency": "HPD",
+    "request_count": "223"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "254"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "56"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "171"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "14"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Found Property",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "GENERAL",
+    "agency": "HPD",
+    "request_count": "294"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "General Construction/Plumbing",
+    "agency": "DOB",
+    "request_count": "864"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "270"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Graffiti",
+    "agency": "NYPD",
+    "request_count": "23"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Green Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "13"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Green Taxi Report",
+    "agency": "TLC",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Harboring Bees/Wasps",
+    "agency": "DOHMH",
+    "request_count": "13"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Hazardous Materials",
+    "agency": "DEP",
+    "request_count": "42"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "HEAT/HOT WATER",
+    "agency": "HPD",
+    "request_count": "834"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Highway Condition",
+    "agency": "DOT",
+    "request_count": "130"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Highway Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Highway Sign - Missing",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "518"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Animal Kept as Pet",
+    "agency": "DOHMH",
+    "request_count": "28"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "928"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "95"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "13092"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Posting",
+    "agency": "DSNY",
+    "request_count": "292"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Illegal Tree Damage",
+    "agency": "DPR",
+    "request_count": "173"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Incorrect Data",
+    "agency": "DSNY",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Indoor Air Quality",
+    "agency": "DOHMH",
+    "request_count": "146"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Indoor Sewage",
+    "agency": "DOHMH",
+    "request_count": "9"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Industrial Waste",
+    "agency": "DEP",
+    "request_count": "26"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Institution Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Investigations and Discipline (IAD)",
+    "agency": "DOB",
+    "request_count": "12"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Lead",
+    "agency": "DEP",
+    "request_count": "179"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Lifeguard",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "LinkNYC",
+    "agency": "OTI",
+    "request_count": "6"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Litter Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "24"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Litter Basket Request",
+    "agency": "DSNY",
+    "request_count": "57"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Lost Property",
+    "agency": "TLC",
+    "request_count": "114"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Lot Condition",
+    "agency": "DSNY",
+    "request_count": "61"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Maintenance or Facility",
+    "agency": "DPR",
+    "request_count": "683"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Missed Collection",
+    "agency": "DSNY",
+    "request_count": "804"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Mobile Food Vendor",
+    "agency": "DOHMH",
+    "request_count": "132"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Mold",
+    "agency": "DOHMH",
+    "request_count": "12"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Mosquitoes",
+    "agency": "DOHMH",
+    "request_count": "19"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "New Tree Request",
+    "agency": "DPR",
+    "request_count": "630"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "1079"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Commercial",
+    "agency": "NYPD",
+    "request_count": "1623"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Helicopter",
+    "agency": "EDC",
+    "request_count": "706"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - House of Worship",
+    "agency": "NYPD",
+    "request_count": "27"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Park",
+    "agency": "NYPD",
+    "request_count": "331"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "6662"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "2519"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Noise - Vehicle",
+    "agency": "NYPD",
+    "request_count": "1593"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Non-Emergency Police Matter",
+    "agency": "NYPD",
+    "request_count": "505"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Obstruction",
+    "agency": "DSNY",
+    "request_count": "613"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Outdoor Dining",
+    "agency": "DOT",
+    "request_count": "68"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "OUTSIDE BUILDING",
+    "agency": "HPD",
+    "request_count": "11"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Overgrown Tree/Branches",
+    "agency": "DPR",
+    "request_count": "1181"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "PAINT/PLASTER",
+    "agency": "HPD",
+    "request_count": "567"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Panhandling",
+    "agency": "NYPD",
+    "request_count": "189"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Pet Shop",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Plant",
+    "agency": "DEP",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Plumbing",
+    "agency": "DOB",
+    "request_count": "83"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "PLUMBING",
+    "agency": "HPD",
+    "request_count": "630"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Poison Ivy",
+    "agency": "DOHMH",
+    "request_count": "11"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Posting Advertisement",
+    "agency": "NYPD",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Public Toilet",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Real Time Enforcement",
+    "agency": "DOB",
+    "request_count": "62"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Residential Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "210"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Rodent",
+    "agency": "DOHMH",
+    "request_count": "715"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Root/Sewer/Sidewalk Condition",
+    "agency": "DPR",
+    "request_count": "381"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "SAFETY",
+    "agency": "HPD",
+    "request_count": "126"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "68"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Scaffold Safety",
+    "agency": "DOB",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "School Maintenance",
+    "agency": "DOE",
+    "request_count": "49"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Sewer",
+    "agency": "DEP",
+    "request_count": "715"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Sewer Maintenance",
+    "agency": "DEP",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Sidewalk Condition",
+    "agency": "DOT",
+    "request_count": "685"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Smoking",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Smoking or Vaping",
+    "agency": "DOHMH",
+    "request_count": "105"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Special Natural Area District (SNAD)",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Special Projects Inspection Team (SPIT)",
+    "agency": "DOB",
+    "request_count": "111"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Standing Water",
+    "agency": "DOHMH",
+    "request_count": "58"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "2930"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "635"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "176"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Sign - Dangling",
+    "agency": "DOT",
+    "request_count": "85"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "105"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Street Sweeping Complaint",
+    "agency": "DSNY",
+    "request_count": "89"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Tattooing",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "192"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Taxi Compliment",
+    "agency": "TLC",
+    "request_count": "3"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Taxi Licensee Complaint",
+    "agency": "TLC",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Taxi Report",
+    "agency": "TLC",
+    "request_count": "15"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Traffic",
+    "agency": "NYPD",
+    "request_count": "656"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "729"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Unleashed Dog",
+    "agency": "DOHMH",
+    "request_count": "68"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Unsanitary Animal Facility",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Unsanitary Animal Pvt Property",
+    "agency": "DOHMH",
+    "request_count": "56"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "UNSANITARY CONDITION",
+    "agency": "HPD",
+    "request_count": "1371"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Unsanitary Pigeon Condition",
+    "agency": "DOHMH",
+    "request_count": "40"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Uprooted Stump",
+    "agency": "DPR",
+    "request_count": "10"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Urinating in Public",
+    "agency": "NYPD",
+    "request_count": "42"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "457"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Violation of Park Rules",
+    "agency": "DPR",
+    "request_count": "171"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Water Conservation",
+    "agency": "DEP",
+    "request_count": "139"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "WATER LEAK",
+    "agency": "HPD",
+    "request_count": "378"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Water Quality",
+    "agency": "DEP",
+    "request_count": "12"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Water System",
+    "agency": "DEP",
+    "request_count": "1157"
+  },
+  {
+    "borough": "QUEENS",
+    "complaint_type": "Wood Pile Remaining",
+    "agency": "DPR",
+    "request_count": "12"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Abandoned Bike",
+    "agency": "DSNY",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Abandoned Vehicle",
+    "agency": "NYPD",
+    "request_count": "344"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Air Quality",
+    "agency": "DEP",
+    "request_count": "26"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Animal-Abuse",
+    "agency": "NYPD",
+    "request_count": "51"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Animal in a Park",
+    "agency": "DPR",
+    "request_count": "27"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "APPLIANCE",
+    "agency": "HPD",
+    "request_count": "28"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Asbestos",
+    "agency": "DEP",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Beach/Pool/Sauna Complaint",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Bike/Roller/Skate Chronic",
+    "agency": "NYPD",
+    "request_count": "7"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Blocked Driveway",
+    "agency": "NYPD",
+    "request_count": "398"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Boilers",
+    "agency": "DOB",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Broken Parking Meter",
+    "agency": "DOT",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Building/Use",
+    "agency": "DOB",
+    "request_count": "87"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Bus Stop Shelter Complaint",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Bus Stop Shelter Placement",
+    "agency": "DOT",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Commercial Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Construction Lead Dust",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "64"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Curb Condition",
+    "agency": "DOT",
+    "request_count": "25"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "239"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Day Care",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Dead Animal",
+    "agency": "DSNY",
+    "request_count": "131"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "189"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "DEP Street Condition",
+    "agency": "DOT",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "131"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Dirty Condition",
+    "agency": "DSNY",
+    "request_count": "280"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Disorderly Youth",
+    "agency": "NYPD",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "DOOR/WINDOW",
+    "agency": "HPD",
+    "request_count": "53"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Drinking",
+    "agency": "NYPD",
+    "request_count": "9"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Drug Activity",
+    "agency": "NYPD",
+    "request_count": "12"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Dumpster Complaint",
+    "agency": "DSNY",
+    "request_count": "4"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "ELECTRIC",
+    "agency": "HPD",
+    "request_count": "49"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Electrical",
+    "agency": "DOB",
+    "request_count": "15"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Elevator",
+    "agency": "DOB",
+    "request_count": "7"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "ELEVATOR",
+    "agency": "HPD",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Emergency Response Team (ERT)",
+    "agency": "DOB",
+    "request_count": "18"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Encampment",
+    "agency": "NYPD",
+    "request_count": "13"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "FLOORING/STAIRS",
+    "agency": "HPD",
+    "request_count": "40"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "24"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "15"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "8"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "GENERAL",
+    "agency": "HPD",
+    "request_count": "28"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "General Construction/Plumbing",
+    "agency": "DOB",
+    "request_count": "190"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "22"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Graffiti",
+    "agency": "NYPD",
+    "request_count": "42"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Harboring Bees/Wasps",
+    "agency": "DOHMH",
+    "request_count": "8"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Hazardous Materials",
+    "agency": "DEP",
+    "request_count": "26"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "HEAT/HOT WATER",
+    "agency": "HPD",
+    "request_count": "81"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Highway Condition",
+    "agency": "DOT",
+    "request_count": "15"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Highway Sign - Missing",
+    "agency": "DOT",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "16"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Animal Kept as Pet",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "111"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "50"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "1364"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Posting",
+    "agency": "DSNY",
+    "request_count": "85"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Illegal Tree Damage",
+    "agency": "DPR",
+    "request_count": "45"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Indoor Air Quality",
+    "agency": "DOHMH",
+    "request_count": "19"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Indoor Sewage",
+    "agency": "DOHMH",
+    "request_count": "5"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Industrial Waste",
+    "agency": "DEP",
+    "request_count": "7"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Investigations and Discipline (IAD)",
+    "agency": "DOB",
+    "request_count": "5"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Lead",
+    "agency": "DEP",
+    "request_count": "26"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Litter Basket Complaint",
+    "agency": "DSNY",
+    "request_count": "9"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Litter Basket Request",
+    "agency": "DSNY",
+    "request_count": "12"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Lot Condition",
+    "agency": "DSNY",
+    "request_count": "24"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Maintenance or Facility",
+    "agency": "DPR",
+    "request_count": "149"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Missed Collection",
+    "agency": "DSNY",
+    "request_count": "301"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Mobile Food Vendor",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Mold",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Mosquitoes",
+    "agency": "DOHMH",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "New Tree Request",
+    "agency": "DPR",
+    "request_count": "125"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "179"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Commercial",
+    "agency": "NYPD",
+    "request_count": "169"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Helicopter",
+    "agency": "EDC",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - House of Worship",
+    "agency": "NYPD",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Park",
+    "agency": "NYPD",
+    "request_count": "17"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "878"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "150"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Noise - Vehicle",
+    "agency": "NYPD",
+    "request_count": "129"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Non-Emergency Police Matter",
+    "agency": "NYPD",
+    "request_count": "103"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Obstruction",
+    "agency": "DSNY",
+    "request_count": "185"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Outdoor Dining",
+    "agency": "DOT",
+    "request_count": "8"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "OUTSIDE BUILDING",
+    "agency": "HPD",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Overgrown Tree/Branches",
+    "agency": "DPR",
+    "request_count": "391"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "PAINT/PLASTER",
+    "agency": "HPD",
+    "request_count": "68"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Panhandling",
+    "agency": "NYPD",
+    "request_count": "14"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Plumbing",
+    "agency": "DOB",
+    "request_count": "18"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "PLUMBING",
+    "agency": "HPD",
+    "request_count": "86"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Poison Ivy",
+    "agency": "DOHMH",
+    "request_count": "9"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Residential Disposal Complaint",
+    "agency": "DSNY",
+    "request_count": "74"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Rodent",
+    "agency": "DOHMH",
+    "request_count": "134"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Root/Sewer/Sidewalk Condition",
+    "agency": "DPR",
+    "request_count": "178"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "SAFETY",
+    "agency": "HPD",
+    "request_count": "28"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "24"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Scaffold Safety",
+    "agency": "DOB",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "School Maintenance",
+    "agency": "DOE",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Sewer",
+    "agency": "DEP",
+    "request_count": "201"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Sidewalk Condition",
+    "agency": "DOT",
+    "request_count": "153"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Smoking or Vaping",
+    "agency": "DOHMH",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Special Natural Area District (SNAD)",
+    "agency": "DOB",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Special Projects Inspection Team (SPIT)",
+    "agency": "DOB",
+    "request_count": "14"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Standing Water",
+    "agency": "DOHMH",
+    "request_count": "29"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "656"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "124"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Sign - Damaged",
+    "agency": "DOT",
+    "request_count": "26"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Sign - Dangling",
+    "agency": "DOT",
+    "request_count": "12"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "20"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Street Sweeping Complaint",
+    "agency": "DSNY",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Tattooing",
+    "agency": "DOHMH",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "1"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Traffic",
+    "agency": "NYPD",
+    "request_count": "40"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "175"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Unleashed Dog",
+    "agency": "DOHMH",
+    "request_count": "16"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Unsanitary Animal Pvt Property",
+    "agency": "DOHMH",
+    "request_count": "22"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "UNSANITARY CONDITION",
+    "agency": "HPD",
+    "request_count": "175"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Unsanitary Pigeon Condition",
+    "agency": "DOHMH",
+    "request_count": "14"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Uprooted Stump",
+    "agency": "DPR",
+    "request_count": "3"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Urinating in Public",
+    "agency": "NYPD",
+    "request_count": "2"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "21"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Violation of Park Rules",
+    "agency": "DPR",
+    "request_count": "20"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Water Conservation",
+    "agency": "DEP",
+    "request_count": "21"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "WATER LEAK",
+    "agency": "HPD",
+    "request_count": "48"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Water Quality",
+    "agency": "DEP",
+    "request_count": "6"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Water System",
+    "agency": "DEP",
+    "request_count": "337"
+  },
+  {
+    "borough": "STATEN ISLAND",
+    "complaint_type": "Wood Pile Remaining",
+    "agency": "DPR",
+    "request_count": "2"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Consumer Complaint",
+    "agency": "DCWP",
+    "request_count": "24"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Damaged Tree",
+    "agency": "DPR",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Dead/Dying Tree",
+    "agency": "DPR",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Derelict Vehicles",
+    "agency": "DSNY",
+    "request_count": "9"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Ferry Complaint",
+    "agency": "DOT",
+    "request_count": "16"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Ferry Inquiry",
+    "agency": "DOT",
+    "request_count": "25"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Food Establishment",
+    "agency": "DOHMH",
+    "request_count": "14"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Food Poisoning",
+    "agency": "DOHMH",
+    "request_count": "6"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "For Hire Vehicle Complaint",
+    "agency": "TLC",
+    "request_count": "17"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "For Hire Vehicle Report",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Graffiti",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Homeless Person Assistance",
+    "agency": "DHS",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Illegal Dumping",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Illegal Fireworks",
+    "agency": "NYPD",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Illegal Parking",
+    "agency": "NYPD",
+    "request_count": "3"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Lost Property",
+    "agency": "TLC",
+    "request_count": "13"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Municipal Parking Facility",
+    "agency": "DOT",
+    "request_count": "3"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Noise",
+    "agency": "DEP",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Noise - Residential",
+    "agency": "NYPD",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Noise - Street/Sidewalk",
+    "agency": "NYPD",
+    "request_count": "2"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Sanitation Worker or Vehicle Complaint",
+    "agency": "DSNY",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Street Condition",
+    "agency": "DOT",
+    "request_count": "9"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Street Light Condition",
+    "agency": "DOT",
+    "request_count": "5"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Street Sign - Missing",
+    "agency": "DOT",
+    "request_count": "1"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Taxi Complaint",
+    "agency": "TLC",
+    "request_count": "16"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Taxi Compliment",
+    "agency": "TLC",
+    "request_count": "3"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Taxi Report",
+    "agency": "TLC",
+    "request_count": "2"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Traffic Signal Condition",
+    "agency": "DOT",
+    "request_count": "19"
+  },
+  {
+    "borough": "Unspecified",
+    "complaint_type": "Vendor Enforcement",
+    "agency": "DSNY",
+    "request_count": "2"
+  }
+]

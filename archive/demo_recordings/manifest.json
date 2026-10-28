@@ -1,0 +1,52 @@
+{
+  "format": "biflow-demo-recordings-v1",
+  "created_at_utc": "2026-10-28T11:20:30.046714+00:00",
+  "note": "Restitutions de véritables exécutions locales; l'injection contrôlée est distincte.",
+  "recordings": [
+    {
+      "scenario_id": "compare_boroughs",
+      "directory": "compare_boroughs",
+      "execution_id": "ce0eaccccbb949a7bfa8656aefc2ecd1",
+      "sha256": {
+        "compare_boroughs/audit.jsonl": "4181deb061a62add9b6d8dfb21040e429c4d8b75e48d73dc230771c5dfbc0a42",
+        "compare_boroughs/metadata.json": "edae6d01ab64d6840c35f21790f589787e2d00316950a908d9baf205f9dd72b7",
+        "compare_boroughs/report.json": "a7aa736565eeaa7e398fd7f86628403545657752aaf4be4488105a9d8b8b7276",
+        "compare_boroughs/verification.json": "8554d61753acb95f1bb299be61e7294c04026b9db3217d620f4b6401c679786a"
+      }
+    },
+    {
+      "scenario_id": "drilldown_brooklyn",
+      "directory": "drilldown_brooklyn",
+      "execution_id": "f27707502a354f6f8b4185973cbfc8e7",
+      "sha256": {
+        "drilldown_brooklyn/analysis.json": "ea14cd8189b6e44c7d65f80badec35efa6abe1f3ad6f875cc150c10d8993e216",
+        "drilldown_brooklyn/audit.jsonl": "638496f53d07569ac026e87d8e5dd358ac0a85e9dd2498673ae05b6f2ecbe79a",
+        "drilldown_brooklyn/metadata.json": "ac1301b9443212fd4a226658867cea65da2cee4295b77af22ae6094c893961ae",
+        "drilldown_brooklyn/report.json": "f7d476d599cbf80cb2e39154a42dcd15c3aa8116e230e2bae6b715857355487a",
+        "drilldown_brooklyn/verification.json": "fd41aa348bdc6e479784d066f838579c719caa19e0b12bc30a56bbce8e0a6a0e"
+      }
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "directory": "insufficient_history",
+      "execution_id": "5f07953a64c9441cae0a20f1a64b2858",
+      "sha256": {
+        "insufficient_history/audit.jsonl": "cd52cf1b5e5212cac28f9d338b78e9e5b18b655f57e7a177c9b405364a027098",
+        "insufficient_history/metadata.json": "fd76cebfb7a4f825de11c7b360d4bb3fe493e18055cc5781562010ff0f7a1d39",
+        "insufficient_history/report.json": "de2c338271f55c265f73d13f11540fe9fb4b5513148a078bcf702935e92065d9",
+        "insufficient_history/verification.json": "8554d61753acb95f1bb299be61e7294c04026b9db3217d620f4b6401c679786a"
+      }
+    },
+    {
+      "scenario_id": "controlled_rejection",
+      "directory": "controlled_rejection",
+      "execution_id": "a62ca4d4a1814e59a26184f35094badc",
+      "sha256": {
+        "controlled_rejection/audit.jsonl": "e72e8e8d108eeadac3b7cf7051631bed797941b6513999eb7336e0f2c020ba2a",
+        "controlled_rejection/metadata.json": "f84d1a04ee50c729533ca6e88a73f4250b4222de71e5775852f73de08e1b0ba4",
+        "controlled_rejection/report.json": "b0873e97991b8450d8fe569e484ff57ad1e57312c88422317a311ec8439c9e7f",
+        "controlled_rejection/verification.json": "20a79f6bb371bc0f7e352619b6884fa1a459f918f9e153eea3b755371983b1c8"
+      }
+    }
+  ]
+}

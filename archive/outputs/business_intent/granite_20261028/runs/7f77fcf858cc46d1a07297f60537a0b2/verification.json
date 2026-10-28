@@ -1,0 +1,395 @@
+{
+  "passed": true,
+  "errors": [],
+  "oracle": {
+    "winner": "STATEN ISLAND",
+    "ranking": [
+      {
+        "borough": "STATEN ISLAND",
+        "median": 0.3322685185185185,
+        "count": 386
+      },
+      {
+        "borough": "BROOKLYN",
+        "median": 0.22848379629629628,
+        "count": 3080
+      },
+      {
+        "borough": "MANHATTAN",
+        "median": 0.17066550925925927,
+        "count": 1712
+      },
+      {
+        "borough": "QUEENS",
+        "median": 0.16594328703703703,
+        "count": 2274
+      },
+      {
+        "borough": "BRONX",
+        "median": 0.14743634259259258,
+        "count": 1828
+      }
+    ],
+    "drilldowns": {
+      "complaint_type": [
+        {
+          "complaint_type": "APPLIANCE",
+          "median": 2.249652777777778,
+          "count": 1
+        },
+        {
+          "complaint_type": "Abandoned Vehicle",
+          "median": 0.07342592592592592,
+          "count": 18
+        },
+        {
+          "complaint_type": "Air Quality",
+          "median": 0.6053356481481481,
+          "count": 2
+        },
+        {
+          "complaint_type": "Animal in a Park",
+          "median": 0.031886574074074074,
+          "count": 1
+        },
+        {
+          "complaint_type": "Animal-Abuse",
+          "median": 0.017291666666666667,
+          "count": 5
+        },
+        {
+          "complaint_type": "Blocked Driveway",
+          "median": 0.09024305555555556,
+          "count": 13
+        },
+        {
+          "complaint_type": "Building/Use",
+          "median": 18.783923611111113,
+          "count": 4
+        },
+        {
+          "complaint_type": "Consumer Complaint",
+          "median": 28.673535879629632,
+          "count": 2
+        },
+        {
+          "complaint_type": "DOOR/WINDOW",
+          "median": 8.720891203703705,
+          "count": 3
+        },
+        {
+          "complaint_type": "Damaged Tree",
+          "median": 2.0521238425925925,
+          "count": 44
+        },
+        {
+          "complaint_type": "Dead Animal",
+          "median": 1.3955092592592593,
+          "count": 4
+        },
+        {
+          "complaint_type": "Dead/Dying Tree",
+          "median": 25.796574074074073,
+          "count": 1
+        },
+        {
+          "complaint_type": "Derelict Vehicles",
+          "median": 1.0965277777777778,
+          "count": 1
+        },
+        {
+          "complaint_type": "Dirty Condition",
+          "median": 1.2353761574074074,
+          "count": 8
+        },
+        {
+          "complaint_type": "Drug Activity",
+          "median": 0.3209722222222222,
+          "count": 1
+        },
+        {
+          "complaint_type": "ELECTRIC",
+          "median": 17.76292824074074,
+          "count": 3
+        },
+        {
+          "complaint_type": "Electrical",
+          "median": 11.618449074074075,
+          "count": 2
+        },
+        {
+          "complaint_type": "Elevator",
+          "median": 79.52179398148148,
+          "count": 1
+        },
+        {
+          "complaint_type": "FLOORING/STAIRS",
+          "median": 17.131909722222222,
+          "count": 1
+        },
+        {
+          "complaint_type": "GENERAL",
+          "median": 2.249652777777778,
+          "count": 3
+        },
+        {
+          "complaint_type": "General Construction/Plumbing",
+          "median": 1.4490277777777778,
+          "count": 7
+        },
+        {
+          "complaint_type": "Graffiti",
+          "median": 1.091400462962963,
+          "count": 1
+        },
+        {
+          "complaint_type": "HEAT/HOT WATER",
+          "median": 2.249652777777778,
+          "count": 1
+        },
+        {
+          "complaint_type": "Hazardous Materials",
+          "median": 3.033333333333333,
+          "count": 1
+        },
+        {
+          "complaint_type": "Homeless Person Assistance",
+          "median": 0.10093171296296297,
+          "count": 2
+        },
+        {
+          "complaint_type": "Illegal Dumping",
+          "median": 2.228113425925926,
+          "count": 5
+        },
+        {
+          "complaint_type": "Illegal Fireworks",
+          "median": 0.037175925925925925,
+          "count": 12
+        },
+        {
+          "complaint_type": "Illegal Parking",
+          "median": 0.09880208333333333,
+          "count": 46
+        },
+        {
+          "complaint_type": "Illegal Tree Damage",
+          "median": 1.1477777777777778,
+          "count": 1
+        },
+        {
+          "complaint_type": "Indoor Air Quality",
+          "median": 3.557326388888889,
+          "count": 2
+        },
+        {
+          "complaint_type": "Lead",
+          "median": 0.8583391203703704,
+          "count": 4
+        },
+        {
+          "complaint_type": "Maintenance or Facility",
+          "median": 6.401174768518518,
+          "count": 2
+        },
+        {
+          "complaint_type": "Missed Collection",
+          "median": 2.0528819444444446,
+          "count": 17
+        },
+        {
+          "complaint_type": "Noise",
+          "median": 5.279930555555556,
+          "count": 4
+        },
+        {
+          "complaint_type": "Noise - Commercial",
+          "median": 0.032164351851851854,
+          "count": 6
+        },
+        {
+          "complaint_type": "Noise - Park",
+          "median": 0.02613425925925926,
+          "count": 1
+        },
+        {
+          "complaint_type": "Noise - Residential",
+          "median": 0.037905092592592594,
+          "count": 47
+        },
+        {
+          "complaint_type": "Noise - Street/Sidewalk",
+          "median": 0.03355324074074074,
+          "count": 19
+        },
+        {
+          "complaint_type": "Noise - Vehicle",
+          "median": 0.17869212962962963,
+          "count": 2
+        },
+        {
+          "complaint_type": "Non-Emergency Police Matter",
+          "median": 0.0856712962962963,
+          "count": 2
+        },
+        {
+          "complaint_type": "Obstruction",
+          "median": 3.690173611111111,
+          "count": 1
+        },
+        {
+          "complaint_type": "Overgrown Tree/Branches",
+          "median": 2.5658449074074072,
+          "count": 6
+        },
+        {
+          "complaint_type": "PAINT/PLASTER",
+          "median": 10.023998842592594,
+          "count": 4
+        },
+        {
+          "complaint_type": "Panhandling",
+          "median": 0.25858796296296294,
+          "count": 1
+        },
+        {
+          "complaint_type": "Residential Disposal Complaint",
+          "median": 0.9628703703703704,
+          "count": 3
+        },
+        {
+          "complaint_type": "Rodent",
+          "median": 10.899942129629629,
+          "count": 1
+        },
+        {
+          "complaint_type": "Sewer",
+          "median": 0.06527777777777777,
+          "count": 8
+        },
+        {
+          "complaint_type": "Sewer Maintenance",
+          "median": 0.14466435185185184,
+          "count": 6
+        },
+        {
+          "complaint_type": "Sidewalk Condition",
+          "median": 20.71050925925926,
+          "count": 6
+        },
+        {
+          "complaint_type": "Standing Water",
+          "median": 39.04037037037037,
+          "count": 1
+        },
+        {
+          "complaint_type": "Street Condition",
+          "median": 2.11494212962963,
+          "count": 11
+        },
+        {
+          "complaint_type": "Street Light Condition",
+          "median": 9.412152777777777,
+          "count": 14
+        },
+        {
+          "complaint_type": "Street Sign - Damaged",
+          "median": 3.9409953703703704,
+          "count": 1
+        },
+        {
+          "complaint_type": "Street Sign - Dangling",
+          "median": 4.028182870370371,
+          "count": 1
+        },
+        {
+          "complaint_type": "Traffic",
+          "median": 0.20200231481481484,
+          "count": 2
+        },
+        {
+          "complaint_type": "Traffic Signal Condition",
+          "median": 0.7795138888888888,
+          "count": 4
+        },
+        {
+          "complaint_type": "UNSANITARY CONDITION",
+          "median": 5.9875,
+          "count": 3
+        },
+        {
+          "complaint_type": "Water Conservation",
+          "median": 0.03796296296296296,
+          "count": 2
+        },
+        {
+          "complaint_type": "Water Maintenance",
+          "median": 0.24761574074074075,
+          "count": 5
+        },
+        {
+          "complaint_type": "Water System",
+          "median": 0.7291666666666666,
+          "count": 5
+        },
+        {
+          "complaint_type": "Wood Pile Remaining",
+          "median": 0.09600694444444445,
+          "count": 1
+        }
+      ],
+      "agency": [
+        {
+          "agency": "DCWP",
+          "median": 28.673535879629632,
+          "count": 2
+        },
+        {
+          "agency": "DEP",
+          "median": 0.5159722222222223,
+          "count": 37
+        },
+        {
+          "agency": "DHS",
+          "median": 0.10093171296296297,
+          "count": 2
+        },
+        {
+          "agency": "DOB",
+          "median": 8.472199074074075,
+          "count": 14
+        },
+        {
+          "agency": "DOHMH",
+          "median": 7.477008101851851,
+          "count": 4
+        },
+        {
+          "agency": "DOT",
+          "median": 6.5234143518518515,
+          "count": 37
+        },
+        {
+          "agency": "DPR",
+          "median": 2.0521238425925925,
+          "count": 56
+        },
+        {
+          "agency": "DSNY",
+          "median": 1.863258101851852,
+          "count": 40
+        },
+        {
+          "agency": "HPD",
+          "median": 5.9875,
+          "count": 19
+        },
+        {
+          "agency": "NYPD",
+          "median": 0.050555555555555555,
+          "count": 175
+        }
+      ]
+    }
+  }
+}

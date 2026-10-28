@@ -1,0 +1,30 @@
+[
+  {
+    "id": "compare_boroughs",
+    "title": "Comparer les délais par arrondissement",
+    "question": "Compare les délais de résolution par arrondissement.",
+    "description": "Données réelles : médianes, effectifs, groupes exclus et limites.",
+    "supports_live": true
+  },
+  {
+    "id": "drilldown_brooklyn",
+    "title": "Investiguer la hausse de moyenne à Brooklyn",
+    "question": "Investiguer la hausse des délais à Brooklyn; préciser les catégories, agences et périodes prioritaires.",
+    "description": "Données réelles : délais internes, composition, catégories et agences; hypothèses à vérifier.",
+    "supports_live": true
+  },
+  {
+    "id": "insufficient_history",
+    "title": "Reconnaître un historique insuffisant",
+    "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?",
+    "description": "Données réelles : un test non exécutable ne démontre pas l'absence d'anomalie.",
+    "supports_live": true
+  },
+  {
+    "id": "controlled_rejection",
+    "title": "Bloquer une réponse incorrecte injectée",
+    "question": "Test contrôlé : rejeter un wildcard, un chiffre libre et une cause supposée, puis montrer le fallback.",
+    "description": "Injection volontaire dérivée d'une réponse réelle; aucune génération Granite et exclusion des métriques du modèle.",
+    "supports_live": false
+  }
+]

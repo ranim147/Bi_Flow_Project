@@ -1,0 +1,7 @@
+{
+  "finding": "higher",
+  "evidence_ids": ["trend.monthly_volume_mann_kendall", "history.trend.complete_periods", "trend.change_pct.2023-02", "trend.change_pct.2023-03", "trend.change_pct.2023-04", "trend.change_pct.2023-05", "trend.change_pct.2023-06", "trend.change_pct.2023-07", "trend.change_pct.2023-08", "trend.change_pct.2023-09", "trend.change_pct.2023-10", "trend.change_pct.2023-11"],
+  "insight": "Le test indique une tendance statistique à la hausse, sans explication causale.",
+  "recommendation": "Vérifier le signal temporel dans les sources métier avant de décider d'une action.",
+  "limitation_codes": ["no_cause", "nonrandom_sample", "population_not_sample", "sample_only", "serial_autocorrelation_not_adjusted"]
+}

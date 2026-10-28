@@ -1,0 +1,18 @@
+{
+  "all_passed": true,
+  "inference_enabled": false,
+  "scenarios": [
+    {
+      "scenario_id": "insufficient_recommendation",
+      "data_kind": "synthetic",
+      "passed": true,
+      "errors": [],
+      "truthful_findings": true,
+      "evidence_references_valid": true,
+      "scope_and_period_precision": true,
+      "hypotheses_explicitly_unverified": true,
+      "concrete_steps_present": true,
+      "both_verification_outcomes_present": true
+    }
+  ]
+}

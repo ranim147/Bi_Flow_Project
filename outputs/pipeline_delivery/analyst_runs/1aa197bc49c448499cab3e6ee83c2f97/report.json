@@ -1,0 +1,228 @@
+{
+  "contract_version": "biflow-bi-analyst-v2",
+  "execution_id": "1aa197bc49c448499cab3e6ee83c2f97",
+  "generated_at": "2026-10-28T21:46:52.246806+00:00",
+  "question": "Quel arrondissement a la médiane la plus élevée ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "1aa197bc49c448499cab3e6ee83c2f97-ranking",
+      "category": "comparison",
+      "finding": "descriptive",
+      "insight": "Classement par médiane décroissante des groupes éligibles (n ≥ 30) : {\"borough\": \"STATEN ISLAND\"} : médiane=0.655677, n=9874; {\"borough\": \"BRONX\"} : médiane=0.505411, n=55022; {\"borough\": \"MANHATTAN\"} : médiane=0.421806, n=52097; {\"borough\": \"BROOKLYN\"} : médiane=0.260729, n=79395; {\"borough\": \"QUEENS\"} : médiane=0.192662, n=62712. Maximum éligible : {\"borough\": \"STATEN ISLAND\"}.",
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "evidence_fact_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.8e5a720326276809",
+        "plan.7104fe0a2d77b1d9",
+        "plan.9e2ef20707b629bf",
+        "plan.8e1ef57c5ac61a28"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "plan.1e8a36f11dda4af9",
+      "metric": "scope_valid_delay_n",
+      "scope": "{}",
+      "value": 259354.0,
+      "unit": "dossiers",
+      "n": 265609,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=1e8a36f11dda4af9",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Count after categorical filters, before requested time filtering; complete prepared extract",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.4dca9856f74d9eca",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"STATEN ISLAND\"}",
+      "value": 0.6556770833333334,
+      "unit": "jours calendaires",
+      "n": 9874,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=4dca9856f74d9eca",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.8e5a720326276809",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"BRONX\"}",
+      "value": 0.5054108796296296,
+      "unit": "jours calendaires",
+      "n": 55022,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=8e5a720326276809",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.7104fe0a2d77b1d9",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"MANHATTAN\"}",
+      "value": 0.42180555555555554,
+      "unit": "jours calendaires",
+      "n": 52097,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=7104fe0a2d77b1d9",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.9e2ef20707b629bf",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"BROOKLYN\"}",
+      "value": 0.2607291666666667,
+      "unit": "jours calendaires",
+      "n": 79395,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=9e2ef20707b629bf",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.8e1ef57c5ac61a28",
+      "metric": "median_resolution_days",
+      "scope": "{\"borough\": \"QUEENS\"}",
+      "value": 0.19266203703703705,
+      "unit": "jours calendaires",
+      "n": 62712,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=8e1ef57c5ac61a28",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Python grouped descriptive calculation; valid observed closed requests",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Les catégories traitées peuvent différer entre agences; leurs délais bruts ne permettent pas de classer leur performance.",
+    "Les délais portent sur les dossiers clôturés observables avec durée valide; aucune durée manquante n'est remplacée par zéro.",
+    "Les écarts descriptifs ne démontrent aucune causalité.",
+    "Aucun SLA métier n'est disponible.",
+    "Les fenêtres d'échantillonnage ne sont pas aléatoires; un biais de sélection reste possible.",
+    "Ces résultats décrivent uniquement l'extrait préparé, pas la population NYC.",
+    "Les groupes de moins de 30 délais valides sont exclus du classement opérationnel."
+  ],
+  "source_refs": [
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=1e8a36f11dda4af9",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=4dca9856f74d9eca",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=7104fe0a2d77b1d9",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=8e1ef57c5ac61a28",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=8e5a720326276809",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=9e2ef20707b629bf"
+  ],
+  "validation": {
+    "status": "not_run",
+    "json_valid": false,
+    "schema_valid": false,
+    "evidence_valid": false,
+    "numerical_claims_valid": false,
+    "causal_claims_clear": false,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "filter_scope",
+      "parameters": {
+        "question": "Quel arrondissement a la médiane la plus élevée ?",
+        "metric": "median_resolution_days",
+        "filters": "{}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T21:46:51.908090+00:00",
+      "elapsed_ms": 7640.039399964735,
+      "evidence_ids": [
+        "plan.1e8a36f11dda4af9"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "rank_groups",
+      "parameters": {
+        "question": "Quel arrondissement a la médiane la plus élevée ?",
+        "metric": "median_resolution_days"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T21:46:52.236780+00:00",
+      "elapsed_ms": 101.01069998927414,
+      "evidence_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.8e5a720326276809",
+        "plan.7104fe0a2d77b1d9",
+        "plan.9e2ef20707b629bf",
+        "plan.8e1ef57c5ac61a28"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "compare_scoped_groups",
+      "parameters": {
+        "question": "Quel arrondissement a la médiane la plus élevée ?",
+        "metric": "median_resolution_days",
+        "dimensions": "borough",
+        "filters": "{}"
+      },
+      "status": "success",
+      "started_at": "2026-10-28T21:46:52.236812+00:00",
+      "elapsed_ms": 0.008499948307871819,
+      "evidence_ids": [],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "data_validation": 1433.6795000126585,
+    "analytics": 7741.058599902317,
+    "total": 9446.413099998608
+  },
+  "decision_support": [],
+  "analytical_plan": {
+    "intent": "ranking",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": false,
+    "operation_sequence": [
+      "filter_scope",
+      "rank_groups",
+      "compare_scoped_groups"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {}
+  }
+}

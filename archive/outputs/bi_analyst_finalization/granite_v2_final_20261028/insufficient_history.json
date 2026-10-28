@@ -1,0 +1,469 @@
+{
+  "scenario": {
+    "id": "insufficient_history",
+    "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?",
+    "expected_metrics": [
+      "monthly_request_volume_change"
+    ]
+  },
+  "baseline": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "72ad8b04afe64bd8ba83d13f1bd6a8c9",
+    "generated_at": "2026-10-28T10:21:02.502820+00:00",
+    "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "insufficient_data",
+    "finding": "insufficient_history",
+    "insights": [
+      {
+        "insight_id": "72ad8b04afe64bd8ba83d13f1bd6a8c9-baseline",
+        "category": "trend",
+        "finding": "insufficient_history",
+        "insight": "L'historique mensuel complet est insuffisant pour le test d'anomalie demandé; aucune absence d'anomalie ne peut être établie. Le nombre de périodes disponibles et les seuils requis figurent dans les preuves.",
+        "recommendation": "Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.",
+        "evidence_fact_ids": [
+          "history.trend.complete_periods",
+          "trend.change_pct.2026-07",
+          "trend.change_pct.2026-08",
+          "trend.change_pct.2026-09",
+          "history.anomaly.complete_periods"
+        ],
+        "limitation_codes": [
+          "insufficient_history",
+          "missing_data",
+          "no_cause",
+          "nonrandom_sample",
+          "partial_month",
+          "population_not_sample",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "history.trend.complete_periods",
+        "metric": "available_complete_periods",
+        "scope": "complete monthly periods for seasonal trend test",
+        "value": 4.0,
+        "unit": "months",
+        "n": 4,
+        "source": "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": "Seasonal Mann-Kendall prerequisites",
+        "threshold": 36.0,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-07",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-07",
+        "value": 2.478541605691187,
+        "unit": "percent",
+        "n": 334834,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-08",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-08",
+        "value": -4.142708512442694,
+        "unit": "percent",
+        "n": 343133,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-09",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-09",
+        "value": -1.6086076164880003,
+        "unit": "percent",
+        "n": 328918,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "history.anomaly.complete_periods",
+        "metric": "available_complete_periods",
+        "scope": "complete monthly periods for anomaly scan",
+        "value": 4.0,
+        "unit": "months",
+        "n": 4,
+        "source": "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": "Monthly anomaly prerequisites",
+        "threshold": 7.0,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "L’historique complet est insuffisant pour le test temporel demandé.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:21:01.829221+00:00",
+        "elapsed_ms": 0.04800001624971628,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "analyze_trend",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "skipped",
+        "started_at": "2026-10-28T10:21:01.830797+00:00",
+        "elapsed_ms": 5.147299962118268,
+        "evidence_ids": [
+          "history.trend.complete_periods",
+          "trend.change_pct.2026-07",
+          "trend.change_pct.2026-08",
+          "trend.change_pct.2026-09"
+        ],
+        "detail": "insufficient evidence"
+      },
+      {
+        "tool": "detect_anomalies",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "skipped",
+        "started_at": "2026-10-28T10:21:01.837037+00:00",
+        "elapsed_ms": 664.3406000221148,
+        "evidence_ids": [
+          "history.anomaly.complete_periods"
+        ],
+        "detail": "insufficient_history"
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 1782.2829000651836
+    }
+  },
+  "agent": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "8a0dab06a6e249fd9c60719131295c70",
+    "generated_at": "2026-10-28T10:21:22.037238+00:00",
+    "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?",
+    "model": "granite3.3:2b",
+    "data_kind": "real",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "finding": "insufficient_history",
+    "insights": [
+      {
+        "insight_id": "8a0dab06a6e249fd9c60719131295c70-001",
+        "category": "trend",
+        "finding": "insufficient_history",
+        "insight": "L'historique complet est insuffisant pour conclure sur le signal temporel demandé. L'historique mensuel complet est insuffisant pour le test d'anomalie demandé; aucune absence d'anomalie ne peut être établie. Le nombre de périodes disponibles et les seuils requis figurent dans les preuves.",
+        "recommendation": "Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.",
+        "evidence_fact_ids": [
+          "history.trend.complete_periods",
+          "trend.change_pct.2026-07",
+          "trend.change_pct.2026-08",
+          "trend.change_pct.2026-09",
+          "history.anomaly.complete_periods"
+        ],
+        "limitation_codes": [
+          "insufficient_history",
+          "missing_data",
+          "no_cause",
+          "nonrandom_sample",
+          "partial_month",
+          "population_not_sample",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "history.trend.complete_periods",
+        "metric": "available_complete_periods",
+        "scope": "complete monthly periods for seasonal trend test",
+        "value": 4.0,
+        "unit": "months",
+        "n": 4,
+        "source": "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": "Seasonal Mann-Kendall prerequisites",
+        "threshold": 36.0,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-07",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-07",
+        "value": 2.478541605691187,
+        "unit": "percent",
+        "n": 334834,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-08",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-08",
+        "value": -4.142708512442694,
+        "unit": "percent",
+        "n": 343133,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "trend.change_pct.2026-09",
+        "metric": "monthly_request_volume_change",
+        "scope": "population volume change during 2026-09",
+        "value": -1.6086076164880003,
+        "unit": "percent",
+        "n": 328918,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "history.anomaly.complete_periods",
+        "metric": "available_complete_periods",
+        "scope": "complete monthly periods for anomaly scan",
+        "value": 4.0,
+        "unit": "months",
+        "n": 4,
+        "source": "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+        "source_sha256": "9b9e9455e5cccf96a69939201985e181d27335e2bdc9ee2bc7a85ca225d50a99",
+        "data_kind": "real",
+        "method": "Monthly anomaly prerequisites",
+        "threshold": 7.0,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "L’historique complet est insuffisant pour le test temporel demandé.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/nyc311_clean.csv",
+      "outputs/bi_analyst/trend_analysis.csv#derived=complete_period_count",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-07&field=change_pct",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-08&field=change_pct",
+      "outputs/bi_analyst/trend_analysis.csv#month=2026-09&field=change_pct"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:21:03.146480+00:00",
+        "elapsed_ms": 0.06560003384947777,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "analyze_trend",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "skipped",
+        "started_at": "2026-10-28T10:21:03.148269+00:00",
+        "elapsed_ms": 3.885400015860796,
+        "evidence_ids": [
+          "history.trend.complete_periods",
+          "trend.change_pct.2026-07",
+          "trend.change_pct.2026-08",
+          "trend.change_pct.2026-09"
+        ],
+        "detail": "insufficient evidence"
+      },
+      {
+        "tool": "detect_anomalies",
+        "parameters": {
+          "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+        },
+        "status": "skipped",
+        "started_at": "2026-10-28T10:21:03.153142+00:00",
+        "elapsed_ms": 735.118200071156,
+        "evidence_ids": [
+          "history.anomaly.complete_periods"
+        ],
+        "detail": "insufficient_history"
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "model_preflight": 35.49439995549619,
+      "data_validation": 573.1268000090495,
+      "inference_attempt_1": 18024.64920002967,
+      "ollama_load_duration_attempt_1": 3.5403,
+      "ollama_prompt_eval_duration_attempt_1": 1655.023,
+      "ollama_eval_duration_attempt_1": 16291.758,
+      "validation_attempt_1": 3.560699988156557,
+      "total": 19529.804899939336
+    }
+  },
+  "agent_wall_time_ms": 19540.487400023267,
+  "execution": {
+    "scenario_id": "insufficient_history",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "initial_response": "{\n  \"finding\": \"insufficient_history\",\n  \"evidence_ids\": [\"history.trend.complete_periods\", \"trend.change_pct.2026-07\", \"trend.change_pct.2026-08\", \"trend.change_pct.2026-09\", \"history.anomaly.complete_periods\"],\n  \"insight\": \"L'historique complet est insuffisant pour conclure sur le signal temporel demandé.\",\n  \"recommendation\": \"Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.\",\n  \"limitation_codes\": [\"insufficient_history\", \"missing_data\", \"no_cause\", \"nonrandom_sample\", \"partial_month\", \"population_not_sample\", \"sample_only\"]\n}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 35.49439995549619,
+      "data_validation": 573.1268000090495,
+      "inference_attempt_1": 18024.64920002967,
+      "ollama_load_duration_attempt_1": 3.5403,
+      "ollama_prompt_eval_duration_attempt_1": 1655.023,
+      "ollama_eval_duration_attempt_1": 16291.758,
+      "validation_attempt_1": 3.560699988156557,
+      "total": 19529.804899939336
+    },
+    "evidence_used": [
+      "history.trend.complete_periods",
+      "trend.change_pct.2026-07",
+      "trend.change_pct.2026-08",
+      "trend.change_pct.2026-09",
+      "history.anomaly.complete_periods",
+      "quality.missing_resolution_days"
+    ],
+    "audit_dir": "audit\\8a0dab06a6e249fd9c60719131295c70"
+  },
+  "factual_metrics": {
+    "expected_metric_facts": 3,
+    "expected_metric_present": true,
+    "missing_metrics": [],
+    "source_and_denominator_complete": true,
+    "invalid_fact_ids": []
+  }
+}

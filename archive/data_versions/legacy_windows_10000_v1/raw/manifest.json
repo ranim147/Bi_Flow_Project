@@ -1,0 +1,53 @@
+{
+  "source": "NYC Open Data — 311 Service Requests from 2020 to Present",
+  "dataset_id": "erm2-nwe9",
+  "source_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+  "extracted_at_utc": "2026-10-17T20:09:21.151537+00:00",
+  "period_start_inclusive": "2026-06-01T00:00:00",
+  "period_end_exclusive": "2026-10-18T00:00:00",
+  "note": "Octobre est partiel : données limitées à ce qui était publié au moment de l'extraction.",
+  "sample_method": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+  "population_monthly_counts": {
+    "2026-06": 334834,
+    "2026-07": 343133,
+    "2026-08": 328918,
+    "2026-09": 323627,
+    "2026-10": 162811
+  },
+  "sample_monthly_counts": {
+    "2026-06": 2242,
+    "2026-07": 2298,
+    "2026-08": 2203,
+    "2026-09": 2167,
+    "2026-10": 1090
+  },
+  "population_rows": 1493323,
+  "sample_rows": 10000,
+  "api_requests": 20,
+  "source_raw_preserved": "data/raw/nyc311_sample.csv",
+  "partial_months": [
+    "2026-10"
+  ],
+  "data_kind": "real",
+  "data_version": "legacy_windows_10000_v1",
+  "source_timezone": "UTC",
+  "source_csv": "D:\\Analyst_Agent\\data\\raw\\nyc311_sample_jun_oct_2026.csv",
+  "source_csv_sha256": "c01f31d93de78a68668275d5c1025ba97f20d57e9436959ff2a695f24b83207f",
+  "source_metadata_sha256": "2fca59a3e25e32416704bd2a96d03255e37c04b6b829101f42b43e1fe48387c4",
+  "imported_at_utc": "2026-10-28T19:25:30.991309+00:00",
+  "parts": [
+    {
+      "path": "raw/local/part-00000.parquet",
+      "rows": 5000,
+      "sha256": "66e26c25d375474a3607fbb8106fe451a01d0ffd6f6655100df7dd46446a5d2f"
+    },
+    {
+      "path": "raw/local/part-00001.parquet",
+      "rows": 5000,
+      "sha256": "566ad3becdefa6c2b78368eb4c6f4c671748f2a7f4b4479b82361d5f4d6e1a51"
+    }
+  ],
+  "limitations": [
+    "Local immutable import of the earlier window-sampled extract; not a new remote extraction."
+  ]
+}

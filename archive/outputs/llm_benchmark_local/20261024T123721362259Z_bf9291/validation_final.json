@@ -1,0 +1,14 @@
+{
+  "notebook_valid": true,
+  "executed_code_cells": 8,
+  "cases": 27,
+  "real_cases": 24,
+  "synthetic_cases": 3,
+  "scheduled_pairs": 81,
+  "inferences_measured": 0,
+  "unit_tests_passed": 37,
+  "unit_tests_failed": 0,
+  "input_and_code_hashes_match": true,
+  "existing_notebook_sources_preserved": true,
+  "no_fabricated_model_scores": true
+}

@@ -1,0 +1,88 @@
+{
+  "unit_tests": {
+    "passed": true,
+    "tests": 156,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0,
+    "duration_seconds": 506.702389699989,
+    "failed_tests": [],
+    "error_tests": []
+  },
+  "live_campaign": "outputs/business_intent/granite_20261028/summary.json",
+  "offline_verification": {
+    "model_calls": 0,
+    "all_passed": true,
+    "historical_files_unchanged": true,
+    "results": [
+      {
+        "test": "A",
+        "execution_id": "2c4492324c464b609a16bec09cd811d4",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "test": "B",
+        "execution_id": "7f77fcf858cc46d1a07297f60537a0b2",
+        "passed": true,
+        "errors": []
+      },
+      {
+        "test": "7",
+        "execution_id": "0bfc38e2d76d4a61af3e1407de09b61a",
+        "passed": true,
+        "errors": []
+      }
+    ]
+  },
+  "historical_files_unchanged": true,
+  "contents": {
+    "README.md": "f5d64dee43f5bed0f1483346878971a2c50d21948f5f813221ed2f80b23ca517",
+    "BI_ANALYST_BUSINESS_FIXES.md": "8bc841790313a4aa843c00aff27374ee83e299e4eeeed1dd4b1ed07887e67984",
+    "bi_analyst/models.py": "c3f75774921d0d4c01f98d3494cf487d2c6036c07fa9eb58617cef55fc8a9f52",
+    "bi_analyst/routing.py": "98817bf9c6c18a448135cfb923134b15b3c750e95d543f8778342a49e0b4ffe9",
+    "bi_analyst/scoped_analytics.py": "438edf533be3a3de77b20ce40c41db1055789972a6b98020533e224b70423b20",
+    "bi_analyst/scoped.py": "ef40ef0e2719eba27cf2a010a03e1729c002b06ee90963013b45cd8ec2978a60",
+    "bi_analyst/business_evaluation.py": "1f02d2eec84fcb0fffc13e02c15cc0dafd7db229cfaef34828e011a120dfcb63",
+    "bi_analyst/tools.py": "45e5ea6a05009b0940b12e8c4f3792073b13ce65fd271ef15b503259809f9110",
+    "bi_analyst/orchestrator.py": "48c1b4f770e0cbdd8a0d2dbbbcd4ff19aa3eea36697d3bd1379f7b100b52378c",
+    "bi_analyst/decision.py": "dc39a41f05ad00692579cc27fbf3c5b4753b886702c993a9641baa62ca3b24e1",
+    "bi_analyst/validation.py": "918c5690ae724a91c64089ccf20135c73711bd01833ff27847f719c8f49b274a",
+    "bi_analyst/verification.py": "819ff7bcb3eb7e943d922837eb1d07fd8ef962b2f7ff3f8a1bd372a2201dd2d4",
+    "bi_analyst/consumers.py": "44ef7e511dbb13914cd70196a67575616e9006d0e55f4a97ec3470957d5bfc8d",
+    "bi_analyst/demo_service.py": "93ccc1df0ba727e46b365a586ebc128d7b88e94b40c34b03f43904d3d3d90232",
+    "demo/streamlit_app.py": "381a6337556d5b0a41999f3010d769ff93169c0aa374c53b6706add5c7055bc5",
+    "tests/test_business_intent.py": "4d03026086e746ebf92258f7c1d3d2abff8c6c7516fb7b529e02193ac4c308ee",
+    "tests/test_demo_service.py": "2c7ab6d90aff905cd65b5a3b5da39fa2f4365deaa4dd41580f76063cf8d05839",
+    "tests/test_demo_ui.py": "d3ceab0709f4c2219b4246c8208213d53b48be4576677a2a51375d54ee21e34d",
+    "tools/export_bi_analyst_schemas.py": "9c7a67c2ebe27af1c8e0eb46f136f4479c1d408fb3e0fca6ddbda35bedf9a60c",
+    "tools/run_agent_tests.py": "a6ba8f601871d6860425184dc39738af092463d9d07bccee993be6e899d8cbe2",
+    "tools/package_business_delivery.py": "44b20e44d7394d6c9b8e35bf453cb6834034fa3075cd4b0df198d11bbd51860e",
+    "schemas/BIAnalysisReport.v1.schema.json": "44342f83b0eb0875a9009b59fd66471f3e2e629e74d058f89b3622b9006d7c84",
+    "schemas/BIAnalysisReport.v2.schema.json": "1ec7bb1d6d29ea225d11b253653735e93e3838ab3b3ddbc486f5c31adc13898d",
+    "outputs/business_intent/granite_20261028/historical_hashes.json": "c59fe3fcfc2c14ee9a73fd9c0ec406baa72bc179a56fa3e449079528a4271b71",
+    "outputs/business_intent/granite_20261028/replay_verification.json": "0ba444e726ac169d7f77d0b2caab1519e0669e25ea182106c0374bd8a66bd345",
+    "outputs/business_intent/granite_20261028/results.json": "5223c0569904c8a07952219d3260b26011220c161fcfd40b98dad0e28fbd9d76",
+    "outputs/business_intent/granite_20261028/streamlit_verification.json": "98232d5e6a21232ca2d901bc0dd9debec04445e3fa3bc006767ac23102ee55f2",
+    "outputs/business_intent/granite_20261028/summary.json": "5b1327846787ffc9c06ba2d77601f6d69e1810017bc2c2f65218ac0829daf8b8",
+    "outputs/business_intent/granite_20261028/runs/0bfc38e2d76d4a61af3e1407de09b61a/analysis.json": "37f17fd6513091abf226de07385df067c4bd05cbe2845bb0ea45a8148804f617",
+    "outputs/business_intent/granite_20261028/runs/0bfc38e2d76d4a61af3e1407de09b61a/attempt_1.txt": "9a3d71ed6a8b8da85f89ddffc48be99aadcb58606267b0cb15ddd2c53e2ef7bb",
+    "outputs/business_intent/granite_20261028/runs/0bfc38e2d76d4a61af3e1407de09b61a/audit.jsonl": "3a6c620d6b5986cb3a71a2e7def814f4f0a0ebe36579b2f0955b12600bd8e45f",
+    "outputs/business_intent/granite_20261028/runs/0bfc38e2d76d4a61af3e1407de09b61a/report.json": "c8c63de097a30122fd6ee3452d42b2d653332f6c1edabe74ca1a758724cff4b7",
+    "outputs/business_intent/granite_20261028/runs/0bfc38e2d76d4a61af3e1407de09b61a/verification.json": "99cda769d034e39d80a748f83a56000c10b98c4b983c49823933015c8935bfc9",
+    "outputs/business_intent/granite_20261028/runs/2c4492324c464b609a16bec09cd811d4/analysis.json": "95e17740eaf4efa4b729e8963344444739c1dc0a14888c6cb39de2d47b6cb9a4",
+    "outputs/business_intent/granite_20261028/runs/2c4492324c464b609a16bec09cd811d4/attempt_1.txt": "6a398f8a24ecfe235d64a8f0992735a673f5b8a9c8b9d60feefb046374154364",
+    "outputs/business_intent/granite_20261028/runs/2c4492324c464b609a16bec09cd811d4/audit.jsonl": "00751d202ac9f1a2ec6789799234a12d2acff1093d84c15af8eef80c522f3d9d",
+    "outputs/business_intent/granite_20261028/runs/2c4492324c464b609a16bec09cd811d4/report.json": "df234e0db599862a31d7c4bf736835a35f04482a5311d2dc4acba205f0584250",
+    "outputs/business_intent/granite_20261028/runs/2c4492324c464b609a16bec09cd811d4/verification.json": "03366698d779cfe6ee0ce353e771949ec77706e8e3c93e2074c8662cba09db82",
+    "outputs/business_intent/granite_20261028/runs/7f77fcf858cc46d1a07297f60537a0b2/analysis.json": "5c4317fdb0197f88f0d83345991e928ccd2b6233b8412092c6e7d8904643adef",
+    "outputs/business_intent/granite_20261028/runs/7f77fcf858cc46d1a07297f60537a0b2/attempt_1.txt": "d6e5054afa6b300c058886aeb8f5f10ec08482c95d60fd7269406de0ba5e3264",
+    "outputs/business_intent/granite_20261028/runs/7f77fcf858cc46d1a07297f60537a0b2/audit.jsonl": "b884d5aab6c1aebac415ac522feb8119196658c40a7bf65dbcfdbf889e13b4ac",
+    "outputs/business_intent/granite_20261028/runs/7f77fcf858cc46d1a07297f60537a0b2/report.json": "899a7c55b1660491dc469fdf73ca20f2c108606731505dd663abc63f200e4051",
+    "outputs/business_intent/granite_20261028/runs/7f77fcf858cc46d1a07297f60537a0b2/verification.json": "4a6eb4482c1a1fff82445bd6c8712adae89b57c984cc83c67928efdf34a208e6",
+    "outputs/business_intent/test_suite/attempt_1_summary.json": "528e3fbe5f6231620625c160200fe5988339802e30f4add57c56c72202f646e6",
+    "outputs/business_intent/test_suite/attempt_1_unittest.log": "8cbf59b0274f45a9867570f59773d059817bacb856c50913880f9eec06690685",
+    "outputs/business_intent/test_suite/summary.json": "cb8ca4006af1ae7a418d4f9e71d72245bba8cda4a249d2dfe81bcc96df8635f1",
+    "outputs/business_intent/test_suite/unittest.log": "cce0228200d5fd55df42e267d577fa9b79e14cdbf2956d153d72df0219e4567a"
+  }
+}

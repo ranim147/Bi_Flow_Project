@@ -1,0 +1,26 @@
+[
+  {
+    "scenario_id": "insufficient_recommendation",
+    "data_kind": "synthetic",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "finding": "small_scope",
+    "automatic_checks": {
+      "passed": true,
+      "errors": [],
+      "truthful_findings": true,
+      "evidence_references_valid": true,
+      "scope_and_period_precision": true,
+      "hypotheses_explicitly_unverified": true,
+      "concrete_steps_present": true,
+      "both_verification_outcomes_present": true
+    },
+    "elapsed_ms": 28506.910299998708,
+    "execution_id": "9fe2f59bc8b8412faebda09532f454ea",
+    "accepted_without_fallback": true,
+    "problem_count": 1,
+    "attempts": 1,
+    "correction_count": 0,
+    "fallback_count": 0
+  }
+]

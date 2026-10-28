@@ -1,0 +1,7 @@
+{
+  "rows": 10000,
+  "valid_delay_n": 9285,
+  "missing_delay_n": 715,
+  "valid_creation_n": 10000,
+  "valid_closure_n": 9291
+}

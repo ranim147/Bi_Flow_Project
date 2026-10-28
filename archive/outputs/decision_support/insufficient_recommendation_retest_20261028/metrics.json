@@ -1,0 +1,49 @@
+{
+  "model": "granite3.3:2b",
+  "contract": "biflow-bi-analyst-v2",
+  "model_inference_enabled": true,
+  "automatic_evaluation_only": true,
+  "human_evaluation_included": false,
+  "scenarios": [
+    {
+      "scenario_id": "insufficient_recommendation",
+      "data_kind": "synthetic",
+      "status": "validated",
+      "decision": "insufficient_data",
+      "finding": "small_scope",
+      "automatic_checks": {
+        "passed": true,
+        "errors": [],
+        "truthful_findings": true,
+        "evidence_references_valid": true,
+        "scope_and_period_precision": true,
+        "hypotheses_explicitly_unverified": true,
+        "concrete_steps_present": true,
+        "both_verification_outcomes_present": true
+      },
+      "elapsed_ms": 28506.910299998708,
+      "execution_id": "9fe2f59bc8b8412faebda09532f454ea",
+      "accepted_without_fallback": true,
+      "problem_count": 1,
+      "attempts": 1,
+      "correction_count": 0,
+      "fallback_count": 0
+    }
+  ],
+  "real": {
+    "scenario_count": 0,
+    "verified_count": 0,
+    "granite_validated_without_fallback_rate": null,
+    "mean_elapsed_ms": null,
+    "corrections": 0,
+    "fallbacks": 0
+  },
+  "synthetic": {
+    "scenario_count": 1,
+    "verified_count": 1,
+    "granite_validated_without_fallback_rate": 1.0,
+    "mean_elapsed_ms": 28506.910299998708,
+    "corrections": 0,
+    "fallbacks": 0
+  }
+}

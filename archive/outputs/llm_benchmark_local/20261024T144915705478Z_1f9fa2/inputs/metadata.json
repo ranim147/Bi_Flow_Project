@@ -1,0 +1,31 @@
+{
+  "source": "NYC Open Data — 311 Service Requests from 2020 to Present",
+  "dataset_id": "erm2-nwe9",
+  "source_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+  "extracted_at_utc": "2026-10-17T20:09:21.151537+00:00",
+  "period_start_inclusive": "2026-06-01T00:00:00",
+  "period_end_exclusive": "2026-10-18T00:00:00",
+  "note": "Octobre est partiel : données limitées à ce qui était publié au moment de l'extraction.",
+  "sample_method": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+  "population_monthly_counts": {
+    "2026-06": 334834,
+    "2026-07": 343133,
+    "2026-08": 328918,
+    "2026-09": 323627,
+    "2026-10": 162811
+  },
+  "sample_monthly_counts": {
+    "2026-06": 2242,
+    "2026-07": 2298,
+    "2026-08": 2203,
+    "2026-09": 2167,
+    "2026-10": 1090
+  },
+  "population_rows": 1493323,
+  "sample_rows": 10000,
+  "api_requests": 20,
+  "source_raw_preserved": "data/raw/nyc311_sample.csv",
+  "partial_months": [
+    "2026-10"
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "problem": "within_segment_increase",
+  "priority_scope": "scope_0",
+  "evidence_ids": [
+    "ds.2e055cfa37e9.delta_mean_days",
+    "ds.2e055cfa37e9.within_days",
+    "ds.2e055cfa37e9.composition_days",
+    "ds.2e055cfa37e9.unmatched_days",
+    "ds.2e055cfa37e9.mean_delay_baseline",
+    "ds.2e055cfa37e9.mean_delay_current",
+    "ds.2e055cfa37e9.valid_closed_baseline_n",
+    "ds.2e055cfa37e9.valid_closed_current_n",
+    "ds.2e055cfa37e9.median_change_days",
+    "ds.b2b761c0bb16.segment_contribution_days",
+    "ds.b2b761c0bb16.segment_priority_score",
+    "ds.2e055cfa37e9.backlog_sample_change",
+    "ds.2e055cfa37e9.current_backlog_sample_n",
+    "ds.2e055cfa37e9.current_open_age_p90_days",
+    "ds.2e055cfa37e9.incoming_sample_change",
+    "ds.2e055cfa37e9.agency_category_overlap_min"
+  ],
+  "investigation_hypotheses": [
+    "segment_processing",
+    "composition",
+    "agency_mix"
+  ],
+  "investigation_steps": [
+    "check_segment_processing",
+    "check_composition",
+    "check_agency_mix"
+  ],
+  "recommended_actions": [
+    "investigate_segment_processing",
+    "investigate_composition",
+    "investigate_agency_mix"
+  ],
+  "expected_verification": [
+    "verify_segment_processing",
+    "verify_composition",
+    "verify_agency_mix"
+  ],
+  "limitations": [
+    "agency_case_mix",
+    "closed_work_selection",
+    "descriptive_not_causal",
+    "mean_not_median",
+    "missing_values",
+    "no_sla",
+    "no_staffing_or_budget_evidence",
+    "nonrandom_sample",
+    "partial_period_excluded",
+    "sample_backlog_only",
+    "small_segments",
+    "unmatched_groups"
+  ]
+}

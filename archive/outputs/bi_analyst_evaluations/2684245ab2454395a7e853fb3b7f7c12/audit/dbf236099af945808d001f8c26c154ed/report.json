@@ -1,0 +1,120 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "dbf236099af945808d001f8c26c154ed",
+  "generated_at": "2026-10-26T14:04:28.637489+00:00",
+  "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "insufficient_data",
+  "finding": "insufficient_history",
+  "insights": [
+    {
+      "insight_id": "dbf236099af945808d001f8c26c154ed-baseline",
+      "category": "summary",
+      "finding": "insufficient_history",
+      "insight": "Synthèse déterministe des faits calculés; aucune conclusion causale n’est établie.",
+      "recommendation": "Aucune recommandation opérationnelle forte n’est justifiée; compléter ou vérifier les données.",
+      "evidence_fact_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days"
+      ],
+      "limitation_codes": [
+        "insufficient_history",
+        "missing_data",
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "sample_only"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "quality.sample_rows",
+      "metric": "sample_rows",
+      "scope": "NYC 311 prepared extract",
+      "value": 10000.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "quality.valid_resolution_days",
+      "metric": "valid_resolution_days",
+      "scope": "closed requests with valid resolution duration",
+      "value": 9285.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "prepared extract",
+      "value": 715.0,
+      "unit": "requests",
+      "n": 10000,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real"
+    }
+  ],
+  "limitations": [
+    "L’historique est trop court pour détecter une anomalie mensuelle.",
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+  ],
+  "source_refs": [
+    "data/processed/nyc311_clean.csv"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:04:27.503533+00:00",
+      "elapsed_ms": 0.07219996768981218,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "detect_anomalies",
+      "parameters": {
+        "question": "Peut-on conclure à l'absence d'anomalie avec cet historique mensuel ?"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T14:04:27.505510+00:00",
+      "elapsed_ms": 1128.324999997858,
+      "evidence_ids": [],
+      "detail": "insufficient_history"
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "total": 2300.752100010868
+  }
+}

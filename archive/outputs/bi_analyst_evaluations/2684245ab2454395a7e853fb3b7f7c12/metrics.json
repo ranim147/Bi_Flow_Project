@@ -1,0 +1,26 @@
+{
+  "scenario_count": 6,
+  "baseline_validated_rate": 1.0,
+  "agent_fully_validated_rate": null,
+  "structured_facts_compared": 41,
+  "numeric_mismatches": 0,
+  "provenance_mismatches": 0,
+  "factual_evidence_accuracy": 1.0,
+  "unsupported_fact_id_errors": 0,
+  "human_insight_relevance": null,
+  "agent_mean_elapsed_ms": 1708.1526000013885,
+  "agent_refusal_or_controlled_failure_rate": 1.0,
+  "human_review_required": true,
+  "human_ratings_note": "No human rating is synthesized by this evaluation.",
+  "run_id": "2684245ab2454395a7e853fb3b7f7c12",
+  "data_kind": "real",
+  "model_inference_enabled": false,
+  "scenario_ids": [
+    "borough_resolution_delays",
+    "complaint_type_comparison",
+    "monthly_anomaly",
+    "steering_committee",
+    "missing_data",
+    "insufficient_history"
+  ]
+}

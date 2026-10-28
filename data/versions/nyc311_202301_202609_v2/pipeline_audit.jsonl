@@ -1,0 +1,20 @@
+{"timestamp": "2026-10-28T19:33:28.079143+00:00", "event": "stage_started", "stage": "profiling", "data_version": "nyc311_202301_202609_v2"}
+{"timestamp": "2026-10-28T19:37:10.515334+00:00", "event": "stage_started", "stage": "profiling", "data_version": "nyc311_202301_202609_v2"}
+{"timestamp": "2026-10-28T19:37:25.932888+00:00", "event": "profiling_progress", "rows": 52334}
+{"timestamp": "2026-10-28T19:37:46.668082+00:00", "event": "profiling_progress", "rows": 102207}
+{"timestamp": "2026-10-28T19:38:07.351113+00:00", "event": "profiling_progress", "rows": 150145}
+{"timestamp": "2026-10-28T19:38:29.189406+00:00", "event": "profiling_progress", "rows": 204353}
+{"timestamp": "2026-10-28T19:38:51.130719+00:00", "event": "profiling_progress", "rows": 250774}
+{"timestamp": "2026-10-28T19:38:58.129591+00:00", "event": "stage_failed", "stage": "profiling", "error_type": "PermissionError", "error": "[WinError 32] Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus: 'D:\\\\Analyst_Agent\\\\data\\\\versions\\\\nyc311_202301_202609_v2\\\\profiling\\\\profile_work.sqlite'"}
+{"timestamp": "2026-10-28T19:40:04.571568+00:00", "event": "stage_started", "stage": "profiling", "data_version": "nyc311_202301_202609_v2"}
+{"timestamp": "2026-10-28T19:40:04.741767+00:00", "event": "stage_completed", "stage": "profiling", "elapsed_seconds": 0.17000659997574985, "resident_bytes": 92524544, "process_peak_working_set_bytes": 92524544}
+{"timestamp": "2026-10-28T19:40:04.745080+00:00", "event": "stage_started", "stage": "etl", "data_version": "nyc311_202301_202609_v2"}
+{"timestamp": "2026-10-28T19:40:17.848073+00:00", "event": "etl_progress", "rows": 52334}
+{"timestamp": "2026-10-28T19:40:34.120411+00:00", "event": "etl_progress", "rows": 102207}
+{"timestamp": "2026-10-28T19:40:51.265868+00:00", "event": "etl_progress", "rows": 150145}
+{"timestamp": "2026-10-28T19:41:10.155217+00:00", "event": "etl_progress", "rows": 204353}
+{"timestamp": "2026-10-28T19:41:24.902920+00:00", "event": "etl_progress", "rows": 250774}
+{"timestamp": "2026-10-28T19:41:30.150259+00:00", "event": "stage_completed", "stage": "etl", "elapsed_seconds": 85.40797339996789, "resident_bytes": 153444352, "process_peak_working_set_bytes": 166985728}
+{"timestamp": "2026-10-28T19:41:30.153302+00:00", "event": "stage_started", "stage": "kpi", "data_version": "nyc311_202301_202609_v2"}
+{"timestamp": "2026-10-28T19:42:01.600699+00:00", "event": "stage_completed", "stage": "kpi", "elapsed_seconds": 31.449336599907838, "resident_bytes": 285605888, "process_peak_working_set_bytes": 378048512}
+{"timestamp": "2026-10-28T19:58:50.570747+00:00", "event": "derived_coverage_revision", "old_manifest_sha256": "dcca13b2ca001364d0b405f5cb27aef13f9263224524686a923f697be37814a9", "new_manifest_sha256": "84f4d0fc9ef0e95e4629d2fdeb2bc4ceb327fab0d28fb3d0d8162d889fa3de7a", "archived_files": {"manifest.json": "dcca13b2ca001364d0b405f5cb27aef13f9263224524686a923f697be37814a9", "coverage.parquet": "bfd70353b3345b530f4916ec073e888fff1ee26023e72c31ff5fc92f2e1e4126", "verification.json": "ba5010cecbd7147e1fe33f408227177c24523882bcaa427d93c91b6052ad3a85"}, "raw_and_cleaned_unchanged": true}

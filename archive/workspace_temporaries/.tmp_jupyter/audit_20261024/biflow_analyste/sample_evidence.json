@@ -1,0 +1,271 @@
+{
+  "check_duplicates": {
+    "tool": "check_duplicates",
+    "params": {
+      "key_col": "Unique Key",
+      "date_col": "Created Date",
+      "group_col": "Complaint Type",
+      "min_dups": 5
+    },
+    "result": {
+      "n_rows": 41225,
+      "n_duplicate_rows": 60,
+      "duplicate_share": 0.00145543,
+      "is_clean": false,
+      "flagged": [
+        {
+          "date": "2025-03-15",
+          "group": "Illegal Parking",
+          "raw_rows": 82,
+          "dup_rows": 60,
+          "dedup_rows": 22,
+          "dup_share": 0.731707,
+          "Borough": "Queens"
+        }
+      ]
+    }
+  },
+  "detect_anomalies": {
+    "tool": "detect_anomalies",
+    "params": {
+      "kpi": "volume_demandes",
+      "borough": "Brooklyn",
+      "complaint_type": "Noise - Residential",
+      "agency": null,
+      "threshold": 4.0,
+      "direction": "up"
+    },
+    "result": {
+      "n_days": 365,
+      "median_daily": 11.0,
+      "scale": 4.4478,
+      "n_events": 1,
+      "events": [
+        {
+          "start": "2025-07-04",
+          "end": "2025-07-06",
+          "n_days": 3,
+          "peak_date": "2025-07-06",
+          "observed_peak": 54,
+          "expected": 11.0,
+          "peak_z": 9.6677,
+          "ratio_vs_expected": 4.90909,
+          "observed_total": 157,
+          "expected_total": 33.0
+        }
+      ]
+    }
+  },
+  "detect_trend": {
+    "tool": "detect_trend",
+    "params": {
+      "kpi": "delai_median_h",
+      "borough": "Bronx",
+      "complaint_type": "Street Condition",
+      "agency": null,
+      "freq": "M",
+      "alpha": 0.05
+    },
+    "result": {
+      "enough_data": true,
+      "n_periods": 12,
+      "direction": "up",
+      "significant": true,
+      "slope_per_period": 4.02649,
+      "pct_change": 81.9255,
+      "tau": 0.757576,
+      "p_value": 0.000240024,
+      "series": {
+        "2025-01": 68.2789,
+        "2025-02": 71.7486,
+        "2025-03": 73.1519,
+        "2025-04": 65.6753,
+        "2025-05": 71.4112,
+        "2025-06": 71.9864,
+        "2025-07": 79.2654,
+        "2025-08": 81.6019,
+        "2025-09": 102.019,
+        "2025-10": 101.651,
+        "2025-11": 123.263,
+        "2025-12": 105.641
+      }
+    }
+  },
+  "compare_dimensions": {
+    "tool": "compare_dimensions",
+    "params": {
+      "kpi": "delai_median_h",
+      "dimension": "borough",
+      "borough": null,
+      "complaint_type": "Street Condition",
+      "agency": null,
+      "min_rows": 30
+    },
+    "result": {
+      "reference_value": 63.075,
+      "overall_test": {
+        "name": "Kruskal-Wallis",
+        "p_value": 9.06401e-77
+      },
+      "alpha_adjusted": 0.01,
+      "ranking": [
+        {
+          "group": "Bronx",
+          "n_rows": 1991,
+          "value": 80.4883,
+          "gap_pct_vs_all": 27.6073,
+          "p_value_vs_rest": 7.787e-79,
+          "significant": true
+        },
+        {
+          "group": "Manhattan",
+          "n_rows": 2445,
+          "value": 61.8625,
+          "gap_pct_vs_all": -1.92231,
+          "p_value_vs_rest": 0.0182544,
+          "significant": false
+        },
+        {
+          "group": "Brooklyn",
+          "n_rows": 3675,
+          "value": 60.7389,
+          "gap_pct_vs_all": -3.7037,
+          "p_value_vs_rest": 8.82171e-06,
+          "significant": true
+        },
+        {
+          "group": "Staten Island",
+          "n_rows": 993,
+          "value": 59.5925,
+          "gap_pct_vs_all": -5.5212,
+          "p_value_vs_rest": 0.000203988,
+          "significant": true
+        },
+        {
+          "group": "Queens",
+          "n_rows": 3147,
+          "value": 58.5028,
+          "gap_pct_vs_all": -7.24887,
+          "p_value_vs_rest": 1.82621e-11,
+          "significant": true
+        }
+      ],
+      "ignored_groups": []
+    }
+  },
+  "target_gap": {
+    "tool": "target_gap",
+    "params": {
+      "dimension": "borough",
+      "period": null,
+      "borough": null,
+      "complaint_type": "Street Condition",
+      "agency": null,
+      "include_open": false,
+      "as_of": "2025-12-31T23:46:09"
+    },
+    "result": {
+      "overall_late_rate": 0.410554,
+      "rows": [
+        {
+          "borough": "Bronx",
+          "n_rows": 1883,
+          "late_rate": 0.571429,
+          "median_gap_h": 8.48833
+        },
+        {
+          "borough": "Manhattan",
+          "n_rows": 2323,
+          "late_rate": 0.399483,
+          "median_gap_h": -10.1375
+        },
+        {
+          "borough": "Brooklyn",
+          "n_rows": 3488,
+          "late_rate": 0.379014,
+          "median_gap_h": -11.2611
+        },
+        {
+          "borough": "Staten Island",
+          "n_rows": 933,
+          "late_rate": 0.371919,
+          "median_gap_h": -12.4075
+        },
+        {
+          "borough": "Queens",
+          "n_rows": 2989,
+          "late_rate": 0.366678,
+          "median_gap_h": -13.4972
+        }
+      ]
+    }
+  },
+  "rank_priority": {
+    "tool": "rank_priority",
+    "params": {
+      "dimensions": [
+        "borough",
+        "complaint_type"
+      ],
+      "top_n": 3
+    },
+    "result": {
+      "weights": {
+        "volume": 0.3,
+        "late_rate": 0.5,
+        "trend": 0.2
+      },
+      "n_groups": 20,
+      "ranking": [
+        {
+          "rank": 1,
+          "borough": "Bronx",
+          "complaint_type": "Street Condition",
+          "score": 0.818004,
+          "raw": {
+            "volume": 1991,
+            "late_rate": 0.571429,
+            "trend_pct": 81.9255
+          },
+          "normalized": {
+            "volume": 0.393345,
+            "late_rate": 1.0,
+            "trend": 1.0
+          }
+        },
+        {
+          "rank": 2,
+          "borough": "Brooklyn",
+          "complaint_type": "Street Condition",
+          "score": 0.480735,
+          "raw": {
+            "volume": 3675,
+            "late_rate": 0.379014,
+            "trend_pct": 0.0
+          },
+          "normalized": {
+            "volume": 0.827702,
+            "late_rate": 0.46485,
+            "trend": 0.0
+          }
+        },
+        {
+          "rank": 3,
+          "borough": "Queens",
+          "complaint_type": "Street Condition",
+          "score": 0.422724,
+          "raw": {
+            "volume": 3147,
+            "late_rate": 0.366678,
+            "trend_pct": 0.0
+          },
+          "normalized": {
+            "volume": 0.691514,
+            "late_rate": 0.43054,
+            "trend": 0.0
+          }
+        }
+      ]
+    }
+  }
+}

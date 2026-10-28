@@ -1,0 +1,54 @@
+{
+  "passed": true,
+  "errors": [],
+  "oracle": {
+    "required_data": {
+      "staffing": {
+        "description": "Effectifs disponibles par agence et période",
+        "available": false,
+        "missing_fields": [
+          "available_staff",
+          "period"
+        ]
+      },
+      "workload": {
+        "description": "Charge de travail et nombre de dossiers assignés",
+        "available": false,
+        "missing_fields": [
+          "assigned_cases",
+          "workload"
+        ]
+      },
+      "capacity": {
+        "description": "Capacité de traitement",
+        "available": false,
+        "missing_fields": [
+          "processing_capacity"
+        ]
+      },
+      "times": {
+        "description": "Temps de traitement et d'attente",
+        "available": false,
+        "missing_fields": [
+          "processing_time",
+          "waiting_time"
+        ]
+      },
+      "complexity": {
+        "description": "Complexité des dossiers",
+        "available": false,
+        "missing_fields": [
+          "case_complexity"
+        ]
+      },
+      "assignments": {
+        "description": "Historique des affectations",
+        "available": false,
+        "missing_fields": [
+          "assignment_history"
+        ]
+      }
+    },
+    "numerical_staffing_estimate": null
+  }
+}

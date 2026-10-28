@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-28T19:22:51.423501+00:00",
+  "global_kpis_recomputed": true,
+  "group_kpis_recomputed": true,
+  "dimensional_denominators_reconciled": true,
+  "official_and_sample_volumes_separate": true,
+  "raw_rows": 8000,
+  "cleaned_rows": 8000,
+  "valid_delay_n": 3609,
+  "complete_periods": 4,
+  "in_memory_dataframe_bytes": 1160851
+}

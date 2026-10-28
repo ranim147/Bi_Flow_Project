@@ -1,0 +1,52 @@
+{
+  "volume_demandes": {
+    "label": "Volume de demandes",
+    "formula": "COUNT(unique_key)",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_date"
+    ]
+  },
+  "delai_moyen_h": {
+    "label": "Délai moyen de traitement (heures)",
+    "formula": "MEAN(delay_hours) sur les demandes clôturées",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_date"
+    ]
+  },
+  "delai_median_h": {
+    "label": "Délai médian de traitement (heures)",
+    "formula": "MEDIAN(delay_hours) sur les demandes clôturées",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_date"
+    ]
+  },
+  "taux_resolution": {
+    "label": "Taux de résolution",
+    "formula": "COUNT(status = 'Closed') / COUNT(unique_key)",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_date"
+    ]
+  },
+  "taux_depassement_cible": {
+    "label": "Taux de dépassement du délai cible",
+    "formula": "COUNT(delay_hours > target_hours) / COUNT(status = 'Closed')",
+    "dimensions": [
+      "borough",
+      "complaint_type",
+      "agency",
+      "created_date"
+    ]
+  }
+}

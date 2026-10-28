@@ -1,0 +1,225 @@
+{
+  "result": {
+    "scenario_id": "insufficient_history",
+    "data_kind": "synthetic",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "finding": "insufficient_history",
+    "automatic_checks": {
+      "passed": true,
+      "errors": [],
+      "truthful_findings": true,
+      "evidence_references_valid": true,
+      "scope_and_period_precision": true,
+      "hypotheses_explicitly_unverified": true,
+      "concrete_steps_present": true,
+      "both_verification_outcomes_present": true
+    },
+    "elapsed_ms": 21646.06390008703,
+    "execution_id": "ecc719be6b6a49e39ddf943fd3bb5088",
+    "accepted_without_fallback": true,
+    "problem_count": 1,
+    "attempts": 1,
+    "correction_count": 0,
+    "fallback_count": 0
+  },
+  "report": {
+    "contract_version": "biflow-bi-analyst-v2",
+    "execution_id": "ecc719be6b6a49e39ddf943fd3bb5088",
+    "generated_at": "2026-10-28T11:04:32.902340+00:00",
+    "question": "Investiguer la hausse des délais à Brooklyn et proposer un plan de vérification.",
+    "model": "granite3.3:2b",
+    "data_kind": "synthetic",
+    "status": "validated",
+    "decision": "insufficient_data",
+    "finding": "insufficient_history",
+    "insights": [
+      {
+        "insight_id": "ecc719be6b6a49e39ddf943fd3bb5088-history",
+        "category": "comparison",
+        "finding": "insufficient_history",
+        "insight": "L'historique ne permet pas de comparer des périodes complètes contiguës. Périmètre : {}; périodes : None",
+        "recommendation": "Demander un historique complet et documenté du périmètre; suspendre les recommandations de changement opérationnel. Cible : {}",
+        "evidence_fact_ids": [
+          "ds.63280b208f",
+          "ds.6d71d3d2c7"
+        ],
+        "limitation_codes": [
+          "descriptive_not_causal",
+          "nonrandom_sample",
+          "closed_work_selection",
+          "sample_backlog_only",
+          "no_staffing_or_budget_evidence",
+          "no_sla",
+          "mean_not_median",
+          "partial_period_excluded",
+          "synthetic_only",
+          "insufficient_history"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "ds.63280b208f",
+        "metric": "invalid_closed_duration_n",
+        "scope": "{\"scope\": \"quality\"}",
+        "value": 0.0,
+        "unit": "requests",
+        "n": 120,
+        "source": "synthetic://decision-fixture/requests.csv#quality/invalid_closed_duration_n",
+        "source_sha256": "158fdd92db6b263316656a264f67904b22e72d2c08e7f635940c0dba5166b312",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "ds.6d71d3d2c7",
+        "metric": "sample_requests_n",
+        "scope": "{\"scope\": \"quality\"}",
+        "value": 120.0,
+        "unit": "requests",
+        "n": 120,
+        "source": "synthetic://decision-fixture/requests.csv#quality/sample_requests_n",
+        "source_sha256": "158fdd92db6b263316656a264f67904b22e72d2c08e7f635940c0dba5166b312",
+        "data_kind": "synthetic",
+        "method": "Descriptive completed-work monthly comparison",
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Aucun SLA métier n'a été fourni.",
+      "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+      "Deux périodes complètes contiguës ne sont pas disponibles pour cette comparaison.",
+      "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+      "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+      "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+      "Les contributions arithmétiques ne démontrent aucune cause.",
+      "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+      "Les périodes partielles sont exclues de la comparaison.",
+      "SCÉNARIO SYNTHÉTIQUE DE TEST; ces résultats ne décrivent pas NYC 311 réel."
+    ],
+    "source_refs": [
+      "synthetic://decision-fixture/requests.csv#quality/invalid_closed_duration_n",
+      "synthetic://decision-fixture/requests.csv#quality/sample_requests_n"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "investigate_degradation",
+        "parameters": {
+          "question": "Investiguer la hausse des délais à Brooklyn et proposer un plan de vérification."
+        },
+        "status": "skipped",
+        "started_at": "2026-10-28T11:04:11.436200+00:00",
+        "elapsed_ms": 17.181199975311756,
+        "evidence_ids": [
+          "ds.63280b208f",
+          "ds.6d71d3d2c7"
+        ],
+        "detail": "EXPLICIT SYNTHETIC FIXTURE"
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "model_preflight": 63.36679996456951,
+      "data_validation": 0.000800006091594696,
+      "analytics": 17.181199975311756,
+      "problem_0_inference_1": 21153.4418000374,
+      "problem_0_load_duration_1": 4.6308,
+      "problem_0_prompt_eval_duration_1": 3506.867,
+      "problem_0_eval_duration_1": 17572.83,
+      "problem_0_validation_1": 2.604000037536025,
+      "total": 21634.332500048913
+    },
+    "decision_support": [
+      {
+        "problem_id": "history",
+        "problem": "L'historique ne permet pas de comparer des périodes complètes contiguës.",
+        "priority_scope": {
+          "scope_id": "history",
+          "filters": {},
+          "baseline_period": null,
+          "current_period": null,
+          "period_basis": "closure_month"
+        },
+        "evidence_ids": [
+          "ds.63280b208f",
+          "ds.6d71d3d2c7"
+        ],
+        "investigation_hypotheses": [
+          {
+            "hypothesis_id": "collect_history",
+            "statement": "Les données disponibles ne permettent pas encore de vérifier une dégradation temporelle.",
+            "status": "unverified",
+            "evidence_ids": [
+              "ds.63280b208f",
+              "ds.6d71d3d2c7"
+            ],
+            "additional_data": [
+              "Clôtures et demandes ouvertes couvrant des périodes complètes contiguës",
+              "Date d'extraction, bornes temporelles et règles d'échantillonnage"
+            ]
+          }
+        ],
+        "investigation_steps": [
+          {
+            "hypothesis_id": "collect_history",
+            "dataset": "additional_data",
+            "filters": {},
+            "fields": [
+              "unique_key",
+              "created_date",
+              "closed_date",
+              "borough",
+              "complaint_type",
+              "agency"
+            ],
+            "comparison": "Collecter des périodes complètes contiguës et vérifier les effectifs avant de comparer les mêmes segments et le stock ouvert."
+          }
+        ],
+        "recommended_actions": [
+          {
+            "hypothesis_id": "collect_history",
+            "priority": 1,
+            "action": "Demander un historique complet et documenté du périmètre; suspendre les recommandations de changement opérationnel.",
+            "priority_reason": "Les périodes disponibles ne permettent pas la comparaison demandée. Sans périodes complètes comparables, aucune hiérarchie opérationnelle ne peut être justifiée.",
+            "decision_if_supported": "Ouvrir un plan d'investigation des segments contributeurs sur les nouvelles preuves.",
+            "decision_if_refuted": "Ne pas conclure à une dégradation et maintenir la collecte ou le suivi descriptif."
+          }
+        ],
+        "expected_verification": [
+          {
+            "hypothesis_id": "collect_history",
+            "supports": "Les nouvelles périodes documentées permettent de mesurer une hausse dans des groupes suffisamment observés.",
+            "refutes": "La comparaison complète ne montre pas de hausse ou demeure insuffisamment couverte."
+          }
+        ],
+        "limitations": [
+          "Les contributions arithmétiques ne démontrent aucune cause.",
+          "L'extrait par fenêtres est non aléatoire; les résultats ne représentent pas la population.",
+          "Les délais portent sur les dossiers clôturés pendant chaque période, pas sur des cohortes entrantes comparables.",
+          "Le backlog reconstitué concerne uniquement les dossiers échantillonnés; les réouvertures et changements de statut ne sont pas observés.",
+          "Aucune preuve d'effectifs, de capacité ou de budget ne justifie une réallocation.",
+          "Aucun SLA métier n'a été fourni.",
+          "La décomposition concerne la moyenne, pas la médiane; leurs variations peuvent être de signes différents.",
+          "Les périodes partielles sont exclues de la comparaison.",
+          "SCÉNARIO SYNTHÉTIQUE DE TEST; ces résultats ne décrivent pas NYC 311 réel.",
+          "Deux périodes complètes contiguës ne sont pas disponibles pour cette comparaison."
+        ],
+        "origin": "granite_validated"
+      }
+    ]
+  }
+}

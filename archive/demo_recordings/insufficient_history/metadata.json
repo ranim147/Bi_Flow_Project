@@ -1,0 +1,13 @@
+{
+  "execution_id": "5f07953a64c9441cae0a20f1a64b2858",
+  "source_mode": "live",
+  "injected": false,
+  "origin": "Exécution locale authentique de granite3.3:2b via Ollama, antérieurement enregistrée",
+  "source_report": "outputs\\bi_analyst_finalization\\granite_v2_release_20261028\\insufficient_history.json",
+  "source_report_sha256": "227c589c4a336ff2dca1103940479e4357fd7caec8dfa3cfddc7f6adb506cb78",
+  "recorded_at": "2026-10-28T10:27:24.390227+00:00",
+  "model": "granite3.3:2b",
+  "original_elapsed_ms": 21487.362399930134,
+  "copied_at_utc": "2026-10-28T11:20:32.772814+00:00",
+  "excluded_from_model_metrics": false
+}

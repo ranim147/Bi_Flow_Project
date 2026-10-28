@@ -1,0 +1,7 @@
+{
+  "finding": "descriptive",
+  "evidence_ids": ["delay.borough.STATEN ISLAND", "delay.borough.BROOKLYN", "delay.borough.MANHATTAN", "delay.borough.BRONX", "delay.borough.QUEENS"],
+  "insight": "La comparaison des groupes est descriptive; la comparabilité des dossiers reste à vérifier.",
+  "recommendation": "Examiner les groupes concernés et vérifier la comparabilité des dossiers avant toute action.",
+  "limitation_codes": ["closed_only", "missing_data", "no_cause", "no_sla", "nonrandom_sample", "partial_month", "sample_only", "small_sample"]
+}

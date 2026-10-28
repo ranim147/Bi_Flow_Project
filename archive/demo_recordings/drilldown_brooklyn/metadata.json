@@ -1,0 +1,13 @@
+{
+  "execution_id": "f27707502a354f6f8b4185973cbfc8e7",
+  "source_mode": "live",
+  "injected": false,
+  "origin": "Exécution locale authentique de granite3.3:2b via Ollama, antérieurement enregistrée",
+  "source_report": "outputs\\decision_support\\granite_investigation_20261028\\real_brooklyn.json",
+  "source_report_sha256": "59028ebc92b1f9bf76e2297f5d19ece297be93d0907c0a18251a727bc1dbe6a3",
+  "recorded_at": "2026-10-28T10:58:56.801564+00:00",
+  "model": "granite3.3:2b",
+  "original_elapsed_ms": 44470.06099997088,
+  "copied_at_utc": "2026-10-28T11:20:31.716935+00:00",
+  "excluded_from_model_metrics": false
+}

@@ -1,0 +1,33 @@
+{
+  "problem": "composition_shift",
+  "priority_scope": "scope_0",
+  "evidence_ids": ["ds.232d0cde6a", "ds.9b95f4b741", "ds.3a042fe288", "ds.be58076ee1", "ds.7368ce177d", "ds.c3ad989769"],
+  "investigation_hypotheses": [
+    "composition",
+    "agency_mix"
+  ],
+  "investigation_steps": [
+    "check_composition",
+    "check_agency_mix"
+  ],
+  "recommended_actions": [
+    "investigate_composition",
+    "investigate_agency_mix"
+  ],
+  "expected_verification": [
+    "verify_composition",
+    "verify_agency_mix"
+  ],
+  "limitations": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8",
+    "L9"
+  ]
+}

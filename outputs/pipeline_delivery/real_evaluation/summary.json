@@ -1,0 +1,241 @@
+{
+  "model": "granite3.3:2b",
+  "model_calls_real": true,
+  "dataset_version": "nyc311_202301_202609_v2",
+  "prepared_manifest_sha256": "dcca13b2ca001364d0b405f5cb27aef13f9263224524686a923f697be37814a9",
+  "all_passed": true,
+  "results": [
+    {
+      "scenario": "A",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+      "execution_id": "adddd0d6624e4ba2925dae1789a01d28",
+      "status": "validated",
+      "decision": "answer",
+      "finding": "descriptive",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 242.8785297999857,
+      "report_timing_ms": {
+        "model_preflight": 201.0820999275893,
+        "data_validation": 4016.1608000053093,
+        "analytics": 20181.950999889523,
+        "inference_attempt_1": 100779.16899998672,
+        "total": 125381.7626000382
+      },
+      "tools": [
+        "filter_scope",
+        "compare_periods",
+        "decompose_mean_change"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\"finding\": \"descriptive\", \"evidence_ids\": [\"plan.fb095f41a2e4865e\", \"plan.924cf5a3730bd4e9\", \"plan.d34ff80fabfef45a\", \"plan.ec01bb5b11a587be\", \"plan.e96742e37566d6d5\", \"plan.363b3db2d4607b94\"], \"insight\": \"La comparaison temporelle porte sur le KPI et les mois verrouillés par Python; les écarts restent descriptifs.\", \"recommendation\": \"Examiner les segments éligibles et leurs étapes de traitement sur les périodes retenues.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"period_selection\", \"sample_only\", \"sample_window\", \"small_sample\"]}"
+      ],
+      "audit_dir": "runs/adddd0d6624e4ba2925dae1789a01d28"
+    },
+    {
+      "scenario": "B",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+      "execution_id": "d7d56684c106487ea308d1c180691815",
+      "status": "validated",
+      "decision": "answer",
+      "finding": "descriptive",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 175.27571909991093,
+      "report_timing_ms": {
+        "model_preflight": 84.94520001113415,
+        "data_validation": 3381.301900022663,
+        "analytics": 18959.38869996462,
+        "inference_attempt_1": 72160.4745000368,
+        "total": 94945.82650007214
+      },
+      "tools": [
+        "filter_scope",
+        "rank_groups",
+        "lock_scope",
+        "compare_scoped_groups",
+        "prioritize_segments"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\"finding\": \"descriptive\", \"evidence_ids\": [\"plan.4dca9856f74d9eca\", \"plan.bcaa15d13931b226\", \"plan.d050fdf43813adf3\", \"plan.ee51cb78eb706b33\", \"plan.b2e97b4cc1d330df\", \"plan.482f6691ff15ebca\"], \"insight\": \"Le classement et les comparaisons portent sur le KPI demandé et le périmètre verrouillé par Python.\", \"recommendation\": \"Examiner les étapes de traitement et la composition des dossiers dans les segments éligibles du périmètre retenu.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"sample_only\", \"small_sample\"]}"
+      ],
+      "audit_dir": "runs/d7d56684c106487ea308d1c180691815"
+    },
+    {
+      "scenario": "7",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+      "execution_id": "9bf20515b53e4ae3a90006c79f9c9264",
+      "status": "validated",
+      "decision": "insufficient_data",
+      "finding": "insufficient_data",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 92.32763249997515,
+      "report_timing_ms": {
+        "model_preflight": 129.19149990193546,
+        "data_validation": 3723.3287000562996,
+        "analytics": 0.3562999190762639,
+        "inference_attempt_1": 65722.32889989391,
+        "total": 69778.65700004622
+      },
+      "tools": [
+        "check_capabilities"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\"finding\": \"insufficient_data\", \"evidence_ids\": [\"plan.fe73a82782522c99\", \"plan.6917af1083636b42\", \"plan.d4308ad3c5baf863\", \"plan.25a911ca78ad0ce0\", \"plan.ae57a29b4899f9a1\", \"plan.afe5b3b8260980d8\"], \"insight\": \"Les informations nécessaires à la demande centrale sont insuffisantes; une investigation documentée est nécessaire.\", \"recommendation\": \"Recueillir les données nécessaires et tester les hypothèses avant toute conclusion ou estimation.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"missing_capabilities\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"sample_only\", \"small_sample\"]}"
+      ],
+      "audit_dir": "runs/9bf20515b53e4ae3a90006c79f9c9264"
+    },
+    {
+      "scenario": "trend",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Analyse la tendance mensuelle des volumes de demandes.",
+      "execution_id": "7e086c55679c4024b04af0cbc91b0686",
+      "status": "validated",
+      "decision": "answer",
+      "finding": "higher",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 84.24701980000827,
+      "report_timing_ms": {
+        "model_preflight": 96.87510004732758,
+        "data_validation": 4362.855099956505,
+        "inference_attempt_1": 68045.01350002829,
+        "ollama_load_duration_attempt_1": 17.4062,
+        "ollama_prompt_eval_duration_attempt_1": 2866.7,
+        "ollama_eval_duration_attempt_1": 64766.822,
+        "validation_attempt_1": 4.3110999977216125,
+        "total": 72720.3761000419
+      },
+      "tools": [
+        "data_quality",
+        "analyze_trend"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\n  \"finding\": \"higher\",\n  \"evidence_ids\": [\"trend.monthly_volume_mann_kendall\", \"history.trend.complete_periods\", \"trend.change_pct.2023-02\", \"trend.change_pct.2023-03\", \"trend.change_pct.2023-04\", \"trend.change_pct.2023-05\", \"trend.change_pct.2023-06\", \"trend.change_pct.2023-07\", \"trend.change_pct.2023-08\", \"trend.change_pct.2023-09\", \"trend.change_pct.2023-10\", \"trend.change_pct.2023-11\"],\n  \"insight\": \"Le test indique une tendance statistique à la hausse, sans explication causale.\",\n  \"recommendation\": \"Vérifier le signal temporel dans les sources métier avant de décider d'une action.\",\n  \"limitation_codes\": [\"no_cause\", \"nonrandom_sample\", \"population_not_sample\", \"sample_only\", \"serial_autocorrelation_not_adjusted\"]\n}"
+      ],
+      "audit_dir": "runs/7e086c55679c4024b04af0cbc91b0686"
+    },
+    {
+      "scenario": "anomalies",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?",
+      "execution_id": "d283a7e20a5b46358566f36d09e0203f",
+      "status": "validated",
+      "decision": "answer",
+      "finding": "higher",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 143.3190823000623,
+      "report_timing_ms": {
+        "model_preflight": 89.00769997853786,
+        "data_validation": 4850.561199942604,
+        "inference_attempt_1": 69177.11449996568,
+        "ollama_load_duration_attempt_1": 14.5424,
+        "ollama_prompt_eval_duration_attempt_1": 2901.932,
+        "ollama_eval_duration_attempt_1": 65960.413,
+        "validation_attempt_1": 2.8634999180212617,
+        "total": 92902.54110004753
+      },
+      "tools": [
+        "data_quality",
+        "analyze_trend",
+        "detect_anomalies"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\"finding\": \"higher\", \"evidence_ids\": [\"trend.monthly_volume_mann_kendall\", \"history.trend.complete_periods\", \"trend.change_pct.2023-02\", \"trend.change_pct.2023-03\", \"trend.change_pct.2023-04\", \"trend.change_pct.2023-05\", \"trend.change_pct.2023-06\", \"trend.change_pct.2023-07\", \"trend.change_pct.2023-08\", \"trend.change_pct.2023-09\", \"trend.change_pct.2023-10\", \"trend.change_pct.2023-11\"], \"insight\": \"Le test indique une tendance statistique à la hausse, sans explication causale.\", \"recommendation\": \"Vérifier le signal temporel dans les sources métier avant de décider d'une action.\", \"limitation_codes\": [\"no_cause\", \"nonrandom_sample\", \"population_not_sample\", \"sample_only\", \"serial_autocorrelation_not_adjusted\"]}"
+      ],
+      "audit_dir": "runs/d283a7e20a5b46358566f36d09e0203f"
+    },
+    {
+      "scenario": "rates",
+      "dataset_version": "nyc311_202301_202609_v2",
+      "question": "Compare les taux de clôture par agence, sans analyse temporelle.",
+      "execution_id": "7d3ccf6b86ca4c719577b4acdc93e949",
+      "status": "validated",
+      "decision": "answer",
+      "finding": "descriptive",
+      "passed": true,
+      "errors": [],
+      "wall_seconds": 116.18908609997015,
+      "report_timing_ms": {
+        "model_preflight": 82.52659998834133,
+        "data_validation": 3554.0776000125334,
+        "analytics": 17476.87939996831,
+        "inference_attempt_1": 57948.77310004085,
+        "total": 79609.01530005503
+      },
+      "tools": [
+        "filter_scope",
+        "compare_scoped_groups"
+      ],
+      "fallback": false,
+      "corrections": 0,
+      "raw_granite_responses": [
+        "{\"finding\": \"descriptive\", \"evidence_ids\": [\"plan.b9ed360dd998ee7f\", \"plan.879227c7519b04a7\", \"plan.82b80d4db5128f58\", \"plan.9fd6d15b5dff255d\", \"plan.351a9b45ec9aa442\", \"plan.7bfba593ea83df1e\"], \"insight\": \"Le classement et les comparaisons portent sur le KPI demandé et le périmètre verrouillé par Python.\", \"recommendation\": \"Examiner les étapes de traitement et la composition des dossiers dans les segments éligibles du périmètre retenu.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"cohort_followup\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"sample_only\", \"small_sample\"]}"
+      ],
+      "audit_dir": "runs/7d3ccf6b86ca4c719577b4acdc93e949"
+    }
+  ],
+  "streamlit": {
+    "method": "Streamlit AppTest replay of real saved live reports; no additional model calls",
+    "passed": true,
+    "scenarios": [
+      {
+        "test": "A",
+        "execution_id": "adddd0d6624e4ba2925dae1789a01d28",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      },
+      {
+        "test": "B",
+        "execution_id": "d7d56684c106487ea308d1c180691815",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      },
+      {
+        "test": "7",
+        "execution_id": "9bf20515b53e4ae3a90006c79f9c9264",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      },
+      {
+        "test": "trend",
+        "execution_id": "7e086c55679c4024b04af0cbc91b0686",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      },
+      {
+        "test": "anomalies",
+        "execution_id": "d283a7e20a5b46358566f36d09e0203f",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      },
+      {
+        "test": "rates",
+        "execution_id": "7d3ccf6b86ca4c719577b4acdc93e949",
+        "passed": true,
+        "previous_result_cleared": true,
+        "exceptions": []
+      }
+    ]
+  }
+}

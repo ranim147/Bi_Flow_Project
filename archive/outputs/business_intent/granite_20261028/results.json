@@ -1,0 +1,705 @@
+[
+  {
+    "test": "A",
+    "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+    "execution_id": "2c4492324c464b609a16bec09cd811d4",
+    "analytical_plan": {
+      "intent": "investigation",
+      "metric": "mean_resolution_days",
+      "dimensions": [],
+      "filters": {},
+      "time_scope": [
+        "2026-08",
+        "2026-09"
+      ],
+      "temporal_forbidden": false,
+      "operation_sequence": [
+        "filter_scope",
+        "compare_periods",
+        "decompose_mean_change"
+      ],
+      "unsupported_request": [],
+      "executor": "scoped",
+      "locked_filters": {}
+    },
+    "tools": [
+      "filter_scope",
+      "compare_periods",
+      "decompose_mean_change"
+    ],
+    "evidence_ids": [
+      "plan.1e8a36f11dda4af9",
+      "plan.fb095f41a2e4865e",
+      "plan.363b3db2d4607b94",
+      "plan.25632150233b8263",
+      "plan.924cf5a3730bd4e9",
+      "plan.9c6aa71d6ea09427",
+      "plan.bcc90db4bbf3c8f4",
+      "plan.ffd54bd6d4700b13",
+      "plan.e96742e37566d6d5",
+      "plan.4775c51a6f1883c1",
+      "plan.10527f37b259fd9e"
+    ],
+    "granite_responses": [
+      "{\"finding\": \"descriptive\", \"evidence_ids\": [\"plan.fb095f41a2e4865e\", \"plan.924cf5a3730bd4e9\", \"plan.e96742e37566d6d5\", \"plan.4775c51a6f1883c1\", \"plan.10527f37b259fd9e\", \"plan.363b3db2d4607b94\"], \"insight\": \"La comparaison temporelle porte sur le KPI et les mois verrouillés par Python; les écarts restent descriptifs.\", \"recommendation\": \"Examiner les segments éligibles et leurs étapes de traitement sur les périodes retenues.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"period_selection\", \"sample_only\", \"sample_window\", \"small_sample\"]}"
+    ],
+    "corrections": 0,
+    "fallback": false,
+    "status": "validated",
+    "decision": "answer",
+    "duration_seconds": 104.67825029999949,
+    "verification": {
+      "passed": true,
+      "errors": [],
+      "oracle": {
+        "mean_baseline": 4.555008010123956,
+        "mean_current": 6.175842729893935,
+        "n_baseline": 1981,
+        "n_current": 2158,
+        "delta": 1.620834719769979,
+        "total_contributions": 1.62083471976998,
+        "top_segments": [
+          {
+            "borough": "BROOKLYN",
+            "complaint_type": "UNSANITARY CONDITION",
+            "agency": "HPD",
+            "n_baseline": 37,
+            "closed_baseline": 37,
+            "missing_baseline": 0,
+            "mean_baseline": 10.833528841341343,
+            "median_baseline": 8.80644675925926,
+            "n_current": 37,
+            "closed_current": 37,
+            "missing_current": 0,
+            "mean_current": 24.28837337337337,
+            "median_current": 21.036979166666665,
+            "eligible": true,
+            "delta_mean_days": 13.454844532032029,
+            "deterioration_observed": true,
+            "weight_baseline": 0.01867743563856638,
+            "weight_current": 0.017145505097312327,
+            "within_days": 0.24099604914072248,
+            "composition_days": -0.026902157334829913,
+            "unmatched_days": 0.0,
+            "contribution_days": 0.21409389180589256,
+            "evidence_coverage": 1.0,
+            "rankable": true,
+            "priority_score": 1.3022823030426043
+          },
+          {
+            "borough": "QUEENS",
+            "complaint_type": "Noise - Residential",
+            "agency": "NYPD",
+            "n_baseline": 30,
+            "closed_baseline": 30,
+            "missing_baseline": 0,
+            "mean_baseline": 0.07980825617283949,
+            "median_baseline": 0.07841435185185185,
+            "n_current": 54,
+            "closed_current": 54,
+            "missing_current": 0,
+            "mean_current": 0.08701753257887518,
+            "median_current": 0.04717592592592593,
+            "eligible": true,
+            "delta_mean_days": 0.007209276406035692,
+            "deterioration_observed": true,
+            "weight_baseline": 0.01514386673397274,
+            "weight_current": 0.025023169601482854,
+            "within_days": 0.0001447876336767892,
+            "composition_days": 0.0008240612465947256,
+            "unmatched_days": 0.0,
+            "contribution_days": 0.0009688488802715148,
+            "evidence_coverage": 1.0,
+            "rankable": true,
+            "priority_score": 0.005306603865383306
+          },
+          {
+            "borough": "BRONX",
+            "complaint_type": "Noise - Residential",
+            "agency": "NYPD",
+            "n_baseline": 48,
+            "closed_baseline": 48,
+            "missing_baseline": 0,
+            "mean_baseline": 0.09906876929012347,
+            "median_baseline": 0.03622685185185185,
+            "n_current": 47,
+            "closed_current": 47,
+            "missing_current": 0,
+            "mean_current": 0.14168439716312056,
+            "median_current": 0.06291666666666666,
+            "eligible": true,
+            "delta_mean_days": 0.042615627872997094,
+            "deterioration_observed": true,
+            "weight_baseline": 0.024230186774356385,
+            "weight_current": 0.021779425393883226,
+            "within_days": 0.000980364255371309,
+            "composition_days": -0.00029501428128511826,
+            "unmatched_days": 0.0,
+            "contribution_days": 0.0006853499740861908,
+            "evidence_coverage": 1.0,
+            "rankable": true,
+            "priority_score": 0.0046985227027287295
+          }
+        ]
+      }
+    },
+    "audit_dir": "runs\\2c4492324c464b609a16bec09cd811d4"
+  },
+  {
+    "test": "B",
+    "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+    "execution_id": "7f77fcf858cc46d1a07297f60537a0b2",
+    "analytical_plan": {
+      "intent": "ranking",
+      "metric": "median_resolution_days",
+      "dimensions": [
+        "borough",
+        "complaint_type",
+        "agency"
+      ],
+      "filters": {},
+      "time_scope": [],
+      "temporal_forbidden": true,
+      "operation_sequence": [
+        "filter_scope",
+        "rank_groups",
+        "lock_scope",
+        "compare_scoped_groups",
+        "prioritize_segments"
+      ],
+      "unsupported_request": [],
+      "executor": "scoped",
+      "locked_filters": {
+        "borough": "STATEN ISLAND"
+      }
+    },
+    "tools": [
+      "filter_scope",
+      "rank_groups",
+      "lock_scope",
+      "compare_scoped_groups",
+      "prioritize_segments"
+    ],
+    "evidence_ids": [
+      "plan.1e8a36f11dda4af9",
+      "plan.4dca9856f74d9eca",
+      "plan.9e2ef20707b629bf",
+      "plan.7104fe0a2d77b1d9",
+      "plan.8e1ef57c5ac61a28",
+      "plan.8e5a720326276809",
+      "plan.e64e6b1929863aaf",
+      "plan.61240e44358671f9",
+      "plan.8f23d40c7b8e7335",
+      "plan.d452f9d9c8efcd0d",
+      "plan.eb621edc8407f189",
+      "plan.91560cb818dc558a",
+      "plan.41f53a5374758555",
+      "plan.9e7f34fdb96246dc",
+      "plan.4976cefd75c89d3d",
+      "plan.386e9b92144c05e6",
+      "plan.f49fb78bb1557f9b"
+    ],
+    "granite_responses": [
+      "{\"finding\": \"descriptive\", \"evidence_ids\": [\"plan.4dca9856f74d9eca\", \"plan.e64e6b1929863aaf\", \"plan.d452f9d9c8efcd0d\", \"plan.4976cefd75c89d3d\", \"plan.386e9b92144c05e6\", \"plan.f49fb78bb1557f9b\"], \"insight\": \"Le classement et les comparaisons portent sur le KPI demandé et le périmètre verrouillé par Python.\", \"recommendation\": \"Examiner les étapes de traitement et la composition des dossiers dans les segments éligibles du périmètre retenu.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"sample_only\", \"small_sample\"]}"
+    ],
+    "corrections": 0,
+    "fallback": false,
+    "status": "validated",
+    "decision": "answer",
+    "duration_seconds": 59.23008749994915,
+    "verification": {
+      "passed": true,
+      "errors": [],
+      "oracle": {
+        "winner": "STATEN ISLAND",
+        "ranking": [
+          {
+            "borough": "STATEN ISLAND",
+            "median": 0.3322685185185185,
+            "count": 386
+          },
+          {
+            "borough": "BROOKLYN",
+            "median": 0.22848379629629628,
+            "count": 3080
+          },
+          {
+            "borough": "MANHATTAN",
+            "median": 0.17066550925925927,
+            "count": 1712
+          },
+          {
+            "borough": "QUEENS",
+            "median": 0.16594328703703703,
+            "count": 2274
+          },
+          {
+            "borough": "BRONX",
+            "median": 0.14743634259259258,
+            "count": 1828
+          }
+        ],
+        "drilldowns": {
+          "complaint_type": [
+            {
+              "complaint_type": "APPLIANCE",
+              "median": 2.249652777777778,
+              "count": 1
+            },
+            {
+              "complaint_type": "Abandoned Vehicle",
+              "median": 0.07342592592592592,
+              "count": 18
+            },
+            {
+              "complaint_type": "Air Quality",
+              "median": 0.6053356481481481,
+              "count": 2
+            },
+            {
+              "complaint_type": "Animal in a Park",
+              "median": 0.031886574074074074,
+              "count": 1
+            },
+            {
+              "complaint_type": "Animal-Abuse",
+              "median": 0.017291666666666667,
+              "count": 5
+            },
+            {
+              "complaint_type": "Blocked Driveway",
+              "median": 0.09024305555555556,
+              "count": 13
+            },
+            {
+              "complaint_type": "Building/Use",
+              "median": 18.783923611111113,
+              "count": 4
+            },
+            {
+              "complaint_type": "Consumer Complaint",
+              "median": 28.673535879629632,
+              "count": 2
+            },
+            {
+              "complaint_type": "DOOR/WINDOW",
+              "median": 8.720891203703705,
+              "count": 3
+            },
+            {
+              "complaint_type": "Damaged Tree",
+              "median": 2.0521238425925925,
+              "count": 44
+            },
+            {
+              "complaint_type": "Dead Animal",
+              "median": 1.3955092592592593,
+              "count": 4
+            },
+            {
+              "complaint_type": "Dead/Dying Tree",
+              "median": 25.796574074074073,
+              "count": 1
+            },
+            {
+              "complaint_type": "Derelict Vehicles",
+              "median": 1.0965277777777778,
+              "count": 1
+            },
+            {
+              "complaint_type": "Dirty Condition",
+              "median": 1.2353761574074074,
+              "count": 8
+            },
+            {
+              "complaint_type": "Drug Activity",
+              "median": 0.3209722222222222,
+              "count": 1
+            },
+            {
+              "complaint_type": "ELECTRIC",
+              "median": 17.76292824074074,
+              "count": 3
+            },
+            {
+              "complaint_type": "Electrical",
+              "median": 11.618449074074075,
+              "count": 2
+            },
+            {
+              "complaint_type": "Elevator",
+              "median": 79.52179398148148,
+              "count": 1
+            },
+            {
+              "complaint_type": "FLOORING/STAIRS",
+              "median": 17.131909722222222,
+              "count": 1
+            },
+            {
+              "complaint_type": "GENERAL",
+              "median": 2.249652777777778,
+              "count": 3
+            },
+            {
+              "complaint_type": "General Construction/Plumbing",
+              "median": 1.4490277777777778,
+              "count": 7
+            },
+            {
+              "complaint_type": "Graffiti",
+              "median": 1.091400462962963,
+              "count": 1
+            },
+            {
+              "complaint_type": "HEAT/HOT WATER",
+              "median": 2.249652777777778,
+              "count": 1
+            },
+            {
+              "complaint_type": "Hazardous Materials",
+              "median": 3.033333333333333,
+              "count": 1
+            },
+            {
+              "complaint_type": "Homeless Person Assistance",
+              "median": 0.10093171296296297,
+              "count": 2
+            },
+            {
+              "complaint_type": "Illegal Dumping",
+              "median": 2.228113425925926,
+              "count": 5
+            },
+            {
+              "complaint_type": "Illegal Fireworks",
+              "median": 0.037175925925925925,
+              "count": 12
+            },
+            {
+              "complaint_type": "Illegal Parking",
+              "median": 0.09880208333333333,
+              "count": 46
+            },
+            {
+              "complaint_type": "Illegal Tree Damage",
+              "median": 1.1477777777777778,
+              "count": 1
+            },
+            {
+              "complaint_type": "Indoor Air Quality",
+              "median": 3.557326388888889,
+              "count": 2
+            },
+            {
+              "complaint_type": "Lead",
+              "median": 0.8583391203703704,
+              "count": 4
+            },
+            {
+              "complaint_type": "Maintenance or Facility",
+              "median": 6.401174768518518,
+              "count": 2
+            },
+            {
+              "complaint_type": "Missed Collection",
+              "median": 2.0528819444444446,
+              "count": 17
+            },
+            {
+              "complaint_type": "Noise",
+              "median": 5.279930555555556,
+              "count": 4
+            },
+            {
+              "complaint_type": "Noise - Commercial",
+              "median": 0.032164351851851854,
+              "count": 6
+            },
+            {
+              "complaint_type": "Noise - Park",
+              "median": 0.02613425925925926,
+              "count": 1
+            },
+            {
+              "complaint_type": "Noise - Residential",
+              "median": 0.037905092592592594,
+              "count": 47
+            },
+            {
+              "complaint_type": "Noise - Street/Sidewalk",
+              "median": 0.03355324074074074,
+              "count": 19
+            },
+            {
+              "complaint_type": "Noise - Vehicle",
+              "median": 0.17869212962962963,
+              "count": 2
+            },
+            {
+              "complaint_type": "Non-Emergency Police Matter",
+              "median": 0.0856712962962963,
+              "count": 2
+            },
+            {
+              "complaint_type": "Obstruction",
+              "median": 3.690173611111111,
+              "count": 1
+            },
+            {
+              "complaint_type": "Overgrown Tree/Branches",
+              "median": 2.5658449074074072,
+              "count": 6
+            },
+            {
+              "complaint_type": "PAINT/PLASTER",
+              "median": 10.023998842592594,
+              "count": 4
+            },
+            {
+              "complaint_type": "Panhandling",
+              "median": 0.25858796296296294,
+              "count": 1
+            },
+            {
+              "complaint_type": "Residential Disposal Complaint",
+              "median": 0.9628703703703704,
+              "count": 3
+            },
+            {
+              "complaint_type": "Rodent",
+              "median": 10.899942129629629,
+              "count": 1
+            },
+            {
+              "complaint_type": "Sewer",
+              "median": 0.06527777777777777,
+              "count": 8
+            },
+            {
+              "complaint_type": "Sewer Maintenance",
+              "median": 0.14466435185185184,
+              "count": 6
+            },
+            {
+              "complaint_type": "Sidewalk Condition",
+              "median": 20.71050925925926,
+              "count": 6
+            },
+            {
+              "complaint_type": "Standing Water",
+              "median": 39.04037037037037,
+              "count": 1
+            },
+            {
+              "complaint_type": "Street Condition",
+              "median": 2.11494212962963,
+              "count": 11
+            },
+            {
+              "complaint_type": "Street Light Condition",
+              "median": 9.412152777777777,
+              "count": 14
+            },
+            {
+              "complaint_type": "Street Sign - Damaged",
+              "median": 3.9409953703703704,
+              "count": 1
+            },
+            {
+              "complaint_type": "Street Sign - Dangling",
+              "median": 4.028182870370371,
+              "count": 1
+            },
+            {
+              "complaint_type": "Traffic",
+              "median": 0.20200231481481484,
+              "count": 2
+            },
+            {
+              "complaint_type": "Traffic Signal Condition",
+              "median": 0.7795138888888888,
+              "count": 4
+            },
+            {
+              "complaint_type": "UNSANITARY CONDITION",
+              "median": 5.9875,
+              "count": 3
+            },
+            {
+              "complaint_type": "Water Conservation",
+              "median": 0.03796296296296296,
+              "count": 2
+            },
+            {
+              "complaint_type": "Water Maintenance",
+              "median": 0.24761574074074075,
+              "count": 5
+            },
+            {
+              "complaint_type": "Water System",
+              "median": 0.7291666666666666,
+              "count": 5
+            },
+            {
+              "complaint_type": "Wood Pile Remaining",
+              "median": 0.09600694444444445,
+              "count": 1
+            }
+          ],
+          "agency": [
+            {
+              "agency": "DCWP",
+              "median": 28.673535879629632,
+              "count": 2
+            },
+            {
+              "agency": "DEP",
+              "median": 0.5159722222222223,
+              "count": 37
+            },
+            {
+              "agency": "DHS",
+              "median": 0.10093171296296297,
+              "count": 2
+            },
+            {
+              "agency": "DOB",
+              "median": 8.472199074074075,
+              "count": 14
+            },
+            {
+              "agency": "DOHMH",
+              "median": 7.477008101851851,
+              "count": 4
+            },
+            {
+              "agency": "DOT",
+              "median": 6.5234143518518515,
+              "count": 37
+            },
+            {
+              "agency": "DPR",
+              "median": 2.0521238425925925,
+              "count": 56
+            },
+            {
+              "agency": "DSNY",
+              "median": 1.863258101851852,
+              "count": 40
+            },
+            {
+              "agency": "HPD",
+              "median": 5.9875,
+              "count": 19
+            },
+            {
+              "agency": "NYPD",
+              "median": 0.050555555555555555,
+              "count": 175
+            }
+          ]
+        }
+      }
+    },
+    "audit_dir": "runs\\7f77fcf858cc46d1a07297f60537a0b2"
+  },
+  {
+    "test": "7",
+    "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+    "execution_id": "0bfc38e2d76d4a61af3e1407de09b61a",
+    "analytical_plan": {
+      "intent": "justified_refusal",
+      "metric": "median_resolution_days",
+      "dimensions": [
+        "borough"
+      ],
+      "filters": {},
+      "time_scope": [],
+      "temporal_forbidden": false,
+      "operation_sequence": [
+        "check_capabilities"
+      ],
+      "unsupported_request": [
+        "unproven_causality",
+        "staffing_without_capacity_data"
+      ],
+      "executor": "scoped",
+      "locked_filters": {}
+    },
+    "tools": [
+      "check_capabilities"
+    ],
+    "evidence_ids": [
+      "plan.fe73a82782522c99",
+      "plan.ae57a29b4899f9a1",
+      "plan.afe5b3b8260980d8",
+      "plan.6917af1083636b42",
+      "plan.d4308ad3c5baf863",
+      "plan.25a911ca78ad0ce0"
+    ],
+    "granite_responses": [
+      "{\"finding\": \"insufficient_data\", \"evidence_ids\": [\"plan.fe73a82782522c99\", \"plan.6917af1083636b42\", \"plan.d4308ad3c5baf863\", \"plan.25a911ca78ad0ce0\", \"plan.ae57a29b4899f9a1\", \"plan.afe5b3b8260980d8\"], \"insight\": \"Les informations nécessaires à la demande centrale sont insuffisantes; une investigation documentée est nécessaire.\", \"recommendation\": \"Recueillir les données nécessaires et tester les hypothèses avant toute conclusion ou estimation.\", \"limitation_codes\": [\"case_mix\", \"closed_only\", \"missing_capabilities\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"sample_only\", \"small_sample\"]}"
+    ],
+    "corrections": 0,
+    "fallback": false,
+    "status": "validated",
+    "decision": "insufficient_data",
+    "duration_seconds": 67.93105140002444,
+    "verification": {
+      "passed": true,
+      "errors": [],
+      "oracle": {
+        "required_data": {
+          "staffing": {
+            "description": "Effectifs disponibles par agence et période",
+            "available": false,
+            "missing_fields": [
+              "available_staff",
+              "period"
+            ]
+          },
+          "workload": {
+            "description": "Charge de travail et nombre de dossiers assignés",
+            "available": false,
+            "missing_fields": [
+              "assigned_cases",
+              "workload"
+            ]
+          },
+          "capacity": {
+            "description": "Capacité de traitement",
+            "available": false,
+            "missing_fields": [
+              "processing_capacity"
+            ]
+          },
+          "times": {
+            "description": "Temps de traitement et d'attente",
+            "available": false,
+            "missing_fields": [
+              "processing_time",
+              "waiting_time"
+            ]
+          },
+          "complexity": {
+            "description": "Complexité des dossiers",
+            "available": false,
+            "missing_fields": [
+              "case_complexity"
+            ]
+          },
+          "assignments": {
+            "description": "Historique des affectations",
+            "available": false,
+            "missing_fields": [
+              "assignment_history"
+            ]
+          }
+        },
+        "numerical_staffing_estimate": null
+      }
+    },
+    "audit_dir": "runs\\0bfc38e2d76d4a61af3e1407de09b61a"
+  }
+]

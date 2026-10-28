@@ -1,0 +1,7 @@
+{
+  "finding": "insufficient_history",
+  "evidence_ids": ["history.trend.complete_periods", "trend.change_pct.2026-07", "trend.change_pct.2026-08", "trend.change_pct.2026-09", "history.anomaly.complete_periods"],
+  "insight": "L'historique complet est insuffisant pour conclure sur le signal temporel demandé.",
+  "recommendation": "Collecter davantage de périodes complètes avant de conclure sur une tendance ou une anomalie.",
+  "limitation_codes": ["insufficient_history", "missing_data", "no_cause", "nonrandom_sample", "partial_month", "population_not_sample", "sample_only"]
+}

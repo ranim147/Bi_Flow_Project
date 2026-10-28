@@ -1,0 +1,152 @@
+{
+  "plan": {
+    "intent": "ranking",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": false,
+    "operation_sequence": [
+      "filter_scope",
+      "rank_groups",
+      "compare_scoped_groups"
+    ],
+    "unsupported_request": [],
+    "executor": "scoped",
+    "locked_filters": {}
+  },
+  "sections": [
+    {
+      "key": "ranking",
+      "text": "Classement par médiane décroissante des groupes éligibles (n ≥ 30) : {\"borough\": \"STATEN ISLAND\"} : médiane=0.655677, n=9874; {\"borough\": \"BRONX\"} : médiane=0.505411, n=55022; {\"borough\": \"MANHATTAN\"} : médiane=0.421806, n=52097; {\"borough\": \"BROOKLYN\"} : médiane=0.260729, n=79395; {\"borough\": \"QUEENS\"} : médiane=0.192662, n=62712. Maximum éligible : {\"borough\": \"STATEN ISLAND\"}.",
+      "evidence_ids": [
+        "plan.4dca9856f74d9eca",
+        "plan.8e5a720326276809",
+        "plan.7104fe0a2d77b1d9",
+        "plan.9e2ef20707b629bf",
+        "plan.8e1ef57c5ac61a28"
+      ],
+      "recommendation": "Contrôler la composition et les étapes de traitement des dossiers dans ce périmètre avant toute décision.",
+      "category": "comparison"
+    }
+  ],
+  "tables": {
+    "ranking": [
+      {
+        "filters": {
+          "borough": "STATEN ISLAND"
+        },
+        "value": 0.6556770833333334,
+        "n": 9874,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "BRONX"
+        },
+        "value": 0.5054108796296296,
+        "n": 55022,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "MANHATTAN"
+        },
+        "value": 0.42180555555555554,
+        "n": 52097,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "BROOKLYN"
+        },
+        "value": 0.2607291666666667,
+        "n": 79395,
+        "eligible": true
+      },
+      {
+        "filters": {
+          "borough": "QUEENS"
+        },
+        "value": 0.19266203703703705,
+        "n": 62712,
+        "eligible": true
+      }
+    ]
+  },
+  "limitations": [
+    "case_mix",
+    "closed_only",
+    "no_cause",
+    "no_sla",
+    "nonrandom_sample",
+    "sample_only",
+    "small_sample"
+  ],
+  "decision": "answer",
+  "finding": "descriptive",
+  "complete_periods": [
+    "2023-01",
+    "2023-02",
+    "2023-03",
+    "2023-04",
+    "2023-05",
+    "2023-06",
+    "2023-07",
+    "2023-08",
+    "2023-09",
+    "2023-10",
+    "2023-11",
+    "2023-12",
+    "2024-01",
+    "2024-02",
+    "2024-03",
+    "2024-04",
+    "2024-05",
+    "2024-06",
+    "2024-07",
+    "2024-08",
+    "2024-09",
+    "2024-10",
+    "2024-11",
+    "2024-12",
+    "2025-01",
+    "2025-02",
+    "2025-03",
+    "2025-04",
+    "2025-05",
+    "2025-06",
+    "2025-07",
+    "2025-08",
+    "2025-09",
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09"
+  ],
+  "winner": {
+    "filters": {
+      "borough": "STATEN ISLAND"
+    },
+    "value": 0.6556770833333334,
+    "n": 9874,
+    "eligible": true
+  },
+  "primary_evidence_ids": [
+    "plan.4dca9856f74d9eca",
+    "plan.7104fe0a2d77b1d9",
+    "plan.9e2ef20707b629bf",
+    "plan.8e1ef57c5ac61a28",
+    "plan.8e5a720326276809"
+  ]
+}

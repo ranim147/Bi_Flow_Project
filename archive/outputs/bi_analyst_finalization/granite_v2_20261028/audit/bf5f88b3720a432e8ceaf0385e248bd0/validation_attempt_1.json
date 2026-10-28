@@ -1,0 +1,9 @@
+{
+  "status": "validated",
+  "json_valid": true,
+  "schema_valid": true,
+  "evidence_valid": true,
+  "numerical_claims_valid": true,
+  "causal_claims_clear": true,
+  "errors": []
+}

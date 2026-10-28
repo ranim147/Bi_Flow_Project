@@ -1,0 +1,3 @@
+model,data_kind,scheduled,responses_received,complete_responses,availability_rate,objective_pass_rate_all_scheduled,mean_latency_seconds,p95_latency_seconds,quality_denominator,json_valid_mean,schema_valid_mean,objective_pass_mean,numeric_accuracy_mean,source_accuracy_mean,sample_size_accuracy_mean,scope_accuracy_mean,required_fact_recall_mean,decision_ok_mean,finding_ok_mean,limits_ok_mean,unsupported_claims,numeric_mismatches,prose_numeric_flags,causal_flags
+granite3.3:2b,real,24,0,0,0.0,,,,0,,,,,,,,,,,,,,,
+granite3.3:2b,synthetic,3,0,0,0.0,,,,0,,,,,,,,,,,,,,,

@@ -1,0 +1,6 @@
+{"timestamp": "2026-10-28T19:25:31.131149+00:00", "event": "stage_started", "stage": "profiling", "data_version": "legacy_windows_10000_v1"}
+{"timestamp": "2026-10-28T19:25:37.896816+00:00", "event": "stage_completed", "stage": "profiling", "elapsed_seconds": 6.765927399974316}
+{"timestamp": "2026-10-28T19:25:37.898933+00:00", "event": "stage_started", "stage": "etl", "data_version": "legacy_windows_10000_v1"}
+{"timestamp": "2026-10-28T19:25:42.321079+00:00", "event": "stage_completed", "stage": "etl", "elapsed_seconds": 4.421489299973473}
+{"timestamp": "2026-10-28T19:25:42.323764+00:00", "event": "stage_started", "stage": "kpi", "data_version": "legacy_windows_10000_v1"}
+{"timestamp": "2026-10-28T19:25:45.788946+00:00", "event": "stage_completed", "stage": "kpi", "elapsed_seconds": 3.46559120004531}

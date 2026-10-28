@@ -1,0 +1,410 @@
+{
+  "scenario": {
+    "id": "steering_committee",
+    "question": "Prépare des insights prudents pour le comité de pilotage.",
+    "expected_metrics": [
+      "request_volume",
+      "median_resolution_days"
+    ]
+  },
+  "baseline": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "f758211e218445c6b95e38f0b423d6c1",
+    "generated_at": "2026-10-28T10:15:04.331442+00:00",
+    "question": "Prépare des insights prudents pour le comité de pilotage.",
+    "model": null,
+    "data_kind": "real",
+    "status": "fallback",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "f758211e218445c6b95e38f0b423d6c1-baseline",
+        "category": "summary",
+        "finding": "descriptive",
+        "insight": "Synthèse des KPI de l’extrait préparé : volume : 10 000 demandes (effectif de référence 10000); durée moyenne : 4,107 jours calendaires (effectif de référence 9285); durée médiane : 0,182 jours calendaires (effectif de référence 9285); taux de clôture : 92,91 % (effectif de référence 10000). Ces indicateurs décrivent l’extrait et ne démontrent aucune cause.",
+        "recommendation": "Présenter ces KPI avec leur population, leur dénominateur et leurs limites d'échantillonnage.",
+        "evidence_fact_ids": [
+          "kpi.request_volume",
+          "kpi.mean_resolution_days",
+          "kpi.median_resolution_days",
+          "kpi.closure_rate"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "kpi.request_volume",
+        "metric": "request_volume",
+        "scope": "prepared NYC 311 sample",
+        "value": 10000.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.mean_resolution_days",
+        "metric": "mean_resolution_days",
+        "scope": "prepared NYC 311 sample",
+        "value": 4.106830597189813,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.median_resolution_days",
+        "metric": "median_resolution_days",
+        "scope": "prepared NYC 311 sample",
+        "value": 0.1819560185185185,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.closure_rate",
+        "metric": "closure_rate",
+        "scope": "prepared NYC 311 sample",
+        "value": 92.91,
+        "unit": "%",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+      "data/processed/nyc311_clean.csv"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Prépare des insights prudents pour le comité de pilotage."
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:15:04.325957+00:00",
+        "elapsed_ms": 0.2266999799758196,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "summarize_kpis",
+        "parameters": {
+          "question": "Prépare des insights prudents pour le comité de pilotage."
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:15:04.328779+00:00",
+        "elapsed_ms": 0.9910999797284603,
+        "evidence_ids": [
+          "kpi.request_volume",
+          "kpi.mean_resolution_days",
+          "kpi.median_resolution_days",
+          "kpi.closure_rate"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "total": 1225.9721000446007
+    }
+  },
+  "agent": {
+    "contract_version": "biflow-bi-analyst-v1",
+    "execution_id": "f703525a254642a4a12985a51fec1809",
+    "generated_at": "2026-10-28T10:15:34.487338+00:00",
+    "question": "Prépare des insights prudents pour le comité de pilotage.",
+    "model": "granite3.3:2b",
+    "data_kind": "real",
+    "status": "validated",
+    "decision": "answer",
+    "finding": "descriptive",
+    "insights": [
+      {
+        "insight_id": "f703525a254642a4a12985a51fec1809-001",
+        "category": "summary",
+        "finding": "descriptive",
+        "insight": "Ces indicateurs décrivent l'extrait préparé et doivent être présentés avec leurs dénominateurs. Synthèse des KPI de l’extrait préparé : volume : 10 000 demandes (effectif de référence 10000); durée moyenne : 4,107 jours calendaires (effectif de référence 9285); durée médiane : 0,182 jours calendaires (effectif de référence 9285); taux de clôture : 92,91 % (effectif de référence 10000). Ces indicateurs décrivent l’extrait et ne démontrent aucune cause.",
+        "recommendation": "Présenter ces KPI avec leur population, leur dénominateur et leurs limites d'échantillonnage.",
+        "evidence_fact_ids": [
+          "kpi.request_volume",
+          "kpi.mean_resolution_days",
+          "kpi.median_resolution_days",
+          "kpi.closure_rate"
+        ],
+        "limitation_codes": [
+          "closed_only",
+          "missing_data",
+          "no_cause",
+          "no_sla",
+          "nonrandom_sample",
+          "partial_month",
+          "sample_only"
+        ]
+      }
+    ],
+    "evidence": [
+      {
+        "fact_id": "kpi.request_volume",
+        "metric": "request_volume",
+        "scope": "prepared NYC 311 sample",
+        "value": 10000.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.mean_resolution_days",
+        "metric": "mean_resolution_days",
+        "scope": "prepared NYC 311 sample",
+        "value": 4.106830597189813,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.median_resolution_days",
+        "metric": "median_resolution_days",
+        "scope": "prepared NYC 311 sample",
+        "value": 0.1819560185185185,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "kpi.closure_rate",
+        "metric": "closure_rate",
+        "scope": "prepared NYC 311 sample",
+        "value": 92.91,
+        "unit": "%",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+        "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      },
+      {
+        "fact_id": "quality.missing_resolution_days",
+        "metric": "missing_or_invalid_resolution_days",
+        "scope": "closed requests without a valid resolution duration",
+        "value": 6.0,
+        "unit": "requests",
+        "n": 9291,
+        "source": "data/processed/nyc311_clean.csv",
+        "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+        "data_kind": "real",
+        "method": null,
+        "threshold": null,
+        "reference_period": null,
+        "p_value": null
+      }
+    ],
+    "limitations": [
+      "Les délais concernent les demandes clôturées avec durée valide.",
+      "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+      "Les données ne démontrent aucune cause.",
+      "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+      "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+      "Les mois partiels sont exclus des comparaisons temporelles.",
+      "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York."
+    ],
+    "source_refs": [
+      "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+      "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+      "data/processed/nyc311_clean.csv"
+    ],
+    "validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "tool_trace": [
+      {
+        "tool": "data_quality",
+        "parameters": {
+          "question": "Prépare des insights prudents pour le comité de pilotage."
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:15:05.483786+00:00",
+        "elapsed_ms": 0.10359997395426035,
+        "evidence_ids": [
+          "quality.sample_rows",
+          "quality.valid_resolution_days",
+          "quality.missing_resolution_days",
+          "quality.open_requests"
+        ],
+        "detail": null
+      },
+      {
+        "tool": "summarize_kpis",
+        "parameters": {
+          "question": "Prépare des insights prudents pour le comité de pilotage."
+        },
+        "status": "success",
+        "started_at": "2026-10-28T10:15:05.485706+00:00",
+        "elapsed_ms": 1.2244000099599361,
+        "evidence_ids": [
+          "kpi.request_volume",
+          "kpi.mean_resolution_days",
+          "kpi.median_resolution_days",
+          "kpi.closure_rate"
+        ],
+        "detail": null
+      }
+    ],
+    "errors": [],
+    "timing_ms": {
+      "model_preflight": 55.46499998308718,
+      "data_validation": 1019.0191000001505,
+      "inference_attempt_1": 28979.357299976982,
+      "ollama_load_duration_attempt_1": 3.5766,
+      "ollama_prompt_eval_duration_attempt_1": 1784.74,
+      "ollama_eval_duration_attempt_1": 27145.432,
+      "validation_attempt_1": 3.624300006777048,
+      "total": 30146.07060002163
+    }
+  },
+  "agent_wall_time_ms": 30157.575400080532,
+  "execution": {
+    "scenario_id": "steering_committee",
+    "status": "validated",
+    "decision": "answer",
+    "initial_response": "{\"finding\": \"descriptive\", \"evidence_ids\": [\"kpi.request_volume\", \"kpi.mean_resolution_days\", \"kpi.median_resolution_days\", \"kpi.closure_rate\"], \"insight\": \"Ces indicateurs décrivent l'extrait préparé et doivent être présentés avec leurs dénominateurs.\", \"recommendation\": \"Présenter ces KPI avec leur population, leur dénominateur et leurs limites d'échantillonnage.\", \"limitation_codes\": [\"closed_only\", \"missing_data\", \"no_cause\", \"no_sla\", \"nonrandom_sample\", \"partial_month\", \"sample_only\"]}",
+    "initial_validation": {
+      "status": "validated",
+      "json_valid": true,
+      "schema_valid": true,
+      "evidence_valid": true,
+      "numerical_claims_valid": true,
+      "causal_claims_clear": true,
+      "errors": []
+    },
+    "correction_response": null,
+    "correction_validation": null,
+    "fallback": false,
+    "timing_ms": {
+      "model_preflight": 55.46499998308718,
+      "data_validation": 1019.0191000001505,
+      "inference_attempt_1": 28979.357299976982,
+      "ollama_load_duration_attempt_1": 3.5766,
+      "ollama_prompt_eval_duration_attempt_1": 1784.74,
+      "ollama_eval_duration_attempt_1": 27145.432,
+      "validation_attempt_1": 3.624300006777048,
+      "total": 30146.07060002163
+    },
+    "evidence_used": [
+      "kpi.request_volume",
+      "kpi.mean_resolution_days",
+      "kpi.median_resolution_days",
+      "kpi.closure_rate",
+      "quality.missing_resolution_days"
+    ],
+    "audit_dir": "audit\\f703525a254642a4a12985a51fec1809"
+  },
+  "factual_metrics": {
+    "expected_metric_facts": 2,
+    "expected_metric_present": true,
+    "source_and_denominator_complete": true,
+    "invalid_fact_ids": []
+  }
+}

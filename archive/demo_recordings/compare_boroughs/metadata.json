@@ -1,0 +1,13 @@
+{
+  "execution_id": "ce0eaccccbb949a7bfa8656aefc2ecd1",
+  "source_mode": "live",
+  "injected": false,
+  "origin": "Exécution locale authentique de granite3.3:2b via Ollama, antérieurement enregistrée",
+  "source_report": "outputs\\bi_analyst_finalization\\granite_v2_release_20261028\\borough_resolution_delays.json",
+  "source_report_sha256": "790c55175684c4b08ab748c90de88d17d7f9e0a44bc41ee64c4a206725ab15c3",
+  "recorded_at": "2026-10-28T10:25:21.030414+00:00",
+  "model": "granite3.3:2b",
+  "original_elapsed_ms": 18751.754800090566,
+  "copied_at_utc": "2026-10-28T11:20:30.507994+00:00",
+  "excluded_from_model_metrics": false
+}

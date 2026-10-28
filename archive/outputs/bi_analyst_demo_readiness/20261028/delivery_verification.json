@@ -1,0 +1,121 @@
+{
+  "no_inference_performed": true,
+  "all_verified": true,
+  "campaign": [
+    {
+      "scenario_id": "borough_resolution_delays",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "complaint_type_comparison",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "monthly_anomaly",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "steering_committee",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "missing_data",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "borough_resolution_delays",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "complaint_type_comparison",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "monthly_anomaly",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "steering_committee",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "missing_data",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "repetition": 2,
+      "errors": [],
+      "passed": true
+    },
+    {
+      "scenario_id": "drilldown_brooklyn",
+      "repetition": 1,
+      "errors": [],
+      "passed": true
+    }
+  ],
+  "recordings": [
+    {
+      "scenario_id": "compare_boroughs",
+      "execution_id": "ce0eaccccbb949a7bfa8656aefc2ecd1",
+      "mode": "replay",
+      "source_mode": "live",
+      "verified": true
+    },
+    {
+      "scenario_id": "drilldown_brooklyn",
+      "execution_id": "f27707502a354f6f8b4185973cbfc8e7",
+      "mode": "replay",
+      "source_mode": "live",
+      "verified": true
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "execution_id": "5f07953a64c9441cae0a20f1a64b2858",
+      "mode": "replay",
+      "source_mode": "live",
+      "verified": true
+    },
+    {
+      "scenario_id": "controlled_rejection",
+      "execution_id": "a62ca4d4a1814e59a26184f35094badc",
+      "mode": "replay",
+      "source_mode": "controlled_test",
+      "verified": true
+    }
+  ],
+  "tests": {
+    "count": 142,
+    "elapsed_seconds": 86.323,
+    "passed": true,
+    "log": "outputs/bi_analyst_demo_readiness/20261028/tests_full.log"
+  },
+  "checked_at_utc": "2026-10-28T11:39:05.819518+00:00"
+}

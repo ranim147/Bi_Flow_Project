@@ -1,0 +1,258 @@
+{
+  "contract_version": "biflow-bi-analyst-v1",
+  "execution_id": "445e791d2cb44b0bac600d9e53927d5f",
+  "generated_at": "2026-10-26T14:40:29.865449+00:00",
+  "question": "Prépare des insights prudents pour le comité de pilotage.",
+  "model": null,
+  "data_kind": "real",
+  "status": "fallback",
+  "decision": "answer",
+  "finding": "descriptive",
+  "insights": [
+    {
+      "insight_id": "445e791d2cb44b0bac600d9e53927d5f-baseline",
+      "category": "summary",
+      "finding": "descriptive",
+      "insight": "Synthèse des KPI de l’extrait préparé : volume : 10 000 demandes (effectif de référence 10000); durée moyenne : 4,107 jours calendaires (effectif de référence 9285); durée médiane : 0,182 jours calendaires (effectif de référence 9285); taux de clôture : 92,91 % (effectif de référence 10000). Ces indicateurs décrivent l’extrait et ne démontrent aucune cause.",
+      "recommendation": "Présenter ces KPI avec leur population, leur dénominateur et leurs limites d'échantillonnage.",
+      "evidence_fact_ids": [
+        "kpi.request_volume",
+        "kpi.mean_resolution_days",
+        "kpi.median_resolution_days",
+        "kpi.closure_rate"
+      ],
+      "limitation_codes": [
+        "closed_only",
+        "insufficient_history",
+        "missing_data",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "partial_month",
+        "population_not_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "kpi.request_volume",
+      "metric": "request_volume",
+      "scope": "prepared NYC 311 sample",
+      "value": 10000.0,
+      "unit": "demandes",
+      "n": 10000,
+      "source": "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "kpi.mean_resolution_days",
+      "metric": "mean_resolution_days",
+      "scope": "prepared NYC 311 sample",
+      "value": 4.106830597189813,
+      "unit": "jours calendaires",
+      "n": 9285,
+      "source": "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "kpi.median_resolution_days",
+      "metric": "median_resolution_days",
+      "scope": "prepared NYC 311 sample",
+      "value": 0.1819560185185185,
+      "unit": "jours calendaires",
+      "n": 9285,
+      "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "kpi.closure_rate",
+      "metric": "closure_rate",
+      "scope": "prepared NYC 311 sample",
+      "value": 92.91,
+      "unit": "%",
+      "n": 10000,
+      "source": "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+      "source_sha256": "007319e054736636eb9c78c93ca20e0339bef32d562edca0e03e3b88fc405043",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "quality.missing_resolution_days",
+      "metric": "missing_or_invalid_resolution_days",
+      "scope": "closed requests without a valid resolution duration",
+      "value": 6.0,
+      "unit": "requests",
+      "n": 9291,
+      "source": "data/processed/nyc311_clean.csv",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "quality.small_delay_groups.borough",
+      "metric": "small_sample_group_count",
+      "scope": "borough groups excluded from delay ranking",
+      "value": 1.0,
+      "unit": "groups",
+      "n": 6,
+      "source": "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    },
+    {
+      "fact_id": "quality.small_delay_groups.complaint_type",
+      "metric": "small_sample_group_count",
+      "scope": "complaint_type groups excluded from delay ranking",
+      "value": 75.0,
+      "unit": "groups",
+      "n": 125,
+      "source": "data/processed/nyc311_clean.csv#derived=complaint_type_group_sample_filter",
+      "source_sha256": "3bc283125891930124566f3ac7d02353a51440ae48b70bab90fa0993d75a9b74",
+      "data_kind": "real",
+      "method": null,
+      "threshold": null,
+      "reference_period": null
+    }
+  ],
+  "limitations": [
+    "Les délais concernent les demandes clôturées avec durée valide.",
+    "L’historique est trop court pour détecter une anomalie mensuelle.",
+    "Des délais sont manquants ou invalides; ils ne sont pas remplacés par zéro.",
+    "Les données ne démontrent aucune cause.",
+    "Aucune cible SLA n’a été fournie; aucun dépassement n’est affirmé.",
+    "L’échantillonnage par fenêtres n’est pas aléatoire; un biais de sélection est possible.",
+    "Les mois partiels sont exclus des comparaisons temporelles.",
+    "Les volumes mensuels proviennent des agrégats de population, pas de l’échantillon.",
+    "Les résultats décrivent l’échantillon préparé, pas l’ensemble de New York.",
+    "Les groupes avec moins de 30 délais valides ne sont pas classés opérationnellement."
+  ],
+  "source_refs": [
+    "data/processed/kpi_summary.csv#kpi_name=closure_rate&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=median_resolution_days&field=value",
+    "data/processed/kpi_summary.csv#kpi_name=request_volume&field=value",
+    "data/processed/nyc311_clean.csv",
+    "data/processed/nyc311_clean.csv#derived=borough_group_sample_filter",
+    "data/processed/nyc311_clean.csv#derived=complaint_type_group_sample_filter"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "data_quality",
+      "parameters": {
+        "question": "Prépare des insights prudents pour le comité de pilotage."
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:40:29.154581+00:00",
+      "elapsed_ms": 0.15490001533180475,
+      "evidence_ids": [
+        "quality.sample_rows",
+        "quality.valid_resolution_days",
+        "quality.missing_resolution_days",
+        "quality.open_requests"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "summarize_kpis",
+      "parameters": {
+        "question": "Prépare des insights prudents pour le comité de pilotage."
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:40:29.157404+00:00",
+      "elapsed_ms": 1.1333999573253095,
+      "evidence_ids": [
+        "kpi.request_volume",
+        "kpi.mean_resolution_days",
+        "kpi.median_resolution_days",
+        "kpi.closure_rate"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "compare_groups",
+      "parameters": {
+        "question": "Prépare des insights prudents pour le comité de pilotage."
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:40:29.160285+00:00",
+      "elapsed_ms": 87.67510001780465,
+      "evidence_ids": [
+        "quality.small_delay_groups.borough",
+        "delay.borough.STATEN ISLAND",
+        "delay.borough.BROOKLYN",
+        "delay.borough.MANHATTAN",
+        "delay.borough.BRONX",
+        "delay.borough.QUEENS",
+        "delay.borough.peer_p75",
+        "quality.small_delay_groups.complaint_type",
+        "delay.complaint_type.APPLIANCE",
+        "delay.complaint_type.Sidewalk Condition",
+        "delay.complaint_type.Maintenance or Facility",
+        "delay.complaint_type.Water System",
+        "delay.complaint_type.Vendor Enforcement",
+        "delay.complaint_type.peer_p75"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "analyze_trend",
+      "parameters": {
+        "question": "Prépare des insights prudents pour le comité de pilotage."
+      },
+      "status": "success",
+      "started_at": "2026-10-26T14:40:29.249327+00:00",
+      "elapsed_ms": 6.151399982627481,
+      "evidence_ids": [
+        "trend.change_pct.2026-07",
+        "trend.change_pct.2026-08",
+        "trend.change_pct.2026-09"
+      ],
+      "detail": null
+    },
+    {
+      "tool": "detect_anomalies",
+      "parameters": {
+        "question": "Prépare des insights prudents pour le comité de pilotage."
+      },
+      "status": "skipped",
+      "started_at": "2026-10-26T14:40:29.256487+00:00",
+      "elapsed_ms": 589.9409999838099,
+      "evidence_ids": [],
+      "detail": "insufficient_history"
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "total": 1513.3589999750257
+  }
+}

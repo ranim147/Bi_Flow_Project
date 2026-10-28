@@ -1,0 +1,206 @@
+{
+  "contract_version": "biflow-bi-analyst-v2",
+  "execution_id": "9bf20515b53e4ae3a90006c79f9c9264",
+  "generated_at": "2026-10-28T19:51:46.407370+00:00",
+  "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+  "model": "granite3.3:2b",
+  "data_kind": "real",
+  "status": "validated",
+  "decision": "insufficient_data",
+  "finding": "insufficient_data",
+  "insights": [
+    {
+      "insight_id": "9bf20515b53e4ae3a90006c79f9c9264-insufficiency",
+      "category": "summary",
+      "finding": "insufficient_data",
+      "insight": "Les informations nécessaires à la demande centrale sont insuffisantes; une investigation documentée est nécessaire. Je ne peux pas démontrer que les retards résultent d'un manque de personnel : les délais observés ne constituent pas une preuve causale. Je ne peux pas calculer un nombre d'agents à recruter sans données d'effectifs, de charge et de capacité adaptées. Données supplémentaires nécessaires : Effectifs disponibles par agence et période; Charge de travail et nombre de dossiers assignés; Capacité de traitement; Temps de traitement et d'attente; Complexité des dossiers; Historique des affectations.",
+      "recommendation": "Recueillir les données nécessaires et tester les hypothèses avant toute conclusion ou estimation. Relier les dossiers aux affectations et effectifs par agence et période; séparer attente et traitement; comparer les charges et capacités à complexité comparable. Tester l'hypothèse de sous-capacité par variation documentée des effectifs, groupes témoins et facteurs de confusion; estimer ensuite la capacité par agent et le besoin sous plusieurs hypothèses de service.",
+      "evidence_fact_ids": [
+        "plan.fe73a82782522c99",
+        "plan.ae57a29b4899f9a1",
+        "plan.afe5b3b8260980d8",
+        "plan.6917af1083636b42",
+        "plan.d4308ad3c5baf863",
+        "plan.25a911ca78ad0ce0"
+      ],
+      "limitation_codes": [
+        "case_mix",
+        "closed_only",
+        "missing_capabilities",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    }
+  ],
+  "evidence": [
+    {
+      "fact_id": "plan.fe73a82782522c99",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"staffing\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=fe73a82782522c99",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.ae57a29b4899f9a1",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"workload\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ae57a29b4899f9a1",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.afe5b3b8260980d8",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"capacity\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=afe5b3b8260980d8",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.6917af1083636b42",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"times\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=6917af1083636b42",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.d4308ad3c5baf863",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"complexity\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=d4308ad3c5baf863",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    },
+    {
+      "fact_id": "plan.25a911ca78ad0ce0",
+      "metric": "required_data_available",
+      "scope": "{\"requirement\": \"assignments\"}",
+      "value": 0.0,
+      "unit": "boolean",
+      "n": 12,
+      "source": "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=25a911ca78ad0ce0",
+      "source_sha256": "6e1205228c29cb6516986fc3e00df7cccf8fbca33145cc41ccfc808d7cfdaa87",
+      "data_kind": "real",
+      "method": "Required fields checked against validated input schema",
+      "threshold": null,
+      "reference_period": null,
+      "p_value": null
+    }
+  ],
+  "limitations": [
+    "Les catégories traitées peuvent différer entre agences; leurs délais bruts ne permettent pas de classer leur performance.",
+    "Les délais portent sur les dossiers clôturés observables avec durée valide; aucune durée manquante n'est remplacée par zéro.",
+    "Les données de causalité et de capacité requises ne sont pas disponibles dans les sources validées.",
+    "Les écarts descriptifs ne démontrent aucune causalité.",
+    "Aucun SLA métier n'est disponible.",
+    "Les fenêtres d'échantillonnage ne sont pas aléatoires; un biais de sélection reste possible.",
+    "Ces résultats décrivent uniquement l'extrait préparé, pas la population NYC.",
+    "Les groupes de moins de 30 délais valides sont exclus du classement opérationnel."
+  ],
+  "source_refs": [
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=25a911ca78ad0ce0",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=6917af1083636b42",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=ae57a29b4899f9a1",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=afe5b3b8260980d8",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=d4308ad3c5baf863",
+    "data/versions/nyc311_202301_202609_v2/cleaned/manifest.json#plan=fe73a82782522c99"
+  ],
+  "validation": {
+    "status": "validated",
+    "json_valid": true,
+    "schema_valid": true,
+    "evidence_valid": true,
+    "numerical_claims_valid": true,
+    "causal_claims_clear": true,
+    "errors": []
+  },
+  "tool_trace": [
+    {
+      "tool": "check_capabilities",
+      "parameters": {
+        "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+        "metric": "median_resolution_days"
+      },
+      "status": "skipped",
+      "started_at": "2026-10-28T19:50:40.627526+00:00",
+      "elapsed_ms": 0.3562999190762639,
+      "evidence_ids": [
+        "plan.fe73a82782522c99",
+        "plan.ae57a29b4899f9a1",
+        "plan.afe5b3b8260980d8",
+        "plan.6917af1083636b42",
+        "plan.d4308ad3c5baf863",
+        "plan.25a911ca78ad0ce0"
+      ],
+      "detail": null
+    }
+  ],
+  "errors": [],
+  "timing_ms": {
+    "model_preflight": 129.19149990193546,
+    "data_validation": 3723.3287000562996,
+    "analytics": 0.3562999190762639,
+    "inference_attempt_1": 65722.32889989391,
+    "total": 69778.65700004622
+  },
+  "decision_support": [],
+  "analytical_plan": {
+    "intent": "justified_refusal",
+    "metric": "median_resolution_days",
+    "dimensions": [
+      "borough"
+    ],
+    "filters": {},
+    "time_scope": [],
+    "temporal_forbidden": false,
+    "operation_sequence": [
+      "check_capabilities"
+    ],
+    "unsupported_request": [
+      "unproven_causality",
+      "staffing_without_capacity_data"
+    ],
+    "executor": "scoped",
+    "locked_filters": {}
+  }
+}

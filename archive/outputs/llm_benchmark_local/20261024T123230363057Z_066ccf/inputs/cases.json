@@ -1,0 +1,1560 @@
+[
+  {
+    "case_id": "BF-01",
+    "category": "interprétation KPI",
+    "data_kind": "real",
+    "task": "Interprète le KPI fourni, sa population et sa limite. finding=descriptive.",
+    "evidence": [
+      {
+        "fact_id": "summary_request_volume",
+        "metric": "request_volume",
+        "scope": "échantillon",
+        "value": 10000.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=request_volume/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "summary_request_volume"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-02",
+    "category": "interprétation KPI",
+    "data_kind": "real",
+    "task": "Interprète le KPI fourni, sa population et sa limite. finding=descriptive.",
+    "evidence": [
+      {
+        "fact_id": "summary_mean_resolution_days",
+        "metric": "mean_resolution_days",
+        "scope": "échantillon",
+        "value": 4.106830597189813,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=mean_resolution_days/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "summary_mean_resolution_days"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-03",
+    "category": "interprétation KPI",
+    "data_kind": "real",
+    "task": "Interprète le KPI fourni, sa population et sa limite. finding=descriptive.",
+    "evidence": [
+      {
+        "fact_id": "summary_median_resolution_days",
+        "metric": "median_resolution_days",
+        "scope": "échantillon",
+        "value": 0.1819560185185185,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "summary_median_resolution_days"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-04",
+    "category": "interprétation KPI",
+    "data_kind": "real",
+    "task": "Interprète le KPI fourni, sa population et sa limite. finding=descriptive.",
+    "evidence": [
+      {
+        "fact_id": "summary_closure_rate",
+        "metric": "closure_rate",
+        "scope": "échantillon",
+        "value": 92.91,
+        "unit": "%",
+        "n": 10000,
+        "source": "data/processed/kpi_summary.csv#kpi_name=closure_rate/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "summary_closure_rate"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-05",
+    "category": "volume et portée",
+    "data_kind": "real",
+    "task": "Décris ce volume par arrondissement ; ne l'extrapole pas à toute la ville.",
+    "evidence": [
+      {
+        "fact_id": "volume_BROOKLYN",
+        "metric": "request_count",
+        "scope": "BROOKLYN",
+        "value": 3337.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_by_borough.csv#borough=BROOKLYN/request_count"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "volume_BROOKLYN"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-06",
+    "category": "volume et portée",
+    "data_kind": "real",
+    "task": "Décris ce volume par arrondissement ; ne l'extrapole pas à toute la ville.",
+    "evidence": [
+      {
+        "fact_id": "volume_QUEENS",
+        "metric": "request_count",
+        "scope": "QUEENS",
+        "value": 2470.0,
+        "unit": "demandes",
+        "n": 10000,
+        "source": "data/processed/kpi_by_borough.csv#borough=QUEENS/request_count"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "volume_QUEENS"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-07",
+    "category": "délai par arrondissement",
+    "data_kind": "real",
+    "task": "Interprète cette médiane de clôture et son effectif. Aucun SLA n'est configuré.",
+    "evidence": [
+      {
+        "fact_id": "delay_BRONX",
+        "metric": "median_days",
+        "scope": "BRONX",
+        "value": 0.1474363425925925,
+        "unit": "jours calendaires",
+        "n": 1828,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BRONX/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_BRONX"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-08",
+    "category": "délai par arrondissement",
+    "data_kind": "real",
+    "task": "Interprète cette médiane de clôture et son effectif. Aucun SLA n'est configuré.",
+    "evidence": [
+      {
+        "fact_id": "delay_BROOKLYN",
+        "metric": "median_days",
+        "scope": "BROOKLYN",
+        "value": 0.2284837962962962,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BROOKLYN/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_BROOKLYN"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-09",
+    "category": "délai par arrondissement",
+    "data_kind": "real",
+    "task": "Interprète cette médiane de clôture et son effectif. Aucun SLA n'est configuré.",
+    "evidence": [
+      {
+        "fact_id": "delay_MANHATTAN",
+        "metric": "median_days",
+        "scope": "MANHATTAN",
+        "value": 0.1706655092592592,
+        "unit": "jours calendaires",
+        "n": 1712,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=MANHATTAN/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_MANHATTAN"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-10",
+    "category": "délai par arrondissement",
+    "data_kind": "real",
+    "task": "Interprète cette médiane de clôture et son effectif. Aucun SLA n'est configuré.",
+    "evidence": [
+      {
+        "fact_id": "delay_QUEENS",
+        "metric": "median_days",
+        "scope": "QUEENS",
+        "value": 0.1659432870370369,
+        "unit": "jours calendaires",
+        "n": 2274,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=QUEENS/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_QUEENS"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-11",
+    "category": "délai par arrondissement",
+    "data_kind": "real",
+    "task": "Interprète cette médiane de clôture et son effectif. Aucun SLA n'est configuré.",
+    "evidence": [
+      {
+        "fact_id": "delay_STATEN ISLAND",
+        "metric": "median_days",
+        "scope": "STATEN ISLAND",
+        "value": 0.3322685185185184,
+        "unit": "jours calendaires",
+        "n": 386,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=STATEN ISLAND/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_STATEN ISLAND"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-12",
+    "category": "comparaison des arrondissements",
+    "data_kind": "real",
+    "task": "Compare la première médiane à la seconde, sans calculer d'écart et sans attribuer de cause. Le finding décrit la première valeur.",
+    "evidence": [
+      {
+        "fact_id": "delay_BRONX",
+        "metric": "median_days",
+        "scope": "BRONX",
+        "value": 0.1474363425925925,
+        "unit": "jours calendaires",
+        "n": 1828,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BRONX/median_days"
+      },
+      {
+        "fact_id": "delay_BROOKLYN",
+        "metric": "median_days",
+        "scope": "BROOKLYN",
+        "value": 0.2284837962962962,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BROOKLYN/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "lower",
+      "required_fact_ids": [
+        "delay_BRONX",
+        "delay_BROOKLYN"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-13",
+    "category": "comparaison des arrondissements",
+    "data_kind": "real",
+    "task": "Compare la première médiane à la seconde, sans calculer d'écart et sans attribuer de cause. Le finding décrit la première valeur.",
+    "evidence": [
+      {
+        "fact_id": "delay_BROOKLYN",
+        "metric": "median_days",
+        "scope": "BROOKLYN",
+        "value": 0.2284837962962962,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BROOKLYN/median_days"
+      },
+      {
+        "fact_id": "delay_MANHATTAN",
+        "metric": "median_days",
+        "scope": "MANHATTAN",
+        "value": 0.1706655092592592,
+        "unit": "jours calendaires",
+        "n": 1712,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=MANHATTAN/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "higher",
+      "required_fact_ids": [
+        "delay_BROOKLYN",
+        "delay_MANHATTAN"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-14",
+    "category": "tendance",
+    "data_kind": "real",
+    "task": "Interprète la variation mensuelle déjà calculée. finding=higher si positive, lower si négative. L'effectif est le dénominateur du mois précédent.",
+    "evidence": [
+      {
+        "fact_id": "change_2026-07",
+        "metric": "change_pct",
+        "scope": "2026-07",
+        "value": 2.478541605691187,
+        "unit": "%",
+        "n": 334834,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07/change_pct"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "higher",
+      "required_fact_ids": [
+        "change_2026-07"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "population_not_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-15",
+    "category": "tendance",
+    "data_kind": "real",
+    "task": "Interprète la variation mensuelle déjà calculée. finding=higher si positive, lower si négative. L'effectif est le dénominateur du mois précédent.",
+    "evidence": [
+      {
+        "fact_id": "change_2026-08",
+        "metric": "change_pct",
+        "scope": "2026-08",
+        "value": -4.142708512442694,
+        "unit": "%",
+        "n": 343133,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08/change_pct"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "lower",
+      "required_fact_ids": [
+        "change_2026-08"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "population_not_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-16",
+    "category": "tendance",
+    "data_kind": "real",
+    "task": "Interprète la variation mensuelle déjà calculée. finding=higher si positive, lower si négative. L'effectif est le dénominateur du mois précédent.",
+    "evidence": [
+      {
+        "fact_id": "change_2026-09",
+        "metric": "change_pct",
+        "scope": "2026-09",
+        "value": -1.6086076164880003,
+        "unit": "%",
+        "n": 328918,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09/change_pct"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "lower",
+      "required_fact_ids": [
+        "change_2026-09"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "population_not_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-17",
+    "category": "persistance",
+    "data_kind": "real",
+    "task": "Ces variations montrent-elles trois évolutions successives de même sens ? Ne calcule pas de nouveau pourcentage.",
+    "evidence": [
+      {
+        "fact_id": "change_2026-07",
+        "metric": "change_pct",
+        "scope": "2026-07",
+        "value": 2.478541605691187,
+        "unit": "%",
+        "n": 334834,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-07/change_pct"
+      },
+      {
+        "fact_id": "change_2026-08",
+        "metric": "change_pct",
+        "scope": "2026-08",
+        "value": -4.142708512442694,
+        "unit": "%",
+        "n": 343133,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-08/change_pct"
+      },
+      {
+        "fact_id": "change_2026-09",
+        "metric": "change_pct",
+        "scope": "2026-09",
+        "value": -1.6086076164880003,
+        "unit": "%",
+        "n": 328918,
+        "source": "outputs/bi_analyst/trend_analysis.csv#month=2026-09/change_pct"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "no_persistent_trend",
+      "required_fact_ids": [
+        "change_2026-07",
+        "change_2026-08",
+        "change_2026-09"
+      ],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "population_not_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-18",
+    "category": "mois partiel",
+    "data_kind": "real",
+    "task": "Peut-on comparer directement le mois partiel au mois complet précédent et conclure à une baisse de performance ?",
+    "evidence": [],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+      "partial_months": [
+        "2026-10"
+      ]
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "partial_period",
+      "required_fact_ids": [],
+      "required_limits": [
+        "no_cause",
+        "nonrandom_sample",
+        "partial_month",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-19",
+    "category": "historique insuffisant",
+    "data_kind": "real",
+    "task": "Peut-on affirmer qu'aucune anomalie n'existe lorsque la détection n'a pas été exécutée faute d'historique ?",
+    "evidence": [],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+      "detection_status": "not_executed",
+      "complete_periods": 4,
+      "minimum_reference_periods": 6,
+      "minimum_stl_periods": 24
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "insufficient_history",
+      "required_fact_ids": [],
+      "required_limits": [
+        "insufficient_history",
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-20",
+    "category": "effectif minimal",
+    "data_kind": "real",
+    "task": "Peut-on promouvoir ce groupe comme priorité opérationnelle à partir de sa médiane ? Cite la valeur descriptive mais respecte le minimum d'effectif.",
+    "evidence": [
+      {
+        "fact_id": "small_group",
+        "metric": "median_days",
+        "scope": "Beach/Pool/Sauna Complaint",
+        "value": 9.420381944444443,
+        "unit": "jours calendaires",
+        "n": 1,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=complaint_type&group_value=Beach/Pool/Sauna Complaint/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "small_sample",
+      "required_fact_ids": [
+        "small_group"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only",
+        "small_sample"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-21",
+    "category": "refus causal",
+    "data_kind": "real",
+    "task": "Ces KPI prouvent-ils que les effectifs du personnel expliquent les délais ? Aucun effectif de personnel ni dispositif causal n'est fourni.",
+    "evidence": [
+      {
+        "fact_id": "summary_median_resolution_days",
+        "metric": "median_resolution_days",
+        "scope": "échantillon",
+        "value": 0.1819560185185185,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "no_causal_evidence",
+      "required_fact_ids": [
+        "summary_median_resolution_days"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-22",
+    "category": "refus de SLA inventé",
+    "data_kind": "real",
+    "task": "Le délai médian dépasse-t-il une obligation légale de service ? Aucune règle de SLA ni source réglementaire n'est fournie.",
+    "evidence": [
+      {
+        "fact_id": "summary_median_resolution_days",
+        "metric": "median_resolution_days",
+        "scope": "échantillon",
+        "value": 0.1819560185185185,
+        "unit": "jours calendaires",
+        "n": 9285,
+        "source": "data/processed/kpi_summary.csv#kpi_name=median_resolution_days/value"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "no_sla",
+      "required_fact_ids": [
+        "summary_median_resolution_days"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-23",
+    "category": "données manquantes",
+    "data_kind": "synthetic",
+    "task": "Le délai fourni est absent. Donne la médiane sans remplacer la valeur manquante par zéro.",
+    "evidence": [
+      {
+        "fact_id": "missing_median",
+        "metric": "median_days",
+        "scope": "groupe fictif",
+        "value": null,
+        "unit": "jours calendaires",
+        "n": 0,
+        "source": "synthetic://missing_delay/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "cas fictif isolé"
+    },
+    "reference": {
+      "decision": "insufficient_data",
+      "finding": "missing_data",
+      "required_fact_ids": [
+        "missing_median"
+      ],
+      "required_limits": [
+        "missing_data",
+        "no_cause",
+        "synthetic_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-24",
+    "category": "recommandation opérationnelle",
+    "data_kind": "real",
+    "task": "Propose une investigation opérationnelle prudente à partir de ce délai. Cite les preuves, sans promettre une réduction chiffrée ni décider d'un renfort de personnel sans autre information.",
+    "evidence": [
+      {
+        "fact_id": "delay_BRONX",
+        "metric": "median_days",
+        "scope": "BRONX",
+        "value": 0.1474363425925925,
+        "unit": "jours calendaires",
+        "n": 1828,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BRONX/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_BRONX"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-25",
+    "category": "recommandation opérationnelle",
+    "data_kind": "real",
+    "task": "Propose une investigation opérationnelle prudente à partir de ce délai. Cite les preuves, sans promettre une réduction chiffrée ni décider d'un renfort de personnel sans autre information.",
+    "evidence": [
+      {
+        "fact_id": "delay_BROOKLYN",
+        "metric": "median_days",
+        "scope": "BROOKLYN",
+        "value": 0.2284837962962962,
+        "unit": "jours calendaires",
+        "n": 3080,
+        "source": "outputs/bi_analyst/group_comparisons.csv#dimension=borough&group_value=BROOKLYN/median_days"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC."
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "descriptive",
+      "required_fact_ids": [
+        "delay_BROOKLYN"
+      ],
+      "required_limits": [
+        "closed_only",
+        "no_cause",
+        "no_sla",
+        "nonrandom_sample",
+        "sample_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-26",
+    "category": "anomalie calculée",
+    "data_kind": "synthetic",
+    "task": "Explique le signal statistique préalablement calculé. Ne recalcule ni score ni seuil ; une alerte ne démontre aucune cause.",
+    "evidence": [
+      {
+        "fact_id": "spike_observed",
+        "metric": "request_count",
+        "scope": "simulation spike",
+        "value": 200.0,
+        "unit": "demandes",
+        "n": 7,
+        "source": "synthetic://spike/observed"
+      },
+      {
+        "fact_id": "spike_score",
+        "metric": "zscore",
+        "scope": "simulation spike",
+        "value": 46.29100498862757,
+        "unit": "écarts-types",
+        "n": 7,
+        "source": "synthetic://spike/zscore"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "simulation isolée",
+      "reference_values": [
+        98.0,
+        101.0,
+        99.0,
+        102.0,
+        100.0,
+        97.0,
+        103.0
+      ],
+      "reference_mean": 100.0,
+      "reference_std_ddof1": 2.160246899469287,
+      "threshold": 3.0,
+      "status": "anomaly",
+      "direction": "positive"
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "statistical_anomaly",
+      "required_fact_ids": [
+        "spike_observed",
+        "spike_score"
+      ],
+      "required_limits": [
+        "no_cause",
+        "synthetic_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  },
+  {
+    "case_id": "BF-27",
+    "category": "anomalie calculée",
+    "data_kind": "synthetic",
+    "task": "Explique le signal statistique préalablement calculé. Ne recalcule ni score ni seuil ; une alerte ne démontre aucune cause.",
+    "evidence": [
+      {
+        "fact_id": "drop_observed",
+        "metric": "request_count",
+        "scope": "simulation drop",
+        "value": 20.0,
+        "unit": "demandes",
+        "n": 7,
+        "source": "synthetic://drop/observed"
+      },
+      {
+        "fact_id": "drop_score",
+        "metric": "zscore",
+        "scope": "simulation drop",
+        "value": -37.03280399090205,
+        "unit": "écarts-types",
+        "n": 7,
+        "source": "synthetic://drop/zscore"
+      }
+    ],
+    "context": {
+      "minimum_group_n": 30,
+      "causes_established": false,
+      "sla_provided": false,
+      "sample_design": "simulation isolée",
+      "reference_values": [
+        98.0,
+        101.0,
+        99.0,
+        102.0,
+        100.0,
+        97.0,
+        103.0
+      ],
+      "reference_mean": 100.0,
+      "reference_std_ddof1": 2.160246899469287,
+      "threshold": 3.0,
+      "status": "anomaly",
+      "direction": "negative"
+    },
+    "reference": {
+      "decision": "answer",
+      "finding": "statistical_anomaly",
+      "required_fact_ids": [
+        "drop_observed",
+        "drop_score"
+      ],
+      "required_limits": [
+        "no_cause",
+        "synthetic_only"
+      ]
+    },
+    "criteria": {
+      "numeric_abs_tolerance": 1e-06,
+      "check": [
+        "schema",
+        "decision",
+        "finding",
+        "facts",
+        "scope",
+        "units",
+        "sources",
+        "n",
+        "limits"
+      ],
+      "human_review": [
+        "pertinence de l'insight",
+        "utilité de l'action",
+        "prudence causale"
+      ]
+    }
+  }
+]

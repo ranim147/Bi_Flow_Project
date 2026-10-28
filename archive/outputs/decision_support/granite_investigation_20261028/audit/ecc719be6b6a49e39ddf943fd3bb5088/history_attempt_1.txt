@@ -1,0 +1,29 @@
+{
+  "problem": "insufficient_history",
+  "priority_scope": "history",
+  "evidence_ids": ["ds.63280b208f", "ds.6d71d3d2c7"],
+  "investigation_hypotheses": [
+    "collect_history"
+  ],
+  "investigation_steps": [
+    "check_collect_history"
+  ],
+  "recommended_actions": [
+    "investigate_collect_history"
+  ],
+  "expected_verification": [
+    "verify_collect_history"
+  ],
+  "limitations": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8",
+    "L9"
+  ]
+}

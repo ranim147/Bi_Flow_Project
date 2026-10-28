@@ -1,0 +1,11 @@
+{
+  "source_mode": "controlled_test",
+  "injected": true,
+  "llm_called_now": false,
+  "execution_id": "a62ca4d4a1814e59a26184f35094badc",
+  "origin": "Réponse réelle de référence altérée volontairement; ce contenu incorrect n'est pas une sortie authentique de Granite.",
+  "source_execution_id": "ce0eaccccbb949a7bfa8656aefc2ecd1",
+  "excluded_from_model_metrics": true,
+  "recorded_at": "2026-10-28T11:20:33.265110+00:00",
+  "original_elapsed_ms": 481.08240007422864
+}

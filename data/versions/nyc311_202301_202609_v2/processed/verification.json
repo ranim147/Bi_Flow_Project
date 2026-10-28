@@ -1,0 +1,19 @@
+{
+  "passed": true,
+  "checked_at": "2026-10-28T21:46:43.602529+00:00",
+  "global_kpis_recomputed": true,
+  "group_kpis_recomputed": true,
+  "dimensional_denominators_reconciled": true,
+  "official_and_sample_volumes_separate": true,
+  "raw_rows": 265609,
+  "cleaned_rows": 265609,
+  "valid_delay_n": 259354,
+  "complete_periods": 45,
+  "in_memory_dataframe_bytes": 39546778,
+  "joint_strata_coverage": {
+    "strata": 35002,
+    "observed_strata": 19231,
+    "missing_strata": 15771,
+    "population_share_in_observed_strata": 0.9820793680832138
+  }
+}

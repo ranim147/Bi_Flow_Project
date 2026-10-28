@@ -1,0 +1,7 @@
+# Core packages already present locally; versions retained for reproducibility.
+pandas==3.0.6
+numpy==2.5.4
+pyarrow==26.0.0
+requests==2.34.2
+tzdata==2026.5
+psutil==7.2.2

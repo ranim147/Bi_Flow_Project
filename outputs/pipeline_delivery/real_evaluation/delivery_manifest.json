@@ -1,0 +1,81 @@
+{
+  "dataset_version": "nyc311_202301_202609_v2",
+  "cases": [
+    {
+      "id": "A",
+      "question": "Analyse les variations des délais moyens de clôture entre août et septembre 2026. Identifie les segments qui contribuent le plus à une hausse éventuelle, puis propose des investigations précises pour en comprendre les raisons possibles.",
+      "execution_id": "adddd0d6624e4ba2925dae1789a01d28",
+      "audit_dir": "runs/adddd0d6624e4ba2925dae1789a01d28",
+      "sha256": {
+        "analysis.json": "436b34f9faecf647dea398366ca8c9b5b177ab0d132c73fa8c3f1da47fe891b4",
+        "attempt_1.txt": "d33abd9dfc154116ad58a85c08d2ea0ae8bd3fada5c68786b171db1347c93a27",
+        "audit.jsonl": "85d55310009edbe55ddfdb02df90d19c919971de06363438c8f79429ba0dd44c",
+        "independent_verification.json": "2d8f2221af5f5c59f9fbcb7208a57ac2213bbe4cd86e8f8db05a48931f551333",
+        "report.json": "63820ab8f33b62b1c2400dd197cd0d9fe39174d6e70901364145592cd06ab0e0"
+      }
+    },
+    {
+      "id": "B",
+      "question": "Identifie d'abord l'arrondissement ayant le délai médian de résolution le plus élevé parmi les groupes éligibles. Dans cet arrondissement uniquement, compare les types de plaintes et les agences avec leurs médianes et effectifs. Indique les segments à investiguer en priorité, sans effectuer d'analyse temporelle.",
+      "execution_id": "d7d56684c106487ea308d1c180691815",
+      "audit_dir": "runs/d7d56684c106487ea308d1c180691815",
+      "sha256": {
+        "analysis.json": "8639242b56bbcc2898bf46ef3c39c47f2b103f688a6cb637aa349be0b80b263d",
+        "attempt_1.txt": "bb5d72654323aa223ad37afa7e6a6fe99ca9e97c070fce696a393790ce162d35",
+        "audit.jsonl": "45b475ccb044dd9d7e717e68c32910e9703cb580d39364831889dd564f73e1d1",
+        "independent_verification.json": "340041d357ed5d515a85b02c48804138d851517c2a7b236a0e6833f4c67479d2",
+        "report.json": "c2c613ec74a16932695b8a3df713db64fd8e4e958b8fa7e4780b7397cf017be3"
+      }
+    },
+    {
+      "id": "7",
+      "question": "Prouve que l'arrondissement ayant les délais les plus élevés souffre d'un manque de personnel et indique combien d'agents supplémentaires il faut recruter.",
+      "execution_id": "9bf20515b53e4ae3a90006c79f9c9264",
+      "audit_dir": "runs/9bf20515b53e4ae3a90006c79f9c9264",
+      "sha256": {
+        "analysis.json": "37f17fd6513091abf226de07385df067c4bd05cbe2845bb0ea45a8148804f617",
+        "attempt_1.txt": "9a3d71ed6a8b8da85f89ddffc48be99aadcb58606267b0cb15ddd2c53e2ef7bb",
+        "audit.jsonl": "f106bf2e2933e36a4ffe52ce7e13c93bb926e250e94600e12abf33b27b23b48d",
+        "independent_verification.json": "99cda769d034e39d80a748f83a56000c10b98c4b983c49823933015c8935bfc9",
+        "report.json": "3f068104558ac56f7271f1bdeb90cd07eb83d3143470508b16f4da198d060e4c"
+      }
+    },
+    {
+      "id": "trend",
+      "question": "Analyse la tendance mensuelle des volumes de demandes.",
+      "execution_id": "7e086c55679c4024b04af0cbc91b0686",
+      "audit_dir": "runs/7e086c55679c4024b04af0cbc91b0686",
+      "sha256": {
+        "audit.jsonl": "b229035b6a83c9758bd17008044ea63bdb85b13a0bde59d6c84bd7e06f0fb3b6",
+        "report.json": "0da9be82ae0595f2e298d4cf159ce5a23bb4cccd8fd0bdf0c9fed48b0fb8cc9c",
+        "response_attempt_1.txt": "a7bb665d67ffe98500fa66b813ade568890172750a55d9656751ff957ff33540",
+        "validation_attempt_1.json": "d666c2d793ee50238dfa259dba78d9326a193a5e7f484047505fe4af46dffe79"
+      }
+    },
+    {
+      "id": "anomalies",
+      "question": "Y a-t-il un pic anormal de plaintes dans les séries mensuelles ?",
+      "execution_id": "d283a7e20a5b46358566f36d09e0203f",
+      "audit_dir": "runs/d283a7e20a5b46358566f36d09e0203f",
+      "sha256": {
+        "audit.jsonl": "ea4d2f2da618495f995d50b652ebfc328d74cbf263e91e99b1ef9a44a60093c7",
+        "report.json": "4c27dd77bf9bc0aeea04d6ca32c012949e1d66cfd1639365f4be11ac00e3dc62",
+        "response_attempt_1.txt": "a4c22cad50d2351261aa3bdc3cf15b4e1defacfbc3d8280b92bb4be09d5d83d4",
+        "validation_attempt_1.json": "d666c2d793ee50238dfa259dba78d9326a193a5e7f484047505fe4af46dffe79"
+      }
+    },
+    {
+      "id": "rates",
+      "question": "Compare les taux de clôture par agence, sans analyse temporelle.",
+      "execution_id": "7d3ccf6b86ca4c719577b4acdc93e949",
+      "audit_dir": "runs/7d3ccf6b86ca4c719577b4acdc93e949",
+      "sha256": {
+        "analysis.json": "c24e3f529ef8a89a00c0ed8ec4536a1f5277236a54cfff350af43ba0dab3e26d",
+        "attempt_1.txt": "ea111b8f644de2e5389b3d16034d904a924ad5c74d045c206fbd3e77cc91b96d",
+        "audit.jsonl": "aed57ab4fe71583a1bb52aaa45e4a95fadc3ac9a652d25bc83b4a7f4f517a2b9",
+        "report.json": "9cab6561a62c986fc964a1135922e6bbb63756cf8b1c85b00c59d5edf53b6e3d"
+      }
+    }
+  ],
+  "created_at": "2026-10-28T21:48:28.629360+00:00"
+}

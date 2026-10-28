@@ -1,0 +1,301 @@
+{
+  "automatic_checks_only": true,
+  "human_evaluation_included": false,
+  "all_scenarios_verified": true,
+  "previous_campaign": "D:\\Analyst_Agent\\outputs\\bi_analyst_evaluations\\fd44245e94c34707a59d2d3e7e152db6",
+  "previous_metrics": {
+    "scenario_count": 6,
+    "baseline_validated_rate": 1.0,
+    "agent_fully_validated_rate": 1.0,
+    "structured_facts_compared": 33,
+    "numeric_mismatches": 0,
+    "provenance_mismatches": 0,
+    "factual_evidence_accuracy": 1.0,
+    "unsupported_evidence_selection_errors": 0,
+    "agent_mean_elapsed_ms": 10035.468550001193,
+    "agent_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "baseline_mean_elapsed_ms": 1372.8786833332076,
+    "baseline_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "run_id": "fd44245e94c34707a59d2d3e7e152db6",
+    "data_kind": "real",
+    "model_inference_enabled": true,
+    "scenario_ids": [
+      "borough_resolution_delays",
+      "complaint_type_comparison",
+      "monthly_anomaly",
+      "steering_committee",
+      "missing_data",
+      "insufficient_history"
+    ]
+  },
+  "current_metrics": {
+    "scenario_count": 6,
+    "baseline_validated_rate": 1.0,
+    "agent_fully_validated_rate": 1.0,
+    "structured_facts_compared": 35,
+    "numeric_mismatches": 0,
+    "provenance_mismatches": 0,
+    "factual_evidence_accuracy": 1.0,
+    "unsupported_evidence_selection_errors": 0,
+    "human_insight_relevance": null,
+    "agent_mean_elapsed_ms": 22384.83018333015,
+    "agent_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "baseline_mean_elapsed_ms": 1349.1172166735244,
+    "baseline_refusal_or_controlled_failure_rate": 0.3333333333333333,
+    "human_evaluation_included": false,
+    "human_ratings_note": "Automatic checks only; human evaluation is outside this phase.",
+    "expected_metrics_coverage_rate": 1.0,
+    "run_id": "9fe04609d4874ea2975edd84ee4ff31e",
+    "data_kind": "real",
+    "model_inference_enabled": true,
+    "scenario_ids": [
+      "borough_resolution_delays",
+      "complaint_type_comparison",
+      "monthly_anomaly",
+      "steering_committee",
+      "missing_data",
+      "insufficient_history"
+    ],
+    "internal_contract": "granite-draft-v2",
+    "initial_validated_count": 6,
+    "correction_count": 0,
+    "fallback_count": 0,
+    "failed_count": 0,
+    "insufficient_data_count": 2,
+    "llm_fallback_rate": 0.0
+  },
+  "scenarios": [
+    {
+      "scenario_id": "borough_resolution_delays",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 13424.63919997681,
+      "current_elapsed_ms": 18751.754800090566,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 5,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 48.01420005969703,
+        "data_validation": 353.6065999651328,
+        "inference_attempt_1": 18293.61179994885,
+        "ollama_load_duration_attempt_1": 6.5333,
+        "ollama_prompt_eval_duration_attempt_1": 154.271,
+        "ollama_eval_duration_attempt_1": 17822.531,
+        "validation_attempt_1": 1.6662999987602234,
+        "total": 18751.754800090566
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 18278478000,
+          "load_duration": 6533300,
+          "prompt_eval_count": 509,
+          "prompt_eval_duration": 154271000,
+          "eval_count": 182,
+          "eval_duration": 17822531000
+        }
+      ]
+    },
+    {
+      "scenario_id": "complaint_type_comparison",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 11501.623900025152,
+      "current_elapsed_ms": 22504.22899995465,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 5,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 17.997800023294985,
+        "data_validation": 534.5129000488669,
+        "inference_attempt_1": 21837.45730004739,
+        "ollama_load_duration_attempt_1": 8.1008,
+        "ollama_prompt_eval_duration_attempt_1": 1477.863,
+        "ollama_eval_duration_attempt_1": 20253.063,
+        "validation_attempt_1": 2.5638999650254846,
+        "total": 22504.22899995465
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 21821566700,
+          "load_duration": 8100800,
+          "prompt_eval_count": 533,
+          "prompt_eval_duration": 1477863000,
+          "eval_count": 188,
+          "eval_duration": 20253063000
+        }
+      ]
+    },
+    {
+      "scenario_id": "monthly_anomaly",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 9402.637099963613,
+      "current_elapsed_ms": 27928.18749998696,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 3,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 39.76159996818751,
+        "data_validation": 1156.7381999921054,
+        "inference_attempt_1": 25251.036299974658,
+        "ollama_load_duration_attempt_1": 10.7398,
+        "ollama_prompt_eval_duration_attempt_1": 164.875,
+        "ollama_eval_duration_attempt_1": 24983.618,
+        "validation_attempt_1": 1.5324000269174576,
+        "total": 27928.18749998696
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 25248873900,
+          "load_duration": 10739800,
+          "prompt_eval_count": 545,
+          "prompt_eval_duration": 164875000,
+          "eval_count": 192,
+          "eval_duration": 24983618000
+        }
+      ]
+    },
+    {
+      "scenario_id": "steering_committee",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8704.641999967862,
+      "current_elapsed_ms": 21989.104700041935,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 2,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 42.85069997422397,
+        "data_validation": 980.4840999422595,
+        "inference_attempt_1": 20885.095600038767,
+        "ollama_load_duration_attempt_1": 9.1297,
+        "ollama_prompt_eval_duration_attempt_1": 185.602,
+        "ollama_eval_duration_attempt_1": 20587.953,
+        "validation_attempt_1": 2.620800049044192,
+        "total": 21989.104700041935
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 20883402100,
+          "load_duration": 9129700,
+          "prompt_eval_count": 479,
+          "prompt_eval_duration": 185602000,
+          "eval_count": 163,
+          "eval_duration": 20587953000
+        }
+      ]
+    },
+    {
+      "scenario_id": "missing_data",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8820.598300022539,
+      "current_elapsed_ms": 21648.342699976638,
+      "previous_expected_metric_present": true,
+      "current_factual_metrics": {
+        "expected_metric_facts": 1,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 24.66270001605153,
+        "data_validation": 793.7631999375299,
+        "inference_attempt_1": 20771.626799949445,
+        "ollama_load_duration_attempt_1": 5.6347,
+        "ollama_prompt_eval_duration_attempt_1": 145.391,
+        "ollama_eval_duration_attempt_1": 20546.583,
+        "validation_attempt_1": 2.6354999281466007,
+        "total": 21648.342699976638
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 20769848700,
+          "load_duration": 5634700,
+          "prompt_eval_count": 460,
+          "prompt_eval_duration": 145391000,
+          "eval_count": 156,
+          "eval_duration": 20546583000
+        }
+      ]
+    },
+    {
+      "scenario_id": "insufficient_history",
+      "verification_passed": true,
+      "errors": [],
+      "previous_status": "validated",
+      "current_status": "validated",
+      "previous_elapsed_ms": 8358.670800051186,
+      "current_elapsed_ms": 21487.362399930134,
+      "previous_expected_metric_present": false,
+      "current_factual_metrics": {
+        "expected_metric_facts": 3,
+        "expected_metric_present": true,
+        "missing_metrics": [],
+        "source_and_denominator_complete": true,
+        "invalid_fact_ids": []
+      },
+      "timing_ms": {
+        "model_preflight": 42.493300046771765,
+        "data_validation": 914.0866999514401,
+        "inference_attempt_1": 19415.227900026366,
+        "ollama_load_duration_attempt_1": 6.1491,
+        "ollama_prompt_eval_duration_attempt_1": 161.108,
+        "ollama_eval_duration_attempt_1": 19179.386,
+        "validation_attempt_1": 1.3864999637007713,
+        "total": 21487.362399930134
+      },
+      "ollama_metrics": [
+        {
+          "total_duration": 19413718900,
+          "load_duration": 6149100,
+          "prompt_eval_count": 549,
+          "prompt_eval_duration": 161108000,
+          "eval_count": 192,
+          "eval_duration": 19179386000
+        }
+      ]
+    }
+  ],
+  "failed_demo_reference": {
+    "execution_id": "58dbda6a956a4c3d8490070a3bedb61b",
+    "status": "fallback",
+    "errors": [
+      "unknown_evidence_fact_ids:delay.borough.*",
+      "unverified_numeric_text",
+      "correction_attempt_rejected"
+    ],
+    "elapsed_ms": 223596.7454999918
+  }
+}

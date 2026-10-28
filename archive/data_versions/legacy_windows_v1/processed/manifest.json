@@ -1,0 +1,108 @@
+{
+  "contract_version": "biflow-prepared-v2",
+  "data_version": "legacy_windows_v1",
+  "data_kind": "real",
+  "generated_at": "2026-10-28T19:22:51.302039+00:00",
+  "raw_manifest_sha256": "71d854f8df5bab77e89c3f7e2c341a42ffdb6a690ee7169b8b227296869d2df5",
+  "cleaned_manifest_sha256": "0b6e3dd8301664e94c2416aca8856e4e5b486964caa3f64f4a1fe20dac513b4e",
+  "semantic_catalog_sha256": "d6a84e5ac9feaf88f9b36eb071f7ff3ad4a6a8918c851acc29b03f4b0fc15750",
+  "files": {
+    "summary": {
+      "path": "processed/summary.parquet",
+      "rows": 8,
+      "sha256": "ea1922aef8abeac0bd515e5fa6cb5d34dcf174b56378c007c29ac025d9eefafd"
+    },
+    "groups": {
+      "path": "processed/groups.parquet",
+      "rows": 147,
+      "sha256": "2962fe41c396f57176514b8a69d8013852a15c2bd388f0ce22c67c9ec3a33fb7"
+    },
+    "borough": {
+      "path": "processed/borough.parquet",
+      "rows": 6,
+      "sha256": "fab9964de56b583f810e3c7cf5248cfd4d94daae51d27f9277e52c5c5061f880"
+    },
+    "monthly": {
+      "path": "processed/monthly.parquet",
+      "rows": 1,
+      "sha256": "004598d5a085c760c44538830854c7046ff9f2cf90ff928952460cd0c008b192"
+    },
+    "trend": {
+      "path": "processed/trend.parquet",
+      "rows": 4,
+      "sha256": "1784f95a3172c50f000aa7790de09753ad89faf8e724460d65932fa43655aae1"
+    },
+    "distribution": {
+      "path": "processed/distribution.parquet",
+      "rows": 7,
+      "sha256": "20fab47d74bbcca700dca3fc3ec2023e90a52cd8a3f279b496c9383d50e8e3c4"
+    },
+    "histogram": {
+      "path": "processed/histogram.parquet",
+      "rows": 7,
+      "sha256": "8cdebf877726bd6bda58bee5b2af8c1b2b45b6ba1e08aea2d52ceea9f168812b"
+    },
+    "backlog": {
+      "path": "processed/backlog.parquet",
+      "rows": 4,
+      "sha256": "977be398b6808bde4e9738947d78da50757bce91a1763e6365c52c1ccca607cf"
+    },
+    "coverage": {
+      "path": "processed/coverage.parquet",
+      "rows": 0,
+      "sha256": "2ef96db8844e1f24ba3a53a475a6723619da54e032ff472a00102465f23d22a9"
+    }
+  },
+  "memory_contract": {
+    "max_rows": 500000,
+    "max_dataframe_bytes": 536870912
+  },
+  "metadata": {
+    "source": "NYC Open Data — 311 Service Requests from 2020 to Present",
+    "dataset_id": "erm2-nwe9",
+    "source_url": "https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2020-to-Present/erm2-nwe9",
+    "extracted_at_utc": "2026-10-17T20:09:21.151537+00:00",
+    "period_start_inclusive": "2026-06-01T00:00:00",
+    "period_end_exclusive": "2026-10-18T00:00:00",
+    "note": "Octobre est partiel : données limitées à ce qui était publié au moment de l'extraction.",
+    "sample_method": "10 000 lignes allouées proportionnellement aux volumes mensuels officiels, sélectionnées en quatre fenêtres espacées par mois selon created_date ASC, unique_key ASC.",
+    "population_monthly_counts": {
+      "2026-06": 334834,
+      "2026-07": 343133,
+      "2026-08": 328918,
+      "2026-09": 323627,
+      "2026-10": 162811
+    },
+    "sample_monthly_counts": {
+      "2026-10": 8000
+    },
+    "population_rows": 1493323,
+    "sample_rows": 8000,
+    "api_requests": 20,
+    "source_raw_preserved": "data/raw/nyc311_sample.csv",
+    "partial_months": [
+      "2026-10"
+    ],
+    "data_kind": "real",
+    "data_version": "legacy_windows_v1",
+    "source_timezone": "UTC",
+    "source_csv": "D:\\Analyst_Agent\\data\\raw\\nyc311_sample.csv",
+    "source_csv_sha256": "78bf21d11043dc379fab14ea9bc75428133a1d7f39397841fd0c953cd48b1548",
+    "source_metadata_sha256": "2fca59a3e25e32416704bd2a96d03255e37c04b6b829101f42b43e1fe48387c4",
+    "imported_at_utc": "2026-10-28T19:22:41.036886+00:00",
+    "limitations": [
+      "Local immutable import of the earlier window-sampled extract; not a new remote extraction."
+    ],
+    "raw_sample_rows": 8000
+  },
+  "quality": {
+    "rows": 8000,
+    "valid_delay_n": 3609,
+    "missing_delay_n": 4391,
+    "closed_missing_delay_n": 0,
+    "open_request_n": 4381,
+    "valid_creation_n": 8000,
+    "valid_closure_n": 3609,
+    "inconsistent_n": 10
+  }
+}

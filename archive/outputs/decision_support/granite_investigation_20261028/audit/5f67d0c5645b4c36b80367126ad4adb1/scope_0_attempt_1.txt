@@ -1,0 +1,39 @@
+{
+  "problem": "within_segment_increase",
+  "priority_scope": "scope_0",
+  "evidence_ids": ["ds.232d0cde6a", "ds.9b95f4b741", "ds.3a042fe288", "ds.be58076ee1", "ds.06a767ea94", "ds.c3ad989769"],
+  "investigation_hypotheses": [
+    "segment_processing",
+    "composition",
+    "agency_mix"
+  ],
+  "investigation_steps": [
+    "check_segment_processing",
+    "check_composition",
+    "check_agency_mix"
+  ],
+  "recommended_actions": [
+    "investigate_segment_processing",
+    "investigate_composition",
+    "investigate_agency_mix"
+  ],
+  "expected_verification": [
+    "verify_segment_processing",
+    "verify_composition",
+    "verify_agency_mix"
+  ],
+  "limitations": [
+    "L0",
+    "L1",
+    "L2",
+    "L3",
+    "L4",
+    "L5",
+    "L6",
+    "L7",
+    "L8",
+    "L9",
+    "L10",
+    "L11"
+  ]
+}

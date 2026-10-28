@@ -1,0 +1,7 @@
+.venv/
+.env
+__pycache__/
+.ipynb_checkpoints/
+/tools/ollama/
+/tools/ollama_models/
+biflow_analyste/nyc311_raw_real.csv
