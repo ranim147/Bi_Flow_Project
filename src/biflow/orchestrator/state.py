@@ -100,6 +100,9 @@ class PipelineState(BaseModel):
     run_id: str
     dataset: DatasetRef = Field(default_factory=DatasetRef)
     status: RunStatus = RunStatus.RUNNING
+    workspace: str | None = Field(
+        None, description="Dossier des artefacts du run : instantanés parquet, spec du dashboard, run.json")
+    questions: list[str] = Field(default_factory=list, description="Questions métier à traduire en SQL")
 
     # Sorties par agent : outputs["kpi_semantic"] = KPIOutput(...).model_dump(mode="json")
     outputs: dict[str, dict[str, Any]] = Field(default_factory=dict)
@@ -118,6 +121,11 @@ class PipelineState(BaseModel):
     # Routage (rempli par les nœuds, lu par le routeur du graphe)
     next_step: str | None = None
     published: bool = False
+
+    def require_workspace(self) -> str:
+        if not self.workspace:
+            raise ValueError("state.workspace non défini (run_pipeline le fixe automatiquement)")
+        return self.workspace
 
     def output(self, step: str) -> dict[str, Any]:
         """Sortie d'une étape précédente (KeyError explicite si absente)."""
