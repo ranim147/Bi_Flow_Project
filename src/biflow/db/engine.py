@@ -12,7 +12,9 @@ from biflow.common.config import get_settings
 
 @lru_cache
 def get_engine(url: str | None = None) -> Engine:
-    return create_engine(url or get_settings().database_url(), pool_pre_ping=True)
+    # connect_timeout : sous Windows, un serveur absent fait sinon attendre ~100 s par connexion
+    return create_engine(url or get_settings().database_url(), pool_pre_ping=True,
+                         connect_args={"connect_timeout": 3})
 
 
 def can_connect(engine: Engine) -> bool:
@@ -20,5 +22,5 @@ def can_connect(engine: Engine) -> bool:
         with engine.connect() as conn:
             conn.execute(text("SELECT 1"))
         return True
-    except Exception:
+    except Exception:  # noqa: BLE001 — toute erreur de connexion = base injoignable
         return False

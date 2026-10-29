@@ -1,15 +1,15 @@
-# Equivalent Windows du Makefile.
-# Usage : .\scripts\tasks.ps1 <setup|up|down|init-db|ingest|ingest-small|run|test> [arguments...]
+﻿# Equivalent Windows du Makefile.
+# Usage : .\scripts\tasks.ps1 <setup|up|down|init-db|ingest|ingest-small|run|evaluate|dashboard|demo|test> [arguments...]
 # Ex.   : .\scripts\tasks.ps1 run --simulate-audit-flag kpi_semantic
 param(
     [Parameter(Mandatory = $true, Position = 0)]
-    [ValidateSet("setup", "up", "down", "init-db", "ingest", "ingest-small", "run", "test")]
+    [ValidateSet("setup", "up", "down", "init-db", "ingest", "ingest-small", "run", "evaluate", "dashboard", "demo", "test")]
     [string]$Task,
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$Rest
 )
 
-$ErrorActionPreference = "Stop"
+$ErrorActionPreference = "Continue"  # les logs Python sur stderr ne sont pas des erreurs ; on teste $LASTEXITCODE
 Set-Location (Split-Path $PSScriptRoot -Parent)
 $py = ".\.venv\Scripts\python.exe"
 
@@ -28,6 +28,9 @@ switch ($Task) {
     "ingest"       { & $py -m biflow.ingestion @Rest }
     "ingest-small" { & $py -m biflow.ingestion --max-rows 5000 @Rest }
     "run"          { & $py -m biflow.run @Rest }
+    "evaluate"     { & $py -m biflow.evaluation @Rest }
+    "dashboard"    { & $py -m streamlit run src/biflow/dashboard/app.py @Rest }
+    "demo"         { & (Join-Path $PSScriptRoot "demo.ps1") @Rest }
     "test"         { & $py -m pytest @Rest }
 }
 exit $LASTEXITCODE

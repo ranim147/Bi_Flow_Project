@@ -1,0 +1,114 @@
+# Catalogue des KPI BIFlow : définitions communes à tous les agents (couche sémantique).
+#
+# Toute modification passe par une revue de ce fichier dans Git (validation humaine).
+# Le SQL est exécuté par DuckDB, en lecture seule, sur l'instantané nettoyé du run :
+#   requests    : une ligne par demande nettoyée (table processed.nyc311_clean)
+#   boroughs    : ref.boroughs (population)
+#   sla_targets : ref.sla_targets (délai cible par type de plainte)
+#
+# kpis       : une valeur globale, la requête retourne une seule colonne `value`
+# breakdowns : une valeur par modalité ; colonnes `<dimension>`, `value`, `n` (nombre de
+#              demandes, utilisé par le seuil anti-identification)
+# Tout ORDER BY se termine par la dimension : en cas d'égalité, l'ordre doit rester le même
+# d'une exécution à l'autre (l'Auditeur rejoue chaque requête).
+
+table_schema:
+  requests:
+    unique_key: identifiant de la demande
+    created_date: date/heure de création (heure de New York)
+    closed_date: date/heure de clôture (NULL si non clôturée)
+    agency: agence responsable (NYPD, DOT...)
+    complaint_type: type de plainte
+    descriptor: sous-type de plainte
+    incident_zip: code postal (NULL si invalide)
+    borough: BRONX, BROOKLYN, MANHATTAN, QUEENS, STATEN ISLAND ou UNSPECIFIED
+    status: statut (Closed, Open, In Progress...)
+    latitude: latitude arrondie à 2 décimales (zone d'environ 1 km)
+    longitude: longitude arrondie à 2 décimales
+    resolution_hours: closed_date - created_date en heures (NULL si non clôturée)
+    is_closed: vrai si la demande est clôturée ; une demande ouverte (en cours, non clôturée) = NOT is_closed
+    created_day: jour de création (DATE)
+    created_hour: heure de création (0-23)
+    weekday: jour de la semaine (0 = lundi, 1 = mardi, 2 = mercredi, 3 = jeudi, 4 = vendredi, 5 = samedi, 6 = dimanche)
+    target_hours: délai cible du type de plainte (NULL si pas de cible)
+    within_sla: vrai si clôturée sous le délai cible (NULL si non clôturée ou sans cible)
+  boroughs:
+    borough: code du borough
+    borough_label: libellé d'affichage (ex. Bronx) ; filtrer et joindre sur borough
+    population: population (recensement 2020)
+  sla_targets:
+    complaint_type: type de plainte
+    target_hours: délai cible en heures
+    is_placeholder: vrai si la valeur est provisoire
+
+kpis:
+  - name: total_requests
+    unit: count
+    definition: Nombre de demandes après nettoyage
+    sql: SELECT COUNT(*) AS value FROM requests
+
+  - name: closure_rate
+    unit: ratio
+    definition: Demandes clôturées / demandes totales
+    sql: SELECT AVG(CASE WHEN is_closed THEN 1.0 ELSE 0.0 END) AS value FROM requests
+
+  - name: median_resolution_hours
+    unit: hours
+    definition: Médiane de (closed_date - created_date) en heures, sur les demandes clôturées
+    sql: SELECT MEDIAN(resolution_hours) AS value FROM requests WHERE is_closed
+
+  - name: sla_compliance_rate
+    unit: percent
+    definition: "% de demandes clôturées sous le délai cible, parmi les demandes clôturées ayant une cible (cibles PLACEHOLDER à valider)"
+    sql: SELECT 100.0 * AVG(CASE WHEN within_sla THEN 1.0 ELSE 0.0 END) AS value FROM requests WHERE within_sla IS NOT NULL
+
+  - name: requests_per_10k
+    unit: per_10k
+    definition: Demandes pour 10 000 habitants (5 boroughs, recensement 2020)
+    sql: >-
+      SELECT 10000.0 * COUNT(*) / (SELECT SUM(population) FROM boroughs) AS value
+      FROM requests WHERE borough IN (SELECT borough FROM boroughs)
+
+breakdowns:
+  - name: requests_by_borough
+    unit: count
+    dimension: borough
+    definition: Nombre de demandes par borough
+    sql: SELECT borough, COUNT(*) AS value, COUNT(*) AS n FROM requests GROUP BY borough ORDER BY value DESC, borough
+
+  - name: requests_per_10k_by_borough
+    unit: per_10k
+    dimension: borough
+    definition: Demandes pour 10 000 habitants par borough
+    sql: >-
+      SELECT r.borough, 10000.0 * COUNT(*) / ANY_VALUE(b.population) AS value, COUNT(*) AS n
+      FROM requests r JOIN boroughs b ON r.borough = b.borough
+      GROUP BY r.borough ORDER BY value DESC, r.borough
+
+  - name: median_resolution_hours_by_borough
+    unit: hours
+    dimension: borough
+    definition: Délai médian de résolution (heures) par borough, demandes clôturées
+    sql: >-
+      SELECT borough, MEDIAN(resolution_hours) AS value, COUNT(*) AS n
+      FROM requests WHERE is_closed GROUP BY borough ORDER BY value DESC, borough
+
+  - name: requests_by_complaint_type
+    unit: count
+    dimension: complaint_type
+    definition: Nombre de demandes par type de plainte
+    sql: SELECT complaint_type, COUNT(*) AS value, COUNT(*) AS n FROM requests GROUP BY complaint_type ORDER BY value DESC, complaint_type
+
+  - name: sla_compliance_by_complaint_type
+    unit: percent
+    dimension: complaint_type
+    definition: "% de demandes clôturées sous le délai cible, par type de plainte"
+    sql: >-
+      SELECT complaint_type, 100.0 * AVG(CASE WHEN within_sla THEN 1.0 ELSE 0.0 END) AS value, COUNT(*) AS n
+      FROM requests WHERE within_sla IS NOT NULL GROUP BY complaint_type ORDER BY value, complaint_type
+
+  - name: daily_requests
+    unit: count
+    dimension: created_day
+    definition: Nombre de demandes par jour de création
+    sql: SELECT created_day, COUNT(*) AS value, COUNT(*) AS n FROM requests GROUP BY created_day ORDER BY created_day

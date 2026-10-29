@@ -19,6 +19,9 @@ dependencies = [
     "python-dotenv>=1.0",
     "streamlit>=1.35",
     "plotly>=5.20",
+    "duckdb>=1.1",
+    "statsmodels>=0.14",
+    "pyyaml>=6.0",
 ]
 
 [project.optional-dependencies]
@@ -26,6 +29,9 @@ dev = ["pytest>=8"]
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.setuptools.package-data]
+biflow = ["semantic/*.yaml"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
