@@ -142,6 +142,22 @@ Chaque run écrit ses artefacts dans `data/processed/<run_id>/` : instantané `n
 `dashboard_spec.json` et `run.json` (state complet : sorties, requêtes et résultats, contrôles, findings).
 `data/processed/published.json` pointe vers le dernier run **publié** : c'est le seul que le dashboard affiche.
 
+### Application web (front React)
+
+Démonstration des 6 agents en direct : choix d'un scénario (nominal, panne d'un agent, écart corrigé par
+l'Auditeur, écart persistant), schéma de ligne animé pendant le run, détail de chaque agent (entrées,
+sorties, contrôles), tableau de bord du run publié, questions en langage naturel, audit et provenance.
+Le front appelle le **vrai pipeline** via l'API FastAPI (`src/biflow/api/`), rien n'est précalculé.
+
+```powershell
+.\scripts\tasks.ps1 web                  # compile le front si besoin, puis http://localhost:8000
+# Développement (rechargement à chaud) : API sur :8000 et Vite sur :5173
+.\.venv\Scripts\python -m biflow.api --reload
+cd frontend; npm install; npm run dev       # http://localhost:5173
+```
+
+Prérequis : Node.js 18+ pour compiler le front. Scénarios décrits dans `docs/SCENARIOS.md`.
+
 ### Évaluation (seed 42)
 
 `python -m biflow.evaluation` (baseline) ; `BIFLOW_LLM_PROVIDER=ollama` pour la mesure avec le LLM local.

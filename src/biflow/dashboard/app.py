@@ -78,6 +78,8 @@ def _figure(c: dict, df: pd.DataFrame):
         anomalies = df[df["anomaly"]]
         fig.add_scatter(x=anomalies["key"], y=anomalies["value"], mode="markers", name="anomalie",
                         marker={"color": ANOMALY, "size": 10, "line": {"width": 2, "color": "white"}})
+        # légende au-dessus du tracé, à gauche : la barre d'outils Plotly occupe le coin droit
+        fig.update_layout(legend={"orientation": "h", "x": 0, "y": 1.08, "xanchor": "left"})
     elif c["chart_type"] == "bar":
         fig = px.bar(df, x="key", y="value", labels={"key": "", "value": c["unit"]},
                      color_discrete_sequence=[SERIES])

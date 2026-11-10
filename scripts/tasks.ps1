@@ -1,9 +1,9 @@
 ﻿# Equivalent Windows du Makefile.
-# Usage : .\scripts\tasks.ps1 <setup|up|down|init-db|ingest|ingest-small|run|evaluate|dashboard|demo|test> [arguments...]
+# Usage : .\scripts\tasks.ps1 <setup|up|down|init-db|ingest|ingest-small|run|evaluate|dashboard|web|demo|test> [arguments...]
 # Ex.   : .\scripts\tasks.ps1 run --simulate-audit-flag kpi_semantic
 param(
     [Parameter(Mandatory = $true, Position = 0)]
-    [ValidateSet("setup", "up", "down", "init-db", "ingest", "ingest-small", "run", "evaluate", "dashboard", "demo", "test")]
+    [ValidateSet("setup", "up", "down", "init-db", "ingest", "ingest-small", "run", "evaluate", "dashboard", "web", "demo", "test")]
     [string]$Task,
     [Parameter(ValueFromRemainingArguments = $true)]
     [string[]]$Rest
@@ -30,6 +30,10 @@ switch ($Task) {
     "run"          { & $py -m biflow.run @Rest }
     "evaluate"     { & $py -m biflow.evaluation @Rest }
     "dashboard"    { & $py -m streamlit run src/biflow/dashboard/app.py @Rest }
+    "web"          {
+        if (-not (Test-Path frontend/dist)) { Push-Location frontend; npm install; npm run build; Pop-Location }
+        & $py -m biflow.api @Rest
+    }
     "demo"         { & (Join-Path $PSScriptRoot "demo.ps1") @Rest }
     "test"         { & $py -m pytest @Rest }
 }
