@@ -1,7 +1,7 @@
 # Démonstration BIFlow — déroulé de la soutenance
 
 Validation technique et métier : présentation (`livrables/BIFlow_Validation.pptx`), puis démonstration
-**en direct** de l'application. La vidéo `livrables/BIFlow_demo.mp4` (3 min 10, intégrée à la slide 15)
+**en direct** de l'application. La vidéo `livrables/BIFlow_demo.mp4` (4 min, intégrée à la slide 15)
 sert de secours si la machine ou le réseau posent problème.
 
 ## Avant la séance (la veille, puis 15 min avant)

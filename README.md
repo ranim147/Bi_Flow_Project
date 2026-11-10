@@ -19,7 +19,7 @@ publié ne vient du LLM.
 | Tests automatisés | 95 (dont les 4 scénarios de démonstration) |
 
 Livrables de la validation (dossier [`livrables/`](livrables/)) : présentation, rapport (docx et pdf),
-vidéo commentée de 3 min 10.
+vidéo commentée de 4 min (démonstration et partie commerciale).
 
 ---
 
