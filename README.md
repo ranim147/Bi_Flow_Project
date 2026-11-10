@@ -373,6 +373,9 @@ Schéma : `src/biflow/db/models.py` ; `init_db` est idempotent. Dates NYC 311 en
 cd frontend; npx tsc --noEmit; npm run build
 ```
 
+La même vérification tourne sur GitHub à chaque push et pull request (`.github/workflows/ci.yml` : lint,
+tests, types et compilation du front).
+
 Les tests couvrent chaque agent, l'orchestrateur (nouveaux essais, échec, boucle de l'Auditeur), le bac à
 sable SQL, la protection des données, l'évaluation et l'API : `tests/test_api.py` rejoue les 4 scénarios de
 bout en bout et vérifie les refus (spec modifiée ou absente, requêtes invalides, run illisible).
