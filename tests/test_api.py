@@ -1,6 +1,7 @@
 """API du front React : les scénarios lancent le vrai pipeline et finissent avec le bon statut."""
 
 import dataclasses
+import os
 import shutil
 import time
 
@@ -98,3 +99,32 @@ def test_invalid_requests(client):
     assert client.get("/api/runs/pas-un-run").status_code == 400
     assert client.get("/api/runs/pas-un-run/quarantine").status_code == 400
     assert client.get("/api/inconnue").status_code == 404
+
+
+def test_published_refuses_missing_or_modified_spec(client):
+    _run(client, scenario="nominal")
+    spec = api_app._published_pointer()["spec_path"]
+    with open(spec, "a", encoding="utf-8") as f:
+        f.write(" ")  # spec modifiée après l'audit
+    assert client.get("/api/published").status_code == 409
+    os.remove(spec)
+    r = client.get("/api/published")
+    assert r.status_code == 409 and "introuvable" in r.json()["detail"]
+
+
+def test_history_skips_unreadable_run(client):
+    snap = _run(client, scenario="nominal")
+    broken = api_app.PROCESSED_DIR / "20200101T000000Z-abcdef"
+    broken.mkdir()
+    (broken / "run.json").write_text("{}", encoding="utf-8")  # ancien format / tronqué
+    runs = client.get("/api/runs").json()
+    assert [r["run_id"] for r in runs] == [snap["run_id"]]
+
+
+def test_failed_start_releases_lock(client, monkeypatch):
+    def boom(*a, **k):
+        raise RuntimeError("thread impossible")
+
+    monkeypatch.setattr(live_mod.threading, "Thread", boom)
+    assert client.post("/api/runs", json={"scenario": "nominal"}).status_code == 409
+    assert not api_app.manager.busy

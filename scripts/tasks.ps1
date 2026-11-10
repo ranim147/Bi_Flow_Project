@@ -31,8 +31,17 @@ switch ($Task) {
     "evaluate"     { & $py -m biflow.evaluation @Rest }
     "dashboard"    { & $py -m streamlit run src/biflow/dashboard/app.py @Rest }
     "web"          {
-        if (-not (Test-Path frontend/dist)) { Push-Location frontend; npm install; npm run build; Pop-Location }
-        & $py -m biflow.api @Rest
+        # (re)compile le front s'il manque ou si une source est plus récente que la version compilée
+        $built = Get-Item frontend/dist/index.html -ErrorAction SilentlyContinue
+        $stale = -not $built -or (Get-ChildItem frontend/src, frontend/index.html, frontend/package.json -Recurse -File |
+                 Where-Object { $_.LastWriteTime -gt $built.LastWriteTime })
+        if ($stale) {
+            Push-Location frontend
+            if (-not (Test-Path node_modules)) { npm install }
+            npm run build
+            Pop-Location
+        }
+        & $py -m biflow.api @Rest   # ex. : .\scripts\tasks.ps1 web --llm ollama
     }
     "demo"         { & (Join-Path $PSScriptRoot "demo.ps1") @Rest }
     "test"         { & $py -m pytest @Rest }

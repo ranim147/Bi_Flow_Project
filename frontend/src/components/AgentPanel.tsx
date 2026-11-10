@@ -3,7 +3,7 @@
 // complet (run.json) arrive à la fin du run.
 import { useEffect, useMemo, useState } from "react";
 import { api, type Check, type QueryRecord, type Run, type Step } from "../api";
-import { STEP_LABEL, STEP_ROLE, checkParts, day, kpiValue, num, short } from "../format";
+import { STEP_LABEL, STEP_ROLE, checkParts, day, kpiValue, num, plural, short } from "../format";
 import { STEPS, type Audit, type Station } from "../timeline";
 import { Bars } from "./charts";
 import { Checks, Notice, Provenance, Sql, Table } from "./ui";
@@ -121,7 +121,7 @@ function Profiler({ out }: { out: any }) {
       <p className="lead">
         {num(out.row_count)} demandes brutes, créées du {day(out.date_min.slice(0, 10))} au{" "}
         {day(out.date_max.slice(0, 10))}, sur {out.columns.length} colonnes.{" "}
-        {out.issues.length ? `${out.issues.length} type(s) de défaut détecté(s), transmis à Qualité / ETL.` : "Aucun défaut détecté."}
+        {out.issues.length ? `${plural(out.issues.length, "type de défaut détecté", "types de défaut détectés")}, transmis à Qualité / ETL.` : "Aucun défaut détecté."}
       </p>
       {out.source?.notes?.length > 0 && (
         <Notice tone="warn">
@@ -222,7 +222,7 @@ function Kpi({ out }: { out: any }) {
       <p className="lead">
         {out.kpis.length} KPI et {out.breakdowns.length} ventilations calculés en SQL (DuckDB, lecture seule) à partir
         du catalogue <code>kpi_catalog.yaml</code>. {out.queries.length} requêtes enregistrées avec leur résultat.{" "}
-        {masked ? `${masked} agrégat(s) masqué(s) : moins de ${out.min_group_size} demandes.` : `Aucun agrégat sous le seuil de ${out.min_group_size} demandes.`}{" "}
+        {masked ? `${plural(masked, "agrégat masqué", "agrégats masqués")} : moins de ${out.min_group_size} demandes.` : `Aucun agrégat sous le seuil de ${out.min_group_size} demandes.`}{" "}
         Questions : {out.llm_model ? `LLM ${out.llm_model}` : "règles de la baseline (aucun LLM configuré)"}.
       </p>
       <div className="kpi-list">
@@ -401,7 +401,7 @@ function Auditor({ out, audits }: { out: any; audits: Audit[] }) {
         <span className="verdict-n">{passed}/{checks.length}</span>
         <div>
           <p className="verdict-title">{out.approved ? "Run approuvé" : "Run non approuvé"}</p>
-          <p>{out.approved ? "Chaque chiffre affiché correspond à une requête enregistrée et rejouable." : `${errors.length} écart(s) bloquant(s), adressé(s) à l'étape fautive.`}</p>
+          <p>{out.approved ? "Chaque chiffre affiché correspond à une requête enregistrée et rejouable." : `${plural(errors.length, "écart bloquant, adressé", "écarts bloquants, adressés")} à l'étape fautive.`}</p>
         </div>
       </div>
       {audits.length > 1 && (

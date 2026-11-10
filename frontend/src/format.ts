@@ -76,7 +76,10 @@ export function day(iso: string): string {
 /** Nom de fichier d'un chemin Windows ou POSIX. */
 export const basename = (path: string) => path.replace(/\\/g, "/").split("/").pop() ?? path;
 
-export const short =(hash: string | null | undefined, n = 12) => (hash ? hash.slice(0, n) : "");
+/** « 1 jour anormal », « 3 jours anormaux » (0 et 1 au singulier, comme en français). */
+export const plural = (n: number, one: string, many: string) => `${num(n)} ${Math.abs(n) >= 2 ? many : one}`;
+
+export const short = (hash: string | null | undefined, n = 12) => (hash ? hash.slice(0, n) : "");
 
 /** Libellé lisible d'un contrôle d'audit : « kpi_egal_requete:total_requests » -> deux parties. */
 export function checkParts(name: string): [string, string | null] {

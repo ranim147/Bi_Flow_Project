@@ -3,7 +3,7 @@ import { api, ApiError, type LiveEvent, type LiveRun, type Meta, type Run, type 
 import AgentPanel from "../components/AgentPanel";
 import LineDiagram from "../components/LineDiagram";
 import { Notice, StatusPill } from "../components/ui";
-import { STATUS_LABEL, STEP_LABEL, basename, num, time } from "../format";
+import { STATUS_LABEL, STEP_LABEL, basename, num, plural, time } from "../format";
 import { navigate } from "../router";
 import { STEPS, buildTimeline, eventsFromRun } from "../timeline";
 
@@ -36,6 +36,7 @@ export default function Demo({ meta, runId, onRunFinished }: {
     if (!runId) return;
     let stopped = false;
     let since = 0;
+    let failures = 0;  // erreurs passagères tolérées avant d'abandonner le suivi en direct
     let timer: number | undefined;
     const finish = () =>
       api.run(runId).then((r) => !stopped && setRun(r)).catch((e) => !stopped && setLoadError(e.message));
@@ -44,6 +45,7 @@ export default function Demo({ meta, runId, onRunFinished }: {
         const snap = await api.live(runId, since);
         if (stopped) return;
         since = snap.next_seq;
+        failures = 0;
         setLive(snap);
         if (snap.events.length) setEvents((prev) => [...prev, ...snap.events]);
         if (snap.ended_at) {
@@ -58,6 +60,8 @@ export default function Demo({ meta, runId, onRunFinished }: {
           api.run(runId)
             .then((r) => { if (!stopped) { setRun(r); setEvents(eventsFromRun(r)); } })
             .catch((err) => !stopped && setLoadError(err.message));
+        } else if (++failures <= 5) {
+          timer = window.setTimeout(poll, POLL_MS * 2 ** failures);
         } else setLoadError((e as Error).message);
       }
     };
@@ -84,7 +88,9 @@ export default function Demo({ meta, runId, onRunFinished }: {
     }
   }
 
-  const scenarioTitle = meta.scenarios.find((s) => s.id === live?.scenario)?.title;
+  // Run suivi en direct : scénario connu. Run rouvert depuis l'historique : déduit de ses événements.
+  const known = live ? { id: live.scenario, step: live.step } : inferScenario(timeline, events);
+  const scenarioTitle = meta.scenarios.find((s) => s.id === known?.id)?.title;
 
   return (
     <div className="demo">
@@ -159,7 +165,7 @@ export default function Demo({ meta, runId, onRunFinished }: {
           <>
             <header className="run-head">
               <div>
-                <h2>{scenarioTitle ?? "Run"}{live?.step ? ` sur ${STEP_LABEL[live.step]}` : ""}</h2>
+                <h2>{scenarioTitle ?? "Run"}{known?.step ? ` sur ${STEP_LABEL[known.step]}` : ""}</h2>
                 <p className="muted">
                   Run <code>{runId}</code>
                   {live?.started_at && `, lancé à ${time(live.started_at)}`}
@@ -199,6 +205,17 @@ export default function Demo({ meta, runId, onRunFinished }: {
   );
 }
 
+function inferScenario(t: ReturnType<typeof buildTimeline>, events: LiveEvent[]): { id: string; step: Step | null } | null {
+  if (!t.final) return null;
+  if (t.final === "failed") {
+    const failed = [...events].reverse().find((e) => e.kind === "failed");
+    return { id: "panne", step: failed?.step ?? null };
+  }
+  const flagged = t.feedbacks[0]?.target ?? null;
+  if (t.final === "unreliable") return { id: "non_fiable", step: flagged };
+  return t.feedbacks.length ? { id: "correction", step: flagged } : { id: "nominal", step: null };
+}
+
 function lastTouched(events: LiveEvent[]): Step | null {
   for (let i = events.length - 1; i >= 0; i--) {
     const e = events[i];
@@ -236,7 +253,7 @@ function describe(e: LiveEvent): string {
     case "audit": {
       const blocking = (e.findings || []).filter((f) => f.severity === "error");
       if (e.approved) return `Audit : ${e.passed}/${e.total} contrôles, aucun écart bloquant.`;
-      return `Audit : ${blocking.length} écart(s) bloquant(s). ${blocking.map((f) => `${STEP_LABEL[f.target_step]} : ${f.message}`).join(" ; ")}`;
+      return `Audit : ${plural(blocking.length, "écart bloquant", "écarts bloquants")}. ${blocking.map((f) => `${STEP_LABEL[f.target_step]} : ${f.message}`).join(" ; ")}`;
     }
     case "run":
       return `Run terminé : ${STATUS_LABEL[e.status ?? "failed"].toLowerCase()}.`;

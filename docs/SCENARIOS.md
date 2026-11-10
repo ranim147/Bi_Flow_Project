@@ -48,7 +48,8 @@ Règles communes à tous les agents (orchestrateur, `src/biflow/orchestrator/gra
 | 5. Dashboard Generator | 13 éléments : 5 cartes KPI, 5 barres, 1 courbe, 1 table, 1 bloc texte |
 | 6. Auditeur/XAI | 53/53 contrôles réussis → statut **SUCCESS**, run publié |
 
-Durée totale : environ 10 secondes sans LLM.
+Durée totale : environ 10 secondes sans LLM, environ 1 min 30 avec le LLM local (`qwen2.5:7b`, rédaction des
+insights comprise).
 
 ---
 
@@ -312,13 +313,17 @@ publier lui-même.
 > Exemple réel : 13 éléments — 5 cartes KPI, 4 barres verticales, 1 barre horizontale (types de plainte),
 > 1 courbe journalière, 1 table de questions, 1 bloc d'insights.
 
-### Ce que voit l'utilisateur ensuite (app Streamlit)
+### Ce que voit l'utilisateur ensuite (application web)
 
-1. L'app lit `data/processed/published.json` (dernier run **publié**, jamais un run en échec).
-2. Elle **recalcule l'empreinte** de la spec ; si elle ne correspond pas, elle refuse d'afficher.
-3. Onglets : *Tableau de bord* (chaque élément a un « Origine des chiffres » : SQL + empreinte),
+1. L'API (`GET /api/published`) lit `data/processed/published.json` : dernier run **publié**, jamais un run
+   en échec ou non fiable.
+2. Elle **recalcule l'empreinte** de la spec ; si elle ne correspond pas (ou si la spec a disparu), elle
+   refuse de l'envoyer et le front affiche le motif.
+3. Pages : *Tableau de bord* (« Voir le SQL » sous chaque chiffre : requête + empreinte de l'instantané),
    *Poser une question* (sur l'instantané audité, mêmes garde-fous que l'agent KPI),
-   *Audit et provenance* (réserves, défauts, règles ETL, contrôles).
+   *Audit et provenance* (réserves, défauts, règles ETL, contrôles), *Historique* (tous les runs).
+
+Le dashboard Streamlit du premier prototype (`src/biflow/dashboard/app.py`) applique les mêmes règles.
 
 ### Scénarios alternatifs
 
@@ -420,8 +425,8 @@ Les 4 scénarios se lancent aussi depuis l'application web (`.\scripts\tasks.ps1
 # Auditeur : blocage, rien n'est publié
 .\.venv\Scripts\python -m biflow.run --no-db --simulate-audit-flag kpi_semantic --persistent
 
-# Le dashboard du dernier run publié
-.\.venv\Scripts\python -m streamlit run src/biflow/dashboard/app.py
+# L'application web (scénarios en direct, tableau de bord du dernier run publié)
+.\scripts\tasks.ps1 web --llm ollama      # ou sans --llm : baseline à règles, plus rapide
 ```
 
 | Scénario | Agents concernés | Statut final | Publié ? |

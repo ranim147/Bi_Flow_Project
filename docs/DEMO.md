@@ -1,70 +1,87 @@
-# Démonstration BIFlow — déroulé (environ 10 minutes)
+# Démonstration BIFlow — déroulé de la soutenance
 
-Prérequis : `.venv` installé, extrait `data/raw/nyc311_2023-01_2026-09_echantillon.parquet` présent
-(sinon : `python -m biflow.ingestion.import_pages <dossier raw de l'acquisition> --name nyc311_2023-01_2026-09_echantillon`).
-Optionnel : Ollama lancé avec `qwen2.5:7b` pour la partie LLM, Docker pour la partie PostgreSQL.
+Validation technique et métier : présentation (`livrables/BIFlow_Validation.pptx`), puis démonstration
+**en direct** de l'application. La vidéo `livrables/BIFlow_demo.mp4` (3 min 10, intégrée à la slide 15)
+sert de secours si la machine ou le réseau posent problème.
 
-## 1. Le pipeline de bout en bout (2 min)
-
-```powershell
-.\scripts\demo.ps1 -NoDashboard
-```
-
-À montrer dans le résumé :
-
-- les 6 étapes OK, avec leurs contrôles de validation ;
-- **265 609 demandes lues, 139 supprimées** par des règles tracées (et gardées en quarantaine) ;
-- les KPI calculés par SQL à partir du catalogue YAML ;
-- la question « Pourquoi... » **refusée avec explication** : les données ne contiennent pas les causes ;
-- l'audit : **53/53 contrôles**, chaque requête rejouée, run publié.
-
-## 2. Le dashboard (3 min)
+## Avant la séance (la veille, puis 15 min avant)
 
 ```powershell
-.\.venv\Scripts\python -m streamlit run src/biflow/dashboard/app.py
+cd biflow
+.\.venv\Scripts\python -m pytest -q                 # doit finir sans échec (tests PostgreSQL ignorés sans base)
+ollama list                                         # qwen2.5:7b présent ; sinon : ollama pull qwen2.5:7b
+.\scripts\tasks.ps1 web --llm ollama                # compile le front si besoin, puis http://localhost:8000
 ```
 
-- **Tableau de bord** : chaque carte et chaque graphique a un « Origine des chiffres » (SQL + empreinte).
-- Les anomalies sur la courbe journalière, avec le type de plainte en hausse :
-  - 2026-02-24 : *Snow or Ice* (231 demandes au lieu d'environ 20 par jour) ;
-  - 2023-09-29 : *Sewer Maintenance* (le jour des inondations de New York).
-  BIFlow écrit « piste à vérifier, pas une cause » : c'est l'analyste qui conclut.
-- **Poser une question** : « Combien de demandes de bruit dans le Bronx ? » puis une question hors
-  périmètre (« Combien d'agents faut-il recruter ? »). Avec une adresse dans la question, montrer le masquage.
-- **Audit et provenance** : réserves sur l'échantillon, défauts du Profiler, règles de l'ETL, contrôles.
+1. Ouvrir <http://localhost:8000> ; le bandeau en haut à droite doit afficher `LLM ollama:qwen2.5:7b`.
+2. **Préchauffer le LLM** : page *Poser une question*, cliquer sur une question d'exemple (la première
+   réponse prend 15 à 20 s, les suivantes 2 à 5 s).
+3. Lancer une fois le **Run nominal** pour que le tableau de bord affiche un run du jour.
+4. Garder un second onglet ouvert sur la page *Tableau de bord*.
 
-## 3. La sécurité : l'Auditeur bloque les erreurs (2 min)
+Plan B sans LLM (machine lente, Ollama absent) : `.\scripts\tasks.ps1 web`. Les runs prennent alors environ
+10 s, les questions du catalogue sont traitées par la baseline à règles, les reformulations libres moins
+bien.
 
-```powershell
-.\.venv\Scripts\python -m biflow.run --no-db --file data/raw/nyc311_2023-01_2026-09_echantillon.parquet --simulate-audit-flag kpi_semantic --persistent
-```
+## Pendant la démonstration (environ 8 min)
 
-Statut **NON FIABLE** : rien n'est publié, le dashboard garde le dernier run validé.
-Autres démos : `--simulate-failure quality_etl` (relances puis ÉCHEC).
+### 1. Run nominal (2 min 30)
 
-## 4. Les preuves du MVP (2 min)
+Page **Scénarios**, *Run nominal*, « Ralentir pour la présentation » coché, **Lancer le scénario**.
 
-```powershell
-.\.venv\Scripts\python -m biflow.evaluation                      # baseline sans LLM (environ 10 s)
-$env:BIFLOW_LLM_PROVIDER="ollama"; .\.venv\Scripts\python -m biflow.evaluation   # avec le LLM local (environ 10 min)
-```
+Pendant que les stations s'allument (environ 1 min 30 avec le LLM), commenter le journal :
 
-Résultats : `data/processed/evaluation/evaluation.md`. À souligner : défauts, KPI, anomalie et audit à 100 % ;
-le SQL des reformulations montre l'apport (et les limites) du LLM face à la baseline.
+- **Data Profiler** : 265 609 demandes, 3 types de défaut (ex. 1 089 demandes « Closed » sans date) ;
+- **Qualité / ETL** : 139 lignes supprimées par des règles tracées, gardées en quarantaine ; texte libre
+  retiré, coordonnées arrondies ; instantané `83d3805019db` ;
+- **KPI & Semantic** : 5 KPI en SQL depuis le catalogue ; la question sur le Bronx traduite par le LLM ;
+  la question « Pourquoi... » refusée ;
+- **Analyste BI** : la partie la plus longue, le LLM rédige les insights ; tout nombre non prouvé est rejeté ;
+- **Auditeur** : **53/53 contrôles**, chaque requête rejouée, run publié.
 
-## 5. Contrôle croisé avec l'implémentation de l'équipe
+Cliquer ensuite sur les onglets d'agents : *Qualité / ETL* (règles, quarantaine), *KPI & Semantic* (« Voir
+le SQL »), *Auditeur / XAI* (contrôles par étape, explication).
 
-Sur la même extraction, le BI Analyst de l'équipe (dépôt `Bi_Flow_Project`, code indépendant) trouve
-STATEN ISLAND comme borough au délai médian le plus long : 0,655677 jour = **15,736 h**, n = 9 874.
-BIFlow trouve **15,736 h**, n = 9 876 (2 demandes d'écart dues aux règles de nettoyage).
-Deux codes différents, même résultat.
+### 2. Tableau de bord et question (2 min)
+
+- **Tableau de bord** : 97,7 % de demandes clôturées, délai médian 7,3 h ; survoler la courbe jusqu'au
+  **24 février 2026** (460 demandes, *Snow or Ice*) : « une piste à vérifier, pas une cause » ; ouvrir
+  « Voir le SQL » sous un KPI.
+- **Poser une question** : « Combien de demandes de bruit dans le Bronx ? » → 15 443, SQL affiché,
+  contrôle croisé concordant. Puis « Combien d'agents faut-il recruter ? » → refus motivé.
+
+### 3. Les scénarios de robustesse (3 min 30)
+
+Pour aller vite, décocher « Ralentir » et choisir des étapes en fin de pipeline.
+
+| Scénario | Réglage conseillé | Durée avec LLM | À montrer |
+|---|---|---|---|
+| Panne d'un agent | Qualité / ETL | environ 20 s | 3 essais, puis « Bloqué » : rien n'est publié |
+| Écart corrigé | KPI & Semantic (sens métier) ou Dashboard Generator (rapide) | 2 min 30 / 1 min 40 | la flèche de renvoi, « 2 passages », second audit 53/53 |
+| Écart persistant | Dashboard Generator | environ 1 min 40 | « non fiable » ; l'onglet *Tableau de bord* n'a pas changé ; *Historique* |
+
+Pendant les runs longs, parler de l'architecture ou répondre aux questions : le journal se met à jour seul.
 
 ## Questions probables
 
 | Question | Réponse courte |
-| :-- | :-- |
-| Le LLM peut-il inventer un chiffre ? | Non : il rédige à partir des `evidence` ; tout nombre absent est rejeté et le gabarit est gardé. Les KPI viennent du SQL du catalogue. |
-| Et si le SQL du LLM est dangereux ? | Bac à sable DuckDB : copie en mémoire, SELECT seul, tables autorisées, accès fichiers coupé, temps et lignes limités. |
-| RGPD ? | Texte libre retiré, coordonnées à environ 1 km, seuil N = 10, question contrôlée avant envoi, jamais de ligne brute au LLM ; modèle local possible (Ollama). |
+|---|---|
+| Le LLM peut-il inventer un chiffre ? | Non. Les KPI viennent du SQL du catalogue ; le LLM rédige à partir des preuves et tout nombre absent des preuves est rejeté. |
+| Et si le SQL du LLM est dangereux ? | Bac à sable DuckDB : copie en mémoire, SELECT seul, tables autorisées, fichiers coupés, temps et lignes limités. |
+| Les pannes sont-elles réelles ? | Simulées, avec les mêmes options que la ligne de commande ; l'orchestrateur, les agents et les données sont les vrais. |
+| Pourquoi un seul renvoi ? | Pour éviter une boucle infinie : si l'écart persiste, un humain doit regarder, rien n'est publié. |
+| RGPD ? | Texte libre retiré, coordonnées à environ 1 km, seuil de 10 demandes, question contrôlée avant envoi, jamais de ligne brute au LLM, modèle local possible. |
 | Pourquoi pas de cause ? | Les données ne contiennent ni effectifs ni capacité : BIFlow refuse plutôt que d'inventer. |
-| Pourquoi 2 % des données ? | Choix d'acquisition bornée (45 mois en environ 265 000 lignes) ; non probabiliste : les volumes ne s'extrapolent pas à la ville, d'où les réserves affichées. |
+| Pourquoi 2 % des données ? | Acquisition bornée (45 mois en environ 265 000 lignes) ; échantillon non probabiliste, d'où la réserve affichée sur le tableau de bord. |
+| Les délais cibles sont-ils officiels ? | Non, provisoires : le KPI « sous le délai cible » l'indique ; ils sont à valider par le service. |
+| Comment savoir que les chiffres sont justes ? | L'Auditeur rejoue chaque requête et recalcule 4 KPI en pandas ; le BI Analyst de l'équipe, code indépendant, trouve le même borough au délai médian le plus long (Staten Island, 15,736 h). |
+
+## Commandes de secours (ligne de commande)
+
+```powershell
+$f = "data/raw/nyc311_2023-01_2026-09_echantillon.parquet"
+.\.venv\Scripts\python -m biflow.run --no-db --file $f                                          # nominal
+.\.venv\Scripts\python -m biflow.run --no-db --file $f --simulate-failure quality_etl           # panne
+.\.venv\Scripts\python -m biflow.run --no-db --file $f --simulate-audit-flag kpi_semantic       # écart corrigé
+.\.venv\Scripts\python -m biflow.run --no-db --file $f --simulate-audit-flag kpi_semantic --persistent  # non fiable
+```

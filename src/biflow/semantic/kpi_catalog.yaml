@@ -59,7 +59,7 @@ kpis:
 
   - name: sla_compliance_rate
     unit: percent
-    definition: "% de demandes clôturées sous le délai cible, parmi les demandes clôturées ayant une cible (cibles PLACEHOLDER à valider)"
+    definition: "% de demandes clôturées sous le délai cible, parmi les demandes clôturées ayant une cible (cibles provisoires, à valider par le service)"
     sql: SELECT 100.0 * AVG(CASE WHEN within_sla THEN 1.0 ELSE 0.0 END) AS value FROM requests WHERE within_sla IS NOT NULL
 
   - name: requests_per_10k

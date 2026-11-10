@@ -1,6 +1,6 @@
 import type { Published } from "../api";
 import { Checks, Notice, Table } from "../components/ui";
-import { STEP_LABEL, basename, day, num, short } from "../format";
+import { STEP_LABEL, basename, day, num, plural, short } from "../format";
 import { STEPS } from "../timeline";
 
 export default function Audit({ data }: { data: Published }) {
@@ -59,7 +59,7 @@ export default function Audit({ data }: { data: Published }) {
                    { key: "rule", label: "Règle" },
                    { key: "n", label: "Lignes", align: "right", render: (r) => num(r.n) },
                  ]} />
-          <p className="muted small">{num(etl.quarantine_rows)} ligne(s) écartée(s), gardée(s) en quarantaine avec leur motif.</p>
+          <p className="muted small">{plural(etl.quarantine_rows, "ligne écartée, gardée", "lignes écartées, gardées")} en quarantaine avec leur motif.</p>
         </section>
       </div>
 

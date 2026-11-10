@@ -3,7 +3,7 @@ import type { ChartSpec, Published, QueryRecord } from "../api";
 import { InsightItem } from "../components/AgentPanel";
 import { Bars, DailyLine } from "../components/charts";
 import { Notice, Provenance } from "../components/ui";
-import { day, dateTime, kpiValue, num, short } from "../format";
+import { day, dateTime, kpiValue, num, plural, short } from "../format";
 
 // Libellés courts des cartes KPI (le titre long reste la définition du catalogue)
 const KPI_SHORT: Record<string, string> = {
@@ -70,7 +70,7 @@ export default function Dashboard({ data }: { data: Published }) {
         <section className="panel">
           <div className="panel-head">
             <h2>Demandes par jour</h2>
-            <p className="muted">{num(daily.data.length)} jours, {flagged} jour(s) anormal(aux) pour toute la ville</p>
+            <p className="muted">{num(daily.data.length)} jours, {plural(flagged, "jour anormal", "jours anormaux")} pour toute la ville</p>
           </div>
           <DailyLine data={daily.data} />
           <Provenance ids={daily.query_ids} queries={queries} />
@@ -113,7 +113,7 @@ function BarPanel({ c, queries, minN }: { c: ChartSpec; queries: Record<string, 
     <section className={`panel ${c.chart_type === "bar_h" ? "wide" : ""}`}>
       <div className="panel-head">
         <h2>{c.title}</h2>
-        {masked > 0 && <p className="muted">{masked} valeur(s) masquée(s) : moins de {minN} demandes.</p>}
+        {masked > 0 && <p className="muted">{plural(masked, "valeur masquée", "valeurs masquées")} : moins de {minN} demandes.</p>}
       </div>
       <Bars data={c.data} unit={c.unit} horizontal={horizontal} />
       <Provenance ids={c.query_ids} queries={queries} />

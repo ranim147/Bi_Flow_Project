@@ -12,7 +12,7 @@ Routes :
     GET  /api/published                  dernier run PUBLIÉ + spec du dashboard (empreinte vérifiée)
     POST /api/ask                        question sur l'instantané audité du run publié
 
-Mêmes garde-fous que le dashboard Streamlit : seul un run publié est affiché, l'empreinte de
+Mêmes garde-fous que le dashboard Streamlit (premier prototype) : seul un run publié est affiché, l'empreinte de
 la spec est vérifiée, les questions passent par le périmètre, le contrôle des données
 personnelles, le bac à sable SQL et le seuil anti-identification.
 """
@@ -20,6 +20,7 @@ personnelles, le bac à sable SQL et le seuil anti-identification.
 from __future__ import annotations
 
 import json
+import logging
 import re
 from functools import lru_cache
 from pathlib import Path
@@ -52,6 +53,7 @@ EXAMPLE_QUESTIONS = [
     "Pourquoi les délais sont-ils plus longs à Staten Island ?",
 ]
 
+log = logging.getLogger(__name__)
 app = FastAPI(title="BIFlow API", version="0.1.0")
 manager = RunManager(PROCESSED_DIR)
 
@@ -162,7 +164,10 @@ def list_runs() -> list[dict[str, Any]]:
     runs = []
     for d in sorted(PROCESSED_DIR.iterdir(), reverse=True) if PROCESSED_DIR.exists() else []:
         if RUN_ID.match(d.name) and (d / "run.json").exists():
-            runs.append(_run_summary(load_run(d.name), published_id))
+            try:
+                runs.append(_run_summary(load_run(d.name), published_id))
+            except (ValueError, KeyError, IndexError):  # run.json tronqué ou d'un ancien format : ignoré
+                log.warning("run %s illisible, ignoré dans l'historique", d.name)
     return runs
 
 
@@ -197,6 +202,8 @@ def published() -> dict[str, Any]:
     pointer = _published_pointer()
     if pointer is None:
         raise HTTPException(404, "aucun run publié : lancer le scénario nominal")
+    if not Path(pointer["spec_path"]).exists():
+        raise HTTPException(409, "la spec du run publié est introuvable : relancer le scénario nominal")
     if file_hash(pointer["spec_path"]) != pointer["spec_hash"]:
         raise HTTPException(409, "la spec du dashboard a été modifiée après l'audit : affichage refusé")
     spec = json.loads(Path(pointer["spec_path"]).read_text(encoding="utf-8"))

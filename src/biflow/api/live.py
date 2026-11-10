@@ -143,7 +143,7 @@ def _instrument(agent: BaseAgent, live: LiveRun) -> BaseAgent:
     original = agent.run
     attempts: dict[int, int] = {}
 
-    def run(state):  # noqa: ANN001, ANN202 — même signature que BaseAgent.run
+    def run(state):  # même signature que BaseAgent.run
         live._round = state.feedback_rounds
         attempts[state.feedback_rounds] = attempts.get(state.feedback_rounds, 0) + 1
         live.add(kind="started", step=agent.name, attempt=attempts[state.feedback_rounds],
@@ -197,10 +197,14 @@ class RunManager:
             step = None
         if not self._busy.acquire(blocking=False):
             raise RuntimeError("un run est déjà en cours")
-        live = LiveRun(run_id=new_run_id(), scenario=scenario, step=step, dataset=dataset,
-                       questions=[q for q in questions if q.strip()], pace_s=max(0.0, min(pace_s, 3.0)))
+        try:
+            live = LiveRun(run_id=new_run_id(), scenario=scenario, step=step, dataset=dataset,
+                           questions=[q for q in questions if q.strip()], pace_s=max(0.0, min(pace_s, 3.0)))
+            threading.Thread(target=self._execute, args=(live,), daemon=True, name=live.run_id).start()
+        except BaseException:
+            self._busy.release()  # sinon le serveur resterait « occupé » pour toujours
+            raise
         self.runs[live.run_id] = live
-        threading.Thread(target=self._execute, args=(live,), daemon=True, name=live.run_id).start()
         return live
 
     def _execute(self, live: LiveRun) -> None:
@@ -213,7 +217,7 @@ class RunManager:
             state = run_pipeline(DatasetRef(file_path=live.dataset), agents=agents, ctx=ctx,
                                  run_id=live.run_id, questions=live.questions, output_dir=self.output_dir)
             live.status, live.published = state.status.value, state.published
-        except Exception as exc:  # noqa: BLE001 — remonté au front
+        except Exception as exc:  # erreur remontée au front
             log.exception("run %s interrompu", live.run_id)
             live.status, live.error = "failed", f"{type(exc).__name__} : {exc}"
         finally:
