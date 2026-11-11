@@ -93,3 +93,102 @@ biflow/
 | **Dashboard Generator** | Spec des graphiques + application Streamlit/Plotly qui lit la spec et la base ; publication uniquement si le run est `success` |
 | **Auditeur / XAI** | Lire `audit.trace_log` du run, recalculer des KPI de façon indépendante, vérifier les insights, émettre des `findings` ciblés et une explication lisible |
 | **Orchestrateur / infra** (moi) | Ingestion de la période complète, ingestion incrémentale, Alembic si le schéma évolue, CI GitHub Actions (pytest + Postgres), revue des contrats entre agents |
+
+---
+
+# MVP : les 6 agents réels
+
+*Date : 28/10/2026*
+
+## Ce qui a été ajouté
+
+- **Les 6 agents sont réels** (plus aucun stub), conformes à l'étape 2 de l'étude d'architecture :
+  - *Data Profiler* : défauts typés par colonne (doublon, manquant, mauvais type, format, valeur invalide,
+    hors plage, incohérence), avec quelques `unique_key` en exemple ;
+  - *Qualité / ETL* : 12 règles comptées et tracées, minimisation RGPD, enrichissement (délai, SLA),
+    instantané parquet + empreinte SHA-256, copie dans `processed.nyc311_clean` si le run lit PostgreSQL ;
+  - *KPI & Semantic* : catalogue YAML (`src/biflow/semantic/kpi_catalog.yaml`), SQL exécuté par DuckDB en
+    lecture seule, journal des requêtes, seuil anti-identification, question → SQL (Mistral ou baseline) ;
+  - *Analyste BI* : STL + z-score robuste (ville et chaque borough), insights avec `evidence`, rédaction
+    Mistral optionnelle avec rejet de tout nombre non justifié ;
+  - *Dashboard* : spec JSON (valeurs + requêtes d'origine) et app Streamlit + Plotly qui vérifie l'empreinte ;
+  - *Auditeur / XAI* : rejeu des requêtes, recalcul indépendant en pandas, contrôles des insights et du
+    dashboard, explication en clair. Les options de simulation (`--simulate-audit-flag`) sont conservées.
+- **Orchestrateur** : `state.workspace` (artefacts du run), `state.questions`, `run.json` écrit à la fin de
+  chaque run, `published.json` seulement si le run est `success`.
+- **CLI** : `--question` (répétable), `--output-dir` ; sans PostgreSQL, le dernier extrait de `data/raw` est utilisé.
+- **Évaluation** : `python -m biflow.evaluation` (jeu synthétique à défauts et anomalie connus, 26 questions,
+  4 écarts volontaires pour l'Auditeur).
+- **Infra** : `connect_timeout` de 3 s (sous Windows, une base absente bloquait environ 100 s par connexion),
+  populations 2020 dans `ref.boroughs`, nouvelles dépendances `duckdb`, `statsmodels`, `pyyaml`.
+- **Tests : 53 passés** sans PostgreSQL (+ 7 tests `db` ignorés sans base). Les tests n'appellent jamais l'API Mistral.
+
+## Écarts avec l'étude d'architecture
+
+| Étude (MVP) | Implémentation | Raison |
+|---|---|---|
+| Script Python, puis LangGraph à l'étape 3 | LangGraph dès le MVP | déjà en place et testé (retry, boucle de l'Auditeur) ; chaque agent reste une fonction simple |
+| DuckDB pour stocker et exécuter le SQL | PostgreSQL pour stocker, DuckDB pour exécuter le SQL sur l'instantané | choix de l'équipe : garder la base existante ; DuckDB sert de bac à sable en lecture seule |
+| Table `audit_log` | `audit.trace_log` (étapes) + `queries` dans `run.json` (SQL, instantané, résultat) | pas de nouvelle table tant que le schéma n'est pas versionné (Alembic) |
+
+## Limites connues
+
+- **Biais des périodes récentes** : sur un extrait des derniers jours, seules les demandes déjà clôturées
+  entrent dans le délai médian et le SLA (sur l'extrait réel du 19 au 22/10, délai médian 1,1 h et SLA à 97 %).
+  Il faut une période plus ancienne, ou une analyse de survie, pour des délais représentatifs.
+- **Délais cibles SLA** toujours provisoires (`is_placeholder = true`).
+- **Baseline question → SQL** : elle couvre les formulations prévues ; sur des reformulations libres, elle
+  échoue ou répond à côté. L'apport de Mistral reste à mesurer (aucune clé configurée pendant le développement).
+- Le contrôle des données personnelles dans la question repose sur des motifs simples : il ne détecte pas un nom isolé.
+- Le seuil anti-identification s'applique aux réponses des questions grâce à la colonne `n` : une requête du
+  LLM sans `n` lui est renvoyée pour correction, puis la baseline prend le relais.
+
+---
+
+# Données réelles, LLM local et compléments
+
+*Date : 30/10/2026*
+
+## Ce qui a été ajouté
+
+- **Données réelles de l'équipe** : `python -m biflow.ingestion.import_pages` regroupe des pages brutes
+  (parquet/CSV) en un extrait `data/raw` avec sa fiche de provenance `.meta.json` (source, empreinte, réserves).
+  Extrait importé : 265 609 demandes, 2023-01 à 2026-09, depuis l'acquisition du dépôt `Bi_Flow_Project`.
+- **Colonnes facultatives** (`descriptor`, `incident_zip`, `resolution_description`, `latitude`, `longitude`) :
+  absentes d'un extrait, elles sont ajoutées vides et signalées par le Data Profiler.
+- **LLM remplaçable** (`src/biflow/llm/client.py`, `BIFLOW_LLM_PROVIDER`) : Mistral ou Ollama (modèle local).
+  Le prompt question → SQL reçoit les modalités des dimensions portées par au moins N demandes.
+- **Contrôle croisé** LLM / baseline sur chaque réponse ; **refus motivé** des questions hors périmètre
+  (`src/biflow/semantic/scope.py`) ; **quarantaine** des lignes supprimées avec leur règle.
+- **Analyste BI** : tendance sur un an quand l'historique couvre 2 ans ; type de plainte le plus en hausse
+  pour chaque anomalie (piste, pas une cause) ; réserves si les données sont échantillonnées.
+- **Dashboard** : onglets *Tableau de bord*, *Poser une question* (`ask()` sur l'instantané audité, empreinte
+  vérifiée) et *Audit et provenance*.
+- **Démo** : `scripts/demo.ps1` (et `make demo`), déroulé dans `docs/DEMO.md`.
+
+## Corrections trouvées sur les données réelles
+
+- La limite de 1 000 lignes (prévue pour le SQL généré) bloquait la série journalière du catalogue
+  (1 369 jours) : le SQL du catalogue, relu dans Git, a sa propre limite (100 000).
+- La tendance « première contre dernière semaine » n'avait pas de sens sur 45 mois : fenêtre adaptée
+  (année contre année précédente).
+- La baseline répondait à côté sur « quelle agence... » (elle donnait le total) : elle répond maintenant
+  « non reconnue » quand le regroupement demandé lui est inconnu.
+- `scripts/tasks.ps1` : `$ErrorActionPreference = "Stop"` transformait les logs Python (stderr) en erreur
+  fatale sous Windows PowerShell 5.1.
+
+## Vérifications
+
+- **Tests : 86 passés**, y compris les 6 tests `db` sur PostgreSQL (Docker) ; ruff sans erreur.
+- **Chemin PostgreSQL** testé de bout en bout : lecture de `raw.nyc311` et `ref.*`, écriture de
+  `processed.nyc311_clean`, 7 lignes dans `audit.trace_log`.
+- **Évaluation** : voir le tableau du README (baseline 61 %, LLM local 88 % sur 51 questions).
+- **Contrôle croisé avec l'implémentation de l'équipe** : même borough au délai médian le plus long
+  (STATEN ISLAND, 15,736 h).
+
+## Limites restantes
+
+- Mistral non testé (pas de clé) ; le LLM local a été mesuré à la place.
+- Mesure du LLM légèrement optimiste (prompt ajusté sur le même jeu de questions) : prévoir un jeu neuf.
+- Échantillon non probabiliste : volumes et taux pour 10 000 habitants non extrapolables à la ville.
+- Délais cibles SLA toujours provisoires.

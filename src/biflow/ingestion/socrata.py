@@ -14,7 +14,12 @@ from datetime import date, timedelta
 import httpx
 import pandas as pd
 
-from biflow.common.schema import DATETIME_COLUMNS, FLOAT_COLUMNS, RAW_COLUMNS, TEXT_COLUMNS
+from biflow.common.schema import (
+    DATETIME_COLUMNS,
+    FLOAT_COLUMNS,
+    RAW_COLUMNS,
+    TEXT_COLUMNS,
+)
 
 log = logging.getLogger(__name__)
 

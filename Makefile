@@ -5,7 +5,7 @@ else
 PY ?= .venv/bin/python
 endif
 
-.PHONY: setup up down init-db ingest ingest-small run test
+.PHONY: setup up down init-db ingest ingest-small run evaluate dashboard web demo test
 
 setup:          ## venv + dépendances + .env
 	python -m venv .venv
@@ -30,6 +30,20 @@ ingest-small:   ## extrait de test (5 000 lignes)
 
 run:            ## pipeline complet
 	$(PY) -m biflow.run $(ARGS)
+
+evaluate:       ## évaluation du MVP sur données synthétiques
+	$(PY) -m biflow.evaluation $(ARGS)
+
+dashboard:      ## dashboard du dernier run publié
+	$(PY) -m streamlit run src/biflow/dashboard/app.py
+
+web:            ## front React + API (http://localhost:8000)
+	cd frontend && npm install && npm run build
+	$(PY) -m biflow.api
+
+demo:           ## run sur l'extrait 2023-2026 puis dashboard (LLM=ollama pour le modèle local)
+	BIFLOW_LLM_PROVIDER=$(or $(LLM),none) $(PY) -m biflow.run --no-db 		--file data/raw/nyc311_2023-01_2026-09_echantillon.parquet 		--question "Quel borough a le délai médian de résolution le plus long ?" 		--question "Pourquoi les délais sont-ils plus longs à Staten Island ?"
+	$(PY) -m streamlit run src/biflow/dashboard/app.py
 
 test:
 	$(PY) -m pytest

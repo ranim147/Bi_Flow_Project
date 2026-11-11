@@ -22,7 +22,11 @@ from biflow.common.logging import setup_logging
 from biflow.db.engine import get_engine
 from biflow.db.init_db import init_db
 from biflow.db.loader import upsert_nyc311
-from biflow.ingestion.socrata import DEFAULT_COMPLAINT_TYPES, fetch_records, records_to_frame
+from biflow.ingestion.socrata import (
+    DEFAULT_COMPLAINT_TYPES,
+    fetch_records,
+    records_to_frame,
+)
 from biflow.orchestrator.validation import check_raw_frame
 
 log = logging.getLogger("biflow.ingestion")

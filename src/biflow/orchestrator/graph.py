@@ -9,20 +9,25 @@
   retour vers l'étape fautive (qui est réexécutée avec toutes les étapes en aval) ;
   sinon run UNRELIABLE.
 - `finalize` fixe le statut final, décide de la publication et trace le run (`__run__`).
+  Le state complet est écrit dans `<workspace>/run.json` (journal d'audit du run) ; si le
+  run est publié, `<workspace>/../published.json` pointe vers lui (lu par le dashboard).
 """
 
 from __future__ import annotations
 
+import json
 import logging
 import uuid
 from collections.abc import Callable
 from datetime import UTC, datetime
+from pathlib import Path
 from typing import Any
 
 from langgraph.graph import END, START, StateGraph
 
 from biflow.agents import default_agents
 from biflow.agents.base import BaseAgent, RunContext
+from biflow.common.config import PROCESSED_DIR
 from biflow.orchestrator.state import (
     STEP_ORDER,
     AuditFinding,
@@ -95,9 +100,27 @@ def _make_finalize_node(ctx: RunContext, started_at: datetime) -> Callable[[Pipe
                 "stub_steps": [s for s, o in state.outputs.items() if o.get("is_stub")],
             },
         ))
+        final = state.model_copy(update={"status": status, "published": published, "next_step": None})
+        if state.workspace:
+            write_run_files(final)
         return {"status": status, "published": published, "next_step": None}
 
     return finalize
+
+
+PUBLISHED_POINTER = "published.json"
+
+
+def write_run_files(state: PipelineState) -> None:
+    workspace = Path(state.require_workspace())
+    workspace.mkdir(parents=True, exist_ok=True)
+    (workspace / "run.json").write_text(state.model_dump_json(indent=2), encoding="utf-8")
+    if state.published:
+        dash = state.outputs.get("dashboard_generator", {})
+        pointer = {"run_id": state.run_id, "workspace": str(workspace), "run_file": str(workspace / "run.json"),
+                   "spec_path": dash.get("spec_path"), "spec_hash": dash.get("spec_hash"),
+                   "published_at": datetime.now(UTC).isoformat()}
+        (workspace.parent / PUBLISHED_POINTER).write_text(json.dumps(pointer, indent=2), encoding="utf-8")
 
 
 def build_graph(agents: dict[str, BaseAgent], ctx: RunContext, started_at: datetime | None = None):
@@ -127,12 +150,19 @@ def run_pipeline(
     agents: dict[str, BaseAgent] | None = None,
     ctx: RunContext | None = None,
     run_id: str | None = None,
+    questions: list[str] | None = None,
+    output_dir: str | Path | None = None,
 ) -> PipelineState:
-    """Point d'entrée programmatique : exécute tout le pipeline et retourne le state final."""
+    """Point d'entrée programmatique : exécute tout le pipeline et retourne le state final.
+
+    Les artefacts du run vont dans `<output_dir>/<run_id>/` (défaut : data/processed).
+    """
     ctx = ctx or RunContext()
     started_at = datetime.now(UTC)
     app = build_graph(agents or default_agents(), ctx, started_at)
-    initial = PipelineState(run_id=run_id or new_run_id(), dataset=dataset or DatasetRef())
+    run_id = run_id or new_run_id()
+    initial = PipelineState(run_id=run_id, dataset=dataset or DatasetRef(), questions=questions or [],
+                            workspace=str(Path(output_dir or PROCESSED_DIR) / run_id))
     log.info("Démarrage du run %s", initial.run_id)
     result = app.invoke(initial, config={"recursion_limit": 100})
     return PipelineState.model_validate(result)

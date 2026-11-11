@@ -19,6 +19,13 @@ RAW_COLUMNS: list[str] = [
     "longitude",
 ]
 
+# Colonnes dont un extrait peut être privé (ex. échantillon projeté sur quelques champs) :
+# elles sont alors ajoutées vides et signalées par le Data Profiler. Les autres sont obligatoires.
+OPTIONAL_COLUMNS: list[str] = [
+    "descriptor", "incident_zip", "resolution_description", "latitude", "longitude",
+]
+REQUIRED_COLUMNS: list[str] = [c for c in RAW_COLUMNS if c not in OPTIONAL_COLUMNS]
+
 DATETIME_COLUMNS = ["created_date", "closed_date"]
 FLOAT_COLUMNS = ["latitude", "longitude"]
 TEXT_COLUMNS = [

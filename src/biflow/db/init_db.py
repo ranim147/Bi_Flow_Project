@@ -11,31 +11,11 @@ from sqlalchemy import text
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.engine import Engine
 
+from biflow.common.reference import BOROUGH_SEED, SLA_SEED
 from biflow.db.engine import get_engine
 from biflow.db.models import SCHEMAS, boroughs, metadata, sla_targets
 
 log = logging.getLogger(__name__)
-
-BOROUGH_SEED = [
-    {"borough": "BRONX", "borough_label": "Bronx"},
-    {"borough": "BROOKLYN", "borough_label": "Brooklyn"},
-    {"borough": "MANHATTAN", "borough_label": "Manhattan"},
-    {"borough": "QUEENS", "borough_label": "Queens"},
-    {"borough": "STATEN ISLAND", "borough_label": "Staten Island"},
-]
-
-_PLACEHOLDER_NOTE = "TO BE DEFINED - valeur provisoire, à valider par l'équipe KPI"
-SLA_SEED = [
-    {"complaint_type": ct, "target_hours": h, "is_placeholder": True, "note": _PLACEHOLDER_NOTE}
-    for ct, h in [
-        ("Noise - Residential", 8),
-        ("Noise - Street/Sidewalk", 8),
-        ("Noise - Commercial", 8),
-        ("Noise - Vehicle", 8),
-        ("Street Condition", 240),
-        ("Street Light Condition", 240),
-    ]
-]
 
 
 def init_db(engine: Engine | None = None) -> None:
@@ -45,7 +25,13 @@ def init_db(engine: Engine | None = None) -> None:
             conn.execute(text(f'CREATE SCHEMA IF NOT EXISTS "{schema}"'))
         metadata.create_all(conn)
         # Seeds : n'écrase jamais une valeur déjà saisie par l'équipe
-        conn.execute(insert(boroughs).values(BOROUGH_SEED).on_conflict_do_nothing())
+        stmt = insert(boroughs).values(BOROUGH_SEED)
+        # population : complétée seulement si elle n'a pas encore été saisie
+        conn.execute(stmt.on_conflict_do_update(
+            index_elements=[boroughs.c.borough],
+            set_={c: stmt.excluded[c] for c in ("population", "population_year", "population_source")},
+            where=boroughs.c.population.is_(None),
+        ))
         conn.execute(insert(sla_targets).values(SLA_SEED).on_conflict_do_nothing())
     log.info("Base initialisée : schémas %s", ", ".join(SCHEMAS))
 

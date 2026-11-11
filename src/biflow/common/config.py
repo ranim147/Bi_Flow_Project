@@ -40,6 +40,17 @@ class Settings:
     retry_delay_seconds: float
     max_feedback_rounds: int
     log_level: str
+    # LLM : auto (Mistral si clé, sinon aucun) | mistral | ollama | none ; sans LLM -> baseline
+    llm_provider: str = "auto"
+    mistral_api_key: str | None = None
+    mistral_model: str = "mistral-small-latest"
+    mistral_base_url: str = "https://api.mistral.ai/v1"
+    ollama_model: str = "qwen2.5:7b"
+    ollama_base_url: str = "http://localhost:11434/v1"
+    # Sécurité / RGPD
+    min_group_size: int = 10          # seuil anti-identification : agrégat < N demandes masqué
+    sql_max_rows: int = 1000          # SQL généré : lignes max retournées
+    sql_timeout_seconds: float = 10.0  # SQL généré : durée max
 
     def database_url(self, db_name: str | None = None) -> str:
         return (
@@ -66,4 +77,13 @@ def get_settings() -> Settings:
         retry_delay_seconds=_env_float("BIFLOW_RETRY_DELAY_SECONDS", 1.0),
         max_feedback_rounds=_env_int("BIFLOW_MAX_FEEDBACK_ROUNDS", 1),
         log_level=os.getenv("LOG_LEVEL", "INFO"),
+        llm_provider=(os.getenv("BIFLOW_LLM_PROVIDER") or "auto").lower(),
+        mistral_api_key=os.getenv("MISTRAL_API_KEY") or None,
+        mistral_model=os.getenv("MISTRAL_MODEL") or "mistral-small-latest",
+        mistral_base_url=os.getenv("MISTRAL_BASE_URL") or "https://api.mistral.ai/v1",
+        ollama_model=os.getenv("OLLAMA_MODEL") or "qwen2.5:7b",
+        ollama_base_url=os.getenv("OLLAMA_BASE_URL") or "http://localhost:11434/v1",
+        min_group_size=_env_int("BIFLOW_MIN_GROUP_SIZE", 10),
+        sql_max_rows=_env_int("BIFLOW_SQL_MAX_ROWS", 1000),
+        sql_timeout_seconds=_env_float("BIFLOW_SQL_TIMEOUT_SECONDS", 10.0),
     )
